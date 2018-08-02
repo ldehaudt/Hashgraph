@@ -35,19 +35,23 @@ class Event{
         bool    vote;
         //missing signature
     public:
+        Event();
+        ~Event();
+        Event(Event &);
+        Event & operator=(Event &);
         Event(Person &, Event *self, Event *gossiper);
         bool operator==(Event &);
 
-        bool see(Event*);
-        bool seeRecursion(Event* y, std::vector<Event*> *);
+        bool see(Event);
+        bool seeRecursion(Event y, std::vector<Event> *);
         
-        bool stronglySee(Event*);
+        bool stronglySee(Event);
 
         void divideRounds();
 
-        Event  *getSelfParent();
+        Event   *getSelfParent();
         Person &getOwner(); 
-        Event  *getGossiperParent();
+        Event   *getGossiperParent();
         double  getTimestamp();
         int     getRound();
         bool    getWitness();
@@ -63,7 +67,7 @@ class Event{
 
 class Person{
     private:
-        std::list<Event*> hashgraph;
+        std::list<Event> hashgraph;
         void gossip(Person &);
         void createEvent(time_t time, Person &gossiper);
         static Event *getTopNode(Person &, Person &);        
@@ -71,11 +75,11 @@ class Person{
     public:
         int index;
         bool operator==(Person &);
-        void recieveGossip(Person &, std::vector<Event*> gossip);
-        std::list<Event*>    getHashgraph();
+        void recieveGossip(Person &, std::vector<Event> gossip);
+        std::list<Event>    getHashgraph();
         void decideFame();
         void findOrder();
-        voidstd::vector<Event*> findWitnesses(int round);
+        std::vector<Event> findWitnesses(int round);
 };
 
 #endif
