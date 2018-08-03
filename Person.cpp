@@ -1,170 +1,8 @@
 #include "Person.hpp"
 #include <list>
 #include <vector>
-
-Event::Event(Person &p, Event *self, Event *gossiper) : selfParent(self), owner(p), gossiperParent(gossiper) {
-
-}
-
-Event::Event(){}
-Event::~Event(){}
-Event::Event(Event &rhs) {
-    *this = rhs;
-}
-
-Event & Event::operator=(Event &rhs){
-    selfParent = rhs.getSelfParent();
-    owner = rhs.getOwner();
-    //PAYLOAD  MISSING
-    gossiperParent = rhs.getGossiperParent();
-    consensusTimestamp = rhs.getConsensusTimestamp();
-    timestamp = rhs.getTimestamp();
-    roundRecieved = rhs.getRoundRecieved();
-    round = rhs.getRound();
-    witness = rhs.getWitness();
-    famous = rhs.getFamous();
-    vote = rhs.getVote();
-}
-
-bool Event::operator==(Event &rhs){
-    return (owner == rhs.getOwner() && timestamp == rhs.getTimestamp());
-}
-
-bool Event::seeRecursion(Event y, std::vector<Event> *forkCheck){
-    if (!this || this->round < y.getRound())
-        return false;
-    if (this->getOwner() == y.getOwner()){
-        (*forkCheck).push_back(*this);
-    }
-    if (*this == y)
-        return true;
-    return this->getSelfParent()->seeRecursion(y, forkCheck) || this->getGossiperParent()->seeRecursion(y, forkCheck);
-}
-
-bool Event::see(Event y){
-    //fork stops when we reach y, might need to be changed !!
-    std::vector<Event> forkCheck;
-    bool b = seeRecursion(y, &forkCheck);
-    for (int i = 0; i < forkCheck.size() - 1; i++){
-        for (int j = i + 1; j < forkCheck.size(); j++){
-            if (fork(forkCheck[i],forkCheck[j]))
-                return false;
-        }
-    }
-    return b;
-}
-
-bool Event::stronglySee(Event y){
-    int numSee = 0;
-    int i;
-    std::vector<Person*> found;
-    std::list<Event>::iterator iter;
-
-    for (iter = owner.getHashgraph().begin(); iter != owner.getHashgraph().end(); iter++){
-        for (i = 0; i < numSee; i++)
-            if (*(found[i]) == owner)
-                break ;
-        if (i == numSee)
-            if (see(*iter) && iter->see(y))
-            {
-                numSee++;
-                found.push_back(&(iter->getOwner()));
-                if (numSee > 2 * N / 3)
-                    return true;
-            }
-    }
-    return false;
-}
-
-bool Event::fork(Event& x, Event& y){
-    Event *t;
-
-    if (!(x.getOwner() == y.getOwner()))
-        return 0;
-    t = &x;
-    while (t)
-    {
-        if (*t == y)
-            return 0;
-        t = t->getSelfParent();
-    }
-    t = &y;
-    while (t)
-    {
-        if (*t == x)
-            return 0;
-        t = t->getSelfParent();
-    }
-    return 1;
-}
-
-#pragma region get/set
-Event  *Event::getSelfParent(){    
-    return (selfParent);
-}
-Person &Event::getOwner(){    
-    return (owner);
-}
-Event  *Event::getGossiperParent(){    
-    return (gossiperParent);
-}
-double  Event::getTimestamp(){    
-    return (timestamp);
-}
-int     Event::getRound(){    
-    return (round);
-}
-bool    Event::getWitness(){    
-    return (witness);
-}
-double  Event::getConsensusTimestamp(){    
-    return (consensusTimestamp);
-}   
-int     Event::getRoundRecieved(){    
-    return (roundRecieved);
-}
-char    Event::getFamous(){    
-    return (famous);
-}
-bool    Event::getVote(){    
-    return (vote);
-}
-void    Event::setFamous(char fame){
-    famous = fame;
-}
-void    Event::setVote(bool b){
-    vote = b;
-}
-
-#pragma endregion
-
-std::vector<Event> Person::findWitnesses(int round){ //probably need player whose graph to look into as param 
-    std::list<Event>::iterator iter;
-    std::vector<Event> witnesses;
-
-    for (iter = getHashgraph().begin(); iter->getRound() >= round - 1; iter++){
-        if (iter->getRound() == round && iter->getWitness() == true){
-            witnesses.push_back(*iter);
-        }
-    }
-    return witnesses;
-}
-
-void Event::divideRounds(){
-    round = this->selfParent->getRound();
-    if (this->gossiperParent->getRound() > round)
-        round = this->gossiperParent->getRound();
-    int numStrongSee = 0;
-    std::vector<Event> witnesses = owner.findWitnesses(round);
-    
-    for (int i = 0; i < witnesses.size(); i++){
-        if (stronglySee(witnesses[i]))
-            numStrongSee++;
-    }
-    if (numStrongSee > 2 * N / 3)
-        round = round + 1;
-    witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
-}
+#include <array>
+#include <algorithm>
 
 void Person::decideFame(){ //probably need player whose graph to look into as param
     std::list<Event>::iterator x;
@@ -174,7 +12,7 @@ void Person::decideFame(){ //probably need player whose graph to look into as pa
     bool v;
     int t;
 
-    for (x = hashgraph.end() - 1; x != hashgraph.begin() - 1; x--){ // p is player (PREV COMMENT)
+    for (x = hashgraph.end() - 1; x >= hashgraph.begin(); x--){ // p is player (PREV COMMENT)
         if (x->getFamous() != -1)
             continue;
         for (y = hashgraph.end() - 1; y != hashgraph.begin() - 1; y--){
@@ -208,7 +46,7 @@ void Person::decideFame(){ //probably need player whose graph to look into as pa
                         if (t > 2 * N / 3){
                             x->setFamous(v);
                             y->setVote(v);
-                            break;
+                            break;.
                         }
                         else{
                             y->setVote(v);
@@ -227,7 +65,109 @@ void Person::decideFame(){ //probably need player whose graph to look into as pa
     }
 }
 
+Person::Person(){}
+        
+~Person::Person(){}
+        
+Person::Person(Person &rhs){
+    *this = rhs;    
+}
+
+Person & Person::operator=(Person &){
+    //DOES NOTHING, I DONT THIKN WE NEED THIS
+}
+
+std::array<Event*, N> findUFW(std::vector<Event> witnesses){
+    std::array<Event*, N> arr;
+    char b[N] = { 0 };
+
+    for(int i = 0; i < witnesses.size(); i++){
+        if (witnesses[i].getFamous() == true)
+        {
+            int num = witnesses[i].getOwner().index;                        
+            if (b[num] == 1)
+            {
+                b[num] = -1;
+                arr[num] = NULL;
+            }
+            if (b[num] == 0){
+                b[num] = 1;
+                arr[num] = &(witnesses[i]);
+            }
+        }
+    }
+    return arr;
+}
+
+void    Person::insertEvent(Event event){
+    std::list<Event>::iterator iter;
+
+    for (iter = getHashgraph().begin(); iter < getHashgraph().end(); iter++){
+        if (iter->getRoundRecieved() != -1 && iter->getRoundRecieved() <= event.getRoundRecieved()){
+            break;
+        }
+    }
+    while (iter != getHashgraph().end() &&
+    (iter->getRoundRecieved() == -1 || iter->getRoundRecieved() == event.getRoundRecieved())
+    && iter->getConsensusTimestamp() <= event.getConsensusTimestamp())
+        iter++;
+    
+    while (iter != getHashgraph().end() &&
+    (iter->getRoundRecieved() == -1 || iter->getRoundRecieved() == event.getRoundRecieved())
+    && iter->getConsensusTimestamp() == event.getConsensusTimestamp()
+    && iter->getOwner()->index < iter->getOwner()->index) //CHANGE INDEX TO SIGNATURE YA PLEB
+        iter++;
+
+    hashgraph.insert(iter, event);
+    
+}
+
 void Person::findOrder(){
+    std::list<Event>::iterator iter;
+    std::vector<Event> w;
+    std::array<Event*, N> ufw;
+    int i;
+
+    for (iter = hashgraph.end() - 1; iter >= hashgraph.begin(); iter--)
+    {
+        for (int r = iter->getRound(); r <= hashgraph.begin()->getRound(); r++) {
+            w = findWitnesses(r);
+            for (i = 0; i < w.size(); i++)
+                if (y.getFamous() == -1)
+                    break ;
+            if (i < w.size())
+                continue ;
+            ufw = findUFW(w);
+            for (int j = 0; j < N; j++)
+            {
+                vector<Event> db;
+                if (!(ufw[j].seeRecursion(*iter, &db))){
+                    break;
+                }
+            }
+            if (j < N)
+                continue;
+            iter->setRoundRecieved(r);
+            std::vector<double> s;
+            Event *tmp;
+            for (int j = 0; j < N; j++){
+                tmp = &ufw[j];
+                while (tmp.getSelfParent().seeRecursion(*iter, &db))
+                    tmp = tmp.getSelfParent();
+                s.push_back(tmp->getTimestamp());
+            }
+            std::sort(s.begin(),s.end());
+            if (s.size() % 2 != 0){
+                iter->setConsensusTimestamp(s[s.size() / 2]);
+            }else{
+                iter->setConsensusTimestamp((s[s.size() / 2 - 1] + s[s.size() / 2]) / 2);
+            }
+            Event evnt = *iter;
+            hashgraph.erase(iter);
+            insertEvent(evnt);
+            break;
+        }
+    }
 
 }
 
@@ -248,7 +188,7 @@ Event *Person::getTopNode(Person &p, Person &target){
 }
 
 void Person::createEvent(time_t time, Person &gossiper){
-    Event tmp(*this, Person::getTopNode(*this, *this), Person::getTopNode(*this, gossiper));
+    Event tmp(*this, Person::getTopNode(*this, *this), Person::getTopNode(*this, gossiper), time);
     hashgraph.push_front(tmp);
 }
 
@@ -296,4 +236,3 @@ bool Person::operator==(Person &rhs){
 std::list<Event>    Person::getHashgraph(){
     return hashgraph;
 }
-
