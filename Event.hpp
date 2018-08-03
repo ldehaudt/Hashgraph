@@ -9,7 +9,7 @@ class Event{
 private:
 	Event *selfParent;
 	Person &owner;
-        //PAYLOAD  MISSING
+	//PAYLOAD  MISSING
 	Event *gossiperParent;
 	double   consensusTimestamp;
 	double   timestamp;
@@ -18,7 +18,7 @@ private:
 	bool    witness;
 	char    famous;
 	bool    vote;
-        //missing signature
+	//missing signature
 public:
 	Event();
 	~Event();
@@ -48,6 +48,11 @@ public:
 	void    setConsensusTimestamp(double);
 	void	setSelfParent(Event *);
 	void	setGossiperParent(Event *);
+
+//KILLLLLLLLL MMMEEEEEEEE
+	int tVal; //KILL MEEEEEEEEEEEEE
+//KILLLLL MMEEEEEEEEEEE
+
 
 	static bool fork(Event&, Event&);        
 };

@@ -14,11 +14,13 @@ Event::Event(Person &p, Event *self, Event *gossiper, double t)
 	famous = -1;
 	witness = false;
 	vote = false;
+	tVal = testingNum;
+	testingNum++;
 }
 
 Event::Event() : owner(pdb) {}
 Event::~Event(){}
-Event::Event(const Event &rhs) : owner(pdb) {
+Event::Event(const Event &rhs) : owner(rhs.owner) {
 	*this = rhs;
 }
 
@@ -34,10 +36,16 @@ Event & Event::operator=(const Event &rhs){
 	witness = rhs.getWitness();
 	famous = rhs.getFamous();
 	vote = rhs.getVote();
+	tVal = rhs.tVal; //KILLLLLLLLL MEMEMEMEMEMEMEMEMEMEME
 	return (*this);
 }
 
 void Event::divideRounds(){
+	if (!this->selfParent)
+	{
+		round = 0;
+		return;
+	}
 	round = this->selfParent->getRound();
 	if (this->gossiperParent->getRound() > round)
 		round = this->gossiperParent->getRound();
@@ -85,18 +93,17 @@ bool Event::stronglySee(Event y){
 	int numSee = 0;
 	int i;
 	std::vector<Person*> found;
-	std::list<Event>::iterator iter;
-
-	for (iter = owner.getHashgraph().begin(); iter != owner.getHashgraph().end(); iter++)
+	// std::list<Event>::iterator iter;
+	for (unsigned int n = 0; n < owner.getHashgraph().size(); n++)
 	{
 		for (i = 0; i < numSee; i++)
 			if (*(found[i]) == owner)
 				break ;
 			if (i == numSee)
-				if (see(*iter) && iter->see(y))
+				if (see(owner.getHashgraph()[n]) && owner.getHashgraph()[n].see(y))
 				{
 					numSee++;
-					found.push_back(&(iter->getOwner()));
+					found.push_back(&(owner.getHashgraph()[n].getOwner()));
 					if (numSee > 2 * N / 3)
 						return true;
 				}
