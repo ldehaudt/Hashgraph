@@ -38,18 +38,18 @@ Event & Event::operator=(const Event &rhs){
 }
 
 void Event::divideRounds(){
-     round = this->selfParent->getRound();
-    if (this->gossiperParent->getRound() > round)
-        round = this->gossiperParent->getRound();
-    int numStrongSee = 0;
-    std::vector<Event> witnesses = owner.findWitnesses(round);    
-    for (int i = 0; i < static_cast<int>(witnesses.size()); i++){
-        if (stronglySee(witnesses[i]))
-             numStrongSee++;
-     }
-     if (numStrongSee > 2 * N / 3)
-         round = round + 1;
-     witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
+	round = this->selfParent->getRound();
+	if (this->gossiperParent->getRound() > round)
+		round = this->gossiperParent->getRound();
+	int numStrongSee = 0;
+	std::vector<Event> witnesses = owner.findWitnesses(round);    
+	for (int i = 0; i < static_cast<int>(witnesses.size()); i++){
+		if (stronglySee(witnesses[i]))
+			numStrongSee++;
+	}
+	if (numStrongSee > 2 * N / 3)
+		round = round + 1;
+	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
 bool Event::operator==(Event &rhs){
@@ -69,7 +69,7 @@ bool Event::seeRecursion(Event y, std::vector<Event> *forkCheck){
 }
 
 bool Event::see(Event y){
-    //fork stops when we reach y, might need to be changed !!
+	//fork stops when we reach y, might need to be changed !!
 	std::vector<Event> forkCheck;
 	bool b = seeRecursion(y, &forkCheck);
 	for (unsigned int i = 0; i < forkCheck.size() - 1; i++){

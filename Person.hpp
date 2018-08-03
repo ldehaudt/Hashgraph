@@ -18,25 +18,25 @@ For example, one event by Alice (red) records the fact that Bob performed a goss
  */
 
 class Person{
-    private:
-        std::list<Event> hashgraph;
-        void gossip(Person &);
-        void createEvent(time_t time, Person &gossiper);
-        static Event *getTopNode(Person &, Person &);        
+private:
+	std::list<Event> hashgraph;
+	void gossip(Person &);
+	void createEvent(time_t time, Person &gossiper);
+	static Event *getTopNode(Person &, Person &);        
 
-    public:
-        Person();
-        ~Person();
-        Person(Person &);
-        Person & operator=(Person &);
-        int index;
-        bool operator==(Person &);
-        void recieveGossip(Person &, std::vector<Event> gossip);
-        std::list<Event>    getHashgraph();
-        void decideFame();
-        void findOrder();
-        void insertEvent(Event event);
-        std::vector<Event> findWitnesses(int round);
+public:
+	Person();
+	~Person();
+	Person(Person &);
+	Person & operator=(Person &);
+	int index;
+	bool operator==(Person &);
+	void recieveGossip(Person &, std::vector<Event> gossip);
+	std::list<Event>    getHashgraph();
+	void decideFame();
+	void findOrder();
+	void insertEvent(Event event);
+	std::vector<Event> findWitnesses(int round);
 };
 
 #endif
