@@ -20,7 +20,7 @@ For example, one event by Alice (red) records the fact that Bob performed a goss
 class Person{
 private:
 	std::vector<Event> hashgraph;
-	void createEvent(time_t time, Person &gossiper);
+	void createEvent(double time, Person &gossiper);
 	static Event *getTopNode(Person &, Person &);        
 
 public:
@@ -28,7 +28,7 @@ public:
 	~Person();
 	Person(Person &);
 	Person & operator=(Person &);
-	
+
 	Person(int);
 	int index;
 	bool operator==(Person &);

@@ -214,7 +214,7 @@ Event *Person::getTopNode(Person &p, Person &target){
 	return NULL;
 }
 
-void Person::createEvent(time_t time, Person &gossiper){
+void Person::createEvent(double time, Person &gossiper){
 	Event tmp(*this, Person::getTopNode(*this, *this), Person::getTopNode(*this, gossiper), time);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
@@ -267,7 +267,7 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 			}
 		}
 	}
-	createEvent(time(0) - startTime, gossiper);    
+	createEvent(difftime(time(0), startTime), gossiper);    
 }
 
 bool Person::operator==(Person &rhs){
