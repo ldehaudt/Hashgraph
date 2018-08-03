@@ -1,5 +1,6 @@
 #include "Person.hpp"
 #include <ctime>
+#include "Hashgraphs.hpp"
 
 time_t startTime;
 

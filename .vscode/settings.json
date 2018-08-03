@@ -12,6 +12,8 @@
         "new": "cpp",
         "stdexcept": "cpp",
         "typeinfo": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "ctime": "cpp",
+        "array": "cpp"
     }
 }

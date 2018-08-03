@@ -5,14 +5,10 @@
 #include <list>
 #include <vector>
 #include "Event.hpp"
-
-const int N = 4; //number of members in the entire population (n > 1)
-const int C = 10; // a small integer constant greater than 2, such as c = 10
+#include "Hashgraphs.hpp"
 
 class Person;
-
-extern time_t startTime;
-extern std::vector<Person*> people;
+class Event;
 
 /*
 For example, one event by Alice (red) records the fact that Bob performed a gossip sync in which he sent her everything he
@@ -39,6 +35,7 @@ class Person{
         std::list<Event>    getHashgraph();
         void decideFame();
         void findOrder();
+        void insertEvent(Event event);
         std::vector<Event> findWitnesses(int round);
 };
 

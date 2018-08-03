@@ -4,18 +4,29 @@
 #include <array>
 #include <algorithm>
 
+std::vector<Event> Person::findWitnesses(int round){ //probably need player whose graph to look into as param 
+    std::list<Event>::iterator iter;
+    std::vector<Event> witnesses;
+    for (iter = getHashgraph().begin(); iter->getRound() >= round - 1; iter++){
+        if (iter->getRound() == round && iter->getWitness() == true){
+            witnesses.push_back(*iter);
+        }
+    }
+    return witnesses;
+ }
+
 void Person::decideFame(){ //probably need player whose graph to look into as param
-    std::list<Event>::iterator x;
-    std::list<Event>::iterator y;
+    std::list<Event>::reverse_iterator x;
+    std::list<Event>::reverse_iterator y;
     int d;
     std::vector<Event> s;
     bool v;
     int t;
 
-    for (x = hashgraph.end() - 1; x >= hashgraph.begin(); x--){ // p is player (PREV COMMENT)
+    for (x = hashgraph.rbegin(); x != hashgraph.rend(); x++){ // p is player (PREV COMMENT)
         if (x->getFamous() != -1)
             continue;
-        for (y = hashgraph.end() - 1; y != hashgraph.begin() - 1; y--){
+        for (y = hashgraph.rbegin(); y != hashgraph.rend(); y++){
             if (x->getWitness() && y->getWitness() && y->getRound() > x->getRound()){
                 d = y->getRound() - x->getRound();
                 s = findWitnesses(y->getRound() - 1);
@@ -25,15 +36,15 @@ void Person::decideFame(){ //probably need player whose graph to look into as pa
                         s.erase(tmp);
                         tmp--;
                     }
-                }
+                
                 int count = 0;
-                for (int i = 0; i < s.size(); i++){
+                for (int i = 0; i < static_cast<int>(s.size()); i++){
                     if (s[i].getVote() == true)
                         count++;
                 }
-                v = (count * 2 >= s.size()) ? true: false;
+                v = (count * 2 >= static_cast<int>(s.size())) ? true: false;
                 count = 0;
-                for (int i = 0; i < s.size(); i++){
+                for (int i = 0; i < static_cast<int>(s.size()); i++){
                     if (s[i].getVote() == v)
                         count++;
                 }
@@ -46,7 +57,7 @@ void Person::decideFame(){ //probably need player whose graph to look into as pa
                         if (t > 2 * N / 3){
                             x->setFamous(v);
                             y->setVote(v);
-                            break;.
+                            break;
                         }
                         else{
                             y->setVote(v);
@@ -67,13 +78,14 @@ void Person::decideFame(){ //probably need player whose graph to look into as pa
 
 Person::Person(){}
         
-~Person::Person(){}
+Person::~Person(){}
         
 Person::Person(Person &rhs){
     *this = rhs;    
 }
 
 Person & Person::operator=(Person &){
+    return *this;
     //DOES NOTHING, I DONT THIKN WE NEED THIS
 }
 
@@ -81,7 +93,7 @@ std::array<Event*, N> findUFW(std::vector<Event> witnesses){
     std::array<Event*, N> arr;
     char b[N] = { 0 };
 
-    for(int i = 0; i < witnesses.size(); i++){
+    for(int i = 0; i < static_cast<int>(witnesses.size()); i++){
         if (witnesses[i].getFamous() == true)
         {
             int num = witnesses[i].getOwner().index;                        
@@ -102,7 +114,7 @@ std::array<Event*, N> findUFW(std::vector<Event> witnesses){
 void    Person::insertEvent(Event event){
     std::list<Event>::iterator iter;
 
-    for (iter = getHashgraph().begin(); iter < getHashgraph().end(); iter++){
+    for (iter = getHashgraph().begin(); iter != getHashgraph().end(); iter++){
         if (iter->getRoundRecieved() != -1 && iter->getRoundRecieved() <= event.getRoundRecieved()){
             break;
         }
@@ -115,7 +127,7 @@ void    Person::insertEvent(Event event){
     while (iter != getHashgraph().end() &&
     (iter->getRoundRecieved() == -1 || iter->getRoundRecieved() == event.getRoundRecieved())
     && iter->getConsensusTimestamp() == event.getConsensusTimestamp()
-    && iter->getOwner()->index < iter->getOwner()->index) //CHANGE INDEX TO SIGNATURE YA PLEB
+    && iter->getOwner().index < iter->getOwner().index) //CHANGE INDEX TO SIGNATURE YA PLEB
         iter++;
 
     hashgraph.insert(iter, event);
@@ -123,37 +135,39 @@ void    Person::insertEvent(Event event){
 }
 
 void Person::findOrder(){
-    std::list<Event>::iterator iter;
+    std::list<Event>::reverse_iterator iter;
     std::vector<Event> w;
     std::array<Event*, N> ufw;
     int i;
+    std::vector<Event> db;
+    
 
-    for (iter = hashgraph.end() - 1; iter >= hashgraph.begin(); iter--)
+    for (iter = hashgraph.rbegin(); iter != hashgraph.rend(); iter--)
     {
         for (int r = iter->getRound(); r <= hashgraph.begin()->getRound(); r++) {
             w = findWitnesses(r);
-            for (i = 0; i < w.size(); i++)
-                if (y.getFamous() == -1)
+            for (i = 0; i < static_cast<int>(w.size()); i++)
+                if (w[i].getFamous() == -1)
                     break ;
-            if (i < w.size())
+            if (i < static_cast<int>(w.size()))
                 continue ;
             ufw = findUFW(w);
-            for (int j = 0; j < N; j++)
+            int j;
+            for (j = 0; j < N; j++)
             {
-                vector<Event> db;
-                if (!(ufw[j].seeRecursion(*iter, &db))){
+                if (!(ufw[j]->seeRecursion(*iter, &db))){
                     break;
                 }
             }
             if (j < N)
                 continue;
-            iter->setRoundRecieved(r);
+            iter->setRoundReceived(r);
             std::vector<double> s;
             Event *tmp;
             for (int j = 0; j < N; j++){
-                tmp = &ufw[j];
-                while (tmp.getSelfParent().seeRecursion(*iter, &db))
-                    tmp = tmp.getSelfParent();
+                tmp = ufw[j];
+                while (tmp->getSelfParent()->seeRecursion(*iter, &db))
+                    tmp = tmp->getSelfParent();
                 s.push_back(tmp->getTimestamp());
             }
             std::sort(s.begin(),s.end());
@@ -163,17 +177,29 @@ void Person::findOrder(){
                 iter->setConsensusTimestamp((s[s.size() / 2 - 1] + s[s.size() / 2]) / 2);
             }
             Event evnt = *iter;
-            hashgraph.erase(iter);
+            hashgraph.erase(--(iter.base()));
             insertEvent(evnt);
             break;
         }
     }
-
 }
 
-
 void Person::gossip(Person &p){
-    p.recieveGossip(*this);// FIND MISSING STUFF BETWEEN BOTH PEOPLE
+    std::vector<Event> arr;
+    std::list<Event>::iterator iter;
+    bool b[N] = {false};
+    Event* check = getTopNode(*this, p);
+
+    for (iter = hashgraph.begin(); iter != hashgraph.end(); iter++){
+        if (b[iter->getOwner().index] == true)
+            continue;
+        if (check->see(*iter)){
+            b[iter->getOwner().index] = true;
+            continue;
+        }
+        arr.push_back(*iter);
+    }
+    p.recieveGossip(*this, arr);// FIND MISSING STUFF BETWEEN BOTH PEOPLE
 }
 
 Event *Person::getTopNode(Person &p, Person &target){
@@ -198,7 +224,7 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
     bool self;
     bool gos;
 
-    for (int i = 0; i < gossip.size(); i++){
+    for (int i = 0; i < static_cast<int>(gossip.size()); i++){
         self = false;
         gos = false;
         for (iter = hashgraph.begin(); iter != hashgraph.end(); iter++){
@@ -209,19 +235,17 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
                 self = true;
             }
             if (*iter == *(gossip[i].getGossiperParent())) {
-                gossip[i].setSelfParent(&(*iter));
+                gossip[i].setGossiperParent(&(*iter));
                 gos = true;
             }
             if (self && gos)
             {
                 gossip[i].divideRounds();
-                int pos = 0;
                 for (tmp = hashgraph.begin(); tmp != hashgraph.end(); tmp++){
                     if (tmp->getRound() <= gossip[i].getRound())
                         break;
-                    pos++;
                 }
-                hashgraph.insert(pos, gossip[i]);
+                hashgraph.insert(tmp, gossip[i]);
                 break;
             }
         }

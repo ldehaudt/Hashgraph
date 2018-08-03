@@ -3,6 +3,7 @@
 #include <vector>
 #include <array>
 #include <algorithm>
+#include "Hashgraphs.hpp"
 
 Person pdb;
 
@@ -34,6 +35,21 @@ Event & Event::operator=(const Event &rhs){
 	famous = rhs.getFamous();
 	vote = rhs.getVote();
 	return (*this);
+}
+
+void Event::divideRounds(){
+     round = this->selfParent->getRound();
+    if (this->gossiperParent->getRound() > round)
+        round = this->gossiperParent->getRound();
+    int numStrongSee = 0;
+    std::vector<Event> witnesses = owner.findWitnesses(round);    
+    for (int i = 0; i < static_cast<int>(witnesses.size()); i++){
+        if (stronglySee(witnesses[i]))
+             numStrongSee++;
+     }
+     if (numStrongSee > 2 * N / 3)
+         round = round + 1;
+     witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
 bool Event::operator==(Event &rhs){

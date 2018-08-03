@@ -1,6 +1,7 @@
 #ifndef EVENT_HPP
 #define EVENT_HPP
 #include "Person.hpp"
+#include "Hashgraphs.hpp"
 
 class Person;
 
