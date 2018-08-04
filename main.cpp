@@ -19,6 +19,12 @@ void square(Event *e)
 	SDL_Rect rect;
 	int y = 1350 - e->getTimestamp() * 20;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
+	if (e->getFamous() == 1)
+		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
+	else if (e->getWitness() == 1)
+		SDL_SetRenderDrawColor(rend, 163, 0, 0, 255);
+	else
+		SDL_SetRenderDrawColor(rend, 9, 71, 124 - e->getRound() * 20, 255);
 	rect.w = 10;
 	rect.h = 10;
 	rect.x = x - 5;
@@ -39,13 +45,13 @@ void refresh(Person *p)
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
 	SDL_RenderFillRect(rend, NULL);
-	SDL_SetRenderDrawColor(rend, 9, 71, 124, 255);
-
-	// for (int i = 0; i < N; i++)
-		// SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1000);
+	SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
+	for (int i = 0; i < N; i++)
+		SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1400);
 	for (unsigned int i = 0; i < p->getHashgraph().size(); i++)
 	{
 		square(p->getHashgraph()[i]);
+		SDL_SetRenderDrawColor(rend, 9, 71, 124, 255);
 		if (((p->getHashgraph())[i])->getSelfParent())
 		{
 			connect(p->getHashgraph()[i], ((p->getHashgraph())[i])->getSelfParent());
@@ -77,14 +83,13 @@ int main(){
 		if (stop)
 			continue ;
 		int i = std::rand() % N;
-		std::cout << i << std::endl;
+		// std::cout << i << std::endl;
 		int j;
 		while ((j = std::rand() % N) == i)
 			;
-		std::cout << j << std::endl;
+		// std::cout << j << std::endl;
 		people[i]->gossip(*(people[j]));
-		printHash(people[j]);
 		refresh(people[j]);
-		sleep(1);
+		usleep(100000);
 	}
 }

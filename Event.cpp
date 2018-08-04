@@ -12,7 +12,7 @@ Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
-	witness = false;
+	witness = (selfParent ? false : true);
 	vote = false;
 	tVal = testingNum;
 	testingNum++;
