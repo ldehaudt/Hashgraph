@@ -16,7 +16,7 @@ void    printHash(Person* p){
 void square(Event *e)
 {
 	SDL_Rect rect;
-	int y = 1000 - e->getTimestamp() * 20;
+	int y = 1000 - e->getTimestamp() * 50;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
 	rect.w = 20;
 	rect.h = 20;
@@ -27,9 +27,9 @@ void square(Event *e)
 
 void connect(Event *e, Event *p)
 {
-	int y = 1000 - e->getTimestamp() * 20;
+	int y = 1000 - e->getTimestamp() * 50;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
-	int y2 = 1000 - p->getTimestamp() * 20;
+	int y2 = 1000 - p->getTimestamp() * 50;
 	int x2 = 100 + p->getOwner().index * 800 / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 }
