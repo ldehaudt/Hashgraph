@@ -9,6 +9,11 @@ Person pdb;
 
 Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
 : selfParent(self), owner(p), gossiperParent(gossiper), timestamp(t) {
+	if (selfParent)
+	{
+		std::cout << "SelfParent " << selfParent->tVal << std::endl;
+		std::cout << "GossiperParent " << gossiperParent->tVal << std::endl;
+	}
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
@@ -18,17 +23,25 @@ Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
 	testingNum++;
 }
 
-Event::Event() : owner(pdb) {}
+Event::Event() : owner(pdb) {
+
+}
 Event::~Event(){}
 Event::Event(const Event &rhs) : owner(rhs.owner) {
 	*this = rhs;
 }
 
 Event & Event::operator=(const Event &rhs){
-	selfParent = rhs.getSelfParent();
 	owner = rhs.getOwner();
+    if (rhs.getSelfParent())
+		selfParent = rhs.getSelfParent();
+	else
+		selfParent = NULL;
     //PAYLOAD  MISSING
-	gossiperParent = rhs.getGossiperParent();
+    if (rhs.getGossiperParent())
+		gossiperParent = rhs.getGossiperParent();
+	else
+		gossiperParent = NULL;
 	consensusTimestamp = rhs.getConsensusTimestamp();
 	timestamp = rhs.getTimestamp();
 	roundRecieved = rhs.getRoundRecieved();
@@ -61,15 +74,14 @@ void Event::divideRounds(){
 }
 
 bool Event::operator==(Event &rhs){
-	return (owner == rhs.getOwner() && timestamp == rhs.getTimestamp());
+	return (timestamp == rhs.getTimestamp() && owner == rhs.getOwner());
 }
 
 bool Event::seeRecursion(Event y, std::vector<Event> *forkCheck){
 	if (this->round < y.getRound())
 		return false;
-	if (this->getOwner() == y.getOwner()){
+	if (this->getOwner() == y.getOwner())
 		(*forkCheck).push_back(*this);
-	}
 	if (*this == y)
 		return true;
 	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
@@ -80,12 +92,10 @@ bool Event::see(Event y){
 	//fork stops when we reach y, might need to be changed !!
 	std::vector<Event> forkCheck;
 	bool b = seeRecursion(y, &forkCheck);
-	for (unsigned int i = 0; i < forkCheck.size() - 1; i++){
-		for (unsigned int j = i + 1; j < forkCheck.size(); j++){
+	for (unsigned int i = 0; i < forkCheck.size(); i++)
+		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
 			if (fork(forkCheck[i],forkCheck[j]))
 				return false;
-		}
-	}
 	return b;
 }
 
@@ -107,9 +117,9 @@ bool Event::stronglySee(Event y){
 					if (numSee > 2 * N / 3)
 						return true;
 				}
-		}
-		return false;
 	}
+	return false;
+}
 
 bool Event::fork(Event& x, Event& y){
 	Event *t;
