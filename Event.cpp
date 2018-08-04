@@ -7,7 +7,7 @@
 
 Person pdb;
 
-Event::Event(Person &p, Event *self, Event *gossiper, double t)
+Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
 : selfParent(self), owner(p), gossiperParent(gossiper), timestamp(t) {
 	roundRecieved = -1;
 	consensusTimestamp = -1;
@@ -142,7 +142,7 @@ Person &Event::getOwner() const {
 Event  *Event::getGossiperParent() const {    
 	return (gossiperParent);
 }
-double  Event::getTimestamp() const {    
+unsigned long   Event::getTimestamp() const {    
 	return (timestamp);
 }
 int     Event::getRound() const {    
@@ -151,7 +151,7 @@ int     Event::getRound() const {
 bool    Event::getWitness() const {    
 	return (witness);
 }
-double  Event::getConsensusTimestamp() const {    
+unsigned long  Event::getConsensusTimestamp() const {    
 	return (consensusTimestamp);
 }   
 int     Event::getRoundRecieved() const {    
@@ -172,7 +172,7 @@ void    Event::setVote(bool b){
 void    Event::setRoundReceived(int r) {
 	roundRecieved = r;
 }
-void    Event::setConsensusTimestamp(double t) {
+void    Event::setConsensusTimestamp(unsigned long t) {
 	consensusTimestamp = t;
 }
 void	Event::setSelfParent(Event *e) {

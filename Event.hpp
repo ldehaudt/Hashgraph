@@ -24,7 +24,7 @@ public:
 	~Event();
 	Event(const Event &);
 	Event & operator=(const Event &);
-	Event(Person &, Event *self, Event *gossiper, double t);
+	Event(Person &, Event *self, Event *gossiper, unsigned long t);
 	bool operator==(Event &);
 
 	bool see(Event);
@@ -34,10 +34,10 @@ public:
 	Event   *getSelfParent() const;
 	Person &getOwner() const; 
 	Event   *getGossiperParent() const;
-	double  getTimestamp() const;
+	unsigned long   getTimestamp() const;
 	int     getRound() const;
 	bool    getWitness() const;
-	double  getConsensusTimestamp() const;
+	unsigned long   getConsensusTimestamp() const;
 	int     getRoundRecieved() const;
 	char    getFamous() const;
 	bool    getVote() const;
@@ -45,7 +45,7 @@ public:
 	void    setFamous(char);
 	void    setVote(bool);
 	void    setRoundReceived(int);
-	void    setConsensusTimestamp(double);
+	void    setConsensusTimestamp(unsigned long );
 	void	setSelfParent(Event *);
 	void	setGossiperParent(Event *);
 

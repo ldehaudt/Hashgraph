@@ -97,7 +97,7 @@ Person & Person::operator=(Person &){
 }
 
 Person::Person(int ind) : index(ind) {
-	Event tmp(*this, NULL, NULL, time(0) - startTime);
+	Event tmp(*this, NULL, NULL, clock() - startTime);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
@@ -189,21 +189,30 @@ void Person::findOrder(){
 }
 
 void Person::gossip(Person &p){
+	std::cout << "1\n";
 	std::vector<Event> arr;
 	// std::list<Event>::iterator iter;
 	bool b[N] = {false};
+	std::cout << "A\n";
+	
 	Event* check = getTopNode(*this, p);
+	std::cout << "B\n";
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
 	{
+		std::cout << "C\n";
 		if (check && b[hashgraph[i].getOwner().index] == true)
 			continue;
+		std::cout << "C2\n";
 		if (check && check->see(hashgraph[i]))
 		{
 			b[hashgraph[i].getOwner().index] = true;
 			continue;
 		}
+		std::cout << "D\n";
 		arr.push_back(hashgraph[i]);
 	}
+	std::cout << "2\n";
+	
     p.recieveGossip(*this, arr);
 }
 
@@ -215,6 +224,8 @@ Event *Person::getTopNode(Person &p, Person &target){
 }
 
 void Person::createEvent(double time, Person &gossiper){
+	std::cout << "5\n";
+	
 	Event tmp(*this, Person::getTopNode(*this, *this), Person::getTopNode(*this, gossiper), time);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
@@ -224,20 +235,29 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	bool gos;
 	unsigned int j;
 	unsigned int n;
+	std::cout << "aa3\n";
 
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
+		std::cout << "a\n";
+		
 		for (n = 0; n < hashgraph.size(); n++)
 		{
 			if (hashgraph[n] == gossip[i])
 				break ;
 		}
+		std::cout << "b\n";
+		
 		if (n < hashgraph.size())
 			continue ;
 		self = false;
 		gos = false;
+		std::cout << "c\n";
+		
 		for (unsigned int k = 0; k < hashgraph.size(); i++)
 		{
+		std::cout << "d\n";
+			
 			if (gossip[i].getSelfParent() == NULL){
 				gossip[i].divideRounds();
 				for (j = 0; j < hashgraph.size(); j++)
@@ -246,16 +266,23 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 				hashgraph.insert(hashgraph.begin() + j, gossip[i]);
 				break;
 			}
+		std::cout << (gossip[i].getSelfParent())->tVal << "e\n";
+		std::cout << gossip[i].getSelfParent() << "e\n";
+		std::cout << hashgraph[k].tVal << "e\n";
 			if (hashgraph[k] == *(gossip[i].getSelfParent()))
 			{
+				std::cout << "e2\n";
 				gossip[i].setSelfParent(&hashgraph[k]);
 				self = true;
 			}
+		std::cout << "f\n";
 			if (hashgraph[k] == *(gossip[i].getGossiperParent()))
 			{
+		std::cout << "f2\n";
 				gossip[i].setGossiperParent(&hashgraph[k]);
 				gos = true;
 			}
+		std::cout << "g\n";
 			if ((self && gos) || !gossip[i].getSelfParent())
 			{
 				gossip[i].divideRounds();
@@ -267,7 +294,9 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 			}
 		}
 	}
-	createEvent(difftime(time(0), startTime), gossiper);    
+	std::cout << "4\n";
+	
+	createEvent(clock() - startTime, gossiper);    
 }
 
 bool Person::operator==(Person &rhs){
