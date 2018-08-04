@@ -28,7 +28,7 @@ public:
 	bool operator==(Event &);
 
 	bool see(Event*);
-	bool seeRecursion(Event *, std::vector<Event> *);
+	bool seeRecursion(Event *, std::vector<Event*> *);
 	bool stronglySee(Event*);
 	void divideRounds();
 	Event   *getSelfParent() const;

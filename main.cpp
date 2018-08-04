@@ -71,7 +71,10 @@ int main(){
 std::cout << startTime << std::endl;
 	while (event.type != SDL_QUIT)
 	{
-		int i = std::rand() % N;
+		int i;
+		while ((i = std::rand() % N) != 1)
+			;
+		// int i = std::rand() % N;
 		std::cout << i << std::endl;
 		int j = 1;
 		// while ((j = std::rand() % N) == i)
@@ -79,9 +82,8 @@ std::cout << startTime << std::endl;
 		std::cout << j << std::endl;
 		people[i]->gossip(*(people[j]));
 		printHash(people[j]);
-		for (int i = 0; i < people[1]->getHashgraph().size(); i++){
-			std::cout << "TREE 1 : " << &(people[1]->getHashgraph()[i]) << std::endl;
-		}
+		for (int i = 0; i < people[j]->getHashgraph().size(); i++)
+			std::cout << "TREE 1 : " << &(people[j]->getHashgraph()[i]) << std::endl;
 		refresh(people[j]);
 		sleep(1);
 		SDL_PollEvent(&event);

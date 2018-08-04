@@ -72,11 +72,11 @@ bool Event::operator==(Event &rhs){
 	return (timestamp == rhs.getTimestamp() && owner == rhs.getOwner());
 }
 
-bool Event::seeRecursion(Event *y, std::vector<Event> *forkCheck){
+bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
 	if (this->round < y->getRound())
 		return false;
 	if (this->getOwner() == y->getOwner())
-		(*forkCheck).push_back(*this);
+		(*forkCheck).push_back(this);
 	if (this == y)
 		return true;
 	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
