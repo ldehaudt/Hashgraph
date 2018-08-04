@@ -147,7 +147,6 @@ void Person::findOrder(){
 	Event *tmp;
 
 	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--)
-	{
 		for (int r = hashgraph[n]->getRound(); r <= hashgraph[0]->getRound(); r++)
 		{
 			w = findWitnesses(r);
@@ -181,12 +180,11 @@ void Person::findOrder(){
 			insertEvent(evnt);
 			break;
 		}
-	}
 }
 
 void Person::gossip(Person &p){
 	std::vector<Event> arr;
-	// std::list<Event>::iterator iter;
+	Event tmp;
 	bool b[N] = {false};
 	
 	Event* check = getTopNode(*this, p);
@@ -201,8 +199,17 @@ void Person::gossip(Person &p){
 		}
 		arr.insert(arr.end(), *(hashgraph[i]));
 	}
-// for (unsigned int i = 0; i < arr.size(); i++)
-// 	std::cout << "Gossip : " << arr[i].tVal << std::endl;
+ 	std::cout << std::endl;
+ 	for (unsigned int i = 0; i < arr.size(); i++)
+ 		for (unsigned int j = 0; j < arr.size(); j++)
+ 			if (arr[j] < arr[i])
+ 			{
+ 				tmp = arr[i];
+ 				arr[i] = arr[j];
+ 				arr[j] = tmp;
+ 			}
+for (unsigned int i = 0; i < arr.size(); i++)
+std::cout << "Gossip : " << arr[i].getTimestamp() << std::endl;
     p.recieveGossip(*this, arr);
 }
 
@@ -226,6 +233,7 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	time_t now;
 	double t;
 
+	// for (int count = 0; count < 10; count++)
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
 		for (n = 0; n < hashgraph.size(); n++)

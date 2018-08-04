@@ -48,6 +48,10 @@ Event & Event::operator=(const Event &rhs){
 	return (*this);
 }
 
+bool Event::operator<(const Event &rhs) const{
+	return timestamp < rhs.getTimestamp();
+}
+
 void Event::divideRounds(){
 	if (!this->selfParent)
 	{

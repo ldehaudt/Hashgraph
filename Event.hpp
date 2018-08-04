@@ -26,6 +26,7 @@ public:
 	Event & operator=(const Event &);
 	Event(Person &, Event *self, Event *gossiper, unsigned long t);
 	bool operator==(Event &);
+	bool operator<(const Event &) const;
 
 	bool see(Event*);
 	bool seeRecursion(Event *, std::vector<Event*> *);

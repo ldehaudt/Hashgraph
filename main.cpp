@@ -67,7 +67,7 @@ int main(){
 	time(&start_time);
 	srand(time(NULL));
 	SDL_Init(SDL_INIT_VIDEO);
-	win= SDL_CreateWindow("Hashgraph", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+	win= SDL_CreateWindow("Hashgraph", 1600, 0,
 		1000, 1400, SDL_WINDOW_SHOWN);
 	rend = SDL_CreateRenderer(win, -1, 0);
 	for (int i = 0; i < N; i++)
@@ -90,6 +90,6 @@ int main(){
 		// std::cout << j << std::endl;
 		people[i]->gossip(*(people[j]));
 		refresh(people[j]);
-		usleep(100000);
+		sleep(1);
 	}
 }
