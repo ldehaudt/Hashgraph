@@ -27,9 +27,9 @@ public:
 	Event(Person &, Event *self, Event *gossiper, unsigned long t);
 	bool operator==(Event &);
 
-	bool see(Event);
-	bool seeRecursion(Event y, std::vector<Event> *);
-	bool stronglySee(Event);
+	bool see(Event*);
+	bool seeRecursion(Event *, std::vector<Event> *);
+	bool stronglySee(Event*);
 	void divideRounds();
 	Event   *getSelfParent() const;
 	Person &getOwner() const; 

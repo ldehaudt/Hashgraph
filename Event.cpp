@@ -9,11 +9,6 @@ Person pdb;
 
 Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
 : selfParent(self), owner(p), gossiperParent(gossiper), timestamp(t) {
-	if (selfParent)
-	{
-		std::cout << "SelfParent " << selfParent->tVal << std::endl;
-		std::cout << "GossiperParent " << gossiperParent->tVal << std::endl;
-	}
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
@@ -77,18 +72,18 @@ bool Event::operator==(Event &rhs){
 	return (timestamp == rhs.getTimestamp() && owner == rhs.getOwner());
 }
 
-bool Event::seeRecursion(Event y, std::vector<Event> *forkCheck){
-	if (this->round < y.getRound())
+bool Event::seeRecursion(Event *y, std::vector<Event> *forkCheck){
+	if (this->round < y->getRound())
 		return false;
-	if (this->getOwner() == y.getOwner())
+	if (this->getOwner() == y->getOwner())
 		(*forkCheck).push_back(*this);
-	if (*this == y)
+	if (this == y)
 		return true;
 	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
 	this->getGossiperParent()->seeRecursion(y, forkCheck);
 }
 
-bool Event::see(Event y){
+bool Event::see(Event *y){
 	//fork stops when we reach y, might need to be changed !!
 	std::vector<Event> forkCheck;
 	bool b = seeRecursion(y, &forkCheck);
@@ -99,7 +94,7 @@ bool Event::see(Event y){
 	return b;
 }
 
-bool Event::stronglySee(Event y){
+bool Event::stronglySee(Event *y){
 	int numSee = 0;
 	int i;
 	std::vector<Person*> found;
@@ -110,10 +105,10 @@ bool Event::stronglySee(Event y){
 			if (*(found[i]) == owner)
 				break ;
 			if (i == numSee)
-				if (see(owner.getHashgraph()[n]) && owner.getHashgraph()[n].see(y))
+				if (see(owner.getHashgraph()[n]) && owner.getHashgraph()[n]->see(y))
 				{
 					numSee++;
-					found.push_back(&(owner.getHashgraph()[n].getOwner()));
+					found.push_back(&(owner.getHashgraph()[n]->getOwner()));
 					if (numSee > 2 * N / 3)
 						return true;
 				}
@@ -121,22 +116,22 @@ bool Event::stronglySee(Event y){
 	return false;
 }
 
-bool Event::fork(Event& x, Event& y){
+bool Event::fork(Event *x, Event *y){
 	Event *t;
 
-	if (!(x.getOwner() == y.getOwner()))
+	if (!(x->getOwner() == y->getOwner()))
 		return 0;
-	t = &x;
+	t = x;
 	while (t)
 	{
-		if (*t == y)
+		if (t == y)
 			return 0;
 		t = t->getSelfParent();
 	}
-	t = &y;
+	t = y;
 	while (t)
 	{
-		if (*t == x)
+		if (t == x)
 			return 0;
 		t = t->getSelfParent();
 	}
