@@ -7,9 +7,8 @@
 
 std::vector<Event*> Person::findWitnesses(int round){
 //probably need player whose graph to look into as param 
-	// std::list<Event>::iterator iter;
 	std::vector<Event*> witnesses;
-	for (unsigned int i = 0; getHashgraph()[i]->getRound() >= round - 1; i++){
+	for (unsigned int i = 0; i < getHashgraph().size() && getHashgraph()[i]->getRound() >= round - 1; i++){
 		if (getHashgraph()[i]->getRound() == round && getHashgraph()[i]->getWitness() == true){
 			witnesses.push_back(getHashgraph()[i]);
 		}
@@ -28,7 +27,6 @@ void Person::decideFame(){
 		if (hashgraph[x]->getFamous() != -1)
 			continue;
 		for (unsigned int y = hashgraph.size() - 1; y < hashgraph.size(); y--)
-		{
 			if (hashgraph[x]->getWitness() && hashgraph[y]->getWitness() &&
 				hashgraph[y]->getRound() > hashgraph[x]->getRound())
 			{
@@ -36,10 +34,7 @@ void Person::decideFame(){
 				s = findWitnesses(hashgraph[y]->getRound() - 1);
 				for (unsigned int t = 0; t < s.size(); t++)
 					if (! (hashgraph[y]->stronglySee(s[t])))
-					{
-						s.erase(s.begin() + t);
-						t--;
-					}
+						s.erase(s.begin() + t--);
 					unsigned int count = 0;
 					for (unsigned int i = 0; i < s.size(); i++)
 						if (s[i]->getVote() == true)
@@ -76,7 +71,6 @@ void Person::decideFame(){
 						}
 					}
 			}
-		}
 	}
 }
 
@@ -205,8 +199,10 @@ void Person::gossip(Person &p){
 			b[hashgraph[i]->getOwner().index] = true;
 			continue;
 		}
-		arr.push_back(*(hashgraph[i]));
+		arr.insert(arr.end(), *(hashgraph[i]));
 	}
+for (unsigned int i = 0; i < arr.size(); i++)
+	std::cout << "Gossip : " << arr[i].tVal << std::endl;
     p.recieveGossip(*this, arr);
 }
 
@@ -233,40 +229,41 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
 		for (n = 0; n < hashgraph.size(); n++)
-		{
 			if (*hashgraph[n] == gossip[i])
 				break ;
-		}
 		if (n < hashgraph.size())
 			continue ;
+		if (!(gossip[i].getSelfParent()))
+		{
+			gossip[i].divideRounds();
+			for (j = 0; j < hashgraph.size(); j++)
+				if (hashgraph[j]->getRound() <= gossip[i].getRound())
+					break;
+			Event *tmp = new Event(gossip[i]);
+			hashgraph.insert(hashgraph.begin() + j, tmp);
+			continue ;
+		}
 		self = false;
 		gos = false;
-		for (unsigned int k = 0; k < hashgraph.size(); i++)
+		for (unsigned int k = 0; k < hashgraph.size(); k++)
 		{
-			if (gossip[i].getSelfParent() == NULL)
-			{
-				gossip[i].divideRounds();
-				for (j = 0; j < hashgraph.size(); j++)
-					if (hashgraph[j]->getRound() <= gossip[i].getRound())
-						break;
-				Event *tmp = new Event(gossip[i]); // SKETCHY MAYBE !!!!!!
-				hashgraph.insert(hashgraph.begin() + j, tmp);
-				//hashgraph.insert(hashgraph.begin() + j, gossip[i]); 
-				break;
-			}
 			if (*(hashgraph[k]) == *(gossip[i].getSelfParent()))
 			{
+std::cout << "Hi I'm true\n";
 				gossip[i].setSelfParent(hashgraph[k]);
 				self = true;
 			}
 			if (*(hashgraph[k]) == *(gossip[i].getGossiperParent()))
 			{
+std::cout << "Hi I'm also true\n";
 				gossip[i].setGossiperParent(hashgraph[k]);
 				gos = true;
 			}
 			if ((self && gos) || !gossip[i].getSelfParent())
 			{
+std::cout << "here\n";
 				gossip[i].divideRounds();
+std::cout << "Now I'm here\n";
 				for (j = 0; j < hashgraph.size(); j++)
 					if (hashgraph[j]->getRound() <= gossip[i].getRound())
 						break;

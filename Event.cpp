@@ -58,18 +58,18 @@ void Event::divideRounds(){
 	if (this->gossiperParent->getRound() > round)
 		round = this->gossiperParent->getRound();
 	int numStrongSee = 0;
-	std::vector<Event*> witnesses = owner.findWitnesses(round);    
-	for (int i = 0; i < static_cast<int>(witnesses.size()); i++){
+	std::vector<Event*> witnesses = owner.findWitnesses(round); 
+	for (unsigned int i = 0; i < witnesses.size(); i++)
 		if (stronglySee(witnesses[i]))
 			numStrongSee++;
-	}
 	if (numStrongSee > 2 * N / 3)
 		round = round + 1;
 	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
 bool Event::operator==(Event &rhs){
-	return (timestamp == rhs.getTimestamp() && owner == rhs.getOwner());
+	//return (timestamp == rhs.getTimestamp() && owner == rhs.getOwner());
+	return (timestamp == rhs.getTimestamp() && owner.index == rhs.getOwner().index);
 }
 
 bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
@@ -79,6 +79,8 @@ bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
 		(*forkCheck).push_back(this);
 	if (this == y)
 		return true;
+	if (!this->getSelfParent())
+		return false;
 	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
 	this->getGossiperParent()->seeRecursion(y, forkCheck);
 }
