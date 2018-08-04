@@ -94,7 +94,12 @@ Person & Person::operator=(Person &){
 }
 
 Person::Person(int ind) : index(ind) {
-	Event* tmp = new Event(*this, NULL, NULL, (float(clock() - startTime) / CLOCKS_PER_SEC) * 10000);
+	time_t now;
+	double t;
+
+	time(&now);
+	t = difftime(now, start_time);
+	Event* tmp = new Event(*this, NULL, NULL, t);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
@@ -222,6 +227,8 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	bool gos;
 	unsigned int j;
 	unsigned int n;
+	time_t now;
+	double t;
 
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
@@ -270,8 +277,9 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 			}
 		}
 	}
-	auto t_end = std::chrono::high_resolution_clock::now();
-	createEvent(td::chrono::duration<double, std::milli>(t_end-start_time).count();, gossiper);
+	time(&now);
+	t = difftime(now, start_time);
+	createEvent(t, gossiper);
 }
 
 bool Person::operator==(Person &rhs){

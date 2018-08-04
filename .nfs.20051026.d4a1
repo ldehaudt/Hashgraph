@@ -1,6 +1,6 @@
 #include "Hashgraphs.hpp"
 
-time_t start_time;
+unsigned long startTime = clock();
 int testingNum = 1000;
 SDL_Window *win;
 SDL_Renderer *rend;
@@ -9,14 +9,14 @@ SDL_Event event;
 void    printHash(Person* p){
 	std::cout << "Printing person # " << p->index << "\n";
 	for (unsigned int i = 0; i < p->getHashgraph().size(); i++){
-		std::cout << p->getHashgraph()[i]->tVal << "; " << p->getHashgraph()[i]->getTimestamp() << "\n";
+		std::cout << p->getHashgraph()[i].tVal << "; " << p->getHashgraph()[i].getTimestamp() << "\n";
 	}
 }
 
 void square(Event *e)
 {
 	SDL_Rect rect;
-	int y = 1000 - e->getTimestamp() * 20;
+	int y = 1000 - e->getTimestamp() / 1500;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
 	rect.w = 20;
 	rect.h = 20;
@@ -27,9 +27,9 @@ void square(Event *e)
 
 void connect(Event *e, Event *p)
 {
-	int y = 1000 - e->getTimestamp() * 20;
+	int y = 1000 - e->getTimestamp() / 1500;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
-	int y2 = 1000 - p->getTimestamp() * 20;
+	int y2 = 1000 - p->getTimestamp() / 1500;
 	int x2 = 100 + p->getOwner().index * 800 / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 }
@@ -40,15 +40,18 @@ void refresh(Person *p)
 	SDL_RenderFillRect(rend, NULL);
 	SDL_SetRenderDrawColor(rend, 9, 71, 124, 255);
 
-	// for (int i = 0; i < N; i++)
-		// SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1000);
+	for (int i = 0; i < N; i++)
+		SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1000);
 	for (unsigned int i = 0; i < p->getHashgraph().size(); i++)
 	{
 		square(p->getHashgraph()[i]);
 		if (((p->getHashgraph())[i])->getSelfParent())
 		{
-			connect(p->getHashgraph()[i], ((p->getHashgraph())[i])->getSelfParent());
-			connect(p->getHashgraph()[i], ((p->getHashgraph())[i])->getGossiperParent());
+			std::cout << "STUFF : "<< ((p->getHashgraph())[i])->tVal << std::endl;
+			std::cout << "STUFF : "<< ((p->getHashgraph())[i])->getSelfParent() << std::endl;
+			std::cout << "STUFF : "<< ((p->getHashgraph())[i])->getSelfParent()->tVal << std::endl;
+			connect(p->getHashgraph()[i], *(((p->getHashgraph())[i])->getSelfParent()));
+			//connect(p->getHashgraph()[i], *(((p->getHashgraph())[i]).getGossiperParent()));
 		}
 	}
 	SDL_RenderPresent(rend);
@@ -56,8 +59,6 @@ void refresh(Person *p)
 
 int main(){
 	std::array<Person*, N> people;
-	auto t_start = std::chrono::high_resolution_clock::now();
-	time(&start_time);
 	srand(time(NULL));
 	SDL_Init(SDL_INIT_VIDEO);
 	win= SDL_CreateWindow("Hashgraph", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
@@ -66,13 +67,18 @@ int main(){
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
 	SDL_PollEvent(&event);
+
+std::cout << startTime << std::endl;
 	while (event.type != SDL_QUIT)
 	{
-		int i = std::rand() % N;
-		std::cout << i << std::endl;
-		int j;
-		while ((j = std::rand() % N) == i)
+		int i;
+		while ((i = std::rand() % N) != 1)
 			;
+		// int i = std::rand() % N;
+		std::cout << i << std::endl;
+		int j = 1;
+		// while ((j = std::rand() % N) == i)
+		// 	;
 		std::cout << j << std::endl;
 		people[i]->gossip(*(people[j]));
 		printHash(people[j]);
