@@ -54,7 +54,7 @@ public:
 //KILLLLL MMEEEEEEEEEEE
 
 
-	static bool fork(Event&, Event&);        
+	static bool fork(Event*, Event*);        
 };
 
 #endif

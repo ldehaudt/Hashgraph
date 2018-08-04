@@ -13,7 +13,7 @@ FLAGS = -Wfatal-errors
 all: $(NAME)
 
 $(NAME):
-	g++ -g $(FLAGS) $(SRC) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
+	g++ -g -std=c++11 $(FLAGS) $(SRC) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
 
 clean:
 	rm -f *.o

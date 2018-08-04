@@ -2,7 +2,7 @@
 #define HASHGRAPHS_HPP
 
 #include <SDL2/SDL.h>
-#include <ctime>
+#include <chrono>
 #include <iostream>
 #include <vector>
 #include <array>
@@ -18,7 +18,7 @@ extern int testingNum;
 
 class Person;
 
-extern unsigned long startTime;
+extern unsigned long  start_time;
 extern std::vector<Person*> people;
 
 #endif

@@ -19,7 +19,7 @@ For example, one event by Alice (red) records the fact that Bob performed a goss
 
 class Person{
 private:
-	std::vector<Event> hashgraph;
+	std::vector<Event*> hashgraph;
 	void createEvent(double time, Person &gossiper);
 	static Event *getTopNode(Person &, Person &);        
 
@@ -33,11 +33,11 @@ public:
 	int index;
 	bool operator==(Person &);
 	void recieveGossip(Person &, std::vector<Event> gossip);
-	std::vector<Event>    getHashgraph();
+	std::vector<Event*>    getHashgraph();
 	void decideFame();
 	void findOrder();
-	void insertEvent(Event event);
-	std::vector<Event> findWitnesses(int round);
+	void insertEvent(Event* event);
+	std::vector<Event*> findWitnesses(int round);
 	void gossip(Person &);
 };
 
