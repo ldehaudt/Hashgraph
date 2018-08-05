@@ -42,11 +42,16 @@ void connect(Event *e, Event *p)
 
 void refresh(Person *p)
 {
+	SDL_Rect rect;
+	rect.w = 1000;
+	rect.h = 1200;
+	rect.x = 0;
+	rect.y = 0;
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
-	SDL_RenderFillRect(rend, NULL);
+	SDL_RenderFillRect(rend, &rect);
 	SDL_SetRenderDrawColor(rend, 220, 220, 220, 255);
 	for (int i = 0; i < N; i++)
-		SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1400);
+		SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1200);
 	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
 	{
 		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * 10 > 1400)
@@ -60,7 +65,7 @@ void refresh(Person *p)
 	}
 	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
 	{
-		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * 10 > 1400)
+		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * 10 > 1200)
 			continue ;
 		square((*(p->getHashgraph()))[i]);
 	}
@@ -73,6 +78,41 @@ int main(){
 	SDL_Init(SDL_INIT_VIDEO);
 	win= SDL_CreateWindow("Hashgraph", 1600, 0, 1000, 1400, SDL_WINDOW_SHOWN);
 	rend = SDL_CreateRenderer(win, -1, 0);
+	SDL_Surface *tmpSurf;
+	SDL_Rect rect;
+	rect.w = 159;
+	rect.h = 159;
+	rect.x = 100;
+	rect.y = 1220;
+	tmpSurf = SDL_LoadBMP("ponies/1.bmp");
+	SDL_Texture* p1 = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
+	SDL_RenderCopy(rend, p1, NULL, &rect);
+	tmpSurf = SDL_LoadBMP("ponies/2.bmp");
+	SDL_Texture* p2 = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
+	rect.x += 800 / (N - 1);
+	SDL_RenderCopy(rend, p2, NULL, &rect);
+	tmpSurf = SDL_LoadBMP("ponies/3.bmp");
+	SDL_Texture* p3 = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
+	rect.x += 800 / (N - 1);
+	SDL_RenderCopy(rend, p3, NULL, &rect);
+	tmpSurf = SDL_LoadBMP("ponies/4.bmp");
+	SDL_Texture* p4 = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
+	rect.x += 800 / (N - 1);
+	SDL_RenderCopy(rend, p4, NULL, &rect);
+	tmpSurf = SDL_LoadBMP("ponies/5.bmp");
+	SDL_Texture* p5 = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
+	rect.x += 800 / (N - 1);
+	SDL_RenderCopy(rend, p5, NULL, &rect);
+	tmpSurf = SDL_LoadBMP("ponies/6.bmp");
+	SDL_Texture* p6 = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
+	rect.x += 800 / (N - 1);
+	SDL_RenderCopy(rend, p6, NULL, &rect);
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
 	// sleep(1);

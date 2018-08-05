@@ -60,9 +60,7 @@ public:
 	void	setGossiperParent(Event *);
 	void	decideFame();
 
-//KILLLLLLLLL MMMEEEEEEEE
 	int tVal; //KILL MEEEEEEEEEEEEE
-//KILLLLL MMEEEEEEEEEEE
 
 	static bool fork(Event*, Event*);        
 };
