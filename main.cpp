@@ -78,6 +78,8 @@ int main(){
 	SDL_Init(SDL_INIT_VIDEO);
 	win= SDL_CreateWindow("Hashgraph", 1600, 0, 1000, 1400, SDL_WINDOW_SHOWN);
 	rend = SDL_CreateRenderer(win, -1, 0);
+	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
+	SDL_RenderFillRect(rend, NULL);
 	SDL_Surface *tmpSurf;
 	SDL_Rect rect;
 	rect.w = 159;
