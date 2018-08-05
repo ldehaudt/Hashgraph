@@ -7,8 +7,14 @@
 
 Person pdb;
 
-Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
-: selfParent(self), owner(p), gossiperParent(gossiper), timestamp(t) {
+Event::Event(Person &p, int selfHash, int gossipHash, unsigned long t) //self and 
+: owner(p) {
+	d.timestamp = t;
+	d.selfP = selfHash;
+	d.gossipP = gossipHash;
+	d.owner = owner.index;
+	gossiperParent = NULL;
+	selfParent = NULL;
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
@@ -16,6 +22,7 @@ Event::Event(Person &p, Event *self, Event *gossiper, unsigned long t)
 	vote = false;
 	tVal = testingNum;
 	testingNum++;
+	hash = tVal;
 }
 
 Event::Event() : owner(pdb) {
@@ -28,28 +35,22 @@ Event::Event(const Event &rhs) : owner(rhs.owner) {
 
 Event & Event::operator=(const Event &rhs){
 	owner = rhs.getOwner();
-    if (rhs.getSelfParent())
-		selfParent = rhs.getSelfParent();
-	else
-		selfParent = NULL;
+    d.timestamp = rhs.getData().timestamp;
+	d.selfP = rhs.getData().selfP;
+	d.gossipP = rhs.getData().gossipP;
+	d.owner = rhs.getData().owner;
     //PAYLOAD  MISSING
-    if (rhs.getGossiperParent())
-		gossiperParent = rhs.getGossiperParent();
-	else
-		gossiperParent = NULL;
+	gossiperParent = NULL;
+	selfParent = NULL;
 	consensusTimestamp = rhs.getConsensusTimestamp();
-	timestamp = rhs.getTimestamp();
 	roundRecieved = rhs.getRoundRecieved();
 	round = rhs.getRound();
 	witness = rhs.getWitness();
 	famous = rhs.getFamous();
 	vote = rhs.getVote();
 	tVal = rhs.tVal; //KILLLLLLLLL MEMEMEMEMEMEMEMEMEMEME
+	hash = tVal; //change to md5 once that works
 	return (*this);
-}
-
-bool Event::operator<(const Event &rhs) const{
-	return timestamp < rhs.getTimestamp();
 }
 
 void Event::divideRounds(){
@@ -72,8 +73,8 @@ void Event::divideRounds(){
 }
 
 bool Event::operator==(Event &rhs){
-	//return (timestamp == rhs.getTimestamp() && owner == rhs.getOwner());
-	return (timestamp == rhs.getTimestamp() && owner.index == rhs.getOwner().index);
+	//return timestamp == rhs.getTimestamp() && owner.index == rhs.getOwner().index;
+	return (hash == rhs.getHash()); // change once actualt hash used
 }
 
 bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
@@ -153,14 +154,17 @@ Person &Event::getOwner() const {
 Event  *Event::getGossiperParent() const {    
 	return (gossiperParent);
 }
-unsigned long   Event::getTimestamp() const {    
-	return (timestamp);
+data   Event::getData() const{
+	return d;
 }
 int     Event::getRound() const {    
 	return (round);
 }
 bool    Event::getWitness() const {    
 	return (witness);
+}
+int		Event::getHash() const{
+	return hash;
 }
 unsigned long  Event::getConsensusTimestamp() const {    
 	return (consensusTimestamp);

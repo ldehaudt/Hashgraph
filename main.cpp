@@ -10,14 +10,14 @@ bool stop = 0;
 void    printHash(Person* p){
 	std::cout << "Printing person # " << p->index << "\n";
 	for (unsigned int i = 0; i < p->getHashgraph().size(); i++){
-		std::cout << p->getHashgraph()[i]->tVal << "; " << p->getHashgraph()[i]->getTimestamp() << "\n";
+		std::cout << p->getHashgraph()[i]->tVal << "; " << p->getHashgraph()[i]->getData().timestamp << "\n";
 	}
 }
 
 void square(Event *e)
 {
 	SDL_Rect rect;
-	int y = 1350 - e->getTimestamp() * 20;
+	int y = 1350 - e->getData().timestamp * 20;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
 	if (e->getFamous() == 1)
 		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
@@ -34,9 +34,9 @@ void square(Event *e)
 
 void connect(Event *e, Event *p)
 {
-	int y = 1350 - e->getTimestamp() * 20;
+	int y = 1350 - e->getData().timestamp * 20;
 	int x = 100 + e->getOwner().index * 800 / (N - 1);
-	int y2 = 1350 - p->getTimestamp() * 20;
+	int y2 = 1350 - p->getData().timestamp * 20;
 	int x2 = 100 + p->getOwner().index * 800 / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 }

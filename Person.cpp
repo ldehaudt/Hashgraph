@@ -93,7 +93,7 @@ Person::Person(int ind) : index(ind) {
 
 	time(&now);
 	t = difftime(now, start_time);
-	Event* tmp = new Event(*this, NULL, NULL, t);
+	Event* tmp = new Event(*this, 0, 0, t);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
@@ -168,7 +168,7 @@ void Person::findOrder(){
 				tmp = ufw[j];
 				while (tmp->getSelfParent()->seeRecursion(hashgraph[n], &db))
 					tmp = tmp->getSelfParent();
-				s.push_back(tmp->getTimestamp());
+				s.push_back(tmp->getData().timestamp);
 			}
 			std::sort(s.begin(),s.end());
 			if (s.size() % 2 != 0)
@@ -200,28 +200,33 @@ void Person::gossip(Person &p){
 		arr.insert(arr.end(), *(hashgraph[i]));
 	}
  	std::cout << std::endl;
- 	for (unsigned int i = 0; i < arr.size(); i++)
- 		for (unsigned int j = 0; j < arr.size(); j++)
- 			if (arr[j] < arr[i])
- 			{
- 				tmp = arr[i];
- 				arr[i] = arr[j];
- 				arr[j] = tmp;
- 			}
+ 	// for (unsigned int i = 0; i < arr.size(); i++)
+ 	// 	for (unsigned int j = 0; j < arr.size(); j++)
+ 	// 		if (arr[j] < arr[i])
+ 	// 		{xsss
+ 	// 			tmp = arr[i];
+ 	// 			arr[i] = arr[j];
+ 	// 			arr[j] = tmp;
+ 	// 		}
 for (unsigned int i = 0; i < arr.size(); i++)
-std::cout << "Gossip : " << arr[i].getTimestamp() << std::endl;
+std::cout << "Gossip : " << arr[i].getData().timestamp << std::endl;
     p.recieveGossip(*this, arr);
 }
 
 Event *Person::getTopNode(Person &p, Person &target){
+	Event *top = NULL;
+	int t = -1;
 	for (unsigned int i = 0; i < p.hashgraph.size(); i++)
-		if (p.hashgraph[i]->getOwner() == target)
-			return (p.hashgraph[i]);
-	return NULL;
+		if (p.hashgraph[i]->getOwner() == target && p.hashgraph[i]->getData().timestamp > t){
+			t = p.hashgraph[i]->getData().timestamp;
+			top = p.hashgraph[i];
+		}
+
+	return top;
 }
 
 void Person::createEvent(double time, Person &gossiper){
-	Event *tmp = new Event(*this, Person::getTopNode(*this, *this), Person::getTopNode(*this, gossiper), time);
+	Event *tmp = new Event(*this, Person::getTopNode(*this, *this)->getHash(), Person::getTopNode(*this, gossiper)->getHash(), time);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
@@ -253,33 +258,63 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 		}
 		self = false;
 		gos = false;
-		for (unsigned int k = 0; k < hashgraph.size(); k++)
-		{
-			if (*(hashgraph[k]) == *(gossip[i].getSelfParent()))
-			{
-				gossip[i].setSelfParent(hashgraph[k]);
-				self = true;
-			}
-			if (*(hashgraph[k]) == *(gossip[i].getGossiperParent()))
-			{
-				gossip[i].setGossiperParent(hashgraph[k]);
-				gos = true;
-			}
-			if ((self && gos) || !gossip[i].getSelfParent())
-			{
-				gossip[i].divideRounds();
-				for (j = 0; j < hashgraph.size(); j++)
-					if (hashgraph[j]->getRound() <= gossip[i].getRound())
-						break;
-				Event *tmp = new Event(gossip[i]); // SKETCHY MAYBE !!!!!!
-				hashgraph.insert(hashgraph.begin() + j, tmp);
+		// for (unsigned int k = 0; k < hashgraph.size(); k++)
+		// {
+		// 	if (*(hashgraph[k]) == *(gossip[i].getSelfParent()))
+		// 	{
+		// 		gossip[i].setSelfParent(hashgraph[k]);
+		// 		self = true;
+		// 	}
+		// 	if (*(hashgraph[k]) == *(gossip[i].getGossiperParent()))
+		// 	{
+		// 		gossip[i].setGossiperParent(hashgraph[k]);
+		// 		gos = true;
+		// 	}
+		// 	if ((self && gos))
+		// 	{
+		gossip[i].divideRounds();
+		for (j = 0; j < hashgraph.size(); j++)
+			if (hashgraph[j]->getRound() <= gossip[i].getRound())
 				break;
-			}
-		}
+		Event *tmp = new Event(gossip[i]); // SKETCHY MAYBE !!!!!!
+		hashgraph.insert(hashgraph.begin() + j, tmp);
+
+			//	break;
+		// 	}
+		// }
 	}
+
+	
 	time(&now);
 	t = difftime(now, start_time);
 	createEvent(t, gossiper);
+	linkEvents();
+}
+
+void Person::linkEvents(){
+	for (int i = 0; i < hashgraph.size(); i++){
+		if (hashgraph[i]->getSelfParent() == NULL && hashgraph[i]->getData().selfP != 0){// 0 means NULL
+			int targetSelf = hashgraph[i]->getData().selfP;
+			int targetGossip = hashgraph[i]->getData().gossipP;
+			int c = 0;
+			for (int j = 0; j < hashgraph.size(); j++){
+				if (hashgraph[j]->getHash() == targetSelf){
+					hashgraph[i]->setSelfParent(hashgraph[j]);
+					c++;
+					if (c == 2){
+						break;
+					}
+				}
+				if (hashgraph[j]->getHash() == targetGossip){
+					hashgraph[i]->setGossiperParent(hashgraph[j]);
+					c++;
+					if (c == 2){
+						break;
+					}
+				}
+			}
+		}
+	}
 }
 
 bool Person::operator==(Person &rhs){
