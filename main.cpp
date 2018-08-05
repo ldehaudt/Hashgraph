@@ -5,22 +5,19 @@ int testingNum = 1000;
 SDL_Window *win;
 SDL_Renderer *rend;
 SDL_Event event;
+std::array<Person*, N> people;
 bool stop = 0;
-
-void    printHash(Person* p){
-	std::cout << "Printing person # " << p->index << "\n";
-	for (unsigned int i = 0; i < p->getHashgraph().size(); i++){
-		std::cout << p->getHashgraph()[i]->tVal << "; " << p->getHashgraph()[i]->getData().timestamp << "\n";
-	}
-}
+int personShown;
 
 void square(Event *e)
 {
 	SDL_Rect rect;
-	int y = 1350 - e->getData().timestamp * 20;
-	int x = 100 + e->getOwner().index * 800 / (N - 1);
+	int y = 1350 - e->getData().timestamp * 10;
+	int x = 100 + e->getOwner() * 800 / (N - 1);
 	if (e->getFamous() == 1)
 		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
+	else if (e->getFamous() == 0)
+		SDL_SetRenderDrawColor(rend, 130, 130, 130, 255);
 	else if (e->getWitness() == 1)
 		SDL_SetRenderDrawColor(rend, 163, 0, 0, 255);
 	else
@@ -34,35 +31,36 @@ void square(Event *e)
 
 void connect(Event *e, Event *p)
 {
-	int y = 1350 - e->getData().timestamp * 20;
-	int x = 100 + e->getOwner().index * 800 / (N - 1);
-	int y2 = 1350 - p->getData().timestamp * 20;
-	int x2 = 100 + p->getOwner().index * 800 / (N - 1);
+	int y = 1350 - e->getData().timestamp * 10;
+	int x = 100 + e->getOwner() * 800 / (N - 1);
+	int y2 = 1350 - p->getData().timestamp * 10;
+	int x2 = 100 + p->getOwner() * 800 / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
+	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
+	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
 }
 
 void refresh(Person *p)
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
 	SDL_RenderFillRect(rend, NULL);
-	SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
+	SDL_SetRenderDrawColor(rend, 220, 220, 220, 255);
 	for (int i = 0; i < N; i++)
 		SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1400);
-	for (unsigned int i = 0; i < p->getHashgraph().size(); i++)
+	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
 	{
-		square(p->getHashgraph()[i]);
-		SDL_SetRenderDrawColor(rend, 9, 71, 124, 255);
-		if (((p->getHashgraph())[i])->getSelfParent())
+		SDL_SetRenderDrawColor(rend, 150, 150, 150, 255);
+		if ((*(p->getHashgraph()))[i]->getSelfParent())
 		{
-			connect(p->getHashgraph()[i], ((p->getHashgraph())[i])->getSelfParent());
-			connect(p->getHashgraph()[i], ((p->getHashgraph())[i])->getGossiperParent());
+			connect((*(p->getHashgraph()))[i], ((*(p->getHashgraph()))[i])->getSelfParent());
+			connect((*(p->getHashgraph()))[i], ((*(p->getHashgraph()))[i])->getGossiperParent());
 		}
+		square((*(p->getHashgraph()))[i]);
 	}
 	SDL_RenderPresent(rend);
 }
 
 int main(){
-	std::array<Person*, N> people;
 	auto t_start = std::chrono::high_resolution_clock::now();
 	time(&start_time);
 	srand(time(NULL));
@@ -71,121 +69,132 @@ int main(){
 	rend = SDL_CreateRenderer(win, -1, 0);
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
-	sleep(1);
-	people[1]->gossip(*(people[3]));
-	refresh(people[3]);
-	sleep(1);
-	people[3]->gossip(*(people[1]));
-	refresh(people[1]);
-	sleep(1);
-	people[1]->gossip(*(people[3]));
-	refresh(people[1]);
-	sleep(1);
-	people[1]->gossip(*(people[0]));
-	refresh(people[1]);
-	sleep(1);
-	people[2]->gossip(*(people[1]));
-	refresh(people[1]);
-	sleep(1);
-	people[1]->gossip(*(people[3]));
-	refresh(people[1]);
-	sleep(1);
-	people[1]->gossip(*(people[2]));
-	refresh(people[1]);
-	sleep(1);
-	people[3]->gossip(*(people[1]));
-	refresh(people[1]);
-	sleep(1);
-	people[0]->gossip(*(people[3]));
-	refresh(people[1]);
-	sleep(1);
-	people[3]->gossip(*(people[0]));
-	refresh(people[1]);
-	sleep(1);
-	people[3]->gossip(*(people[1]));
-	refresh(people[1]);
-	sleep(1);
-	people[2]->gossip(*(people[0]));
-	refresh(people[1]);
-	sleep(1);
-	people[1]->gossip(*(people[3]));
-	refresh(people[1]);
-	sleep(1);
-	people[0]->gossip(*(people[2]));
-	refresh(people[1]);
-	sleep(1);
-	people[1]->gossip(*(people[0]));
-	sleep(1);
-	refresh(people[1]);
-	people[0]->gossip(*(people[3]));
-	sleep(1);
-	refresh(people[1]);
-	people[0]->gossip(*(people[1]));
-	sleep(1);
-	refresh(people[1]);
-	people[3]->gossip(*(people[1]));
-	sleep(1);
-	refresh(people[1]);
-	people[1]->gossip(*(people[3]));
-	sleep(1);
-	refresh(people[1]);
-	people[1]->gossip(*(people[0]));
-	sleep(1);
-	refresh(people[1]);
-	people[0]->gossip(*(people[1]));
-	sleep(1);
-	refresh(people[1]);
-	people[2]->gossip(*(people[3]));
-	sleep(1);
-	refresh(people[1]);
-	people[3]->gossip(*(people[2]));
-	sleep(1);
-	refresh(people[1]);
-	people[0]->gossip(*(people[1]));
-	sleep(1);
-	refresh(people[1]);
-	people[1]->gossip(*(people[0]));
-	sleep(1);
-	refresh(people[1]);
-	people[0]->gossip(*(people[1]));
-	sleep(1);
-	refresh(people[1]);
-	people[1]->gossip(*(people[3]));
-	sleep(1);
-	refresh(people[1]);
-	while (1)
-		;
-	people[2]->gossip(*(people[3]));
-	sleep(1);
-	refresh(people[1]);
-	people[3]->gossip(*(people[1]));
-	sleep(1);
-	refresh(people[1]);
-	while (1)
-		;
-	sleep(1);
+	// sleep(1);
+	// people[1]->gossip(*(people[3]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[3]->gossip(*(people[1]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[1]->gossip(*(people[3]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[1]->gossip(*(people[0]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[2]->gossip(*(people[1]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[1]->gossip(*(people[3]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[1]->gossip(*(people[2]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[3]->gossip(*(people[1]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[0]->gossip(*(people[3]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[3]->gossip(*(people[0]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[3]->gossip(*(people[1]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[2]->gossip(*(people[0]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[1]->gossip(*(people[3]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[0]->gossip(*(people[2]));
+	// refresh(people[1]);
+	// sleep(1);
+	// people[1]->gossip(*(people[0]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[0]->gossip(*(people[3]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[0]->gossip(*(people[1]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[3]->gossip(*(people[1]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[1]->gossip(*(people[3]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[1]->gossip(*(people[0]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[0]->gossip(*(people[1]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[2]->gossip(*(people[3]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[3]->gossip(*(people[2]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[1]->gossip(*(people[0]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[3]->gossip(*(people[1]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[1]->gossip(*(people[0]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[1]->gossip(*(people[3]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[0]->gossip(*(people[1]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[2]->gossip(*(people[3]));
+	// sleep(1);
+	// refresh(people[1]);
+	// people[3]->gossip(*(people[1]));
+	// sleep(1);
+	// refresh(people[1]);
 	// while (1)
-	// {
-	// 	while (SDL_PollEvent(&event))
-	// 	{
-	// 	    if (event.type == SDL_KEYDOWN)
-	// 	    {
-	// 	        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
-	// 	            exit (1);
-	// 	        if (event.key.keysym.sym == SDLK_SPACE)
-	// 	            stop = !stop;
-	// 	    }
-	// 	}
-	// 	if (stop)
-	// 		continue ;
-	// 	int i = std::rand() % N;
-	// 	// std::cout << i << std::endl;
-	// 	int j;
-	// 	while ((j = std::rand() % N) == i)
-	// 		;
-	// 	// std::cout << j << std::endl;
-	// 	people[i]->gossip(*(people[j]));
-	// 	refresh(people[j]);
-	// 	sleep(1);
-	// }
+	// 	;
+	sleep(1);
+	personShown = 1;
+	while (1)
+	{
+		while (SDL_PollEvent(&event))
+		{
+		    if (event.type == SDL_KEYDOWN || event.type == SDL_QUIT)
+		    {
+		        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
+		            exit (1);
+		        if (event.key.keysym.sym == SDLK_SPACE)
+		            stop = !stop;
+		        if (event.key.keysym.sym == SDLK_1)
+		        	personShown = 1;
+		        if (event.key.keysym.sym == SDLK_2)
+		        	personShown = 2;
+		        if (event.key.keysym.sym == SDLK_3)
+		        	personShown = 3;
+		        if (event.key.keysym.sym == SDLK_4)
+		        	personShown = 4;
+				refresh(people[personShown]);
+		    }
+		}
+		if (stop)
+			continue ;
+		int i = std::rand() % N;
+		// std::cout << i << std::endl;
+		int j;
+		while ((j = std::rand() % N) == i)
+			;
+		// std::cout << j << std::endl;
+		people[i]->gossip(*(people[j]));
+		refresh(people[personShown]);
+		sleep(1);
+	}
 }

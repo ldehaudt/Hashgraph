@@ -21,7 +21,7 @@ class Person{
 private:
 	std::vector<Event*> hashgraph;
 	void createEvent(double time, Person &gossiper);
-	static Event *getTopNode(Person &, Person &);        
+	Event *getTopNode(Person &);        
 
 public:
 	Person();
@@ -33,8 +33,7 @@ public:
 	int index;
 	bool operator==(Person &);
 	void recieveGossip(Person &, std::vector<Event> gossip);
-	std::vector<Event*>    getHashgraph();
-	void decideFame();
+	std::vector<Event*>    *getHashgraph();
 	void findOrder();
 	void linkEvents(std::vector<Event*>);
 	void insertEvent(Event* event);

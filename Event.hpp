@@ -16,7 +16,8 @@ class Person;
 
 class Event{
 private:
-	Person &owner; //PROB KILL
+	int owner;
+	std::vector<Event*> *graph;
 	//PAYLOAD  MISSING
 	//t_byte hash[32];
 	int hash;
@@ -28,22 +29,21 @@ private:
 	int     round;
 	bool    witness;
 	char    famous;
-	bool    vote;
 	//missing signature
 public:
 	Event();
 	~Event();
 	Event(const Event &);
 	Event & operator=(const Event &);
-	Event(Person &p, int selfHash, int gossipHash, unsigned long t);
+	Event(int p, int selfHash, int gossipHash, unsigned long t);
 	bool operator==(Event &);
 	bool operator<(const Event &) const;
 	bool see(Event*);
-	bool seeRecursion(Event *, std::vector<Event*> *);
+	// bool seeRecursion(Event *, std::vector<Event*> *);
 	bool stronglySee(Event*);
 	void divideRounds();
 	Event   *getSelfParent() const;
-	Person &getOwner() const; 
+	int getOwner() const; 
 	Event   *getGossiperParent() const;
 	data   getData() const;
 	int     getRound() const;
@@ -51,20 +51,18 @@ public:
 	unsigned long   getConsensusTimestamp() const;
 	int     getRoundRecieved() const;
 	char    getFamous() const;
-	bool    getVote() const;
 	int		getHash() const;
-
+	std::vector<Event*> *getGraph() const;
 	void    setFamous(char);
-	void    setVote(bool);
 	void    setRoundReceived(int);
 	void    setConsensusTimestamp(unsigned long );
 	void	setSelfParent(Event *);
 	void	setGossiperParent(Event *);
+	void	decideFame();
 
 //KILLLLLLLLL MMMEEEEEEEE
 	int tVal; //KILL MEEEEEEEEEEEEE
 //KILLLLL MMEEEEEEEEEEE
-
 
 	static bool fork(Event*, Event*);        
 };
