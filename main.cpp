@@ -67,29 +67,125 @@ int main(){
 	time(&start_time);
 	srand(time(NULL));
 	SDL_Init(SDL_INIT_VIDEO);
-	win= SDL_CreateWindow("Hashgraph", 1600, 0,
-		1000, 1400, SDL_WINDOW_SHOWN);
+	win= SDL_CreateWindow("Hashgraph", 1600, 0, 1000, 1400, SDL_WINDOW_SHOWN);
 	rend = SDL_CreateRenderer(win, -1, 0);
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
 	sleep(1);
+	people[1]->gossip(*(people[3]));
+	refresh(people[3]);
+	sleep(1);
+	people[3]->gossip(*(people[1]));
+	refresh(people[1]);
+	sleep(1);
+	people[1]->gossip(*(people[3]));
+	refresh(people[1]);
+	sleep(1);
+	people[1]->gossip(*(people[0]));
+	refresh(people[1]);
+	sleep(1);
+	people[2]->gossip(*(people[1]));
+	refresh(people[1]);
+	sleep(1);
+	people[1]->gossip(*(people[3]));
+	refresh(people[1]);
+	sleep(1);
+	people[1]->gossip(*(people[2]));
+	refresh(people[1]);
+	sleep(1);
+	people[3]->gossip(*(people[1]));
+	refresh(people[1]);
+	sleep(1);
+	people[0]->gossip(*(people[3]));
+	refresh(people[1]);
+	sleep(1);
+	people[3]->gossip(*(people[0]));
+	refresh(people[1]);
+	sleep(1);
+	people[3]->gossip(*(people[1]));
+	refresh(people[1]);
+	sleep(1);
+	people[2]->gossip(*(people[0]));
+	refresh(people[1]);
+	sleep(1);
+	people[1]->gossip(*(people[3]));
+	refresh(people[1]);
+	sleep(1);
+	people[0]->gossip(*(people[2]));
+	refresh(people[1]);
+	sleep(1);
+	people[1]->gossip(*(people[0]));
+	sleep(1);
+	refresh(people[1]);
+	people[0]->gossip(*(people[3]));
+	sleep(1);
+	refresh(people[1]);
+	people[0]->gossip(*(people[1]));
+	sleep(1);
+	refresh(people[1]);
+	people[3]->gossip(*(people[1]));
+	sleep(1);
+	refresh(people[1]);
+	people[1]->gossip(*(people[3]));
+	sleep(1);
+	refresh(people[1]);
+	people[1]->gossip(*(people[0]));
+	sleep(1);
+	refresh(people[1]);
+	people[0]->gossip(*(people[1]));
+	sleep(1);
+	refresh(people[1]);
+	people[2]->gossip(*(people[3]));
+	sleep(1);
+	refresh(people[1]);
+	people[3]->gossip(*(people[2]));
+	sleep(1);
+	refresh(people[1]);
+	people[0]->gossip(*(people[1]));
+	sleep(1);
+	refresh(people[1]);
+	people[1]->gossip(*(people[0]));
+	sleep(1);
+	refresh(people[1]);
+	people[0]->gossip(*(people[1]));
+	sleep(1);
+	refresh(people[1]);
+	people[1]->gossip(*(people[3]));
+	sleep(1);
+	refresh(people[1]);
 	while (1)
-	{
-		SDL_PollEvent(&event);
-		if (event.type == SDL_QUIT || event.type == SDLK_ESCAPE)
-			exit (1);
-		if (event.type == SDLK_KP_SPACE)
-			stop = !stop;
-		if (stop)
-			continue ;
-		int i = std::rand() % N;
-		// std::cout << i << std::endl;
-		int j;
-		while ((j = std::rand() % N) == i)
-			;
-		// std::cout << j << std::endl;
-		people[i]->gossip(*(people[j]));
-		refresh(people[j]);
-		sleep(1);
-	}
+		;
+	people[2]->gossip(*(people[3]));
+	sleep(1);
+	refresh(people[1]);
+	people[3]->gossip(*(people[1]));
+	sleep(1);
+	refresh(people[1]);
+	while (1)
+		;
+	sleep(1);
+	// while (1)
+	// {
+	// 	while (SDL_PollEvent(&event))
+	// 	{
+	// 	    if (event.type == SDL_KEYDOWN)
+	// 	    {
+	// 	        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
+	// 	            exit (1);
+	// 	        if (event.key.keysym.sym == SDLK_SPACE)
+	// 	            stop = !stop;
+	// 	    }
+	// 	}
+	// 	if (stop)
+	// 		continue ;
+	// 	int i = std::rand() % N;
+	// 	// std::cout << i << std::endl;
+	// 	int j;
+	// 	while ((j = std::rand() % N) == i)
+	// 		;
+	// 	// std::cout << j << std::endl;
+	// 	people[i]->gossip(*(people[j]));
+	// 	refresh(people[j]);
+	// 	sleep(1);
+	// }
 }

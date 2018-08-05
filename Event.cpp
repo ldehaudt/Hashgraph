@@ -9,6 +9,7 @@ Person pdb;
 
 Event::Event(Person &p, int selfHash, int gossipHash, unsigned long t) //self and 
 : owner(p) {
+	round = 0;
 	d.timestamp = t;
 	d.selfP = selfHash;
 	d.gossipP = gossipHash;
@@ -60,20 +61,26 @@ void Event::divideRounds(){
 		return;
 	}
 	round = this->selfParent->getRound();
+std::cout << "Parent: owner: " << this->selfParent->getOwner().index << " ; time: "
+<< this->selfParent->getData().timestamp << " round: " << this->selfParent->getRound() << std::endl;
+std::cout << "GossiperParent: owner: " << this->gossiperParent->getOwner().index << " ; time: "
+<< this->gossiperParent->getData().timestamp << " round: " << this->gossiperParent->getRound() << std::endl;
 	if (this->gossiperParent->getRound() > round)
 		round = this->gossiperParent->getRound();
 	int numStrongSee = 0;
-	std::vector<Event*> witnesses = owner.findWitnesses(round); 
+	std::vector<Event*> witnesses = owner.findWitnesses(round);
+std::cout << "here?\n";
 	for (unsigned int i = 0; i < witnesses.size(); i++)
 		if (stronglySee(witnesses[i]))
 			numStrongSee++;
 	if (numStrongSee > 2 * N / 3)
 		round = round + 1;
+std::cout << "owner: " << owner.index << " ; time: "
+<< d.timestamp << " round: " << round << std::endl;
 	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
 bool Event::operator==(Event &rhs){
-	//return timestamp == rhs.getTimestamp() && owner.index == rhs.getOwner().index;
 	return (hash == rhs.getHash()); // change once actualt hash used
 }
 
@@ -102,25 +109,22 @@ bool Event::see(Event *y){
 }
 
 bool Event::stronglySee(Event *y){
-	int numSee = 0;
-	int i;
-	std::vector<Person*> found;
-	// std::list<Event>::iterator iter;
-	for (unsigned int n = 0; n < owner.getHashgraph().size(); n++)
-	{
-		for (i = 0; i < numSee; i++)
-			if (*(found[i]) == owner)
-				break ;
-			if (i == numSee)
-				if (see(owner.getHashgraph()[n]) && owner.getHashgraph()[n]->see(y))
-				{
-					numSee++;
-					found.push_back(&(owner.getHashgraph()[n]->getOwner()));
-					if (numSee > 2 * N / 3)
-						return true;
-				}
-	}
-	return false;
+    int numSee = 0;
+    std::array<bool, N> found = {false};
+
+    for (unsigned int n = 0; n < owner.getHashgraph().size(); n++)
+    {
+        if (found[owner.getHashgraph()[n]->getOwner().index] == true)
+            continue ;
+        if (see(owner.getHashgraph()[n]) && owner.getHashgraph()[n]->see(y))
+        {
+            numSee++;
+            found[owner.getHashgraph()[n]->getOwner().index] = true;
+            if (numSee > 2 * N / 3)
+                return true;
+        }
+    }
+    return false;
 }
 
 bool Event::fork(Event *x, Event *y){

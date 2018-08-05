@@ -6,13 +6,12 @@
 #include <iostream>
 
 std::vector<Event*> Person::findWitnesses(int round){
-//probably need player whose graph to look into as param 
 	std::vector<Event*> witnesses;
-	for (unsigned int i = 0; i < getHashgraph().size() && getHashgraph()[i]->getRound() >= round - 1; i++){
-		if (getHashgraph()[i]->getRound() == round && getHashgraph()[i]->getWitness() == true){
+	for (unsigned int i = 0; i < getHashgraph().size()
+		&& getHashgraph()[i]->getRound() >= round - 1; i++)
+		if (getHashgraph()[i]->getRound() == round
+			&& getHashgraph()[i]->getWitness() == true)
 			witnesses.push_back(getHashgraph()[i]);
-		}
-	}
 	return witnesses;
 }
 
@@ -123,17 +122,21 @@ void    Person::insertEvent(Event* event){
 	unsigned int i;
 
 	for (i = 0; i < hashgraph.size(); i++)
-		if (hashgraph[i]->getRoundRecieved() != -1 && hashgraph[i]->getRoundRecieved() <= event->getRoundRecieved())
+		if (hashgraph[i]->getRoundRecieved() != -1
+			&& hashgraph[i]->getRoundRecieved() <= event->getRoundRecieved())
 			break;
 	while (i != hashgraph.size() &&
-		(hashgraph[i]->getRoundRecieved() == -1 || hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
+		(hashgraph[i]->getRoundRecieved() == -1
+			|| hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
 		&& hashgraph[i]->getConsensusTimestamp() <= event->getConsensusTimestamp())
 		i++;
 
 	while (i != hashgraph.size() &&
-		(hashgraph[i]->getRoundRecieved() == -1 || hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
+		(hashgraph[i]->getRoundRecieved() == -1
+			|| hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
 		&& hashgraph[i]->getConsensusTimestamp() == event->getConsensusTimestamp()
-   		 && hashgraph[i]->getOwner().index < hashgraph[i]->getOwner().index) //CHANGE INDEX TO SIGNATURE YA PLEB
+   		 && hashgraph[i]->getOwner().index < hashgraph[i]->getOwner().index)
+   		 //CHANGE INDEX TO SIGNATURE YA PLEB
 		i++;
 	hashgraph.insert(hashgraph.begin() + i, event);
 }
@@ -184,7 +187,6 @@ void Person::findOrder(){
 
 void Person::gossip(Person &p){
 	std::vector<Event> arr;
-	Event tmp;
 	bool b[N] = {false};
 	
 	Event* check = getTopNode(*this, p);
@@ -199,18 +201,8 @@ void Person::gossip(Person &p){
 		}
 		arr.insert(arr.end(), *(hashgraph[i]));
 	}
- 	std::cout << std::endl;
- 	// for (unsigned int i = 0; i < arr.size(); i++)
- 	// 	for (unsigned int j = 0; j < arr.size(); j++)
- 	// 		if (arr[j] < arr[i])
- 	// 		{xsss
- 	// 			tmp = arr[i];
- 	// 			arr[i] = arr[j];
- 	// 			arr[j] = tmp;
- 	// 		}
-for (unsigned int i = 0; i < arr.size(); i++)
-std::cout << "Gossip : " << arr[i].getData().timestamp << std::endl;
     p.recieveGossip(*this, arr);
+std::cout << std::endl;
 }
 
 Event *Person::getTopNode(Person &p, Person &target){
@@ -221,22 +213,21 @@ Event *Person::getTopNode(Person &p, Person &target){
 			t = p.hashgraph[i]->getData().timestamp;
 			top = p.hashgraph[i];
 		}
-
 	return top;
 }
 
 void Person::createEvent(double time, Person &gossiper){
-	Event *tmp = new Event(*this, Person::getTopNode(*this, *this)->getHash(), Person::getTopNode(*this, gossiper)->getHash(), time);
+	Event *tmp = new Event(*this, Person::getTopNode(*this, *this)->getHash(),
+		Person::getTopNode(*this, gossiper)->getHash(), time);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
 void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
-	bool self;
-	bool gos;
-	unsigned int j;
 	unsigned int n;
 	time_t now;
 	double t;
+	Event *tmp;
+	std::vector<Event*> nEvents;
 
 	// for (int count = 0; count < 10; count++)
 	for (unsigned int i = 0; i < gossip.size(); i++)
@@ -246,71 +237,51 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 				break ;
 		if (n < hashgraph.size())
 			continue ;
-		if (!(gossip[i].getSelfParent()))
-		{
-			gossip[i].divideRounds();
-			for (j = 0; j < hashgraph.size(); j++)
-				if (hashgraph[j]->getRound() <= gossip[i].getRound())
-					break;
-			Event *tmp = new Event(gossip[i]);
-			hashgraph.insert(hashgraph.begin() + j, tmp);
-			continue ;
-		}
-		self = false;
-		gos = false;
-		// for (unsigned int k = 0; k < hashgraph.size(); k++)
-		// {
-		// 	if (*(hashgraph[k]) == *(gossip[i].getSelfParent()))
-		// 	{
-		// 		gossip[i].setSelfParent(hashgraph[k]);
-		// 		self = true;
-		// 	}
-		// 	if (*(hashgraph[k]) == *(gossip[i].getGossiperParent()))
-		// 	{
-		// 		gossip[i].setGossiperParent(hashgraph[k]);
-		// 		gos = true;
-		// 	}
-		// 	if ((self && gos))
-		// 	{
-		gossip[i].divideRounds();
-		for (j = 0; j < hashgraph.size(); j++)
-			if (hashgraph[j]->getRound() <= gossip[i].getRound())
-				break;
-		Event *tmp = new Event(gossip[i]); // SKETCHY MAYBE !!!!!!
-		hashgraph.insert(hashgraph.begin() + j, tmp);
-
-			//	break;
-		// 	}
-		// }
+		Event *tmp = new Event(gossip[i]);
+		hashgraph.insert(hashgraph.begin(), tmp);
+		nEvents.push_back(tmp);
 	}
-
-	
 	time(&now);
 	t = difftime(now, start_time);
 	createEvent(t, gossiper);
-	linkEvents();
+	nEvents.push_back(hashgraph[0]);
+	for (unsigned int i = 0; i < nEvents.size(); i++)
+		for (unsigned int j = i; j < nEvents.size(); j++)
+			if (nEvents[j]->getData().timestamp < nEvents[i]->getData().timestamp)
+			{
+				tmp = nEvents[i];
+				nEvents[i] = nEvents[j];
+				nEvents[j] = tmp;
+			}
+	linkEvents(nEvents);
+	for (unsigned int i = 0; i < nEvents.size(); i++){
+		nEvents[i]->divideRounds();
+	}
 }
 
-void Person::linkEvents(){
-	for (int i = 0; i < hashgraph.size(); i++){
-		if (hashgraph[i]->getSelfParent() == NULL && hashgraph[i]->getData().selfP != 0){// 0 means NULL
-			int targetSelf = hashgraph[i]->getData().selfP;
-			int targetGossip = hashgraph[i]->getData().gossipP;
+void Person::linkEvents(std::vector<Event*> nEvents){
+	for (int i = 0; i < nEvents.size(); i++)
+	{
+		if (nEvents[i]->getSelfParent() == NULL && nEvents[i]->getData().selfP != 0)
+		{
+			int targetSelf = nEvents[i]->getData().selfP;
+			int targetGossip = nEvents[i]->getData().gossipP;
 			int c = 0;
-			for (int j = 0; j < hashgraph.size(); j++){
-				if (hashgraph[j]->getHash() == targetSelf){
-					hashgraph[i]->setSelfParent(hashgraph[j]);
+			for (int j = 0; j < hashgraph.size(); j++)
+			{
+				if (hashgraph[j]->getHash() == targetSelf)
+				{
+					nEvents[i]->setSelfParent(hashgraph[j]);
 					c++;
-					if (c == 2){
+					if (c == 2)
 						break;
-					}
 				}
-				if (hashgraph[j]->getHash() == targetGossip){
-					hashgraph[i]->setGossiperParent(hashgraph[j]);
+				if (hashgraph[j]->getHash() == targetGossip)
+				{
+					nEvents[i]->setGossiperParent(hashgraph[j]);
 					c++;
-					if (c == 2){
+					if (c == 2)
 						break;
-					}
 				}
 			}
 		}

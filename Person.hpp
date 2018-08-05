@@ -36,7 +36,7 @@ public:
 	std::vector<Event*>    getHashgraph();
 	void decideFame();
 	void findOrder();
-	void linkEvents();
+	void linkEvents(std::vector<Event*>);
 	void insertEvent(Event* event);
 	std::vector<Event*> findWitnesses(int round);
 	void gossip(Person &);
