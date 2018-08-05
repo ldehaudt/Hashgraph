@@ -5,7 +5,7 @@
 #include <algorithm>
 #include "Hashgraphs.hpp"
 
-Event::Event(int p, int selfHash, int gossipHash, unsigned long t) //self and 
+Event::Event(int p, int selfHash, int gossipHash, int t) //self and 
 : owner(p) {
 	graph = people[p]->getHashgraph();
 	round = 0;
@@ -73,39 +73,39 @@ bool Event::operator==(Event &rhs){
 	return (hash == rhs.getHash()); // change once actualt hash used
 }
 
-// bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
-// 	if (this->round < y->getRound())
-// 		return false;
-// 	if (this->getOwner() == y->getOwner())
-// 		(*forkCheck).push_back(this);
-// 	if (this == y)
-// 		return true;
-// 	if (!this->getSelfParent())
-// 		return false;
-// 	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
-// 	this->getGossiperParent()->seeRecursion(y, forkCheck);
-// }
-
-bool Event::see(Event *y){
+bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
 	if (this->round < y->getRound())
 		return false;
+	if (this->getOwner() == y->getOwner())
+		(*forkCheck).push_back(this);
 	if (*this == *y)
 		return true;
 	if (!this->getSelfParent())
 		return false;
-	return (this->getSelfParent()->see(y)) || (this->getGossiperParent()->see(y));
+	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
+	this->getGossiperParent()->seeRecursion(y, forkCheck);
 }
 
 // bool Event::see(Event *y){
-// 	//fork stops when we reach y, might need to be changed !!
-// 	std::vector<Event*> forkCheck;
-// 	bool b = seeRecursion(y, &forkCheck);
-// 	for (unsigned int i = 0; i < forkCheck.size(); i++)
-// 		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
-// 			if (fork(forkCheck[i],forkCheck[j]))
-// 				return false;
-// 	return b;
+// 	if (this->round < y->getRound())
+// 		return false;
+// 	if (*this == *y)
+// 		return true;
+// 	if (!this->getSelfParent())
+// 		return false;
+// 	return (this->getSelfParent()->see(y)) || (this->getGossiperParent()->see(y));
 // }
+
+bool Event::see(Event *y){
+	//fork stops when we reach y, might need to be changed !!
+	std::vector<Event*> forkCheck;
+	bool b = seeRecursion(y, &forkCheck);
+	for (unsigned int i = 0; i < forkCheck.size(); i++)
+		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
+			if (fork(forkCheck[i],forkCheck[j]))
+				return false;
+	return b;
+}
 
 void Event::decideFame(){
 	std::vector<Event*> s;
@@ -212,7 +212,7 @@ bool    Event::getWitness() const {
 int		Event::getHash() const{
 	return hash;
 }
-unsigned long  Event::getConsensusTimestamp() const {    
+int  Event::getConsensusTimestamp() const {    
 	return (consensusTimestamp);
 }   
 int     Event::getRoundRecieved() const {    
@@ -227,7 +227,7 @@ void    Event::setFamous(char fame){
 void    Event::setRoundReceived(int r) {
 	roundRecieved = r;
 }
-void    Event::setConsensusTimestamp(unsigned long t) {
+void    Event::setConsensusTimestamp(int t) {
 	consensusTimestamp = t;
 }
 void	Event::setSelfParent(Event *e) {

@@ -27,12 +27,7 @@ Person & Person::operator=(Person &){
 }
 
 Person::Person(int ind) : index(ind) {
-	time_t now;
-	double t;
-
-	time(&now);
-	t = difftime(now, start_time);
-	Event* tmp = new Event(index, 0, 0, t);
+	Event* tmp = new Event(index, 0, 0, runTime);
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
@@ -158,7 +153,6 @@ void Person::createEvent(double time, Person &gossiper){
 
 void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	unsigned int n;
-	time_t now;
 	double t;
 	Event *tmp;
 	std::vector<Event*> nEvents;
@@ -175,9 +169,7 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 		hashgraph.insert(hashgraph.begin(), tmp);
 		nEvents.push_back(tmp);
 	}
-	time(&now);
-	t = difftime(now, start_time);
-	createEvent(t, gossiper);
+	createEvent(runTime, gossiper);
 	nEvents.push_back(hashgraph[0]);
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 		for (unsigned int j = i; j < nEvents.size(); j++)
