@@ -1,7 +1,6 @@
 #include "Hashgraphs.hpp"
 
-time_t start_time;
-time_t now;
+int runTime = 0;
 int testingNum = 1000;
 SDL_Window *win;
 SDL_Renderer *rend;
@@ -13,7 +12,7 @@ int personShown;
 void square(Event *e)
 {
 	SDL_Rect rect;
-	int y = 50 + difftime(now, e->getData().timestamp) * 10;
+	int y = (runTime - e->getData().timestamp) * 10;
 	int x = 100 + e->getOwner() * 800 / (N - 1);
 	if (e->getFamous() == 1)
 		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
@@ -32,9 +31,9 @@ void square(Event *e)
 
 void connect(Event *e, Event *p)
 {
-	int y = 50 + difftime(now, e->getData().timestamp) * 10;
+	int y = (runTime - e->getData().timestamp) * 10;
 	int x = 100 + e->getOwner() * 800 / (N - 1);
-	int y2 = 50 + difftime(now, p->getData().timestamp) * 10;
+	int y2 = (runTime - p->getData().timestamp) * 10;
 	int x2 = 100 + p->getOwner() * 800 / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
@@ -43,7 +42,6 @@ void connect(Event *e, Event *p)
 
 void refresh(Person *p)
 {
-	time(&now);
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
 	SDL_RenderFillRect(rend, NULL);
 	SDL_SetRenderDrawColor(rend, 220, 220, 220, 255);
@@ -51,7 +49,7 @@ void refresh(Person *p)
 		SDL_RenderDrawLine(rend, 100 + i * 800 / (N - 1), 0, 100 + i * 800 / (N - 1), 1400);
 	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
 	{
-		if (difftime(now, ((*(p->getHashgraph()))[i])->getData().timestamp) * 10 > 1400)
+		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * 10 > 1400)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 150, 150, 150, 255);
 		if ((*(p->getHashgraph()))[i]->getSelfParent())
@@ -59,6 +57,11 @@ void refresh(Person *p)
 			connect((*(p->getHashgraph()))[i], ((*(p->getHashgraph()))[i])->getSelfParent());
 			connect((*(p->getHashgraph()))[i], ((*(p->getHashgraph()))[i])->getGossiperParent());
 		}
+	}
+	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
+	{
+		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * 10 > 1400)
+			continue ;
 		square((*(p->getHashgraph()))[i]);
 	}
 	SDL_RenderPresent(rend);
@@ -66,7 +69,6 @@ void refresh(Person *p)
 
 int main(){
 	auto t_start = std::chrono::high_resolution_clock::now();
-	time(&start_time);
 	srand(time(NULL));
 	SDL_Init(SDL_INIT_VIDEO);
 	win= SDL_CreateWindow("Hashgraph", 1600, 0, 1000, 1400, SDL_WINDOW_SHOWN);
@@ -199,6 +201,7 @@ int main(){
 		// std::cout << j << std::endl;
 		people[i]->gossip(*(people[j]));
 		refresh(people[personShown]);
-		sleep(1);
+		runTime++;
+		// sleep(1);
 	}
 }
