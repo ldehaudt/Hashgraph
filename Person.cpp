@@ -33,9 +33,11 @@ Person::Person(int ind) : index(ind) {
 
 std::array<Event*, N> findUFW(std::vector<Event*> witnesses){
 	std::array<Event*, N> arr;
+	for (int i = 0; i < N; i++)
+		arr[i] = NULL;
 	char b[N] = { 0 };
 
-	for(unsigned int i = 0; i < witnesses.size(); i++){
+	for(unsigned int i = 0; i < witnesses.size(); i++)
 		if (witnesses[i]->getFamous() == true)
 		{
 			int num = witnesses[i]->getOwner();                        
@@ -49,7 +51,6 @@ std::array<Event*, N> findUFW(std::vector<Event*> witnesses){
 				arr[num] = witnesses[i];
 			}
 		}
-	}
 	return arr;
 }
 
@@ -84,7 +85,7 @@ void Person::findOrder(){
 	std::vector<double> s;
 	Event *tmp;
 
-	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--)
+	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--){
 		for (int r = hashgraph[n]->getRound(); r <= hashgraph[0]->getRound(); r++)
 		{
 			w = findWitnesses(r);
@@ -96,7 +97,7 @@ void Person::findOrder(){
 			ufw = findUFW(w);
 			int j;
 			for (j = 0; j < N; j++)
-				if (!(ufw[j]->see(hashgraph[n])))
+				if (!(ufw[j] && ufw[j]->ancestor(hashgraph[n])))
 					break;
 			if (j < N)
 				continue;
@@ -104,8 +105,9 @@ void Person::findOrder(){
 			for (int j = 0; j < N; j++)
 			{
 				tmp = ufw[j];
-				while (tmp->getSelfParent()->see(hashgraph[n]))
+				while (tmp->getSelfParent() && tmp->getSelfParent()->ancestor(hashgraph[n])){
 					tmp = tmp->getSelfParent();
+				}
 				s.push_back(tmp->getData().timestamp);
 			}
 			std::sort(s.begin(),s.end());
@@ -118,6 +120,7 @@ void Person::findOrder(){
 			insertEvent(evnt);
 			break;
 		}
+	}
 }
 
 void Person::gossip(Person &p){
@@ -138,7 +141,8 @@ Event *Person::getTopNode(Person &target){
 	Event *top = NULL;
 	int t = -1;
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
-		if (hashgraph[i]->getOwner() == target.index && hashgraph[i]->getData().timestamp > t){
+		if (hashgraph[i]->getOwner() == target.index && hashgraph[i]->getData().timestamp > t)
+		{
 			t = hashgraph[i]->getData().timestamp;
 			top = hashgraph[i];
 		}
@@ -157,7 +161,6 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	Event *tmp;
 	std::vector<Event*> nEvents;
 
-	// for (int count = 0; count < 10; count++)
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
 		for (n = 0; n < hashgraph.size(); n++)
@@ -180,19 +183,18 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 				nEvents[j] = tmp;
 			}
 	linkEvents(nEvents);
-	for (unsigned int i = 0; i < nEvents.size(); i++){
+	for (unsigned int i = 0; i < nEvents.size(); i++)
+	{
 		nEvents[i]->divideRounds();
 	}
-	for (unsigned int i = 0; i < nEvents.size(); i++){
+	for (unsigned int i = 0; i < nEvents.size(); i++)
 		nEvents[i]->decideFame();
-	}
-	// findOrder();
+	findOrder();
 }
 
 void Person::linkEvents(std::vector<Event*> nEvents){
 
 	for (int i = 0; i < nEvents.size(); i++)
-	{
 		if (nEvents[i]->getSelfParent() == NULL && nEvents[i]->getData().selfP != 0)
 		{
 			int targetSelf = nEvents[i]->getData().selfP;
@@ -216,7 +218,6 @@ void Person::linkEvents(std::vector<Event*> nEvents){
 				}
 			}
 		}
-	}
 }
 
 bool Person::operator==(Person &rhs){

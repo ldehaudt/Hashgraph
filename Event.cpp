@@ -73,38 +73,61 @@ bool Event::operator==(Event &rhs){
 	return (hash == rhs.getHash()); // change once actualt hash used
 }
 
-bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck){
-	if (this->round < y->getRound())
-		return false;
-	if (this->getOwner() == y->getOwner())
-		(*forkCheck).push_back(this);
-	if (*this == *y)
-		return true;
-	if (!this->getSelfParent())
-		return false;
-	return this->getSelfParent()->seeRecursion(y, forkCheck) ||
-	this->getGossiperParent()->seeRecursion(y, forkCheck);
+bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck, bool *done, std::vector<Event*> *visited){
+    if (std::find((*visited).begin(),(*visited).end() , this) != (*visited).end())
+    	return (*this == *y);
+    visited->push_back(this);
+    if (*done)
+        return true;
+    if (*this == *y)
+    {
+        return true;
+        *done = true;
+    }
+    if (d.timestamp < y->getData().timestamp)
+        return false;
+    if (this->getOwner() == y->getOwner())
+        (*forkCheck).push_back(this);
+    if (!this->getSelfParent())
+        return false;
+    return this->getSelfParent()->seeRecursion(y, forkCheck, done, visited) ||
+    this->getGossiperParent()->seeRecursion(y, forkCheck, done, visited);
 }
 
-// bool Event::see(Event *y){
-// 	if (this->round < y->getRound())
-// 		return false;
-// 	if (*this == *y)
-// 		return true;
-// 	if (!this->getSelfParent())
-// 		return false;
-// 	return (this->getSelfParent()->see(y)) || (this->getGossiperParent()->see(y));
-// }
-
 bool Event::see(Event *y){
-	//fork stops when we reach y, might need to be changed !!
-	std::vector<Event*> forkCheck;
-	bool b = seeRecursion(y, &forkCheck);
-	for (unsigned int i = 0; i < forkCheck.size(); i++)
-		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
-			if (fork(forkCheck[i],forkCheck[j]))
-				return false;
-	return b;
+    std::vector<Event*> forkCheck;
+    std::vector<Event*> visited;
+    bool done = false;
+    bool b = seeRecursion(y, &forkCheck, &done, &visited);
+    for (unsigned int i = 0; i < forkCheck.size(); i++)
+        for (unsigned int j = i + 1; j < forkCheck.size(); j++)
+            if (fork(forkCheck[i],forkCheck[j]))
+                return false;
+    return b;
+}
+
+bool Event::ancestorRecursion(Event *y, bool* done, std::vector<Event*> *visited){
+	if (std::find((*visited).begin(),(*visited).end() , this) != (*visited).end())
+    	return (*this == *y);
+    visited->push_back(this);
+	if (*done)
+        return true;
+    if (*this == *y)
+    {
+        return true;
+        *done = true;
+    }
+    if (d.timestamp < y->getData().timestamp)
+        return false;
+    if (!this->getSelfParent())
+        return false;
+    return (this->getSelfParent()->see(y)) || (this->getGossiperParent()->see(y));
+}
+
+bool Event::ancestor(Event *y){
+	std::vector<Event*> visited;
+	bool done = false;
+	return ancestorRecursion(y, &done, &visited);
 }
 
 void Event::decideFame(){
@@ -116,6 +139,7 @@ void Event::decideFame(){
 
 	if (!witness || round < 2)
 		return ;
+std::cout << std::endl;
 	for (unsigned int x = graph->size() - 1; x < graph->size(); x--)
 	{
 		if (!((*graph)[x]->getWitness()) || (*graph)[x]->getFamous() != -1
@@ -142,7 +166,11 @@ void Event::decideFame(){
 		else if (countNo > 2 * N / 3)
 			(*graph)[x]->setFamous(0);
 		else if (!(d % C))
+		{
+std::cout << "COIN ROUND : " << (*graph)[x]->tVal;
 			(*graph)[x]->setFamous((*graph)[x]->tVal % 2);
+std::cout << ((*graph)[x]->getFamous() ? " Famous" : " Not Famous") << std::endl;
+		}
 	}
 }
 

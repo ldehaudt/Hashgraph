@@ -38,8 +38,10 @@ public:
 	Event(int p, int selfHash, int gossipHash, int t);
 	bool operator==(Event &);
 	bool operator<(const Event &) const;
+	bool ancestor(Event *y);
+	bool ancestorRecursion(Event *y, bool* done, std::vector<Event*> *visted);
 	bool see(Event*);
-	bool seeRecursion(Event *, std::vector<Event*> *);
+	bool  seeRecursion(Event *, std::vector<Event*> *, bool *, std::vector<Event*> *visited);
 	bool stronglySee(Event*);
 	void divideRounds();
 	Event   *getSelfParent() const;
