@@ -5,35 +5,17 @@
 #include <algorithm>
 #include "Hashgraphs.hpp"
 
-<<<<<<< HEAD
 Event::Event(Person &p, data data) {
 	graph = p.getHashgraph();
 	round = 0;
 	d = data;
-=======
-Event::Event(int p, int selfHash, int gossipHash, int t) //self and 
-: owner(p) {
-	graph = people[p]->getHashgraph();
-	round = 0;
-	d.timestamp = t;
-	d.selfP = selfHash;
-	d.gossipP = gossipHash;
-	d.owner = p;
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	gossiperParent = NULL;
 	selfParent = NULL;
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
-<<<<<<< HEAD
 	witness = (d.selfP ? false : true);
 	hash = d.tVal;
-=======
-	witness = (selfParent ? false : true);
-	tVal = testingNum;
-	testingNum++;
-	hash = tVal;
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 }
 
 Event::Event(){}
@@ -44,15 +26,7 @@ Event::Event(const Event &rhs){
 
 Event & Event::operator=(const Event &rhs){
 	graph = rhs.getGraph();
-<<<<<<< HEAD
     d = rhs.getData();
-=======
-	owner = rhs.getOwner();
-    d.timestamp = rhs.getData().timestamp;
-	d.selfP = rhs.getData().selfP;
-	d.gossipP = rhs.getData().gossipP;
-	d.owner = rhs.owner;
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
     //PAYLOAD  MISSING
 	gossiperParent = NULL;
 	selfParent = NULL;
@@ -61,12 +35,7 @@ Event & Event::operator=(const Event &rhs){
 	round = rhs.getRound();
 	witness = rhs.getWitness();
 	famous = rhs.getFamous();
-<<<<<<< HEAD
 	hash = d.tVal; //change to md5 once that works
-=======
-	tVal = rhs.tVal; //KILLLLLLLLL MEMEMEMEMEMEMEMEMEMEME
-	hash = tVal; //change to md5 once that works
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	return (*this);
 }
 
@@ -80,11 +49,7 @@ void Event::divideRounds(){
 	if (this->gossiperParent->getRound() > round)
 		round = this->gossiperParent->getRound();
 	int numStrongSee = 0;
-<<<<<<< HEAD
 	std::vector<Event*> witnesses = people[d.owner]->findWitnesses(round);
-=======
-	std::vector<Event*> witnesses = people[owner]->findWitnesses(round);
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	for (unsigned int i = 0; i < witnesses.size(); i++)
 		if (stronglySee(witnesses[i]))
 			numStrongSee++;
@@ -111,11 +76,7 @@ bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck, bool *done, s
     }
     if (d.timestamp < y->getData().timestamp)
         return false;
-<<<<<<< HEAD
     if (d.owner == y->getData().owner)
-=======
-    if (this->getOwner() == y->getOwner())
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
         (*forkCheck).push_back(this);
     if (!this->getSelfParent())
         return false;
@@ -168,20 +129,12 @@ void Event::decideFame(){
 
 	if (!witness || round < 2)
 		return ;
-<<<<<<< HEAD
-=======
-std::cout << std::endl;
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	for (unsigned int x = graph->size() - 1; x < graph->size(); x--)
 	{
 		if (!((*graph)[x]->getWitness()) || (*graph)[x]->getFamous() != -1
 			|| (*graph)[x]->getRound() > round - 2)
 			continue;
-<<<<<<< HEAD
 		s = people[getData().owner]->findWitnesses((*graph)[x]->getRound() + 1);
-=======
-		s = people[owner]->findWitnesses((*graph)[x]->getRound() + 1);
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 		count = 0;
 		countNo = 0;
 		for (unsigned int y = 0; y < s.size(); y++)
@@ -202,15 +155,7 @@ std::cout << std::endl;
 		else if (countNo > 2 * N / 3)
 			(*graph)[x]->setFamous(0);
 		else if (!(d % C))
-<<<<<<< HEAD
 			(*graph)[x]->setFamous((*graph)[x]->getHash() % 2);
-=======
-		{
-std::cout << "COIN ROUND : " << (*graph)[x]->tVal;
-			(*graph)[x]->setFamous((*graph)[x]->tVal % 2);
-std::cout << ((*graph)[x]->getFamous() ? " Famous" : " Not Famous") << std::endl;
-		}
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	}
 }
 
@@ -220,20 +165,12 @@ bool Event::stronglySee(Event *y){
 
     for (unsigned int n = 0; n < graph->size(); n++)
     {
-<<<<<<< HEAD
         if (found[(*graph)[n]->getData().owner] == true || (*graph)[n]->getRound() < y->getRound() )
-=======
-        if (found[(*graph)[n]->getOwner()] == true || (*graph)[n]->getRound() < y->getRound() )
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
             continue ;
         if (this->see((*graph)[n]) && (*graph)[n]->see(y))
         {
             numSee++;
-<<<<<<< HEAD
             found[(*graph)[n]->getData().owner] = true;
-=======
-            found[(*graph)[n]->getOwner()] = true;
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
             if (numSee > 2 * N / 3)
                 return true;
         }
@@ -270,12 +207,6 @@ std::vector<Event*> *Event::getGraph() const {
 Event  *Event::getSelfParent() const {    
 	return (selfParent);
 }
-<<<<<<< HEAD
-=======
-int Event::getOwner() const {    
-	return (owner);
-}
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 Event  *Event::getGossiperParent() const {    
 	return (gossiperParent);
 }

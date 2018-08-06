@@ -23,11 +23,7 @@ void square(Event *e)
 {
 	SDL_Rect rect;
 	int y = (runTime - e->getData().timestamp) * GAP;
-<<<<<<< HEAD
 	int x = M + e->getData().owner * (W - 2 * M) / (N - 1);
-=======
-	int x = M + e->getOwner() * (W - 2 * M) / (N - 1);
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	if (e->getFamous() == 1)
 		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
 	else if (e->getFamous() == 0)
@@ -48,15 +44,9 @@ void square(Event *e)
 void connect(Event *e, Event *p)
 {
 	int y = (runTime - e->getData().timestamp) * GAP;
-<<<<<<< HEAD
 	int x = M + e->getData().owner * (W - 2 * M) / (N - 1);
 	int y2 = (runTime - p->getData().timestamp) * GAP;
 	int x2 = M + p->getData().owner * (W - 2 * M) / (N - 1);
-=======
-	int x = M + e->getOwner() * (W - 2 * M) / (N - 1);
-	int y2 = (runTime - p->getData().timestamp) * GAP;
-	int x2 = M + p->getOwner() * (W - 2 * M) / (N - 1);
->>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
