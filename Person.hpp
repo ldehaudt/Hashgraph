@@ -42,6 +42,9 @@ public:
 	void insertEvent(Event* event);
 	std::vector<Event*> findWitnesses(int round);
 	void gossip(Person &);
+	int getCurRound();
+	void incCurRound();
+	void removeOddballs();
 };
 
 #endif

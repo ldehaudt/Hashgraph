@@ -54,7 +54,12 @@ void Event::divideRounds(){
 		if (stronglySee(witnesses[i]))
 			numStrongSee++;
 	if (numStrongSee > 2 * N / 3)
+	{
 		round = round + 1;
+		if (people[d.owner]->getCurRound() < round){
+			people[d.owner]->incCurRound();
+		}
+	}
 std::cout << "round " << round << std::endl;
 	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }

@@ -26,6 +26,7 @@ Person & Person::operator=(Person &){
 }
 
 Person::Person(int ind) : index(ind) {
+	currentRound = 0;
 	data d;
 	d.owner = index;
 	d.selfP = 0;
@@ -94,22 +95,18 @@ void Person::findOrder(){
 		for (int r = hashgraph[n]->getRound(); r <= hashgraph[0]->getRound(); r++)
 		{
 			w = findWitnesses(r);
-std::cout << "A\n";
 			for (i = 0; i < w.size(); i++)
 				if (w[i]->getFamous() == -1)
 					break ;
-std::cout << "B\n";
 			if (i < w.size())
 				continue ;
 			ufw = findUFW(w);
-std::cout << "C\n";
 			int j;
 			for (j = 0; j < N; j++)
 				if (ufw[j] && !(ufw[j]->ancestor(hashgraph[n])))
 					break;
 			if (j < N)
 				continue;
-std::cout << "D\n";
 			hashgraph[n]->setRoundReceived(r);
 			for (int j = 0; j < N; j++)
 			{
@@ -121,14 +118,11 @@ std::cout << "D\n";
 				}
 				s.push_back(tmp->getData().timestamp);
 			}
-std::cout << "E\n";
 			std::sort(s.begin(),s.end());
-std::cout << s.size() << std::endl;
 			if (s.size() % 2)
 				hashgraph[n]->setConsensusTimestamp(s[s.size() / 2]);
 			else
 				hashgraph[n]->setConsensusTimestamp((s[s.size() / 2 - 1] + s[s.size() / 2]) / 2);
-std::cout << "G\n";
 			break;
 		}
 	}
@@ -137,7 +131,6 @@ std::cout << "G\n";
 void Person::gossip(Person &p){
 	std::vector<data> arr;
 	bool b[N] = {false};
-std::cout << "dasda\n";
 	Event* check = getTopNode(p);
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
 	{
@@ -145,7 +138,6 @@ std::cout << "dasda\n";
 			continue;
 		arr.push_back(hashgraph[i]->getData());
 	}
-std::cout << "1\n";
     p.recieveGossip(*this, arr);
 }
 
@@ -178,7 +170,6 @@ void Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
 	Event *tmp;
 	std::vector<Event*> nEvents;
 
-std::cout << "2\n";
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
 		for (n = 0; n < hashgraph.size(); n++)
@@ -190,7 +181,6 @@ std::cout << "2\n";
 		hashgraph.insert(hashgraph.begin(), tmp);
 		nEvents.push_back(tmp);
 	}
-std::cout << "3\n";
 	createEvent(runTime, gossiper);
 	nEvents.push_back(hashgraph[0]);
 	for (unsigned int i = 0; i < nEvents.size(); i++)
@@ -204,12 +194,10 @@ std::cout << "3\n";
 	linkEvents(nEvents);
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 		nEvents[i]->divideRounds();
-std::cout << "6\n";
+	removeOddballs();
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 		nEvents[i]->decideFame();
-std::cout << "7\n";
 	findOrder();
-std::cout << "8\n";
 }
 
 void Person::linkEvents(std::vector<Event*> nEvents){
@@ -226,7 +214,6 @@ void Person::linkEvents(std::vector<Event*> nEvents){
 				{
 					nEvents[i]->setSelfParent(hashgraph[j]);
 					c++;
-					std::cout << "self !!!!!!!!!!!!!!!!!\n";
 					if (c == 2)
 						break;
 				}
@@ -234,13 +221,10 @@ void Person::linkEvents(std::vector<Event*> nEvents){
 				{
 					nEvents[i]->setGossiperParent(hashgraph[j]);
 					c++;
-					std::cout << "gossip !!!!!!!!!!!!!!!!!\n";
 					if (c == 2)
 						break;
 				}
 			}
-			if (c == 1)
-				std::cout << "WARNING !!!!!!!!!!!!!!!!!\n";
 		}
 }
 
@@ -250,4 +234,21 @@ bool Person::operator==(Person &rhs){
 
 std::vector<Event*>    *Person::getHashgraph(){
 	return &hashgraph;
+}
+
+int Person::getCurRound(){
+	return currentRound;
+}
+
+void Person::incCurRound(){
+	currentRound++;
+}
+
+void Person::removeOddballs(){
+	for (unsigned int i = 0; i < hashgraph.size(); i++){
+		if (hashgraph[i]->getRound() < currentRound - 4){
+			hashgraph.erase(hashgraph.begin() + i);
+			i--;
+		}
+	}
 }
