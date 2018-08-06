@@ -1,17 +1,13 @@
 #ifndef EVENT_HPP
 #define EVENT_HPP
 #include "Person.hpp"
-#include "Hashgraphs.hpp"
-#include <list>
-#include <vector>
-#include <array>
-#include <algorithm> 
+#include "Hashgraphs.hpp" 
 
 class Person;
 
 typedef struct s_data{
-    std::string selfP;
-    std::string gossipP;
+    std::string selfHash;
+    std::string gossipHash;
 	int timestamp;
 	int owner;
 }               data;
@@ -31,6 +27,7 @@ private:
 	char    famous;
 	//missing signature
 	std::string makeHash();
+
 public:
 	Event();
 	~Event();
@@ -50,10 +47,10 @@ public:
 	data   getData() const;
 	int     getRound() const;
 	bool    getWitness() const;
-	int		getConsensusTimestamp() const;
+	int   getConsensusTimestamp() const;
 	int     getRoundRecieved() const;
 	char    getFamous() const;
-	std::string		getHash() const;
+	std::string			getHash() const;
 	std::vector<Event*> *getGraph() const;
 	void    setFamous(char);
 	void    setRoundReceived(int);

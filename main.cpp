@@ -1,11 +1,6 @@
 #include "Hashgraphs.hpp"
-#define W 1000
-#define H 1300
-#define M 150
-#define GAP 7
 
 int runTime = 1;
-int testingNum = 1000;
 SDL_Window *win;
 SDL_Renderer *rend;
 SDL_Texture* p1;
@@ -134,6 +129,7 @@ void refresh(Person *p)
 		ponies();
 	SDL_RenderPresent(rend);
 	// runTime++;
+	// sleep(1);
 }
 
 int main(){

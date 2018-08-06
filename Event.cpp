@@ -2,7 +2,6 @@
 #include "Hashgraphs.hpp"
 
 Event::Event(Person &p, data data) {
-
 	graph = p.getHashgraph();
 	round = 0;
 	d = data;
@@ -11,7 +10,7 @@ Event::Event(Person &p, data data) {
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
-	witness = (d.selfP == "\0" ? true : false);
+	witness = (d.selfHash == "\0" ? true : false);
 	hash = makeHash();
 }
 
@@ -29,7 +28,8 @@ std::string Event::makeHash()
 	return md5_hash(s.str());
 }
 
-Event & Event::operator=(const Event &rhs){
+Event & Event::operator=(const Event &rhs)
+{
 	graph = rhs.getGraph();
     d = rhs.getData();
     //PAYLOAD  MISSING
@@ -40,41 +40,35 @@ Event & Event::operator=(const Event &rhs){
 	round = rhs.getRound();
 	witness = rhs.getWitness();
 	famous = rhs.getFamous();
-	hash = makeHash(); 
+	hash = makeHash();
 	return (*this);
 }
 
-void Event::divideRounds(){
-	std::cout << "b1\n";
+void Event::divideRounds()
+{
 	if (!this->selfParent || !this->gossiperParent)
 	{
 		round = 0;
 		return;
 	}
-	std::cout << "b2\n";
 	round = this->selfParent->getRound();
-	std::cout << "b3\n";
 	if (this->gossiperParent->getRound() > round)
 		round = this->gossiperParent->getRound();
-	std::cout << "b4\n";
 	int numStrongSee = 0;
 	std::vector<Event*> witnesses = people[d.owner]->findWitnesses(round);
-	std::cout << "b5\n";
 	for (unsigned int i = 0; i < witnesses.size(); i++)
 		if (stronglySee(witnesses[i]))
 			numStrongSee++;
-	std::cout << "b6\n";
 	if (numStrongSee > 2 * N / 3)
 	{
 		round = round + 1;
 		if (people[d.owner]->getCurRound() < round)
 			people[d.owner]->incCurRound();
 	}
-	std::cout << "b7\n";
 	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
-bool Event::operator==(Event &rhs){
+bool Event::operator==(Event &rhs) {
 	return (hash == rhs.getHash());
 }
 
@@ -171,27 +165,29 @@ void Event::decideFame(){
 		else if (countNo > 2 * N / 3)
 			(*graph)[x]->setFamous(0);
 		else if (!(d % C))
-			(*graph)[x]->setFamous((*graph)[x]->getHash()[32] % 2);
+			(*graph)[x]->setFamous((*graph)[x]->getHash()[16] % 2);
 	}
 }
 
-bool Event::stronglySee(Event *y){
-    int numSee = 0;
-    std::array<bool, N> found = {false};
+bool Event::stronglySee(Event *y)
+{
+	int numSee = 0;
+	std::array<bool, N> found = {false};
 
-    for (unsigned int n = 0; n < graph->size(); n++)
-    {
-        if (found[(*graph)[n]->getData().owner] == true || (*graph)[n]->getRound() < y->getRound() )
-            continue ;
-        if (this->see((*graph)[n]) && (*graph)[n]->see(y))
-        {
-            numSee++;
-            found[(*graph)[n]->getData().owner] = true;
-            if (numSee > 2 * N / 3)
-                return true;
-        }
-    }
-    return false;
+	for (unsigned int n = 0; n < graph->size(); n++)
+	{
+		if (found[(*graph)[n]->getData().owner] == true
+			|| (*graph)[n]->getRound() < y->getRound())
+			continue ;
+		if (this->see((*graph)[n]) && (*graph)[n]->see(y))
+		{
+			numSee++;
+			found[(*graph)[n]->getData().owner] = true;
+			if (numSee > 2 * N / 3)
+			return true;
+		}
+	}
+	return false;
 }
 
 bool Event::fork(Event *x, Event *y){
@@ -265,6 +261,7 @@ void	Event::setGossiperParent(Event *e) {
 
 std::ostream& operator<<(std::ostream& os, const Event& e)
 {  
-    os << e.getData().selfP << e.getData().gossipP << e.getData().timestamp << e.getData().owner;
+    os << e.getData().selfHash << e.getData().gossipHash
+    << e.getData().timestamp << e.getData().owner;
     return os;  
-}  
+}

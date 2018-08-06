@@ -9,12 +9,13 @@
 #include <sstream>
 #include "Event.hpp"
 
+#define W 1000
+#define H 1300
+#define M 150
+#define GAP 60 / N
 
-const int N = 4; //number of members in the entire population (n > 1)
-const int C = 5; // a small integer constant greater than 2, such as c = 10
-
-// KILLLLLLLLLL MMEEEEEEEEEEEEE
-extern int testingNum;
+const int N = 6;
+const int C = 5;
 
 class Person;
 typedef struct s_data data;
