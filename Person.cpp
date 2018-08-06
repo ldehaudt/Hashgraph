@@ -177,14 +177,16 @@ void Person::recieveGossip(Person &gossiper, std::vector<Event> gossip){
 	}
 	createEvent(runTime, gossiper);
 	nEvents.push_back(hashgraph[0]);
-	for (unsigned int i = 0; i < nEvents.size(); i++)
-		for (unsigned int j = i; j < nEvents.size(); j++)
-			if (nEvents[j]->getData().timestamp < nEvents[i]->getData().timestamp)
-			{
-				tmp = nEvents[i];
-				nEvents[i] = nEvents[j];
-				nEvents[j] = tmp;
-			}
+	//MIGHT NOT BE NEEDED, CHECK FOR USEFULLNESS 
+	// for (unsigned int i = 0; i < nEvents.size(); i++)
+	// 	for (unsigned int j = i; j < nEvents.size(); j++)
+	// 		if (nEvents[j]->getData().timestamp < nEvents[i]->getData().timestamp)
+	// 		{
+	// 			tmp = nEvents[i];
+	// 			nEvents[i] = nEvents[j];
+	// 			nEvents[j] = tmp;
+	// 		}
+	//END KILL
 	linkEvents(nEvents);
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 	{

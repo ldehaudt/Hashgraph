@@ -180,7 +180,7 @@ bool Event::stronglySee(Event *y){
 
     for (unsigned int n = 0; n < graph->size(); n++)
     {
-        if (found[(*graph)[n]->getOwner()] == true)
+        if (found[(*graph)[n]->getOwner()] == true || (*graph)[n]->getRound() < y->getRound() )
             continue ;
         if (this->see((*graph)[n]) && (*graph)[n]->see(y))
         {
