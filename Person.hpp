@@ -22,7 +22,7 @@ For example, one event by Alice (red) records the fact that Bob performed a goss
 class Person{
 private:
 	std::vector<Event*> hashgraph;
-	void createEvent(double time, Person &gossiper);
+	void createEvent(int time, Person &gossiper);
 	Event *getTopNode(Person &);
 	int currentRound;
 

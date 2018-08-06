@@ -1,26 +1,26 @@
 #ifndef EVENT_HPP
 #define EVENT_HPP
 #include "Person.hpp"
-#include "Hashgraphs.hpp" 
+#include "Hashgraphs.hpp"
+#include <list>
+#include <vector>
+#include <array>
+#include <algorithm> 
 
 class Person;
 
 typedef struct s_data{
-	//t_byte selfP[32];
-    int selfP;
-    //t_byte gossipP[32];
-    int gossipP;
+    std::string selfP;
+    std::string gossipP;
 	int timestamp;
 	int owner;
-	int tVal; //KILLLLLLL MEMEMEMEEMM!!!!!!!
 }               data;
 
 class Event{
 private:
 	std::vector<Event*> *graph;
 	//PAYLOAD  MISSING
-	//t_byte hash[32];
-	int hash;
+	std::string hash;
 	data d;
 	Event *selfParent;
 	Event *gossiperParent;
@@ -30,6 +30,7 @@ private:
 	bool    witness;
 	char    famous;
 	//missing signature
+	std::string makeHash();
 public:
 	Event();
 	~Event();
@@ -49,10 +50,10 @@ public:
 	data   getData() const;
 	int     getRound() const;
 	bool    getWitness() const;
-	int   getConsensusTimestamp() const;
+	int		getConsensusTimestamp() const;
 	int     getRoundRecieved() const;
 	char    getFamous() const;
-	int		getHash() const;
+	std::string		getHash() const;
 	std::vector<Event*> *getGraph() const;
 	void    setFamous(char);
 	void    setRoundReceived(int);
@@ -63,5 +64,7 @@ public:
 
 	static bool fork(Event*, Event*);
 };
+
+std::ostream& operator<<(std::ostream& os, const Event& e); 
 
 #endif

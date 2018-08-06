@@ -134,7 +134,6 @@ void refresh(Person *p)
 		ponies();
 	SDL_RenderPresent(rend);
 	// runTime++;
-	// runTime++;
 }
 
 int main(){
@@ -166,101 +165,6 @@ int main(){
 		people[i] = new Person(i);
 	personShown = 0;
 	runTime++;
-
-	// runTime++;
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[1]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[2]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[1]->gossip(*(people[2]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[0]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[3]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[2]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[0]->gossip(*(people[2]));
-	// refresh(people[1]);
-	// runTime++;
-	// people[1]->gossip(*(people[0]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[3]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[1]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[1]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[2]->gossip(*(people[3]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[2]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[1]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[2]->gossip(*(people[3]));
-	// runTime++;
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// runTime++;
-	// refresh(people[1]);
-	// while (1)
-	// 	;
-
 	while (1)
 	{
 		while (SDL_PollEvent(&event))

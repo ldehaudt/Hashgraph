@@ -1,11 +1,8 @@
 #include "Event.hpp"
-#include <list>
-#include <vector>
-#include <array>
-#include <algorithm>
 #include "Hashgraphs.hpp"
 
 Event::Event(Person &p, data data) {
+
 	graph = p.getHashgraph();
 	round = 0;
 	d = data;
@@ -14,14 +11,22 @@ Event::Event(Person &p, data data) {
 	roundRecieved = -1;
 	consensusTimestamp = -1;
 	famous = -1;
-	witness = (d.selfP ? false : true);
-	hash = d.tVal;
+	witness = (d.selfP == "\0" ? true : false);
+	hash = makeHash();
 }
 
 Event::Event(){}
 Event::~Event(){}
 Event::Event(const Event &rhs){
 	*this = rhs;
+}
+
+std::string Event::makeHash()
+{
+	std::ostringstream s;
+
+	s << *this;
+	return md5_hash(s.str());
 }
 
 Event & Event::operator=(const Event &rhs){
@@ -35,40 +40,46 @@ Event & Event::operator=(const Event &rhs){
 	round = rhs.getRound();
 	witness = rhs.getWitness();
 	famous = rhs.getFamous();
-	hash = d.tVal; //change to md5 once that works
+	hash = makeHash(); 
 	return (*this);
 }
 
 void Event::divideRounds(){
+	std::cout << "b1\n";
 	if (!this->selfParent || !this->gossiperParent)
 	{
 		round = 0;
 		return;
 	}
+	std::cout << "b2\n";
 	round = this->selfParent->getRound();
+	std::cout << "b3\n";
 	if (this->gossiperParent->getRound() > round)
 		round = this->gossiperParent->getRound();
+	std::cout << "b4\n";
 	int numStrongSee = 0;
 	std::vector<Event*> witnesses = people[d.owner]->findWitnesses(round);
+	std::cout << "b5\n";
 	for (unsigned int i = 0; i < witnesses.size(); i++)
 		if (stronglySee(witnesses[i]))
 			numStrongSee++;
+	std::cout << "b6\n";
 	if (numStrongSee > 2 * N / 3)
 	{
 		round = round + 1;
-		if (people[d.owner]->getCurRound() < round){
+		if (people[d.owner]->getCurRound() < round)
 			people[d.owner]->incCurRound();
-		}
 	}
-std::cout << "round " << round << std::endl;
+	std::cout << "b7\n";
 	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
 bool Event::operator==(Event &rhs){
-	return (hash == rhs.getHash()); // change once actualt hash used
+	return (hash == rhs.getHash());
 }
 
-bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck, bool *done, std::vector<Event*> *visited){
+bool Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck,
+	bool *done, std::vector<Event*> *visited){
     if (std::find((*visited).begin(),(*visited).end() , this) != (*visited).end())
     	return (*this == *y);
     visited->push_back(this);
@@ -160,7 +171,7 @@ void Event::decideFame(){
 		else if (countNo > 2 * N / 3)
 			(*graph)[x]->setFamous(0);
 		else if (!(d % C))
-			(*graph)[x]->setFamous((*graph)[x]->getHash() % 2);
+			(*graph)[x]->setFamous((*graph)[x]->getHash()[32] % 2);
 	}
 }
 
@@ -224,7 +235,7 @@ int     Event::getRound() const {
 bool    Event::getWitness() const {    
 	return (witness);
 }
-int		Event::getHash() const{
+std::string		Event::getHash() const{
 	return hash;
 }
 int  Event::getConsensusTimestamp() const {    
@@ -251,3 +262,9 @@ void	Event::setSelfParent(Event *e) {
 void	Event::setGossiperParent(Event *e) {
 	gossiperParent = e;
 }
+
+std::ostream& operator<<(std::ostream& os, const Event& e)
+{  
+    os << e.getData().selfP << e.getData().gossipP << e.getData().timestamp << e.getData().owner;
+    return os;  
+}  
