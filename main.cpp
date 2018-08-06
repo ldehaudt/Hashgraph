@@ -1,7 +1,8 @@
 #include "Hashgraphs.hpp"
 #define W 1000
-#define H 1400
-#define GAP 10
+#define H 1300
+#define M 150
+#define GAP 7
 
 int runTime = 1;
 int testingNum = 1000;
@@ -22,13 +23,15 @@ void square(Event *e)
 {
 	SDL_Rect rect;
 	int y = (runTime - e->getData().timestamp) * GAP;
-	int x = 100 + e->getOwner() * (W - 200) / (N - 1);
+	int x = M + e->getOwner() * (W - 2 * M) / (N - 1);
 	if (e->getFamous() == 1)
 		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
 	else if (e->getFamous() == 0)
 		SDL_SetRenderDrawColor(rend, 130, 130, 130, 255);
 	else if (e->getWitness() == 1)
 		SDL_SetRenderDrawColor(rend, 163, 0, 0, 255);
+	else if (e->getRoundRecieved() != -1)
+		SDL_SetRenderDrawColor(rend, 19, 132, 70, 255);
 	else
 		SDL_SetRenderDrawColor(rend, 9, 71, 124, 255);
 	rect.w = 10;
@@ -41,12 +44,66 @@ void square(Event *e)
 void connect(Event *e, Event *p)
 {
 	int y = (runTime - e->getData().timestamp) * GAP;
-	int x = 100 + e->getOwner() * (W - 200) / (N - 1);
+	int x = M + e->getOwner() * (W - 2 * M) / (N - 1);
 	int y2 = (runTime - p->getData().timestamp) * GAP;
-	int x2 = 100 + p->getOwner() * (W - 200) / (N - 1);
+	int x2 = M + p->getOwner() * (W - 2 * M) / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
+}
+
+void ponies()
+{
+	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
+	SDL_Rect rect;
+	rect.w = (W - 2 * M) * 2 / (N - 1) / 3;
+	rect.h = (W - 2 * M) * 2 / (N - 1) / 3;
+	rect.x = 50;
+	rect.y = 50;
+	switch (personShown)
+	{
+		case 0 :
+			SDL_RenderCopy(rend, p1, NULL, &rect);
+			break;
+		case 1 :
+			SDL_RenderCopy(rend, p2, NULL, &rect);
+			break;
+		case 2 :
+			SDL_RenderCopy(rend, p3, NULL, &rect);
+			break;
+		case 3 :
+			SDL_RenderCopy(rend, p4, NULL, &rect);
+			break;
+		case 4 :
+			SDL_RenderCopy(rend, p5, NULL, &rect);
+			break;
+		case 5 :
+			SDL_RenderCopy(rend, p6, NULL, &rect);
+			break;
+	}
+
+	rect.w = W;
+	rect.h = (W - 4 * M) / (N - 1) + 100;
+	rect.x = 0;
+	rect.y = H - (W - 4 * M) / (N - 1) - 60;
+	SDL_RenderFillRect(rend, &rect);
+	rect.w = (W - 2 * M) * 2 / (N - 1) / 3;
+	rect.h = (W - 2 * M) * 2 / (N - 1) / 3;
+	rect.x = M - rect.w / 2;
+	SDL_RenderCopy(rend, p1, NULL, &rect);
+	rect.x += (W - 2 * M) / (N - 1);
+	SDL_RenderCopy(rend, p2, NULL, &rect);
+	rect.x += (W - 2 * M) / (N - 1);
+	SDL_RenderCopy(rend, p3, NULL, &rect);
+	rect.x += (W - 2 * M) / (N - 1);
+	SDL_RenderCopy(rend, p4, NULL, &rect);
+	rect.x += (W - 2 * M) / (N - 1);
+	SDL_RenderCopy(rend, p5, NULL, &rect);
+	rect.x += (W - 2 * M) / (N - 1);
+	SDL_RenderCopy(rend, p6, NULL, &rect);
+
+	rect.x = M - rect.w / 2 + N * (W - 2 * M) / (N - 1);
+	SDL_RenderFillRect(rend, &rect);
 }
 
 void refresh(Person *p)
@@ -55,7 +112,7 @@ void refresh(Person *p)
 	SDL_RenderFillRect(rend, NULL);
 	SDL_SetRenderDrawColor(rend, 220, 220, 220, 255);
 	for (int i = 0; i < N; i++)
-		SDL_RenderDrawLine(rend, 100 + i * (W - 200) / (N - 1), 0, 100 + i * (W - 200) / (N - 1), H);
+		SDL_RenderDrawLine(rend, M + i * (W - 2 * M) / (N - 1), 0, M + i * (W - 2 * M) / (N - 1), H);
 	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
 	{
 		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * GAP > H)
@@ -73,28 +130,8 @@ void refresh(Person *p)
 			continue ;
 		square((*(p->getHashgraph()))[i]);
 	}
-	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
-	SDL_Rect rect;
-	rect.w = W;
-	rect.h = (W - 400) / (N - 1) + 20;
-	rect.x = 0;
-	rect.y = H - rect.h;
-	SDL_RenderFillRect(rend, &rect);
-
-	rect.w = (W - 400) / (N - 1);
-	rect.h = (W - 400) / (N - 1);
-	rect.x = 100 - rect.w / 2;
-	SDL_RenderCopy(rend, p1, NULL, &rect);
-	rect.x += (W - 200) / (N - 1);
-	SDL_RenderCopy(rend, p2, NULL, &rect);
-	rect.x += (W - 200) / (N - 1);
-	SDL_RenderCopy(rend, p3, NULL, &rect);
-	rect.x += (W - 200) / (N - 1);
-	SDL_RenderCopy(rend, p4, NULL, &rect);
-	rect.x += (W - 200) / (N - 1);
-	SDL_RenderCopy(rend, p5, NULL, &rect);
-	rect.x += (W - 200) / (N - 1);
-	SDL_RenderCopy(rend, p6, NULL, &rect);
+	if (N <= 6)
+		ponies();
 	SDL_RenderPresent(rend);
 	// runTime++;
 	// sleep(1);
@@ -127,91 +164,31 @@ int main(){
 	SDL_FreeSurface(tmpSurf);
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[2]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[2]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[2]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[2]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[2]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[2]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[0]));
-	// refresh(people[1]);
-	// people[1]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[0]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// people[2]->gossip(*(people[3]));
-	// refresh(people[1]);
-	// people[3]->gossip(*(people[1]));
-	// refresh(people[1]);
-	// while (1)
-	// 	;
-	personShown = 1;
+	personShown = 0;
 	runTime++;
 	while (1)
 	{
 		while (SDL_PollEvent(&event))
-		{
 		    if (event.type == SDL_KEYDOWN || event.type == SDL_QUIT)
 		    {
 		        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
 		            exit (1);
 		        if (event.key.keysym.sym == SDLK_SPACE)
 		            stop = !stop;
-		        if (event.key.keysym.sym == SDLK_1)
+		        if (N >= 1 && event.key.keysym.sym == SDLK_1)
 		        	personShown = 0;
-		        if (event.key.keysym.sym == SDLK_2)
+		        if (N >= 2 && event.key.keysym.sym == SDLK_2)
 		        	personShown = 1;
-		        if (event.key.keysym.sym == SDLK_3)
+		        if (N >= 3 && event.key.keysym.sym == SDLK_3)
 		        	personShown = 2;
-		        if (event.key.keysym.sym == SDLK_4)
+		        if (N >= 4 && event.key.keysym.sym == SDLK_4)
 		        	personShown = 3;
+		        if (N >= 5 && event.key.keysym.sym == SDLK_5)
+		        	personShown = 4;
+		        if (N >= 6 && event.key.keysym.sym == SDLK_6)
+		        	personShown = 5;
 				refresh(people[personShown]);
 		    }
-		}
 		if (stop)
 			continue ;
 		int i = std::rand() % N;
