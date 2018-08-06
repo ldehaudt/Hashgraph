@@ -10,6 +10,8 @@
 class Person;
 class Event;
 
+typedef struct s_data data;
+
 /*
 For example, one event by Alice (red) records the fact that Bob performed a gossip sync in which he sent her everything he
  knew. This event is created by Alice and signed by her, and contains the hashes of two other events: her last event and Bob’s 
@@ -21,7 +23,12 @@ class Person{
 private:
 	std::vector<Event*> hashgraph;
 	void createEvent(double time, Person &gossiper);
+<<<<<<< HEAD
+	Event *getTopNode(Person &);
+	int currentRound;
+=======
 	Event *getTopNode(Person &);        
+>>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 
 public:
 	Person();
@@ -32,7 +39,11 @@ public:
 	Person(int);
 	int index;
 	bool operator==(Person &);
+<<<<<<< HEAD
+	void recieveGossip(Person &, std::vector<data> gossip);
+=======
 	void recieveGossip(Person &, std::vector<Event> gossip);
+>>>>>>> 8c4ba2c8a04e696a707c97ffc0a711356b2069af
 	std::vector<Event*>    *getHashgraph();
 	void findOrder();
 	void linkEvents(std::vector<Event*>);
