@@ -104,6 +104,8 @@ void Person::findOrder(){
 			hashgraph[n]->setRoundReceived(r);
 			for (int j = 0; j < N; j++)
 			{
+				if (!ufw[j])
+					continue ;
 				tmp = ufw[j];
 				while (tmp->getSelfParent() && tmp->getSelfParent()->ancestor(hashgraph[n])){
 					tmp = tmp->getSelfParent();
