@@ -97,7 +97,7 @@ void Person::findOrder(){
 			ufw = findUFW(w);
 			int j;
 			for (j = 0; j < N; j++)
-				if (!(ufw[j] && ufw[j]->ancestor(hashgraph[n])))
+				if (ufw[j] && !(ufw[j]->ancestor(hashgraph[n])))
 					break;
 			if (j < N)
 				continue;
@@ -115,6 +115,7 @@ void Person::findOrder(){
 				hashgraph[n]->setConsensusTimestamp(s[s.size() / 2]);
 			else
 				hashgraph[n]->setConsensusTimestamp((s[s.size() / 2 - 1] + s[s.size() / 2]) / 2);
+			std::cout << "CONSENSUS TIMESTAMP FOUND : "<< hashgraph[n]->getConsensusTimestamp() << "\n";
 			Event *evnt = hashgraph[n];
 			hashgraph.erase(hashgraph.begin() + n);
 			insertEvent(evnt);
