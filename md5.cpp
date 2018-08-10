@@ -1,4 +1,4 @@
-#include "sha256.hpp"
+#include "md5.hpp"
 
 unsigned int g_a;
 unsigned int g_b;
@@ -142,6 +142,6 @@ std::string		md5_hash(std::string str)
 	reverse_bits(&g_b);
 	reverse_bits(&g_c);
 	reverse_bits(&g_d);
-	s << std::fixed << std::hex << g_a << g_b << g_c << g_d;
+	s << std::setw(8) << std::setfill('0') << std::hex << g_a << g_b << g_c << g_d;
 	return (s.str());
 }

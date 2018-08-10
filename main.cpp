@@ -107,7 +107,8 @@ void refresh(Person *p)
 	SDL_RenderFillRect(rend, NULL);
 	SDL_SetRenderDrawColor(rend, 220, 220, 220, 255);
 	for (int i = 0; i < N; i++)
-		SDL_RenderDrawLine(rend, M + i * (W - 2 * M) / (N - 1), 0, M + i * (W - 2 * M) / (N - 1), H);
+		SDL_RenderDrawLine(rend, M + i * (W - 2 * M) / (N - 1), 0,
+			M + i * (W - 2 * M) / (N - 1), H);
 	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
 	{
 		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * GAP > H)
@@ -115,8 +116,10 @@ void refresh(Person *p)
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
 		if ((*(p->getHashgraph()))[i]->getSelfParent())
 		{
-			connect((*(p->getHashgraph()))[i], ((*(p->getHashgraph()))[i])->getSelfParent());
-			connect((*(p->getHashgraph()))[i], ((*(p->getHashgraph()))[i])->getGossiperParent());
+			connect((*(p->getHashgraph()))[i],
+				((*(p->getHashgraph()))[i])->getSelfParent());
+			connect((*(p->getHashgraph()))[i],
+				((*(p->getHashgraph()))[i])->getGossiperParent());
 		}
 	}
 	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)

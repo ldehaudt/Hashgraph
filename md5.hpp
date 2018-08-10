@@ -1,5 +1,5 @@
-#ifndef SHA256_HPP
-# define SHA256_HPP
+#ifndef MD5_HPP
+# define MD5_HPP
 
 # include <math.h>
 # include <stdbool.h>
@@ -7,6 +7,7 @@
 # include <fcntl.h>
 # include <sstream>
 # include <iostream>
+# include <iomanip>
 
 typedef struct			s_v
 {
