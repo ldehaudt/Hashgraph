@@ -78,6 +78,8 @@ bool	Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck,
 	if (std::find((*visited).begin(),(*visited).end() , this) != (*visited).end())
 		return (*this == *y);
 	visited->push_back(this);
+	if (d.owner == y->getData().owner)
+		(*forkCheck).push_back(this);
 	if (*done)
 		return true;
 	if (*this == *y)
@@ -87,8 +89,6 @@ bool	Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck,
 	}
 	if (d.timestamp < y->getData().timestamp)
 		return false;
-	if (d.owner == y->getData().owner)
-		(*forkCheck).push_back(this);
 	if (!this->getSelfParent())
 		return false;
 	return this->getSelfParent()->seeRecursion(y, forkCheck, done, visited) ||

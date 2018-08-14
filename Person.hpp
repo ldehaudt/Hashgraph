@@ -14,6 +14,7 @@ private:
 	std::vector<Event*> hashgraph;
 	void	createEvent(int time, Person &gossiper);
 	Event	*getTopNode(Person &);
+	Event	*getForkNode(Person &target);
 	int		currentRound;
 	std::ofstream ofs;
 public:

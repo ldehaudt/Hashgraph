@@ -92,7 +92,6 @@ void	Person::findOrder(){
 	std::array<Event*, N> ufw;
 	unsigned int i;
 	std::vector<Event*> db;
-	std::vector<double> s;
 	Event *tmp;
 
 	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--){
@@ -112,7 +111,7 @@ void	Person::findOrder(){
 					break;
 			if (j < N)
 				continue;
-			hashgraph[n]->setRoundReceived(r);
+			std::vector<double> s;
 			for (int j = 0; j < N; j++)
 			{
 				if (!ufw[j])
@@ -123,12 +122,11 @@ void	Person::findOrder(){
 					tmp = tmp->getSelfParent();
 				s.push_back(tmp->getData().timestamp);
 			}
+			if (s.size() == 0)
+				return ;
+			hashgraph[n]->setRoundReceived(r);
 			std::sort(s.begin(),s.end());
-			if (s.size() % 2)
-				hashgraph[n]->setConsensusTimestamp(s[s.size() / 2]);
-			else
-				hashgraph[n]->setConsensusTimestamp((s[s.size() / 2 - 1]
-					+ s[s.size() / 2]) / 2);
+			hashgraph[n]->setConsensusTimestamp(s[s.size() / 2]);
 			if (hashgraph[n]->getData().payload != 0)
 			{
 				networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
@@ -181,6 +179,31 @@ Event	*Person::getTopNode(Person &target){
 	return top;
 }
 
+//THIS FUNCTION IS ONLY TO TEST FORKS, DO NOT USE THIS UNLESS YOU WANT TO CHEAT
+Event	*Person::getForkNode(Person &target){
+	Event *top = NULL;
+	Event *fork = NULL;
+	bool topFound = false;
+	int t = -1;
+	int t2 = -1;
+	for (unsigned int i = 0; i < hashgraph.size(); i++)
+		if (hashgraph[i]->getData().owner == target.index
+			&& hashgraph[i]->getData().timestamp > t)
+		{
+			t = hashgraph[i]->getData().timestamp;
+			top = hashgraph[i];
+		}
+	for (unsigned int i = 0; i < hashgraph.size(); i++)
+		if (hashgraph[i]->getData().owner == target.index
+			&& hashgraph[i]->getData().timestamp > t2 &&
+			hashgraph[i]->getData().timestamp != t)
+		{
+			t2 = hashgraph[i]->getData().timestamp;
+			fork = hashgraph[i];
+		}
+	return fork;
+}
+
 void	Person::createEvent(int time, Person &gossiper){
 	data d;
 
@@ -194,7 +217,13 @@ void	Person::createEvent(int time, Person &gossiper){
 		d.target = target;
 	}
 	d.owner = index;
-	d.selfHash = (getTopNode(*this) ? getTopNode(*this)->getHash() : "\0");
+	if (makeForks && !(std::rand() % 100) && getForkNode(*this))
+	{
+		d.selfHash = getForkNode(*this)->getHash();
+		std::cout << RED << "Person " << index << " has created a fork!\n"; 
+	}
+	else
+		d.selfHash = (getTopNode(*this) ? getTopNode(*this)->getHash() : "\0");
 	d.gossipHash = (getTopNode(gossiper) ? getTopNode(gossiper)->getHash() : "\0");
 	d.timestamp = time;
 	Event *tmp = new Event(*this, d);

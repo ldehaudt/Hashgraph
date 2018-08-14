@@ -1,6 +1,7 @@
 #include "Hashgraphs.hpp"
 
 int runTime = 1;
+bool makeForks = 0;
 SDL_Window *win;
 SDL_Renderer *rend;
 SDL_Texture* p1;
@@ -9,10 +10,34 @@ SDL_Texture* p3;
 SDL_Texture* p4;
 SDL_Texture* p5;
 SDL_Texture* p6;
+SDL_Texture* number_tex;
 SDL_Event event;
 std::array<Person*, N> people;
 bool stop = 0;
 int personShown;
+
+
+void putdigit(int x, int y, int val)
+{
+	SDL_Rect rect = {x, y, 10, 15};
+	if (val == 10)
+		rect.w = 5;
+	SDL_Rect num = {val * 10, 0, 10, 15};
+	SDL_RenderCopy(rend, number_tex, &num, &rect);
+}
+
+void putfloat(int x, int y, std::string val)
+{
+	int i;
+	for (i = 0; val[i] != '.'; i++){
+		putdigit(x + i * 10, y, val[i] - '0');
+	}
+	putdigit(x + i * 10, y, 10);
+	i++;
+	for (int j = 0; j < 2; j++){
+		putdigit(x + (i + j) * 10, y, val[i + j] - '0');
+	}
+}
 
 void square(Event *e)
 {
@@ -76,11 +101,10 @@ void ponies()
 			SDL_RenderCopy(rend, p6, NULL, &rect);
 			break;
 	}
-
 	rect.w = W;
 	rect.h = (W - 4 * M) / (N - 1) + 100;
 	rect.x = 0;
-	rect.y = H - (W - 4 * M) / (N - 1) - 60;
+	rect.y = H - (W - 4 * M) / (N - 1) - 80;
 	SDL_RenderFillRect(rend, &rect);
 	rect.w = (W - 2 * M) * 2 / (N - 1) / 3;
 	rect.h = (W - 2 * M) * 2 / (N - 1) / 3;
@@ -96,9 +120,16 @@ void ponies()
 	SDL_RenderCopy(rend, p5, NULL, &rect);
 	rect.x += (W - 2 * M) / (N - 1);
 	SDL_RenderCopy(rend, p6, NULL, &rect);
-
 	rect.x = M - rect.w / 2 + N * (W - 2 * M) / (N - 1);
 	SDL_RenderFillRect(rend, &rect);
+	rect.x = M - rect.w / 2 + 10;
+	for (int i = 0; i < N; i++)
+	{
+		std::ostringstream s;
+		s << std::fixed << std::setprecision(2) << fabs(people[personShown]->networth[i]);
+		putfloat(rect.x, H - 50, s.str());
+		rect.x += (W - 2 * M) / (N - 1);
+	}
 }
 
 void refresh(Person *p)
@@ -158,6 +189,9 @@ int main(){
 	tmpSurf = SDL_LoadBMP("ponies/6.bmp");
 	p6 = SDL_CreateTextureFromSurface(rend, tmpSurf);
 	SDL_FreeSurface(tmpSurf);
+	tmpSurf = SDL_LoadBMP("numbers.bmp");
+	number_tex = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
 	personShown = 0;
@@ -171,6 +205,8 @@ int main(){
 		            exit (1);
 		        if (event.key.keysym.sym == SDLK_SPACE)
 		            stop = !stop;
+		        if (event.key.keysym.sym == SDLK_f)
+		            makeForks = !makeForks;
 		        if (N >= 1 && event.key.keysym.sym == SDLK_1)
 		        	personShown = 0;
 		        if (N >= 2 && event.key.keysym.sym == SDLK_2)

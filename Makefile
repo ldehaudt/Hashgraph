@@ -18,6 +18,7 @@ $(NAME): $(SRC)
 clean:
 	rm -f *.o
 	rm -f Log*
+	rm -rf *.dSYM
 
 fclean: clean
 	rm -f $(NAME)
