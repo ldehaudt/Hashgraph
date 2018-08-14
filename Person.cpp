@@ -36,7 +36,6 @@ Person::Person(int ind) : index(ind) {
 	std::ostringstream filename;
 	filename << "Log" << ind << std::endl;
 	ofs.open(filename.str(), std::ofstream::out | std::ofstream::trunc);
-
 	hashgraph.insert(hashgraph.begin(), tmp);
 	for (int i = 0; i < N; i++)
 		networth.push_back(10000);
@@ -138,8 +137,14 @@ void	Person::findOrder(){
 			ofs << "Node owner: " << hashgraph[n]->getData().owner
 			<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
 			if (hashgraph[n]->getData().payload)
+			{
 				ofs << "\tPayload: " << hashgraph[n]->getData().payload << " to "
 				<< hashgraph[n]->getData().target << std::endl;
+				ofs << "\tCurrent Networth: ";
+				for (int i = 0; i < N; i++)
+					ofs << networth[i] << "   ";
+				ofs << std::endl;
+			}
 			ofs << "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
 			<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"
 			<< "\tRound Received: " << hashgraph[n]->getRoundRecieved()
