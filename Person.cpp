@@ -11,7 +11,10 @@ std::vector<Event*>	Person::findWitnesses(int round){
 }
 
 Person::Person(){}
-Person::~Person(){}
+Person::~Person(){
+	ofs.close();
+}
+
 Person::Person(Person &rhs){
 	*this = rhs;    
 }
@@ -32,7 +35,7 @@ Person::Person(int ind) : index(ind) {
 	Event* tmp = new Event(*this, d);
 	std::ostringstream filename;
 	filename << "Log" << ind << std::endl;
-	ofs.open(filename.str(), std::ios::app);
+	ofs.open(filename.str(), std::ofstream::out | std::ofstream::trunc);
 
 	hashgraph.insert(hashgraph.begin(), tmp);
 	for (int i = 0; i < N; i++)
@@ -127,8 +130,11 @@ void	Person::findOrder(){
 			else
 				hashgraph[n]->setConsensusTimestamp((s[s.size() / 2 - 1]
 					+ s[s.size() / 2]) / 2);
-			networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
-			networth[hashgraph[n]->getData().target] += hashgraph[n]->getData().payload;
+			if (hashgraph[n]->getData().payload != 0)
+			{
+				networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
+				networth[hashgraph[n]->getData().target] += hashgraph[n]->getData().payload;
+			}
 			ofs << "Node owner: " << hashgraph[n]->getData().owner
 			<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
 			if (hashgraph[n]->getData().payload)
@@ -273,7 +279,7 @@ void	Person::incCurRound(){
 void	Person::removeOldBalls()
 {
 	for (unsigned int i = 0; i < hashgraph.size(); i++){
-		if (hashgraph[i]->getRound() < currentRound - 7){
+		if (hashgraph[i]->getRound() < currentRound - 5){
 			hashgraph.erase(hashgraph.begin() + i);
 			i--;
 		}
