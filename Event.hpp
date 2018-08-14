@@ -6,6 +6,8 @@
 class Person;
 
 typedef struct s_data{
+	float		payload;
+	int			target;
 	std::string	selfHash;
 	std::string	gossipHash;
 	int			timestamp;

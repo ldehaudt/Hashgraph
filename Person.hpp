@@ -21,6 +21,7 @@ public:
 	~Person();
 	Person(Person &);
 	Person&	operator=(Person &);
+	std::vector<float>	networth;
 
 	Person(int);
 	int	index;

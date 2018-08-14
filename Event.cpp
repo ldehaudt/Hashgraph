@@ -17,8 +17,7 @@ Event::Event(Person &p, data data)
 
 Event::Event(){}
 Event::~Event(){}
-Event::Event(const Event &rhs)
-{
+Event::Event(const Event &rhs){
 	*this = rhs;
 }
 

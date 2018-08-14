@@ -24,6 +24,8 @@ Person::Person(int ind) : index(ind) {
 	currentRound = 0;
 	data d;
 	d.owner = index;
+	d.payload = 0;
+	d.target = -1;
 	d.selfHash = "\0";
 	d.gossipHash = "\0";
 	d.timestamp = runTime;
@@ -31,8 +33,10 @@ Person::Person(int ind) : index(ind) {
 	std::ostringstream filename;
 	filename << "Log" << ind << std::endl;
 	ofs.open(filename.str(), std::ios::app);
-	ofs.clear();
+
 	hashgraph.insert(hashgraph.begin(), tmp);
+	for (int i = 0; i < N; i++)
+		networth.push_back(10000);
 }
 
 std::array<Event*, N>	findUFW(std::vector<Event*> witnesses){
@@ -123,10 +127,15 @@ void	Person::findOrder(){
 			else
 				hashgraph[n]->setConsensusTimestamp((s[s.size() / 2 - 1]
 					+ s[s.size() / 2]) / 2);
+			networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
+			networth[hashgraph[n]->getData().target] += hashgraph[n]->getData().payload;
 			ofs << "Node owner: " << hashgraph[n]->getData().owner
-			<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl
-			<< "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
-			<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"	
+			<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
+			if (hashgraph[n]->getData().payload)
+				ofs << "\tPayload: " << hashgraph[n]->getData().payload << " to "
+				<< hashgraph[n]->getData().target << std::endl;
+			ofs << "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
+			<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"
 			<< "\tRound Received: " << hashgraph[n]->getRoundRecieved()
 			<< "\tConsensus Time: "<< hashgraph[n]->getConsensusTimestamp()
 			<< std::endl << std::endl;
@@ -163,6 +172,16 @@ Event	*Person::getTopNode(Person &target){
 
 void	Person::createEvent(int time, Person &gossiper){
 	data d;
+
+	d.payload = 0;
+	d.target = -1;
+	if (!(std::rand() % 10))
+	{
+		float f = (float)(std::rand() % 100000) / 100;
+		int target = std::rand() % N;
+		d.payload = f;
+		d.target = target;
+	}
 	d.owner = index;
 	d.selfHash = (getTopNode(*this) ? getTopNode(*this)->getHash() : "\0");
 	d.gossipHash = (getTopNode(gossiper) ? getTopNode(gossiper)->getHash() : "\0");

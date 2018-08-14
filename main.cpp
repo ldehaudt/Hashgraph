@@ -131,8 +131,6 @@ void refresh(Person *p)
 	if (N <= 6)
 		ponies();
 	SDL_RenderPresent(rend);
-	// runTime++;
-	// sleep(1);
 }
 
 int main(){
@@ -194,7 +192,12 @@ int main(){
 		while ((j = std::rand() % N) == i)
 			;
 		people[i]->gossip(*(people[j]));
+		if (j == 1) {
 		refresh(people[personShown]);
+		for (int i = 0; i < N; i++)
+			printf("%f  ", people[1]->networth[i]);
+		printf("\n");
+		}
 		runTime++;
 	}
 }

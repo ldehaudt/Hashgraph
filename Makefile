@@ -1,6 +1,6 @@
 NAME = hashgraph
 
-SRC = *.cpp
+SRC = Event.cpp Person.cpp main.cpp md5.cpp
 
 FRAMEWORKS = -framework OpenGl
 
@@ -12,11 +12,12 @@ FLAGS = -Wfatal-errors
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRC)
 	g++ -g -std=c++11 $(FLAGS) $(SRC) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
 
 clean:
 	rm -f *.o
+	rm -f Log*
 
 fclean: clean
 	rm -f $(NAME)
