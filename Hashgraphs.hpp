@@ -26,6 +26,7 @@ const int	C = 5;
 class					Person;
 typedef struct s_data	data;
 extern bool						makeForks;
+extern bool						writeLog;
 extern int						runTime;
 extern std::array<Person*, N>	people;
 

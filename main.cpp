@@ -2,6 +2,7 @@
 
 int runTime = 1;
 bool makeForks = 0;
+bool writeLog = 1;
 SDL_Window *win;
 SDL_Renderer *rend;
 SDL_Texture* p1;
@@ -207,6 +208,8 @@ int main(){
 		            stop = !stop;
 		        if (event.key.keysym.sym == SDLK_f)
 		            makeForks = !makeForks;
+				if (event.key.keysym.sym == SDLK_l)
+		            writeLog = !writeLog;
 		        if (N >= 1 && event.key.keysym.sym == SDLK_1)
 		        	personShown = 0;
 		        if (N >= 2 && event.key.keysym.sym == SDLK_2)

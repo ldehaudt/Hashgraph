@@ -56,9 +56,10 @@ void	Event::divideRounds()
 		round = this->gossiperParent->getRound();
 	int numStrongSee = 0;
 	std::vector<Event*> witnesses = people[d.owner]->findWitnesses(round);
-	for (unsigned int i = 0; i < witnesses.size(); i++)
-		if (stronglySee(witnesses[i]))
+	for (unsigned int i = 0; i < witnesses.size(); i++){
+		if (!(numStrongSee > 2 * N / 3) && stronglySee(witnesses[i]))
 			numStrongSee++;
+	}
 	if (numStrongSee > 2 * N / 3)
 	{
 		round = round + 1;
@@ -101,11 +102,13 @@ bool	Event::see(Event *y)
 	std::vector<Event*> visited;
 	bool done = false;
 	bool b = seeRecursion(y, &forkCheck, &done, &visited);
+	if (b == false)
+		return false;
 	for (unsigned int i = 0; i < forkCheck.size(); i++)
 		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
 			if (fork(forkCheck[i],forkCheck[j]))
 				return false;
-	return b;
+	return true;
 }
 
 bool	Event::ancestorRecursion(Event *y, bool* done, std::vector<Event*> *visited)
@@ -188,8 +191,9 @@ bool	Event::stronglySee(Event *y)
 		{
 			numSee++;
 			found[(*graph)[n]->getData().owner] = true;
-			if (numSee > 2 * N / 3)
+			if (numSee > 2 * N / 3){
 				return true;
+			}
 		}
 	}
 	return false;
