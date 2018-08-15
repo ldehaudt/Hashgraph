@@ -57,7 +57,9 @@ void	Event::divideRounds()
 	int numStrongSee = 0;
 	std::vector<Event*> witnesses = people[d.owner]->findWitnesses(round);
 	for (unsigned int i = 0; i < witnesses.size(); i++){
-		if (!(numStrongSee > 2 * N / 3) && stronglySee(witnesses[i]))
+		if (numStrongSee > 2 * N / 3) 
+			break;
+		if (stronglySee(witnesses[i]))
 			numStrongSee++;
 	}
 	if (numStrongSee > 2 * N / 3)
@@ -98,16 +100,25 @@ bool	Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck,
 
 bool	Event::see(Event *y)
 {
+	if (hashesSeen.find(y->getHash()) != hashesSeen.end())
+		return true;
+	if (hashesNotSeen.find(y->getHash()) != hashesSeen.end())
+		return false;
 	std::vector<Event*> forkCheck;
 	std::vector<Event*> visited;
 	bool done = false;
 	bool b = seeRecursion(y, &forkCheck, &done, &visited);
-	if (b == false)
+	if (b == false){
+		hashesNotSeen.insert(y->getHash());
 		return false;
+	}
 	for (unsigned int i = 0; i < forkCheck.size(); i++)
 		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
-			if (fork(forkCheck[i],forkCheck[j]))
+			if (fork(forkCheck[i],forkCheck[j])){
+				hashesNotSeen.insert(y->getHash());	
 				return false;
+			}
+	hashesSeen.insert(y->getHash());	
 	return true;
 }
 
@@ -132,9 +143,19 @@ bool	Event::ancestorRecursion(Event *y, bool* done, std::vector<Event*> *visited
 
 bool	Event::ancestor(Event *y)
 {
+	if (hashesSeen.find(y->getHash()) != hashesSeen.end())
+		return true;
+	if (ancestorsNotSeen.find(y->getHash()) != ancestorsNotSeen.end())
+		return false;
+	bool b;
+
 	std::vector<Event*> visited;
 	bool done = false;
-	return ancestorRecursion(y, &done, &visited);
+	b = ancestorRecursion(y, &done, &visited);
+	if (!b){
+		ancestorsNotSeen.insert(y->getHash());		
+	}
+	return b;
 }
 
 void	Event::decideFame()
@@ -181,7 +202,6 @@ bool	Event::stronglySee(Event *y)
 {
 	int numSee = 0;
 	std::array<bool, N> found = {false};
-
 	for (unsigned int n = 0; n < graph->size(); n++)
 	{
 		if (found[(*graph)[n]->getData().owner] == true

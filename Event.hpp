@@ -2,6 +2,7 @@
 #define EVENT_HPP
 #include "Person.hpp"
 #include "Hashgraphs.hpp" 
+#include <unordered_set>
 
 class Person;
 
@@ -17,6 +18,9 @@ typedef struct s_data{
 class Event{
 private:
 	std::vector<Event*> *graph;
+	std::unordered_set<std::string> ancestorsNotSeen;
+	std::unordered_set<std::string> hashesSeen;
+	std::unordered_set<std::string> hashesNotSeen;
 	std::string hash;
 	data	d;
 	Event	*selfParent;

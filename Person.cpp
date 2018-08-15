@@ -132,36 +132,51 @@ void	Person::findOrder(){
 				networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
 				networth[hashgraph[n]->getData().target] += hashgraph[n]->getData().payload;
 			}
-			ofs << "Node owner: " << hashgraph[n]->getData().owner
-			<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
-			if (hashgraph[n]->getData().payload)
-			{
-				ofs << "\tPayload: " << hashgraph[n]->getData().payload << " to "
-				<< hashgraph[n]->getData().target << std::endl;
-				ofs << "\tCurrent Networth: ";
-				for (int i = 0; i < N; i++)
-					ofs << networth[i] << "   ";
-				ofs << std::endl;
+			if (writeLog){
+				ofs << "Node owner: " << hashgraph[n]->getData().owner
+				<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
+				if (hashgraph[n]->getData().payload)
+				{
+					ofs << "\tPayload: " << hashgraph[n]->getData().payload << " to "
+					<< hashgraph[n]->getData().target << std::endl;
+					ofs << "\tCurrent Networth: ";
+					for (int i = 0; i < N; i++)
+						ofs << networth[i] << "   ";
+					ofs << std::endl;
+				}
+				ofs << "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
+				<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"
+				<< "\tRound Received: " << hashgraph[n]->getRoundRecieved()
+				<< "\tConsensus Time: "<< hashgraph[n]->getConsensusTimestamp()
+				<< std::endl << std::endl;
 			}
-			ofs << "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
-			<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"
-			<< "\tRound Received: " << hashgraph[n]->getRoundRecieved()
-			<< "\tConsensus Time: "<< hashgraph[n]->getConsensusTimestamp()
-			<< std::endl << std::endl;
 			break;
 		}
 	}
 }
 
+bool	compareEventsGreater(const Event* lhs, const Event* rhs){
+	return lhs->getData().timestamp > rhs->getData().timestamp;
+}
+
+bool	compareEventsLesser(const Event* lhs, const Event* rhs){
+	return lhs->getData().timestamp < rhs->getData().timestamp;
+}
+
 void	Person::gossip(Person &p){
+	Event *tmp;
 	std::vector<data> arr;
-	bool b[N] = {false};
+
+	std::sort(hashgraph.begin(), hashgraph.end(), compareEventsGreater);
 	Event* check = getTopNode(p);
+	bool b[N] = {false};
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
 	{
-		if (check && check->see(hashgraph[i]))
-			continue;
-		arr.push_back(hashgraph[i]->getData());
+		if (!b[hashgraph[i]->getData().owner]){
+			if (check && check->see(hashgraph[i]))
+				b[hashgraph[i]->getData().owner] = true;
+			arr.push_back(hashgraph[i]->getData());
+		}
 	}
     p.recieveGossip(*this, arr);
 }
@@ -186,6 +201,7 @@ Event	*Person::getForkNode(Person &target){
 	bool topFound = false;
 	int t = -1;
 	int t2 = -1;
+	
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
 		if (hashgraph[i]->getData().owner == target.index
 			&& hashgraph[i]->getData().timestamp > t)
@@ -235,14 +251,18 @@ void	Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
 	double t;
 	Event *tmp;
 	std::vector<Event*> nEvents;
+	std::string hash;
 
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
+		
 		std::ostringstream s;
 		s << Event(*this, gossip[i]);
-		for (n = 0; n < hashgraph.size(); n++)
-			if (hashgraph[n]->getHash() == md5_hash(s.str()))
+		hash = md5_hash(s.str());
+		for (n = 0; n < hashgraph.size(); n++){
+			if (hashgraph[n]->getHash() == hash)
 				break ;
+		}
 		if (n < hashgraph.size())
 			continue ;
 		Event *tmp = new Event(*this, gossip[i]);
@@ -251,14 +271,16 @@ void	Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
 	}
 	createEvent(runTime, gossiper);
 	nEvents.push_back(hashgraph[0]);
-	for (unsigned int i = 0; i < nEvents.size(); i++)
-		for (unsigned int j = i; j < nEvents.size(); j++)
-			if (nEvents[j]->getData().timestamp < nEvents[i]->getData().timestamp)
-			{
-				tmp = nEvents[i];
-				nEvents[i] = nEvents[j];
-				nEvents[j] = tmp;
-			}
+	std::sort(nEvents.begin(), nEvents.end(), compareEventsLesser);
+	
+	// for (unsigned int i = 0; i < nEvents.size(); i++)
+	// 	for (unsigned int j = i; j < nEvents.size(); j++)
+	// 		if (nEvents[j]->getData().timestamp < nEvents[i]->getData().timestamp)
+	// 		{
+	// 			tmp = nEvents[i];
+	// 			nEvents[i] = nEvents[j];
+	// 			nEvents[j] = tmp;
+	// 		}
 	linkEvents(nEvents);
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 		nEvents[i]->divideRounds();
