@@ -170,31 +170,32 @@ void	Event::decideFame()
 		return ;
 	for (unsigned int x = graph->size() - 1; x < graph->size(); x--)
 	{
-		if (!((*graph)[x]->getWitness()) || (*graph)[x]->getFamous() != -1
-			|| (*graph)[x]->getRound() > round - 2)
-			continue;
-		s = people[getData().owner]->findWitnesses((*graph)[x]->getRound() + 1);
-		count = 0;
-		countNo = 0;
-		for (unsigned int y = 0; y < s.size(); y++)
+		if ((*graph)[x]->getWitness() && (*graph)[x]->getFamous() == -1
+			&& (*graph)[x]->getRound() <= round - 2)
 		{
-			if (!stronglySee(s[y]))
+			s = people[getData().owner]->findWitnesses((*graph)[x]->getRound() + 1);
+			count = 0;
+			countNo = 0;
+			for (unsigned int y = 0; y < s.size(); y++)
 			{
-				s.erase(s.begin() + y);
-				continue ;
+				if (!stronglySee(s[y])){
+					s.erase(s.begin() + y);
+				}
+				else {
+					if (s[y]->see((*graph)[x]))
+						count++;
+					else
+						countNo++;
+				}
 			}
-			if (s[y]->see((*graph)[x]))
-				count++;
-			else
-				countNo++;
+			d = round - (*graph)[x]->getRound();
+			if (count > 2 * N / 3)
+				(*graph)[x]->setFamous(1);
+			else if (countNo > 2 * N / 3)
+				(*graph)[x]->setFamous(0);
+			else if (!(d % C))
+				(*graph)[x]->setFamous((*graph)[x]->getHash()[16] % 2);
 		}
-		d = round - (*graph)[x]->getRound();
-		if (count > 2 * N / 3)
-			(*graph)[x]->setFamous(1);
-		else if (countNo > 2 * N / 3)
-			(*graph)[x]->setFamous(0);
-		else if (!(d % C))
-			(*graph)[x]->setFamous((*graph)[x]->getHash()[16] % 2);
 	}
 }
 

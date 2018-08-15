@@ -30,6 +30,8 @@ public:
 	void	recieveGossip(Person &, std::vector<data> gossip);
 	std::vector<Event*>	*getHashgraph();
 	void	findOrder();
+	int		finalizeOrder(int n, int r, std::vector<Event*> w);
+	void	outputOrder(int n);
 	void	linkEvents(std::vector<Event*>);
 	void	insertEvent(Event* event);
 	std::vector<Event*>	findWitnesses(int round);

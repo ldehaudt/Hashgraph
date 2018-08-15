@@ -68,16 +68,16 @@ std::array<Event*, N>	findUFW(std::vector<Event*> witnesses){
 void	Person::insertEvent(Event* event){
 	unsigned int i;
 
-	for (i = 0; i < hashgraph.size(); i++)
+	for (i = 0; i < hashgraph.size(); i++) {
 		if (hashgraph[i]->getRoundRecieved() != -1
 			&& hashgraph[i]->getRoundRecieved() <= event->getRoundRecieved())
 			break;
+	}
 	while (i != hashgraph.size() &&
 		(hashgraph[i]->getRoundRecieved() == -1
 			|| hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
 		&& hashgraph[i]->getConsensusTimestamp() <= event->getConsensusTimestamp())
 		i++;
-
 	while (i != hashgraph.size() &&
 		(hashgraph[i]->getRoundRecieved() == -1
 			|| hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
@@ -87,70 +87,87 @@ void	Person::insertEvent(Event* event){
 	hashgraph.insert(hashgraph.begin() + i, event);
 }
 
-void	Person::findOrder(){
-	std::vector<Event*> w;
+void	Person::outputOrder(int n)
+{
+	ofs << "Node owner: " << hashgraph[n]->getData().owner
+	<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
+	if (hashgraph[n]->getData().payload)
+	{
+		ofs << "\tPayload: " << hashgraph[n]->getData().payload << " to "
+		<< hashgraph[n]->getData().target << std::endl;
+		ofs << "\tCurrent Networth: ";
+		for (int i = 0; i < N; i++)
+			ofs << networth[i] << " ";
+		ofs << std::endl;
+	}
+	ofs << "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
+	<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"
+	<< "\tRound Received: " << hashgraph[n]->getRoundRecieved()
+	<< "\tConsensus Time: "<< hashgraph[n]->getConsensusTimestamp()
+	<< std::endl << std::endl;
+}
+
+int	Person::finalizeOrder(int n, int r, std::vector<Event*> w)
+{
 	std::array<Event*, N> ufw;
-	unsigned int i;
-	std::vector<Event*> db;
+	std::vector<double> s;
 	Event *tmp;
 
-	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--){
-		if (hashgraph[n]->getRoundRecieved() == -1)
-		for (int r = hashgraph[n]->getRound(); r <= hashgraph[0]->getRound(); r++)
+	ufw = findUFW(w);
+	int j;
+	for (j = 0; j < N && (!ufw[j] || ufw[j]->ancestor(hashgraph[n])); j++)
+		;
+	if (j == N)
+	{
+		for (int j = 0; j < N; j++)
 		{
-			w = findWitnesses(r);
-			for (i = 0; i < w.size(); i++)
-				if (w[i]->getFamous() == -1)
-					break ;
-			if (i < w.size())
-				continue ;
-			ufw = findUFW(w);
-			int j;
-			for (j = 0; j < N; j++)
-				if (ufw[j] && !(ufw[j]->ancestor(hashgraph[n])))
-					break;
-			if (j < N)
-				continue;
-			std::vector<double> s;
-			for (int j = 0; j < N; j++)
+			if (ufw[j])
 			{
-				if (!ufw[j])
-					continue ;
 				tmp = ufw[j];
 				while (tmp->getSelfParent()
 					&& tmp->getSelfParent()->ancestor(hashgraph[n]))
 					tmp = tmp->getSelfParent();
 				s.push_back(tmp->getData().timestamp);
 			}
-			if (s.size() == 0)
-				return ;
-			hashgraph[n]->setRoundReceived(r);
-			std::sort(s.begin(),s.end());
-			hashgraph[n]->setConsensusTimestamp(s[s.size() / 2]);
-			if (hashgraph[n]->getData().payload != 0)
+		}
+		if (s.size() == 0)
+			return (1);
+		hashgraph[n]->setRoundReceived(r);
+		std::sort(s.begin(),s.end());
+		hashgraph[n]->setConsensusTimestamp(s[s.size() / 2]);
+		if (hashgraph[n]->getData().payload != 0)
+		{
+			networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
+			networth[hashgraph[n]->getData().target] += hashgraph[n]->getData().payload;
+		}
+		if (writeLog)
+			outputOrder(n);
+		return (1);
+	}
+	return (0);
+}
+
+void	Person::findOrder()
+{
+	std::vector<Event*> w;
+	std::vector<Event*> db;
+	unsigned int i;
+
+	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--)
+	{
+		if (hashgraph[n]->getRoundRecieved() == -1)
+		{
+			for (int r = hashgraph[n]->getRound(); r <= hashgraph[0]->getRound(); r++)
 			{
-				networth[hashgraph[n]->getData().owner] -= hashgraph[n]->getData().payload;
-				networth[hashgraph[n]->getData().target] += hashgraph[n]->getData().payload;
-			}
-			if (writeLog){
-				ofs << "Node owner: " << hashgraph[n]->getData().owner
-				<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
-				if (hashgraph[n]->getData().payload)
+				w = findWitnesses(r);
+				for (i = 0; i < w.size() && w[i]->getFamous() != -1; i++)
+					;
+				if (i == w.size())
 				{
-					ofs << "\tPayload: " << hashgraph[n]->getData().payload << " to "
-					<< hashgraph[n]->getData().target << std::endl;
-					ofs << "\tCurrent Networth: ";
-					for (int i = 0; i < N; i++)
-						ofs << networth[i] << "   ";
-					ofs << std::endl;
+					if (finalizeOrder(n, r, w))
+						break ;
 				}
-				ofs << "\t" << hashgraph[n]->getData().selfHash << " -Self Parent\n"
-				<< "\t" << hashgraph[n]->getData().gossipHash << " -Gossip Parent\n"
-				<< "\tRound Received: " << hashgraph[n]->getRoundRecieved()
-				<< "\tConsensus Time: "<< hashgraph[n]->getConsensusTimestamp()
-				<< std::endl << std::endl;
 			}
-			break;
 		}
 	}
 }
@@ -263,24 +280,15 @@ void	Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
 			if (hashgraph[n]->getHash() == hash)
 				break ;
 		}
-		if (n < hashgraph.size())
-			continue ;
-		Event *tmp = new Event(*this, gossip[i]);
-		hashgraph.insert(hashgraph.begin(), tmp);
-		nEvents.push_back(tmp);
+		if (n >= hashgraph.size()){
+			Event *tmp = new Event(*this, gossip[i]);
+			hashgraph.insert(hashgraph.begin(), tmp);
+			nEvents.push_back(tmp);
+		}
 	}
 	createEvent(runTime, gossiper);
 	nEvents.push_back(hashgraph[0]);
 	std::sort(nEvents.begin(), nEvents.end(), compareEventsLesser);
-	
-	// for (unsigned int i = 0; i < nEvents.size(); i++)
-	// 	for (unsigned int j = i; j < nEvents.size(); j++)
-	// 		if (nEvents[j]->getData().timestamp < nEvents[i]->getData().timestamp)
-	// 		{
-	// 			tmp = nEvents[i];
-	// 			nEvents[i] = nEvents[j];
-	// 			nEvents[j] = tmp;
-	// 		}
 	linkEvents(nEvents);
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 		nEvents[i]->divideRounds();
