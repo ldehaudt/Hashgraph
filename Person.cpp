@@ -253,7 +253,7 @@ void	Person::createEvent(int time, Person &gossiper){
 	if (makeForks && !(std::rand() % 100) && getForkNode(*this))
 	{
 		d.selfHash = getForkNode(*this)->getHash();
-		std::cout << RED << "Person " << index << " has created a fork!\n"; 
+		std::cout << RED << "Person " << index << " has created a fork!\007\n"; 
 	}
 	else
 		d.selfHash = (getTopNode(*this) ? getTopNode(*this)->getHash() : "\0");
