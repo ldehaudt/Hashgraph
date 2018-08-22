@@ -37,36 +37,35 @@ public:
 	~Event();
 	Event(const Event &);
 	Event & operator=(const Event &);
-	Event(Person &, data) ;
-	bool	operator==(Event &);
+	Event(Person &, data const &) ;
+	bool	operator==(Event const &) const;
 	bool	operator<(const Event &) const;
-	bool	ancestor(Event *y);
-	bool	ancestorRecursion(Event *y, bool* done, std::vector<Event*> *visted);
-	bool	see(Event*);
-	bool	seeRecursion(Event *, std::vector<Event*> *,
-		bool *, std::vector<Event*> *visited);
-	bool	stronglySee(Event*);
+	bool	ancestor(Event const &);
+	bool	ancestorRecursion(Event const &, bool &, std::vector<Event*> &);
+	bool	see(Event const &);
+	bool	seeRecursion(Event const &, std::vector<Event*> &, bool &, std::vector<Event*> &);
+	bool	stronglySee(Event const &);
+	bool	getWitness() const;
 	void	divideRounds();
+	void	setFamous(char const &);
+	void	setRoundReceived(int const &);
+	void	setConsensusTimestamp(int const &);
+	void	setSelfParent(Event* const e);
+	void	setGossiperParent(Event* const e);
+	void	decideFame();
+	char	getFamous() const;
+	int		getRound() const;
+	int		getConsensusTimestamp() const;
+	int		getRoundRecieved() const;
 	Event	*getSelfParent() const;
 	Event	*getGossiperParent() const;
 	data	getData() const;
-	int		getRound() const;
-	bool	getWitness() const;
-	int		getConsensusTimestamp() const;
-	int		getRoundRecieved() const;
-	char	getFamous() const;
 	std::string			getHash() const;
 	std::vector<Event*>	*getGraph() const;
-	void	setFamous(char);
-	void	setRoundReceived(int);
-	void	setConsensusTimestamp(int );
-	void	setSelfParent(Event *);
-	void	setGossiperParent(Event *);
-	void	decideFame();
 
 	static bool fork(Event*, Event*);
 };
 
-std::ostream&	operator<<(std::ostream& os, const Event& e); 
+std::ostream&	operator<<(std::ostream & os, const Event & e); 
 
 #endif

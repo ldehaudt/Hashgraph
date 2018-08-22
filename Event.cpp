@@ -1,7 +1,7 @@
 #include "Event.hpp"
 #include "Hashgraphs.hpp"
 
-Event::Event(Person &p, data data)
+Event::Event(Person &p, data const & data)
 {
 	graph = p.getHashgraph();
 	round = 0;
@@ -59,7 +59,7 @@ void	Event::divideRounds()
 	for (unsigned int i = 0; i < witnesses.size(); i++){
 		if (numStrongSee > 2 * N / 3) 
 			break;
-		if (stronglySee(witnesses[i]))
+		if (stronglySee(*witnesses[i]))
 			numStrongSee++;
 	}
 	if (numStrongSee > 2 * N / 3)
@@ -71,26 +71,26 @@ void	Event::divideRounds()
 	witness = (getSelfParent() == NULL || getSelfParent()->getRound() < round);
 }
 
-bool	Event::operator==(Event &rhs)
+bool	Event::operator==(Event const & rhs) const
 {
 	return (hash == rhs.getHash());
 }
 
-bool	Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck,
-	bool *done, std::vector<Event*> *visited){
-	if (std::find((*visited).begin(),(*visited).end() , this) != (*visited).end())
-		return (*this == *y);
-	visited->push_back(this);
-	if (d.owner == y->getData().owner)
-		(*forkCheck).push_back(this);
-	if (*done)
+bool	Event::seeRecursion(Event const & y, std::vector<Event*> & forkCheck,
+	bool & done, std::vector<Event*> & visited){
+	if (std::find(visited.begin(), visited.end() , this) != visited.end())
+		return (*this == y);
+	visited.push_back(this);
+	if (d.owner == y.getData().owner)
+		forkCheck.push_back(this);
+	if (done)
 		return true;
-	if (*this == *y)
+	if (*this == y)
 	{
 		return true;
-		*done = true;
+		done = true;
 	}
-	if (d.timestamp < y->getData().timestamp)
+	if (d.timestamp < y.getData().timestamp)
 		return false;
 	if (!this->getSelfParent())
 		return false;
@@ -98,62 +98,65 @@ bool	Event::seeRecursion(Event *y, std::vector<Event*> *forkCheck,
 	this->getGossiperParent()->seeRecursion(y, forkCheck, done, visited);
 }
 
-bool	Event::see(Event *y)
+bool	Event::see(Event const & y)
 {
-	if (hashesSeen.find(y->getHash()) != hashesSeen.end())
+	if (hashesSeen.find(y.getHash()) != hashesSeen.end())
 		return true;
-	if (hashesNotSeen.find(y->getHash()) != hashesSeen.end())
+	if (hashesNotSeen.find(y.getHash()) != hashesSeen.end())
 		return false;
 	std::vector<Event*> forkCheck;
 	std::vector<Event*> visited;
 	bool done = false;
-	bool b = seeRecursion(y, &forkCheck, &done, &visited);
-	if (b == false){
-		hashesNotSeen.insert(y->getHash());
+	bool b = seeRecursion(y, forkCheck, done, visited);
+	if (b == false)
+	{
+		hashesNotSeen.insert(y.getHash());
 		return false;
 	}
 	for (unsigned int i = 0; i < forkCheck.size(); i++)
 		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
-			if (fork(forkCheck[i],forkCheck[j])){
-				hashesNotSeen.insert(y->getHash());	
+			if (fork(forkCheck[i],forkCheck[j]))
+			{
+				hashesNotSeen.insert(y.getHash());	
 				return false;
 			}
-	hashesSeen.insert(y->getHash());	
+	hashesSeen.insert(y.getHash());	
 	return true;
 }
 
-bool	Event::ancestorRecursion(Event *y, bool* done, std::vector<Event*> *visited)
+bool	Event::ancestorRecursion(Event const & y, bool & done,
+std::vector<Event*> & visited)
 {
-	if (std::find((*visited).begin(),(*visited).end() , this) != (*visited).end())
-		return (*this == *y);
-	visited->push_back(this);
-	if (*done)
+	if (std::find(visited.begin(), visited.end() , this) != visited.end())
+		return (*this == y);
+	visited.push_back(this);
+	if (done)
 		return true;
-	if (*this == *y)
+	if (*this == y)
 	{
 		return true;
-		*done = true;
+		done = true;
 	}
-	if (d.timestamp < y->getData().timestamp)
+	if (d.timestamp < y.getData().timestamp)
 		return false;
 	if (!this->getSelfParent())
 		return false;
 	return (this->getSelfParent()->see(y)) || (this->getGossiperParent()->see(y));
 }
 
-bool	Event::ancestor(Event *y)
+bool	Event::ancestor(Event const & y)
 {
-	if (hashesSeen.find(y->getHash()) != hashesSeen.end())
-		return true;
-	if (ancestorsNotSeen.find(y->getHash()) != ancestorsNotSeen.end())
-		return false;
 	bool b;
-
 	std::vector<Event*> visited;
 	bool done = false;
-	b = ancestorRecursion(y, &done, &visited);
+
+	if (hashesSeen.find(y.getHash()) != hashesSeen.end())
+		return true;
+	if (ancestorsNotSeen.find(y.getHash()) != ancestorsNotSeen.end())
+		return false;
+	b = ancestorRecursion(y, done, visited);
 	if (!b){
-		ancestorsNotSeen.insert(y->getHash());		
+		ancestorsNotSeen.insert(y.getHash());		
 	}
 	return b;
 }
@@ -178,11 +181,11 @@ void	Event::decideFame()
 			countNo = 0;
 			for (unsigned int y = 0; y < s.size(); y++)
 			{
-				if (!stronglySee(s[y])){
+				if (!stronglySee(*(s[y]))){
 					s.erase(s.begin() + y);
 				}
 				else {
-					if (s[y]->see((*graph)[x]))
+					if (s[y]->see(*((*graph)[x])))
 						count++;
 					else
 						countNo++;
@@ -199,16 +202,16 @@ void	Event::decideFame()
 	}
 }
 
-bool	Event::stronglySee(Event *y)
+bool	Event::stronglySee(Event const & y)
 {
 	int numSee = 0;
 	std::array<bool, N> found = {false};
 	for (unsigned int n = 0; n < graph->size(); n++)
 	{
 		if (found[(*graph)[n]->getData().owner] == true
-			|| (*graph)[n]->getRound() < y->getRound())
+			|| (*graph)[n]->getRound() < y.getRound())
 			continue ;
-		if (this->see((*graph)[n]) && (*graph)[n]->see(y))
+		if (this->see(*((*graph)[n])) && (*graph)[n]->see(y))
 		{
 			numSee++;
 			found[(*graph)[n]->getData().owner] = true;
@@ -273,19 +276,19 @@ int		Event::getRoundRecieved() const {
 char	Event::getFamous() const {    
 	return (famous);
 }
-void	Event::setFamous(char fame){
+void	Event::setFamous(char const & fame){
 	famous = fame;
 }
-void	Event::setRoundReceived(int r) {
+void	Event::setRoundReceived(int const & r) {
 	roundRecieved = r;
 }
-void	Event::setConsensusTimestamp(int t) {
+void	Event::setConsensusTimestamp(int const & t) {
 	consensusTimestamp = t;
 }
-void	Event::setSelfParent(Event *e) {
+void	Event::setSelfParent(Event* const e) {
 	selfParent = e;
 }
-void	Event::setGossiperParent(Event *e) {
+void	Event::setGossiperParent(Event* const e) {
 	gossiperParent = e;
 }
 
