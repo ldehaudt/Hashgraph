@@ -1,12 +1,13 @@
 #include "Person.hpp"
 
-std::vector<Event*>	Person::findWitnesses(int round){
+std::vector<Event*>	Person::findWitnesses(int const & round) const
+{
 	std::vector<Event*> witnesses;
-	for (unsigned int i = 0; i < getHashgraph()->size()
-		&& (*getHashgraph())[i]->getRound() >= round - 1; i++)
-		if ((*getHashgraph())[i]->getRound() == round
-			&& (*getHashgraph())[i]->getWitness() == true)
-			witnesses.push_back((*getHashgraph())[i]);
+	for (unsigned int i = 0; i < getHashgraph_const()->size()
+		&& (*getHashgraph_const())[i]->getRound() >= round - 1; i++)
+		if ((*getHashgraph_const())[i]->getRound() == round
+			&& (*getHashgraph_const())[i]->getWitness() == true)
+			witnesses.push_back((*getHashgraph_const())[i]);
 	return witnesses;
 }
 
@@ -15,15 +16,15 @@ Person::~Person(){
 	ofs.close();
 }
 
-Person::Person(Person &rhs){
+Person::Person(Person const & rhs){
 	*this = rhs;    
 }
 
-Person&	Person::operator=(Person &){
+Person&	Person::operator=(Person const &){
 	return *this;
 }
 
-Person::Person(int ind) : index(ind) {
+Person::Person(int const & ind) : index(ind) {
 	currentRound = 0;
 	data d;
 	d.owner = index;
@@ -41,7 +42,7 @@ Person::Person(int ind) : index(ind) {
 		networth.push_back(10000);
 }
 
-std::array<Event*, N>	findUFW(std::vector<Event*> witnesses){
+static std::array<Event*, N>	findUFW(std::vector<Event*> const & witnesses){
 	std::array<Event*, N> arr;
 	for (int i = 0; i < N; i++)
 		arr[i] = NULL;
@@ -65,29 +66,31 @@ std::array<Event*, N>	findUFW(std::vector<Event*> witnesses){
 	return arr;
 }
 
-void	Person::insertEvent(Event* event){
+void	Person::insertEvent(Event const & event){
 	unsigned int i;
+	Event* p;
 
+	*p = event;
 	for (i = 0; i < hashgraph.size(); i++) {
 		if (hashgraph[i]->getRoundRecieved() != -1
-			&& hashgraph[i]->getRoundRecieved() <= event->getRoundRecieved())
+			&& hashgraph[i]->getRoundRecieved() <= event.getRoundRecieved())
 			break;
 	}
 	while (i != hashgraph.size() &&
 		(hashgraph[i]->getRoundRecieved() == -1
-			|| hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
-		&& hashgraph[i]->getConsensusTimestamp() <= event->getConsensusTimestamp())
+			|| hashgraph[i]->getRoundRecieved() == event.getRoundRecieved())
+		&& hashgraph[i]->getConsensusTimestamp() <= event.getConsensusTimestamp())
 		i++;
 	while (i != hashgraph.size() &&
 		(hashgraph[i]->getRoundRecieved() == -1
-			|| hashgraph[i]->getRoundRecieved() == event->getRoundRecieved())
-		&& hashgraph[i]->getConsensusTimestamp() == event->getConsensusTimestamp()
+			|| hashgraph[i]->getRoundRecieved() == event.getRoundRecieved())
+		&& hashgraph[i]->getConsensusTimestamp() == event.getConsensusTimestamp()
 		 && hashgraph[i]->getData().owner < hashgraph[i]->getData().owner)
 		i++;
-	hashgraph.insert(hashgraph.begin() + i, event);
+	hashgraph.insert(hashgraph.begin() + i, p);
 }
 
-void	Person::outputOrder(int n)
+void	Person::outputOrder(int const & n)
 {
 	ofs << "Node owner: " << hashgraph[n]->getData().owner
 	<< "\tTimestamp: " << hashgraph[n]->getData().timestamp << std::endl;
@@ -107,7 +110,7 @@ void	Person::outputOrder(int n)
 	<< std::endl << std::endl;
 }
 
-int	Person::finalizeOrder(int n, int r, std::vector<Event*> w)
+int	Person::finalizeOrder(int const & n, int const & r, std::vector<Event*> const & w)
 {
 	std::array<Event*, N> ufw;
 	std::vector<double> s;
@@ -180,7 +183,7 @@ bool	compareEventsLesser(const Event* lhs, const Event* rhs){
 	return lhs->getData().timestamp < rhs->getData().timestamp;
 }
 
-void	Person::gossip(Person &p){
+void	Person::gossip(Person & p) {
 	Event *tmp;
 	std::vector<data> arr;
 
@@ -198,7 +201,7 @@ void	Person::gossip(Person &p){
     p.recieveGossip(*this, arr);
 }
 
-Event	*Person::getTopNode(Person &target){
+Event	*Person::getTopNode(Person const & target) const {
 	Event *top = NULL;
 	int t = -1;
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
@@ -212,7 +215,7 @@ Event	*Person::getTopNode(Person &target){
 }
 
 //THIS FUNCTION IS ONLY TO TEST FORKS, DO NOT USE THIS UNLESS YOU WANT TO CHEAT
-Event	*Person::getForkNode(Person &target){
+Event	*Person::getForkNode(Person const & target) const {
 	Event *top = NULL;
 	Event *fork = NULL;
 	bool topFound = false;
@@ -237,7 +240,7 @@ Event	*Person::getForkNode(Person &target){
 	return fork;
 }
 
-void	Person::createEvent(int time, Person &gossiper){
+void	Person::createEvent(int const & time, Person & gossiper){
 	data d;
 
 	d.payload = 0;
@@ -263,7 +266,7 @@ void	Person::createEvent(int time, Person &gossiper){
 	hashgraph.insert(hashgraph.begin(), tmp);
 }
 
-void	Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
+void	Person::recieveGossip(Person & gossiper, std::vector<data> const & gossip){
 	unsigned int n;
 	double t;
 	Event *tmp;
@@ -272,7 +275,6 @@ void	Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
 
 	for (unsigned int i = 0; i < gossip.size(); i++)
 	{
-		
 		std::ostringstream s;
 		s << Event(*this, gossip[i]);
 		hash = md5_hash(s.str());
@@ -298,7 +300,7 @@ void	Person::recieveGossip(Person &gossiper, std::vector<data> gossip){
 	findOrder();
 }
 
-void	Person::linkEvents(std::vector<Event*> nEvents)
+void	Person::linkEvents(std::vector<Event*> const & nEvents)
 {
 	for (int i = 0; i < nEvents.size(); i++)
 		if (nEvents[i]->getSelfParent() == NULL && nEvents[i]->getData().selfHash != "\0")
@@ -324,11 +326,15 @@ void	Person::linkEvents(std::vector<Event*> nEvents)
 		}
 }
 
-bool	Person::operator==(Person &rhs){
+bool	Person::operator==(Person const & rhs){
 	return index == rhs.index;
 }
 
-std::vector<Event*>    *Person::getHashgraph(){
+const std::vector<Event*>    *Person::getHashgraph_const() const {
+	return &hashgraph;
+}
+
+std::vector<Event*>    *Person::getHashgraph() {
 	return &hashgraph;
 }
 

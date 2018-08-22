@@ -18,7 +18,7 @@ bool stop = 0;
 int personShown;
 
 
-void putdigit(int x, int y, int val)
+void putdigit(int const & x, int const & y, int const & val)
 {
 	SDL_Rect rect = {x, y, 10, 15};
 	if (val == 10)
@@ -27,7 +27,7 @@ void putdigit(int x, int y, int val)
 	SDL_RenderCopy(rend, number_tex, &num, &rect);
 }
 
-void putfloat(int x, int y, std::string val)
+void putfloat(int const & x, int const & y, std::string const & val)
 {
 	int i;
 	for (i = 0; val[i] != '.'; i++){
@@ -40,18 +40,18 @@ void putfloat(int x, int y, std::string val)
 	}
 }
 
-void square(Event *e)
+void square(Event const & e)
 {
 	SDL_Rect rect;
-	int y = (runTime - e->getData().timestamp) * GAP;
-	int x = M + e->getData().owner * (W - 2 * M) / (N - 1);
-	if (e->getFamous() == 1)
+	int y = (runTime - e.getData().timestamp) * GAP;
+	int x = M + e.getData().owner * (W - 2 * M) / (N - 1);
+	if (e.getFamous() == 1)
 		SDL_SetRenderDrawColor(rend, 247, 185, 0, 255);
-	else if (e->getFamous() == 0)
+	else if (e.getFamous() == 0)
 		SDL_SetRenderDrawColor(rend, 130, 130, 130, 255);
-	else if (e->getWitness() == 1)
+	else if (e.getWitness() == 1)
 		SDL_SetRenderDrawColor(rend, 163, 0, 0, 255);
-	else if (e->getRoundRecieved() != -1)
+	else if (e.getRoundRecieved() != -1)
 		SDL_SetRenderDrawColor(rend, 19, 132, 70, 255);
 	else
 		SDL_SetRenderDrawColor(rend, 9, 71, 124, 255);
@@ -62,12 +62,12 @@ void square(Event *e)
 	SDL_RenderFillRect(rend, &rect);
 }
 
-void connect(Event *e, Event *p)
+void connect(Event const & e, Event const & p)
 {
-	int y = (runTime - e->getData().timestamp) * GAP;
-	int x = M + e->getData().owner * (W - 2 * M) / (N - 1);
-	int y2 = (runTime - p->getData().timestamp) * GAP;
-	int x2 = M + p->getData().owner * (W - 2 * M) / (N - 1);
+	int y = (runTime - e.getData().timestamp) * GAP;
+	int x = M + e.getData().owner * (W - 2 * M) / (N - 1);
+	int y2 = (runTime - p.getData().timestamp) * GAP;
+	int x2 = M + p.getData().owner * (W - 2 * M) / (N - 1);
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
@@ -133,7 +133,7 @@ void ponies()
 	}
 }
 
-void refresh(Person *p)
+void refresh(Person const & p)
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
 	SDL_RenderFillRect(rend, NULL);
@@ -141,31 +141,32 @@ void refresh(Person *p)
 	for (int i = 0; i < N; i++)
 		SDL_RenderDrawLine(rend, M + i * (W - 2 * M) / (N - 1), 0,
 			M + i * (W - 2 * M) / (N - 1), H);
-	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
+	for (unsigned int i = 0; i < (p.getHashgraph_const())->size(); i++)
 	{
-		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * GAP > H)
+		if ((runTime - ((*(p.getHashgraph_const()))[i])->getData().timestamp) * GAP > H)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
-		if ((*(p->getHashgraph()))[i]->getSelfParent())
+		if ((*(p.getHashgraph_const()))[i]->getSelfParent())
 		{
-			connect((*(p->getHashgraph()))[i],
-				((*(p->getHashgraph()))[i])->getSelfParent());
-			connect((*(p->getHashgraph()))[i],
-				((*(p->getHashgraph()))[i])->getGossiperParent());
+			connect(*(*(p.getHashgraph_const()))[i],
+				(*((*(p.getHashgraph_const()))[i])->getSelfParent()));
+			connect(*(*(p.getHashgraph_const()))[i],
+				(*((*(p.getHashgraph_const()))[i])->getGossiperParent()));
 		}
 	}
-	for (unsigned int i = 0; i < (p->getHashgraph())->size(); i++)
+	for (unsigned int i = 0; i < (p.getHashgraph_const())->size(); i++)
 	{
-		if ((runTime - ((*(p->getHashgraph()))[i])->getData().timestamp) * GAP > H)
+		if ((runTime - ((*(p.getHashgraph_const()))[i])->getData().timestamp) * GAP > H)
 			continue ;
-		square((*(p->getHashgraph()))[i]);
+		square(*((*(p.getHashgraph_const()))[i]));
 	}
 	if (N <= 6)
 		ponies();
 	SDL_RenderPresent(rend);
 }
 
-int main(){
+void SDL_Init()
+{
 	auto t_start = std::chrono::high_resolution_clock::now();
 	srand(time(NULL));
 	SDL_Init(SDL_INIT_VIDEO);
@@ -193,6 +194,10 @@ int main(){
 	tmpSurf = SDL_LoadBMP("numbers.bmp");
 	number_tex = SDL_CreateTextureFromSurface(rend, tmpSurf);
 	SDL_FreeSurface(tmpSurf);
+}
+
+int main(){
+	SDL_Init();
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
 	personShown = 0;
@@ -222,7 +227,7 @@ int main(){
 		        	personShown = 4;
 		        if (N >= 6 && event.key.keysym.sym == SDLK_6)
 		        	personShown = 5;
-				refresh(people[personShown]);
+				refresh(*(people[personShown]));
 		    }
 		if (stop)
 			continue ;
@@ -231,7 +236,7 @@ int main(){
 		while ((j = std::rand() % N) == i)
 			;
 		people[i]->gossip(*(people[j]));
-		refresh(people[personShown]);
+		refresh(*people[personShown]);
 		runTime++;
 	}
 }
