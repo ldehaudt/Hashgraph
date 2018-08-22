@@ -334,6 +334,10 @@ const std::vector<Event*>    *Person::getHashgraph_const() const {
 	return &hashgraph;
 }
 
+const std::list<Event*>    *Person::getFinishedNodes() const {
+	return &finishedNodes;
+}
+
 std::vector<Event*>    *Person::getHashgraph() {
 	return &hashgraph;
 }
@@ -349,9 +353,22 @@ void	Person::incCurRound(){
 void	Person::removeOldBalls()
 {
 	for (unsigned int i = 0; i < hashgraph.size(); i++){
-		if (hashgraph[i]->getRound() < currentRound - 5){
+		if (hashgraph[i]->getConsensusTimestamp() != -1 && hashgraph[i]->getWitness()  == false){
+			finishedNodes.push_back(hashgraph[i]);
+			hashgraph.erase(hashgraph.begin() + i);
+			i--;			
+		}
+		if (hashgraph[i]->getWitness() && hashgraph[i]->getConsensusTimestamp() != -1 
+		&& hashgraph[i]->getRound() < currentRound - 5){
 			hashgraph.erase(hashgraph.begin() + i);
 			i--;
 		}
 	}
+	for (std::list<Event*>::iterator i = finishedNodes.begin(); i != finishedNodes.end(); ++i){
+		if ((*i)->getRound() < currentRound - 6){
+			finishedNodes.erase(i);
+			i--;
+		}
+	}
+
 }

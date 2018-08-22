@@ -31,7 +31,7 @@ ifneq ("$(shell test -e $(HOME)/.brew && echo ex)" , "ex")
 	@echo "${YELLO}INSTALLING SDL2: please be patient"
 endif
 	@echo "${YELLO}Checking for graphics library ..."	
-	@brew install sdl2
+	#@brew install sdl2
 	@echo "${YELLO}Compiling ...${WHITE}"
 	$(CPP) $(FLAGS) $(OBJ) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
 	@echo "${RED}It's a Gaetan ???${WHITE}"

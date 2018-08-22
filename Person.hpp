@@ -12,6 +12,7 @@ typedef struct s_data data;
 class Person{
 private:
 	std::vector<Event*> hashgraph;
+	std::list<Event*> finishedNodes;
 	void	createEvent(int const & time, Person & gossiper);
 	Event	*getTopNode(Person const &) const;
 	Event	*getForkNode(Person const &) const;
@@ -29,6 +30,7 @@ public:
 	bool	operator==(Person const &);
 	void	recieveGossip(Person &, std::vector<data> const & gossip);
 	const std::vector<Event*>	*getHashgraph_const() const;
+	const std::list<Event*>	*getFinishedNodes() const;
 	std::vector<Event*>	*getHashgraph();
 	void	findOrder();
 	int		finalizeOrder(int const & n, int const & r,

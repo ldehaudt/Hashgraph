@@ -1,0 +1,5679 @@
+Node owner: 1	Timestamp: 1
+	 -Self Parent
+	 -Gossip Parent
+	Round Received: 1	Consensus Time: 21
+
+Node owner: 2	Timestamp: 1
+	 -Self Parent
+	 -Gossip Parent
+	Round Received: 1	Consensus Time: 11
+
+Node owner: 5	Timestamp: 1
+	 -Self Parent
+	 -Gossip Parent
+	Round Received: 1	Consensus Time: 9
+
+Node owner: 4	Timestamp: 1
+	 -Self Parent
+	 -Gossip Parent
+	Round Received: 1	Consensus Time: 8
+
+Node owner: 0	Timestamp: 1
+	 -Self Parent
+	 -Gossip Parent
+	Round Received: 1	Consensus Time: 14
+
+Node owner: 3	Timestamp: 1
+	 -Self Parent
+	 -Gossip Parent
+	Round Received: 1	Consensus Time: 13
+
+Node owner: 0	Timestamp: 2
+	6aa20b132ca329481f25075f1980b0a1 -Self Parent
+	07294e26b8d14c59abbd750b45b5fb37 -Gossip Parent
+	Round Received: 1	Consensus Time: 14
+
+Node owner: 1	Timestamp: 3
+	f910abf6c834862cbce6af854f896dc1 -Self Parent
+	07294e26b8d14c59abbd750b45b5fb37 -Gossip Parent
+	Round Received: 1	Consensus Time: 21
+
+Node owner: 5	Timestamp: 4
+	879c78853d1692a57ac7e087c24fbe73 -Self Parent
+	bd8f226eba3c6779f0a79cd61d90a668 -Gossip Parent
+	Round Received: 1	Consensus Time: 9
+
+Node owner: 2	Timestamp: 5
+	07294e26b8d14c59abbd750b45b5fb37 -Self Parent
+	433c026d318c3157a999ab3cb76af6c -Gossip Parent
+	Round Received: 1	Consensus Time: 16
+
+Node owner: 2	Timestamp: 6
+	ff3fa5605208a973f6f515db36e9e966 -Self Parent
+	9c7d2d6e3026fb034039248482d57a3a -Gossip Parent
+	Round Received: 1	Consensus Time: 16
+
+Node owner: 3	Timestamp: 8
+	cbcf19b4c4b30ae92e3fded3c1a7ed10 -Self Parent
+	9c7d2d6e3026fb034039248482d57a3a -Gossip Parent
+	Round Received: 1	Consensus Time: 15
+
+Node owner: 4	Timestamp: 9
+	bd8f226eba3c6779f0a79cd61d90a668 -Self Parent
+	a02fdc13ded945ed26ee0164a85dedbb -Gossip Parent
+	Round Received: 1	Consensus Time: 21
+
+Node owner: 4	Timestamp: 10
+	ac1c19f9825a48446bdfb91dea87257 -Self Parent
+	a02fdc13ded945ed26ee0164a85dedbb -Gossip Parent
+	Round Received: 1	Consensus Time: 21
+
+Node owner: 4	Timestamp: 11
+	5e899b386e2388211e54f6c8e787e72f -Self Parent
+	bf2db034de62618ed57d778e6b810db2 -Gossip Parent
+	Round Received: 1	Consensus Time: 21
+
+Node owner: 3	Timestamp: 12
+	a02fdc13ded945ed26ee0164a85dedbb -Self Parent
+	b749c39786107c3f0e3cd8129a66357 -Gossip Parent
+	Round Received: 1	Consensus Time: 20
+
+Node owner: 5	Timestamp: 13
+	9c7d2d6e3026fb034039248482d57a3a -Self Parent
+	52c2ad1a57d31d8f4413c9e8f6ca3f5 -Gossip Parent
+	Round Received: 1	Consensus Time: 23
+
+Node owner: 1	Timestamp: 14
+	bf2db034de62618ed57d778e6b810db2 -Self Parent
+	b749c39786107c3f0e3cd8129a66357 -Gossip Parent
+	Round Received: 1	Consensus Time: 28
+
+Node owner: 1	Timestamp: 15
+	d748576ec03bf39472e15ed8abc9b51 -Self Parent
+	4d6bc7c6fe26348a8c6ef63349894e27 -Gossip Parent
+	Round Received: 1	Consensus Time: 28
+
+Node owner: 4	Timestamp: 16
+	Payload: 804.36 to 1
+	Current Networth: 10000 10804.4 10000 10000 9195.64 10000 
+	52c2ad1a57d31d8f4413c9e8f6ca3f5 -Self Parent
+	d4035eafec52eec466d19db41a27434c -Gossip Parent
+	Round Received: 1	Consensus Time: 29
+
+Node owner: 4	Timestamp: 19
+	4fe6dad9e392d3b75ae3bc385da2d979 -Self Parent
+	d4035eafec52eec466d19db41a27434c -Gossip Parent
+	Round Received: 1	Consensus Time: 29
+
+Node owner: 5	Timestamp: 20
+	4d6bc7c6fe26348a8c6ef63349894e27 -Self Parent
+	d4035eafec52eec466d19db41a27434c -Gossip Parent
+	Round Received: 1	Consensus Time: 31
+
+Node owner: 2	Timestamp: 21
+	b749c39786107c3f0e3cd8129a66357 -Self Parent
+	1be00a5c72fed8e43363e6514169f6fe -Gossip Parent
+	Round Received: 1	Consensus Time: 29
+
+Node owner: 5	Timestamp: 25
+	273b385899d5a0b5186935634f05acad -Self Parent
+	b72d662338522b8ce3a76ad3a52ecfef -Gossip Parent
+	Round Received: 1	Consensus Time: 31
+
+Node owner: 4	Timestamp: 26
+	1be00a5c72fed8e43363e6514169f6fe -Self Parent
+	2efff8ea86baf6a7ed5fd6e5f105c56 -Gossip Parent
+	Round Received: 1	Consensus Time: 31
+
+Node owner: 4	Timestamp: 27
+	0934a204259ce5c9492355016965bb5 -Self Parent
+	b72d662338522b8ce3a76ad3a52ecfef -Gossip Parent
+	Round Received: 1	Consensus Time: 31
+
+Node owner: 4	Timestamp: 28
+	3bf97f631c2271825fd16801325115cc -Self Parent
+	e02865d3e5726c333e4785372327778 -Gossip Parent
+	Round Received: 1	Consensus Time: 31
+
+Node owner: 0	Timestamp: 7
+	433c026d318c3157a999ab3cb76af6c -Self Parent
+	cbcf19b4c4b30ae92e3fded3c1a7ed10 -Gossip Parent
+	Round Received: 3	Consensus Time: 49
+
+Node owner: 0	Timestamp: 17
+	d5847906823ff33348c70eb5ddfe389d -Self Parent
+	b749c39786107c3f0e3cd8129a66357 -Gossip Parent
+	Round Received: 3	Consensus Time: 49
+
+Node owner: 0	Timestamp: 18
+	e0924219b922af9e66b9b6685fec285a -Self Parent
+	d4035eafec52eec466d19db41a27434c -Gossip Parent
+	Round Received: 3	Consensus Time: 49
+
+Node owner: 0	Timestamp: 22
+	d2ff7b7f9e4f7de95a6c9c291bc911fb -Self Parent
+	e02865d3e5726c333e4785372327778 -Gossip Parent
+	Round Received: 3	Consensus Time: 49
+
+Node owner: 3	Timestamp: 23
+	Payload: 606.48 to 1
+	Current Networth: 10000 11410.8 10000 9393.52 9195.64 10000 
+	d4035eafec52eec466d19db41a27434c -Self Parent
+	273b385899d5a0b5186935634f05acad -Gossip Parent
+	Round Received: 3	Consensus Time: 32
+
+Node owner: 3	Timestamp: 24
+	7e747100794df02c46e188225b919627 -Self Parent
+	e02865d3e5726c333e4785372327778 -Gossip Parent
+	Round Received: 3	Consensus Time: 32
+
+Node owner: 3	Timestamp: 29
+	fc3ada8c96171f678d94be7f85ac13b6 -Self Parent
+	0f117a593524bc1743e23ba134e32356 -Gossip Parent
+	Round Received: 3	Consensus Time: 32
+
+Node owner: 5	Timestamp: 30
+	2efff8ea86baf6a7ed5fd6e5f105c56 -Self Parent
+	a819d1feb1ec63769128cdd52ebdc0 -Gossip Parent
+	Round Received: 3	Consensus Time: 45
+
+Node owner: 1	Timestamp: 31
+	e02865d3e5726c333e4785372327778 -Self Parent
+	a819d1feb1ec63769128cdd52ebdc0 -Gossip Parent
+	Round Received: 3	Consensus Time: 38
+
+Node owner: 4	Timestamp: 32
+	Payload: 567.41 to 1
+	Current Networth: 10000 11978.2 10000 9393.52 8628.23 10000 
+	0f117a593524bc1743e23ba134e32356 -Self Parent
+	4c05815cad6be2d725ceccc5f02edac3 -Gossip Parent
+	Round Received: 3	Consensus Time: 46
+
+Node owner: 2	Timestamp: 33
+	b72d662338522b8ce3a76ad3a52ecfef -Self Parent
+	a819d1feb1ec63769128cdd52ebdc0 -Gossip Parent
+	Round Received: 3	Consensus Time: 37
+
+Node owner: 1	Timestamp: 34
+	4c05815cad6be2d725ceccc5f02edac3 -Self Parent
+	08fdee25f8e9aaf86492b18eada5f87c -Gossip Parent
+	Round Received: 3	Consensus Time: 38
+
+Node owner: 2	Timestamp: 35
+	Payload: 266.09 to 5
+	Current Networth: 10000 11978.2 9733.91 9393.52 8628.23 10266.1 
+	08fdee25f8e9aaf86492b18eada5f87c -Self Parent
+	a819d1feb1ec63769128cdd52ebdc0 -Gossip Parent
+	Round Received: 3	Consensus Time: 46
+
+Node owner: 4	Timestamp: 36
+	01e00b505080e2e2cb5611573d392657 -Self Parent
+	5562edd0dc9e3364ca8335a593c07718 -Gossip Parent
+	Round Received: 3	Consensus Time: 46
+
+Node owner: 5	Timestamp: 37
+	01402fae4d79a57f437ee772da1c6721 -Self Parent
+	5562edd0dc9e3364ca8335a593c07718 -Gossip Parent
+	Round Received: 3	Consensus Time: 45
+
+Node owner: 2	Timestamp: 38
+	11a93e1f4c34397e4e2a4ad24c82bb5b -Self Parent
+	5562edd0dc9e3364ca8335a593c07718 -Gossip Parent
+	Round Received: 3	Consensus Time: 46
+
+Node owner: 1	Timestamp: 39
+	5562edd0dc9e3364ca8335a593c07718 -Self Parent
+	a819d1feb1ec63769128cdd52ebdc0 -Gossip Parent
+	Round Received: 3	Consensus Time: 44
+
+Node owner: 4	Timestamp: 40
+	6a845c94cf53e0f2f117c966abf7ae75 -Self Parent
+	83e6d4b79d4b5a2e43126af0ae9e09fb -Gossip Parent
+	Round Received: 3	Consensus Time: 46
+
+Node owner: 4	Timestamp: 41
+	4541512114398829400a303e7c6a49 -Self Parent
+	f20ec2dd7868241a6bd03c458e2c8399 -Gossip Parent
+	Round Received: 3	Consensus Time: 46
+
+Node owner: 0	Timestamp: 42
+	Payload: 929.86 to 1
+	Current Networth: 9070.14 12908.1 9733.91 9393.52 8628.23 10266.1 
+	3302f4af13c605193caabca297c266f -Self Parent
+	b613545714ce5061185a59125d6737cb -Gossip Parent
+	Round Received: 3	Consensus Time: 49
+
+Node owner: 4	Timestamp: 43
+	b613545714ce5061185a59125d6737cb -Self Parent
+	ec2726fac94fc09045facf6ba56a54d5 -Gossip Parent
+	Round Received: 3	Consensus Time: 52
+
+Node owner: 2	Timestamp: 44
+	Payload: 824.92 to 2
+	Current Networth: 9070.14 12908.1 9733.91 9393.52 8628.23 10266.1 
+	f20ec2dd7868241a6bd03c458e2c8399 -Self Parent
+	7f79aa3f9f715c73f4c8ff5a6d6c660 -Gossip Parent
+	Round Received: 3	Consensus Time: 55
+
+Node owner: 3	Timestamp: 45
+	a819d1feb1ec63769128cdd52ebdc0 -Self Parent
+	ec2726fac94fc09045facf6ba56a54d5 -Gossip Parent
+	Round Received: 3	Consensus Time: 56
+
+Node owner: 5	Timestamp: 46
+	ec2726fac94fc09045facf6ba56a54d5 -Self Parent
+	12bcb723b3bd0a8a8f602a53dd75a490 -Gossip Parent
+	Round Received: 3	Consensus Time: 52
+
+Node owner: 3	Timestamp: 47
+	76e1715b2f89a355fbf9df86cd23e31a -Self Parent
+	9836213f14d2f87e99e04c19ea458aac -Gossip Parent
+	Round Received: 3	Consensus Time: 56
+
+Node owner: 1	Timestamp: 48
+	83e6d4b79d4b5a2e43126af0ae9e09fb -Self Parent
+	8b29d45c637b55852f271bf61dba5e2c -Gossip Parent
+	Round Received: 3	Consensus Time: 56
+
+Node owner: 2	Timestamp: 49
+	8b29d45c637b55852f271bf61dba5e2c -Self Parent
+	96b2df3ae5d7f9921652c5a7c5feb84a -Gossip Parent
+	Round Received: 3	Consensus Time: 65
+
+Node owner: 2	Timestamp: 50
+	a086b6ae1cf57dbaa917adbbe8184cb1 -Self Parent
+	96b2df3ae5d7f9921652c5a7c5feb84a -Gossip Parent
+	Round Received: 3	Consensus Time: 65
+
+Node owner: 2	Timestamp: 51
+	61ce32b9113557015ff1e46e219c8069 -Self Parent
+	96b2df3ae5d7f9921652c5a7c5feb84a -Gossip Parent
+	Round Received: 3	Consensus Time: 65
+
+Node owner: 0	Timestamp: 52
+	12bcb723b3bd0a8a8f602a53dd75a490 -Self Parent
+	68d53439a46a32e87e4691bc5c98b9a1 -Gossip Parent
+	Round Received: 3	Consensus Time: 68
+
+Node owner: 4	Timestamp: 53
+	7f79aa3f9f715c73f4c8ff5a6d6c660 -Self Parent
+	9836213f14d2f87e99e04c19ea458aac -Gossip Parent
+	Round Received: 3	Consensus Time: 64
+
+Node owner: 2	Timestamp: 54
+	68d53439a46a32e87e4691bc5c98b9a1 -Self Parent
+	80c0874ffdc20207d4ca76f6cefcf35a -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 3	Timestamp: 55
+	96b2df3ae5d7f9921652c5a7c5feb84a -Self Parent
+	80c0874ffdc20207d4ca76f6cefcf35a -Gossip Parent
+	Round Received: 3	Consensus Time: 70
+
+Node owner: 5	Timestamp: 56
+	9836213f14d2f87e99e04c19ea458aac -Self Parent
+	d5354a6a6b7752eed983f769dfc1ea4a -Gossip Parent
+	Round Received: 3	Consensus Time: 70
+
+Node owner: 4	Timestamp: 57
+	c5322e30854b4130a349f8b24c07866f -Self Parent
+	80c0874ffdc20207d4ca76f6cefcf35a -Gossip Parent
+	Round Received: 3	Consensus Time: 64
+
+Node owner: 1	Timestamp: 58
+	Payload: 796.71 to 4
+	Current Networth: 9070.14 12111.4 9733.91 9393.52 9424.94 10266.1 
+	80c0874ffdc20207d4ca76f6cefcf35a -Self Parent
+	c58306fb6a3bb049cec342ae2cb41a0 -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 3	Timestamp: 59
+	d5354a6a6b7752eed983f769dfc1ea4a -Self Parent
+	c58306fb6a3bb049cec342ae2cb41a0 -Gossip Parent
+	Round Received: 3	Consensus Time: 70
+
+Node owner: 1	Timestamp: 60
+	4516afd41b4ded06db52f1d732ea0118 -Self Parent
+	1dc0f18f4f288ede2708dc6960d0e46 -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 3	Timestamp: 61
+	1dc0f18f4f288ede2708dc6960d0e46 -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 70
+
+Node owner: 5	Timestamp: 62
+	c58306fb6a3bb049cec342ae2cb41a0 -Self Parent
+	c18f66eff91d4e11d34be16f9c406272 -Gossip Parent
+	Round Received: 3	Consensus Time: 70
+
+Node owner: 2	Timestamp: 63
+	Payload: 426.13 to 5
+	Current Networth: 9070.14 12111.4 9307.78 9393.52 9424.94 10692.2 
+	d80beb93fe875a75b1bdcd42dfd5ad63 -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 0	Timestamp: 64
+	c18f66eff91d4e11d34be16f9c406272 -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 3	Timestamp: 65
+	7fcc6c7cd05f40cbc2d405be9ba0a041 -Self Parent
+	89c48d82a4d625213d00fa12d4e4ecb4 -Gossip Parent
+	Round Received: 3	Consensus Time: 70
+
+Node owner: 0	Timestamp: 66
+	db7573a84183cc00abb08a95b93f952e -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 5	Timestamp: 67
+	Payload: 58.73 to 4
+	Current Networth: 9070.14 12111.4 9307.78 9393.52 9483.67 10633.5 
+	89c48d82a4d625213d00fa12d4e4ecb4 -Self Parent
+	23f2663a5bbd8d1e448390a43d72d559 -Gossip Parent
+	Round Received: 3	Consensus Time: 74
+
+Node owner: 1	Timestamp: 68
+	a2d3d91660155ae1ef0619dcaad32a82 -Self Parent
+	f94f3f832751c7b7369760f4b258309a -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 1	Timestamp: 69
+	f8d1f2e6aad7aeaa3b9de74b4df78c23 -Self Parent
+	68a086f7df7e42e36fbd0472d00c16d -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 0	Timestamp: 70
+	f94f3f832751c7b7369760f4b258309a -Self Parent
+	68a086f7df7e42e36fbd0472d00c16d -Gossip Parent
+	Round Received: 3	Consensus Time: 83
+
+Node owner: 5	Timestamp: 71
+	68a086f7df7e42e36fbd0472d00c16d -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 81
+
+Node owner: 1	Timestamp: 72
+	799d281b9854804f8a8fcc2b7fece142 -Self Parent
+	47e81bcf5eeb438422b9347f6b97689e -Gossip Parent
+	Round Received: 3	Consensus Time: 79
+
+Node owner: 5	Timestamp: 73
+	397d55b7894926df2e56fec4eae3739 -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 81
+
+Node owner: 3	Timestamp: 74
+	23f2663a5bbd8d1e448390a43d72d559 -Self Parent
+	eee14c29e16a11e941a0cf05e44e482 -Gossip Parent
+	Round Received: 3	Consensus Time: 88
+
+Node owner: 2	Timestamp: 75
+	47e81bcf5eeb438422b9347f6b97689e -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 83
+
+Node owner: 2	Timestamp: 76
+	90ee1421c7bb04c4500ed281cdff57a6 -Self Parent
+	6ef2eb59134030442b89873bcbfce5d6 -Gossip Parent
+	Round Received: 3	Consensus Time: 83
+
+Node owner: 0	Timestamp: 77
+	b960b421bf0d1b8a14492700b29f9be2 -Self Parent
+	380f2b9891b1b459e06bb42afd6d35 -Gossip Parent
+	Round Received: 3	Consensus Time: 83
+
+Node owner: 0	Timestamp: 78
+	1a97056734279e6770777c745fce6de5 -Self Parent
+	bd690d1fc269b3d2980f6ff6f4ac6979 -Gossip Parent
+	Round Received: 3	Consensus Time: 83
+
+Node owner: 3	Timestamp: 79
+	f4df33c35ab5acb0b94032eff7db6f66 -Self Parent
+	78f7c3d3ddb9bef0fe5457dd66fb2e9b -Gossip Parent
+	Round Received: 3	Consensus Time: 88
+
+Node owner: 2	Timestamp: 80
+	bd690d1fc269b3d2980f6ff6f4ac6979 -Self Parent
+	c8e99387d0e3db8e9fe37b111682babc -Gossip Parent
+	Round Received: 4	Consensus Time: 94
+
+Node owner: 1	Timestamp: 81
+	6ef2eb59134030442b89873bcbfce5d6 -Self Parent
+	eee14c29e16a11e941a0cf05e44e482 -Gossip Parent
+	Round Received: 4	Consensus Time: 92
+
+Node owner: 4	Timestamp: 82
+	Payload: 863.01 to 3
+	Current Networth: 9070.14 12111.4 9307.78 10256.5 8620.66 10633.5 
+	380f2b9891b1b459e06bb42afd6d35 -Self Parent
+	eee14c29e16a11e941a0cf05e44e482 -Gossip Parent
+	Round Received: 4	Consensus Time: 92
+
+Node owner: 5	Timestamp: 83
+	eee14c29e16a11e941a0cf05e44e482 -Self Parent
+	c8e99387d0e3db8e9fe37b111682babc -Gossip Parent
+	Round Received: 4	Consensus Time: 92
+
+Node owner: 3	Timestamp: 84
+	c8e99387d0e3db8e9fe37b111682babc -Self Parent
+	d1446502245df7242a63e02c8887a0c6 -Gossip Parent
+	Round Received: 4	Consensus Time: 99
+
+Node owner: 3	Timestamp: 85
+	073e136f382d8e21b2826b41cb35d56 -Self Parent
+	ca5732d14c7b0f008fbb8b725f667d8f -Gossip Parent
+	Round Received: 4	Consensus Time: 99
+
+Node owner: 3	Timestamp: 86
+	bc742c0c61f1cbda20e3ba818de382b4 -Self Parent
+	61a009e372bd6edc2f46a16ce4493b73 -Gossip Parent
+	Round Received: 4	Consensus Time: 99
+
+Node owner: 3	Timestamp: 87
+	2552a32dc725dae87c7fcf672f168a -Self Parent
+	ca5732d14c7b0f008fbb8b725f667d8f -Gossip Parent
+	Round Received: 4	Consensus Time: 99
+
+Node owner: 4	Timestamp: 88
+	ca5732d14c7b0f008fbb8b725f667d8f -Self Parent
+	96cda15c4de13bf433a6f442dbafd264 -Gossip Parent
+	Round Received: 4	Consensus Time: 109
+
+Node owner: 3	Timestamp: 89
+	ff4ad1dc6cef2717722ed66b35b5e684 -Self Parent
+	78f7c3d3ddb9bef0fe5457dd66fb2e9b -Gossip Parent
+	Round Received: 4	Consensus Time: 99
+
+Node owner: 2	Timestamp: 90
+	96cda15c4de13bf433a6f442dbafd264 -Self Parent
+	61a009e372bd6edc2f46a16ce4493b73 -Gossip Parent
+	Round Received: 4	Consensus Time: 95
+
+Node owner: 1	Timestamp: 91
+	61a009e372bd6edc2f46a16ce4493b73 -Self Parent
+	ea0b51142d2f2cc7be855afab72f6be1 -Gossip Parent
+	Round Received: 4	Consensus Time: 105
+
+Node owner: 0	Timestamp: 92
+	78f7c3d3ddb9bef0fe5457dd66fb2e9b -Self Parent
+	ea0b51142d2f2cc7be855afab72f6be1 -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 3	Timestamp: 93
+	ea0b51142d2f2cc7be855afab72f6be1 -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 105
+
+Node owner: 0	Timestamp: 94
+	8f0a2b915bdb7f01bd3487c19a71aff7 -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 5	Timestamp: 95
+	d1446502245df7242a63e02c8887a0c6 -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 3	Timestamp: 96
+	4c95930af085bfb1f43c57d68dcd4fa -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 105
+
+Node owner: 0	Timestamp: 97
+	01da28c66a2f6ee56d5ab884eac70c5d -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 4	Timestamp: 98
+	cc2666dc74ca7a381276416a41b26a52 -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 109
+
+Node owner: 4	Timestamp: 99
+	4d67a680d19d8db3656ebf4fd7c7bcec -Self Parent
+	2580db13fe6e6ded9527c26f38d8ba3b -Gossip Parent
+	Round Received: 4	Consensus Time: 109
+
+Node owner: 0	Timestamp: 100
+	480fbabd832b04756af7852b20918e6e -Self Parent
+	f2a5527c4b550119c31b93e0bb9909b8 -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 5	Timestamp: 101
+	f2a5527c4b550119c31b93e0bb9909b8 -Self Parent
+	5da8769a9a1577b6a6849a1e1659a12f -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 4	Timestamp: 102
+	5da8769a9a1577b6a6849a1e1659a12f -Self Parent
+	adff8b4d9ec230e74b31bc6ee6142012 -Gossip Parent
+	Round Received: 4	Consensus Time: 124
+
+Node owner: 2	Timestamp: 103
+	adff8b4d9ec230e74b31bc6ee6142012 -Self Parent
+	8801e3c3ffb6724c6769989d4f8a150c -Gossip Parent
+	Round Received: 4	Consensus Time: 115
+
+Node owner: 5	Timestamp: 104
+	b354a622fffb55b784b520e93ed2d6d -Self Parent
+	8801e3c3ffb6724c6769989d4f8a150c -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 0	Timestamp: 105
+	4c30029b913885f729381b96e9340cd4 -Self Parent
+	d5970f1beb02215945f342fe86fd968 -Gossip Parent
+	Round Received: 4	Consensus Time: 112
+
+Node owner: 5	Timestamp: 106
+	d5970f1beb02215945f342fe86fd968 -Self Parent
+	8801e3c3ffb6724c6769989d4f8a150c -Gossip Parent
+	Round Received: 4	Consensus Time: 115
+
+Node owner: 5	Timestamp: 107
+	8a4ab768b9f3ffc0cb3f7d7e5387db6 -Self Parent
+	02a5b2367ab0f2e2b71e67285d4b97c2 -Gossip Parent
+	Round Received: 4	Consensus Time: 115
+
+Node owner: 0	Timestamp: 108
+	02a5b2367ab0f2e2b71e67285d4b97c2 -Self Parent
+	73ab65a2339a517b1e6872d4efa1c1c1 -Gossip Parent
+	Round Received: 5	Consensus Time: 127
+
+Node owner: 1	Timestamp: 109
+	2580db13fe6e6ded9527c26f38d8ba3b -Self Parent
+	e179fe132d38524def5666b21a9e919a -Gossip Parent
+	Round Received: 4	Consensus Time: 116
+
+Node owner: 2	Timestamp: 110
+	73ab65a2339a517b1e6872d4efa1c1c1 -Self Parent
+	e9b2a9793dddc2ecc7acd497f2752fd2 -Gossip Parent
+	Round Received: 4	Consensus Time: 124
+
+Node owner: 2	Timestamp: 111
+	75309cf41a136ef69ddd5425ebcaacb -Self Parent
+	e9b2a9793dddc2ecc7acd497f2752fd2 -Gossip Parent
+	Round Received: 4	Consensus Time: 124
+
+Node owner: 4	Timestamp: 112
+	e9b2a9793dddc2ecc7acd497f2752fd2 -Self Parent
+	f0c595786ea59c9625d82c9835a0c529 -Gossip Parent
+	Round Received: 4	Consensus Time: 124
+
+Node owner: 4	Timestamp: 113
+	72c762da7131516f3a864925f563c55 -Self Parent
+	633ee31a4c1a24608751a4a2369a19a0 -Gossip Parent
+	Round Received: 4	Consensus Time: 124
+
+Node owner: 1	Timestamp: 114
+	f0c595786ea59c9625d82c9835a0c529 -Self Parent
+	8801e3c3ffb6724c6769989d4f8a150c -Gossip Parent
+	Round Received: 5	Consensus Time: 125
+
+Node owner: 3	Timestamp: 115
+	8801e3c3ffb6724c6769989d4f8a150c -Self Parent
+	fe82193617aec2099a106e43790f3f52 -Gossip Parent
+	Round Received: 5	Consensus Time: 125
+
+Node owner: 2	Timestamp: 116
+	633ee31a4c1a24608751a4a2369a19a0 -Self Parent
+	fe82193617aec2099a106e43790f3f52 -Gossip Parent
+	Round Received: 5	Consensus Time: 132
+
+Node owner: 2	Timestamp: 117
+	6334751bb086fd73c5594283d4a2006d -Self Parent
+	431a3f54d503c9af586fd6d24b63b25a -Gossip Parent
+	Round Received: 5	Consensus Time: 132
+
+Node owner: 0	Timestamp: 118
+	431a3f54d503c9af586fd6d24b63b25a -Self Parent
+	75e4454c1edc6a4028e076d45ad4e476 -Gossip Parent
+	Round Received: 5	Consensus Time: 127
+
+Node owner: 4	Timestamp: 119
+	fe82193617aec2099a106e43790f3f52 -Self Parent
+	27f82dbe52feaa351121be473608eeb5 -Gossip Parent
+	Round Received: 5	Consensus Time: 125
+
+Node owner: 3	Timestamp: 120
+	Payload: 563.33 to 1
+	Current Networth: 9070.14 12674.7 9307.78 9693.2 8620.66 10633.5 
+	27f82dbe52feaa351121be473608eeb5 -Self Parent
+	490cd3b9ada0258c928385c14b850440 -Gossip Parent
+	Round Received: 5	Consensus Time: 125
+
+Node owner: 4	Timestamp: 121
+	490cd3b9ada0258c928385c14b850440 -Self Parent
+	960987cabd2e63005a6151412569ba71 -Gossip Parent
+	Round Received: 5	Consensus Time: 135
+
+Node owner: 2	Timestamp: 122
+	b415d07d719415e8eb0da80cb8bfde14 -Self Parent
+	e179fe132d38524def5666b21a9e919a -Gossip Parent
+	Round Received: 5	Consensus Time: 132
+
+Node owner: 5	Timestamp: 123
+	e179fe132d38524def5666b21a9e919a -Self Parent
+	75e4454c1edc6a4028e076d45ad4e476 -Gossip Parent
+	Round Received: 5	Consensus Time: 139
+
+Node owner: 0	Timestamp: 124
+	46f52c694cc87ebed8f7ed9399f8ff6 -Self Parent
+	960987cabd2e63005a6151412569ba71 -Gossip Parent
+	Round Received: 5	Consensus Time: 127
+
+Node owner: 2	Timestamp: 125
+	09c3fec8ab98f419aa5e3431a231e62 -Self Parent
+	9fa658cbb20c2e03525b63fa962c0ce9 -Gossip Parent
+	Round Received: 5	Consensus Time: 132
+
+Node owner: 1	Timestamp: 126
+	75e4454c1edc6a4028e076d45ad4e476 -Self Parent
+	9fa658cbb20c2e03525b63fa962c0ce9 -Gossip Parent
+	Round Received: 5	Consensus Time: 142
+
+Node owner: 5	Timestamp: 127
+	1f9a4776dc6e8d7d4ace5ed247b7a94c -Self Parent
+	c77446632cb38c9f509670fb4f773ee0 -Gossip Parent
+	Round Received: 5	Consensus Time: 139
+
+Node owner: 0	Timestamp: 128
+	9fa658cbb20c2e03525b63fa962c0ce9 -Self Parent
+	90db81bb80df8cd99227deb3240fe4ca -Gossip Parent
+	Round Received: 5	Consensus Time: 137
+
+Node owner: 0	Timestamp: 129
+	8899380d5984af7493ee80cc91c270 -Self Parent
+	90db81bb80df8cd99227deb3240fe4ca -Gossip Parent
+	Round Received: 5	Consensus Time: 137
+
+Node owner: 4	Timestamp: 130
+	90db81bb80df8cd99227deb3240fe4ca -Self Parent
+	960987cabd2e63005a6151412569ba71 -Gossip Parent
+	Round Received: 5	Consensus Time: 142
+
+Node owner: 1	Timestamp: 131
+	6057f4861ddba73916ccaf295874ed40 -Self Parent
+	9c5d96c4f3ca7e4017a3a0c492d26320 -Gossip Parent
+	Round Received: 5	Consensus Time: 142
+
+Node owner: 2	Timestamp: 133
+	c77446632cb38c9f509670fb4f773ee0 -Self Parent
+	9c5d96c4f3ca7e4017a3a0c492d26320 -Gossip Parent
+	Round Received: 5	Consensus Time: 145
+
+Node owner: 1	Timestamp: 135
+	5a5bd964576debbfeda8ce319189c8e7 -Self Parent
+	ae6605ead51f3949723eaf07a070c306 -Gossip Parent
+	Round Received: 5	Consensus Time: 142
+
+Node owner: 2	Timestamp: 136
+	Payload: 357.27 to 0
+	Current Networth: 9427.41 12674.7 8950.51 9693.2 8620.66 10633.5 
+	0f90e06b8dca94d6740673c5244a47f8 -Self Parent
+	bd98ffeb57afd010ed1cc3809f621e42 -Gossip Parent
+	Round Received: 5	Consensus Time: 145
+
+Node owner: 4	Timestamp: 137
+	1c65d83170627194f5e98c29e97bda1c -Self Parent
+	ae6605ead51f3949723eaf07a070c306 -Gossip Parent
+	Round Received: 5	Consensus Time: 143
+
+Node owner: 1	Timestamp: 138
+	bd98ffeb57afd010ed1cc3809f621e42 -Self Parent
+	6967bb7bc34bd950e4bb5b92d2366478 -Gossip Parent
+	Round Received: 5	Consensus Time: 143
+
+Node owner: 4	Timestamp: 139
+	6967bb7bc34bd950e4bb5b92d2366478 -Self Parent
+	fc984cbfc6c1b1f342078439466d7d3a -Gossip Parent
+	Round Received: 5	Consensus Time: 150
+
+Node owner: 4	Timestamp: 141
+	eda038f38172508d641e3ab395f1c0b -Self Parent
+	918e1d4257b6aed8bec931328b4a6d32 -Gossip Parent
+	Round Received: 5	Consensus Time: 150
+
+Node owner: 0	Timestamp: 142
+	ae6605ead51f3949723eaf07a070c306 -Self Parent
+	fb61ee33b24aad3eac761f7f67f3aa46 -Gossip Parent
+	Round Received: 5	Consensus Time: 171
+
+Node owner: 3	Timestamp: 132
+	960987cabd2e63005a6151412569ba71 -Self Parent
+	c77446632cb38c9f509670fb4f773ee0 -Gossip Parent
+	Round Received: 7	Consensus Time: 148
+
+Node owner: 3	Timestamp: 134
+	98a5937ca72a102d67cb5aedbb5d698c -Self Parent
+	1c65d83170627194f5e98c29e97bda1c -Gossip Parent
+	Round Received: 7	Consensus Time: 148
+
+Node owner: 2	Timestamp: 140
+	fc984cbfc6c1b1f342078439466d7d3a -Self Parent
+	ae6605ead51f3949723eaf07a070c306 -Gossip Parent
+	Round Received: 7	Consensus Time: 149
+
+Node owner: 5	Timestamp: 143
+	9c5d96c4f3ca7e4017a3a0c492d26320 -Self Parent
+	918e1d4257b6aed8bec931328b4a6d32 -Gossip Parent
+	Round Received: 7	Consensus Time: 157
+
+Node owner: 5	Timestamp: 144
+	5fb1073d2cb110029943cb763e284c39 -Self Parent
+	918e1d4257b6aed8bec931328b4a6d32 -Gossip Parent
+	Round Received: 7	Consensus Time: 157
+
+Node owner: 1	Timestamp: 145
+	918e1d4257b6aed8bec931328b4a6d32 -Self Parent
+	eaa287b4274e1f162304787d471d867a -Gossip Parent
+	Round Received: 7	Consensus Time: 165
+
+Node owner: 0	Timestamp: 146
+	dbb78154d1e5e100436f6e5c1409173f -Self Parent
+	555be41a8ad0da808e67cc3cb350710f -Gossip Parent
+	Round Received: 7	Consensus Time: 171
+
+Node owner: 2	Timestamp: 147
+	eaa287b4274e1f162304787d471d867a -Self Parent
+	555be41a8ad0da808e67cc3cb350710f -Gossip Parent
+	Round Received: 7	Consensus Time: 156
+
+Node owner: 4	Timestamp: 148
+	fb61ee33b24aad3eac761f7f67f3aa46 -Self Parent
+	0153e74d14adeadc7d4942c886160861 -Gossip Parent
+	Round Received: 7	Consensus Time: 156
+
+Node owner: 5	Timestamp: 149
+	20a05ca22dfadcc96d65d2b0759f217a -Self Parent
+	6624890a4912327ccf21e11278e94f52 -Gossip Parent
+	Round Received: 7	Consensus Time: 157
+
+Node owner: 2	Timestamp: 150
+	0153e74d14adeadc7d4942c886160861 -Self Parent
+	cdc45e1389d8b6c453d1450690754ade -Gossip Parent
+	Round Received: 7	Consensus Time: 165
+
+Node owner: 2	Timestamp: 151
+	ff46c8388da67da76a75db53f473a120 -Self Parent
+	bfafa057bbf5a1bfc79da2455e6c6ce7 -Gossip Parent
+	Round Received: 7	Consensus Time: 165
+
+Node owner: 2	Timestamp: 152
+	060502d4237a21a2e6fc8f93a641ee51 -Self Parent
+	bfafa057bbf5a1bfc79da2455e6c6ce7 -Gossip Parent
+	Round Received: 7	Consensus Time: 165
+
+Node owner: 0	Timestamp: 153
+	1b1a77a36c010776ff2ec6399e1879f -Self Parent
+	555be41a8ad0da808e67cc3cb350710f -Gossip Parent
+	Round Received: 7	Consensus Time: 171
+
+Node owner: 0	Timestamp: 154
+	66bab8646d2514d4330046cd8b1262eb -Self Parent
+	555be41a8ad0da808e67cc3cb350710f -Gossip Parent
+	Round Received: 7	Consensus Time: 171
+
+Node owner: 2	Timestamp: 155
+	34cb380a34f7db79c445e715c4132389 -Self Parent
+	6624890a4912327ccf21e11278e94f52 -Gossip Parent
+	Round Received: 7	Consensus Time: 165
+
+Node owner: 1	Timestamp: 156
+	bfafa057bbf5a1bfc79da2455e6c6ce7 -Self Parent
+	16b036f2759b1792cf0f349b4d0b1d12 -Gossip Parent
+	Round Received: 7	Consensus Time: 170
+
+Node owner: 0	Timestamp: 157
+	31b5008f85608e6397541ddb5b247ffa -Self Parent
+	cdc45e1389d8b6c453d1450690754ade -Gossip Parent
+	Round Received: 7	Consensus Time: 171
+
+Node owner: 4	Timestamp: 158
+	6624890a4912327ccf21e11278e94f52 -Self Parent
+	16b036f2759b1792cf0f349b4d0b1d12 -Gossip Parent
+	Round Received: 7	Consensus Time: 168
+
+Node owner: 2	Timestamp: 159
+	16b036f2759b1792cf0f349b4d0b1d12 -Self Parent
+	d9e4d7af8d18a8e4e703189724eb63b -Gossip Parent
+	Round Received: 7	Consensus Time: 174
+
+Node owner: 4	Timestamp: 160
+	d9e4d7af8d18a8e4e703189724eb63b -Self Parent
+	555be41a8ad0da808e67cc3cb350710f -Gossip Parent
+	Round Received: 7	Consensus Time: 170
+
+Node owner: 3	Timestamp: 161
+	555be41a8ad0da808e67cc3cb350710f -Self Parent
+	9e794f92ea3a7a7362135798a478dc2 -Gossip Parent
+	Round Received: 7	Consensus Time: 178
+
+Node owner: 4	Timestamp: 162
+	8710f737281c0558e25fde7b23a21e12 -Self Parent
+	cdc45e1389d8b6c453d1450690754ade -Gossip Parent
+	Round Received: 7	Consensus Time: 170
+
+Node owner: 5	Timestamp: 163
+	Payload: 183.25 to 0
+	Current Networth: 9610.66 12674.7 8950.51 9693.2 8620.66 10450.2 
+	cdc45e1389d8b6c453d1450690754ade -Self Parent
+	9e794f92ea3a7a7362135798a478dc2 -Gossip Parent
+	Round Received: 7	Consensus Time: 175
+
+Node owner: 4	Timestamp: 164
+	1b5e514edab821beb7fd5c1af904a471 -Self Parent
+	8f40abaa90b908593598e1c0fa1cde78 -Gossip Parent
+	Round Received: 7	Consensus Time: 170
+
+Node owner: 0	Timestamp: 165
+	9e794f92ea3a7a7362135798a478dc2 -Self Parent
+	6e23368453fe53b3bbb20804e6f1e256 -Gossip Parent
+	Round Received: 7	Consensus Time: 185
+
+Node owner: 3	Timestamp: 166
+	e67736f9cbfb926d734f9387c44111d0 -Self Parent
+	d91779909f8184d1cb9d84603543d818 -Gossip Parent
+	Round Received: 7	Consensus Time: 178
+
+Node owner: 5	Timestamp: 167
+	d91779909f8184d1cb9d84603543d818 -Self Parent
+	8f40abaa90b908593598e1c0fa1cde78 -Gossip Parent
+	Round Received: 7	Consensus Time: 181
+
+Node owner: 1	Timestamp: 168
+	8f40abaa90b908593598e1c0fa1cde78 -Self Parent
+	94544ec56fc3eb62568c1f28449423ce -Gossip Parent
+	Round Received: 7	Consensus Time: 181
+
+Node owner: 5	Timestamp: 169
+	4d0a7bf51a8e50574fd69a92e489394 -Self Parent
+	94544ec56fc3eb62568c1f28449423ce -Gossip Parent
+	Round Received: 7	Consensus Time: 181
+
+Node owner: 3	Timestamp: 170
+	004d118e2ee6af4ce822ed3e7e4ab0fb -Self Parent
+	94544ec56fc3eb62568c1f28449423ce -Gossip Parent
+	Round Received: 7	Consensus Time: 178
+
+Node owner: 4	Timestamp: 171
+	94544ec56fc3eb62568c1f28449423ce -Self Parent
+	cef209c2e4e6e3adb3e5d693808bf056 -Gossip Parent
+	Round Received: 7	Consensus Time: 184
+
+Node owner: 5	Timestamp: 172
+	ae3d6b149c4609953f4dedc8c27f0bc7 -Self Parent
+	d4a6677e7756e11878fc81d86e55bcd9 -Gossip Parent
+	Round Received: 7	Consensus Time: 181
+
+Node owner: 5	Timestamp: 173
+	bcd3fa365aad13d781ddff32af373284 -Self Parent
+	6e23368453fe53b3bbb20804e6f1e256 -Gossip Parent
+	Round Received: 7	Consensus Time: 181
+
+Node owner: 3	Timestamp: 174
+	cef209c2e4e6e3adb3e5d693808bf056 -Self Parent
+	6e23368453fe53b3bbb20804e6f1e256 -Gossip Parent
+	Round Received: 7	Consensus Time: 179
+
+Node owner: 1	Timestamp: 175
+	d4a6677e7756e11878fc81d86e55bcd9 -Self Parent
+	498592e9674671e9f2d1da931a0d0709 -Gossip Parent
+	Round Received: 7	Consensus Time: 190
+
+Node owner: 1	Timestamp: 176
+	568f108df1e83612a1840769162efd7c -Self Parent
+	f481ab82d964909e6125769d9fb10767 -Gossip Parent
+	Round Received: 7	Consensus Time: 190
+
+Node owner: 0	Timestamp: 177
+	865f476ce31beaf972977d871f1c00d9 -Self Parent
+	498592e9674671e9f2d1da931a0d0709 -Gossip Parent
+	Round Received: 7	Consensus Time: 185
+
+Node owner: 0	Timestamp: 178
+	9b8a3f5bc6ce139cdce95f60ac148ba -Self Parent
+	f481ab82d964909e6125769d9fb10767 -Gossip Parent
+	Round Received: 7	Consensus Time: 185
+
+Node owner: 5	Timestamp: 179
+	Payload: 388.33 to 0
+	Current Networth: 9998.99 12674.7 8950.51 9693.2 8620.66 10061.9 
+	498592e9674671e9f2d1da931a0d0709 -Self Parent
+	e3affb26d3ccc518ad10384eea499e -Gossip Parent
+	Round Received: 7	Consensus Time: 192
+
+Node owner: 3	Timestamp: 180
+	f481ab82d964909e6125769d9fb10767 -Self Parent
+	58cd8d8c21d16809261a95c396e25eb0 -Gossip Parent
+	Round Received: 7	Consensus Time: 185
+
+Node owner: 2	Timestamp: 181
+	Payload: 860.99 to 4
+	Current Networth: 9998.99 12674.7 8089.52 9693.2 9481.65 10061.9 
+	6e23368453fe53b3bbb20804e6f1e256 -Self Parent
+	c3afec8e6858d9c8786ff2dba7b4f132 -Gossip Parent
+	Round Received: 7	Consensus Time: 198
+
+Node owner: 4	Timestamp: 182
+	58cd8d8c21d16809261a95c396e25eb0 -Self Parent
+	8bc7fea7f39fd7ebec96095895c8dd31 -Gossip Parent
+	Round Received: 7	Consensus Time: 192
+
+Node owner: 0	Timestamp: 183
+	e3affb26d3ccc518ad10384eea499e -Self Parent
+	9c3301948dfffe18b58ae706b4f98f5 -Gossip Parent
+	Round Received: 7	Consensus Time: 190
+
+Node owner: 2	Timestamp: 184
+	2691202536fc2bd236cde7f523a3d34b -Self Parent
+	9c3301948dfffe18b58ae706b4f98f5 -Gossip Parent
+	Round Received: 7	Consensus Time: 198
+
+Node owner: 4	Timestamp: 185
+	715dd616c73e0c43c5fcb5de588cb3 -Self Parent
+	022abb1d17c792447e9dadda96f55fcf -Gossip Parent
+	Round Received: 7	Consensus Time: 192
+
+Node owner: 3	Timestamp: 186
+	Payload: 895.92 to 0
+	Current Networth: 10894.9 12674.7 8089.52 8797.28 9481.65 10061.9 
+	9c3301948dfffe18b58ae706b4f98f5 -Self Parent
+	ca2498907e75a3977bda92cd9e856f1b -Gossip Parent
+	Round Received: 7	Consensus Time: 200
+
+Node owner: 2	Timestamp: 187
+	Payload: 33.14 to 0
+	Current Networth: 10928 12674.7 8056.38 8797.28 9481.65 10061.9 
+	ca2498907e75a3977bda92cd9e856f1b -Self Parent
+	022abb1d17c792447e9dadda96f55fcf -Gossip Parent
+	Round Received: 7	Consensus Time: 198
+
+Node owner: 0	Timestamp: 188
+	022abb1d17c792447e9dadda96f55fcf -Self Parent
+	52e3d98b66f4fdd3981bbd9dad2ca2e1 -Gossip Parent
+	Round Received: 7	Consensus Time: 192
+
+Node owner: 4	Timestamp: 189
+	52e3d98b66f4fdd3981bbd9dad2ca2e1 -Self Parent
+	8576ad1161bc83ebdd480f07994f897 -Gossip Parent
+	Round Received: 7	Consensus Time: 194
+
+Node owner: 5	Timestamp: 190
+	c3afec8e6858d9c8786ff2dba7b4f132 -Self Parent
+	2a57335b5b92272015e56163ddad27ec -Gossip Parent
+	Round Received: 7	Consensus Time: 195
+
+Node owner: 0	Timestamp: 191
+	8576ad1161bc83ebdd480f07994f897 -Self Parent
+	8bc7fea7f39fd7ebec96095895c8dd31 -Gossip Parent
+	Round Received: 7	Consensus Time: 216
+
+Node owner: 1	Timestamp: 192
+	8bc7fea7f39fd7ebec96095895c8dd31 -Self Parent
+	7b408d6d2537d95986f0f4ec9429759f -Gossip Parent
+	Round Received: 7	Consensus Time: 196
+
+Node owner: 3	Timestamp: 193
+	5e8564da147ed3b8db90357decadf3 -Self Parent
+	e96ba64b12b0e674ccfd23d5f170de9d -Gossip Parent
+	Round Received: 7	Consensus Time: 200
+
+Node owner: 2	Timestamp: 194
+	Payload: 249.16 to 5
+	Current Networth: 10928 12674.7 7807.22 8797.28 9481.65 10311.1 
+	e96ba64b12b0e674ccfd23d5f170de9d -Self Parent
+	82e89d06fcadaf91bbbde5df757bbdf8 -Gossip Parent
+	Round Received: 7	Consensus Time: 198
+
+Node owner: 3	Timestamp: 195
+	bc1b817652db16babd5689295627c291 -Self Parent
+	82013598824cdd5e55a69b48f3ceae73 -Gossip Parent
+	Round Received: 7	Consensus Time: 200
+
+Node owner: 4	Timestamp: 196
+	2a57335b5b92272015e56163ddad27ec -Self Parent
+	25de0e81df17038cd706c1574c31f58 -Gossip Parent
+	Round Received: 7	Consensus Time: 208
+
+Node owner: 0	Timestamp: 197
+	fc7fbcffc2ad37b9d3fa88c45a116cfa -Self Parent
+	7b408d6d2537d95986f0f4ec9429759f -Gossip Parent
+	Round Received: 7	Consensus Time: 216
+
+Node owner: 0	Timestamp: 198
+	519e42b171deebe758ad42f6b597bfa7 -Self Parent
+	25de0e81df17038cd706c1574c31f58 -Gossip Parent
+	Round Received: 7	Consensus Time: 216
+
+Node owner: 3	Timestamp: 199
+	25de0e81df17038cd706c1574c31f58 -Self Parent
+	7b408d6d2537d95986f0f4ec9429759f -Gossip Parent
+	Round Received: 7	Consensus Time: 204
+
+Node owner: 2	Timestamp: 201
+	82013598824cdd5e55a69b48f3ceae73 -Self Parent
+	5661bb104370ad2465225a0566d5ff26 -Gossip Parent
+	Round Received: 7	Consensus Time: 220
+
+Node owner: 0	Timestamp: 202
+	71720bb981748cb27e3293b3cf83d561 -Self Parent
+	7b408d6d2537d95986f0f4ec9429759f -Gossip Parent
+	Round Received: 7	Consensus Time: 216
+
+Node owner: 5	Timestamp: 203
+	7b408d6d2537d95986f0f4ec9429759f -Self Parent
+	eb613e8acddd13f678c2fbea31194d44 -Gossip Parent
+	Round Received: 7	Consensus Time: 208
+
+Node owner: 4	Timestamp: 204
+	eb613e8acddd13f678c2fbea31194d44 -Self Parent
+	5661bb104370ad2465225a0566d5ff26 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 0	Timestamp: 206
+	0197e76d7d109e66f9c33fecd99bf911 -Self Parent
+	9be68a2da9198ef464ae11ca9c6cfaf1 -Gossip Parent
+	Round Received: 7	Consensus Time: 216
+
+Node owner: 4	Timestamp: 207
+	30a06d9d5b2bc5f5e4ded6831371777b -Self Parent
+	85f2b546955ab4eabf58ddfee4f3a17 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 3	Timestamp: 208
+	5661bb104370ad2465225a0566d5ff26 -Self Parent
+	9be68a2da9198ef464ae11ca9c6cfaf1 -Gossip Parent
+	Round Received: 7	Consensus Time: 212
+
+Node owner: 5	Timestamp: 210
+	9be68a2da9198ef464ae11ca9c6cfaf1 -Self Parent
+	2c0c5f23d72a1aec44b1fe9cecb126e -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 4	Timestamp: 211
+	98a8f40540111882fa6147972783bbb6 -Self Parent
+	60663edf5da7e8522c46c1c5afa4be15 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 0	Timestamp: 212
+	85f2b546955ab4eabf58ddfee4f3a17 -Self Parent
+	2c0c5f23d72a1aec44b1fe9cecb126e -Gossip Parent
+	Round Received: 7	Consensus Time: 220
+
+Node owner: 5	Timestamp: 213
+	60663edf5da7e8522c46c1c5afa4be15 -Self Parent
+	41665efceaab9a28655bd8e5aaa28ec5 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 2	Timestamp: 214
+	4584794afce3ad276ff448e09779936 -Self Parent
+	2c0c5f23d72a1aec44b1fe9cecb126e -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 5	Timestamp: 215
+	Payload: 584.63 to 3
+	Current Networth: 10928 12674.7 7807.22 9381.91 9481.65 9726.44 
+	4ff2b6916fb37ae7a1e02b1d693f7969 -Self Parent
+	28f0ef7497df8b38e1ce4c2a3abe23 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 2	Timestamp: 216
+	Payload: 627.65 to 0
+	Current Networth: 11555.7 12674.7 7179.57 9381.91 9481.65 9726.44 
+	28f0ef7497df8b38e1ce4c2a3abe23 -Self Parent
+	08827f1080242138301210a485963807 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 5	Timestamp: 217
+	96d223dabcc634de9d29cbe1ca96081e -Self Parent
+	137f536c33757a97f1e274248febdd96 -Gossip Parent
+	Round Received: 7	Consensus Time: 224
+
+Node owner: 2	Timestamp: 218
+	137f536c33757a97f1e274248febdd96 -Self Parent
+	900053f66f9bd9b83337d2bbaacda0a8 -Gossip Parent
+	Round Received: 7	Consensus Time: 230
+
+Node owner: 3	Timestamp: 224
+	2c0c5f23d72a1aec44b1fe9cecb126e -Self Parent
+	fc631539bd528f799dae130cc7f8d886 -Gossip Parent
+	Round Received: 7	Consensus Time: 235
+
+Node owner: 1	Timestamp: 200
+	82e89d06fcadaf91bbbde5df757bbdf8 -Self Parent
+	5661bb104370ad2465225a0566d5ff26 -Gossip Parent
+	Round Received: 8	Consensus Time: 236
+
+Node owner: 1	Timestamp: 205
+	9d7aa9fce98aff76f50c7c77c39e0dbf -Self Parent
+	4584794afce3ad276ff448e09779936 -Gossip Parent
+	Round Received: 8	Consensus Time: 236
+
+Node owner: 1	Timestamp: 209
+	d7d43f17ff1d37078fa7b27beec3040a -Self Parent
+	4584794afce3ad276ff448e09779936 -Gossip Parent
+	Round Received: 8	Consensus Time: 236
+
+Node owner: 4	Timestamp: 219
+	08827f1080242138301210a485963807 -Self Parent
+	2c0c5f23d72a1aec44b1fe9cecb126e -Gossip Parent
+	Round Received: 8	Consensus Time: 234
+
+Node owner: 4	Timestamp: 220
+	50e4cc6bca771538ed18daf829784565 -Self Parent
+	900053f66f9bd9b83337d2bbaacda0a8 -Gossip Parent
+	Round Received: 8	Consensus Time: 234
+
+Node owner: 4	Timestamp: 221
+	Payload: 449.53 to 3
+	Current Networth: 11555.7 12674.7 7179.57 9831.44 9032.12 9726.44 
+	53e9f9b29dde9af63acb57e4787e44d9 -Self Parent
+	900053f66f9bd9b83337d2bbaacda0a8 -Gossip Parent
+	Round Received: 8	Consensus Time: 234
+
+Node owner: 4	Timestamp: 222
+	b277066f530e0721369a572163d6b914 -Self Parent
+	41665efceaab9a28655bd8e5aaa28ec5 -Gossip Parent
+	Round Received: 8	Consensus Time: 234
+
+Node owner: 1	Timestamp: 223
+	de3a3a91a6b49f2c88bd1dcd15b8fc -Self Parent
+	2c0c5f23d72a1aec44b1fe9cecb126e -Gossip Parent
+	Round Received: 8	Consensus Time: 236
+
+Node owner: 2	Timestamp: 225
+	fc631539bd528f799dae130cc7f8d886 -Self Parent
+	900053f66f9bd9b83337d2bbaacda0a8 -Gossip Parent
+	Round Received: 8	Consensus Time: 234
+
+Node owner: 3	Timestamp: 226
+	df4e443a7ad54e33619b38dd8266ca0e -Self Parent
+	41665efceaab9a28655bd8e5aaa28ec5 -Gossip Parent
+	Round Received: 8	Consensus Time: 235
+
+Node owner: 5	Timestamp: 227
+	900053f66f9bd9b83337d2bbaacda0a8 -Self Parent
+	e2e5f3a3ded03136badf21a5ecb7c37d -Gossip Parent
+	Round Received: 8	Consensus Time: 266
+
+Node owner: 2	Timestamp: 228
+	e2e5f3a3ded03136badf21a5ecb7c37d -Self Parent
+	6fb8227d2f5791965c728c2261baa430 -Gossip Parent
+	Round Received: 8	Consensus Time: 235
+
+Node owner: 0	Timestamp: 229
+	41665efceaab9a28655bd8e5aaa28ec5 -Self Parent
+	d733f5b96de2e83ea033ac6b5a4dfd68 -Gossip Parent
+	Round Received: 8	Consensus Time: 240
+
+Node owner: 1	Timestamp: 230
+	d733f5b96de2e83ea033ac6b5a4dfd68 -Self Parent
+	5cfc965f6cd0d9b660580a2bf51acba2 -Gossip Parent
+	Round Received: 8	Consensus Time: 237
+
+Node owner: 3	Timestamp: 231
+	5cfc965f6cd0d9b660580a2bf51acba2 -Self Parent
+	d895cd8eab41010c56a422775847010a -Gossip Parent
+	Round Received: 8	Consensus Time: 238
+
+Node owner: 2	Timestamp: 232
+	d895cd8eab41010c56a422775847010a -Self Parent
+	14833d74d0b59f191d0e73b5f80c2f92 -Gossip Parent
+	Round Received: 8	Consensus Time: 254
+
+Node owner: 0	Timestamp: 233
+	14833d74d0b59f191d0e73b5f80c2f92 -Self Parent
+	b1e1bdbde0264cdd39271a72d4d7a597 -Gossip Parent
+	Round Received: 8	Consensus Time: 248
+
+Node owner: 1	Timestamp: 234
+	Payload: 888.13 to 2
+	Current Networth: 11555.7 11786.6 8067.7 9831.44 9032.12 9726.44 
+	b1e1bdbde0264cdd39271a72d4d7a597 -Self Parent
+	a875a69ad156bfc1c23a92aca02e0df4 -Gossip Parent
+	Round Received: 8	Consensus Time: 239
+
+Node owner: 4	Timestamp: 235
+	6fb8227d2f5791965c728c2261baa430 -Self Parent
+	a875a69ad156bfc1c23a92aca02e0df4 -Gossip Parent
+	Round Received: 8	Consensus Time: 248
+
+Node owner: 3	Timestamp: 236
+	a875a69ad156bfc1c23a92aca02e0df4 -Self Parent
+	aa40c76f9c2fd6b8d2b7c7a18a5b0c1a -Gossip Parent
+	Round Received: 8	Consensus Time: 247
+
+Node owner: 4	Timestamp: 237
+	a2007014e27eeac67417425029866e25 -Self Parent
+	eca549f039c1266c623c745061283020 -Gossip Parent
+	Round Received: 8	Consensus Time: 248
+
+Node owner: 5	Timestamp: 238
+	3fcacc9688150069e595d55e9c37bf -Self Parent
+	aa40c76f9c2fd6b8d2b7c7a18a5b0c1a -Gossip Parent
+	Round Received: 8	Consensus Time: 266
+
+Node owner: 2	Timestamp: 239
+	d5f482a91834ad759906ade462074e59 -Self Parent
+	aa40c76f9c2fd6b8d2b7c7a18a5b0c1a -Gossip Parent
+	Round Received: 8	Consensus Time: 254
+
+Node owner: 5	Timestamp: 241
+	1b1ddce7d0368b981ea36030a5e06403 -Self Parent
+	f641b098caf9cb6a67d3945eb15f12b4 -Gossip Parent
+	Round Received: 8	Consensus Time: 266
+
+Node owner: 5	Timestamp: 243
+	a43171ae85a7ca234bfdfa7fa3833853 -Self Parent
+	0444138d9bf465b29dbb0a85ae27dde -Gossip Parent
+	Round Received: 8	Consensus Time: 266
+
+Node owner: 0	Timestamp: 244
+	eca549f039c1266c623c745061283020 -Self Parent
+	acd96ce31c6e424f543a5344b3ec5d40 -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 0	Timestamp: 246
+	6ca6f2a664887f9f26f18086d5ea2e7 -Self Parent
+	0444138d9bf465b29dbb0a85ae27dde -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 4	Timestamp: 247
+	Payload: 368.19 to 2
+	Current Networth: 11555.7 11786.6 8435.89 9831.44 8663.93 9726.44 
+	0444138d9bf465b29dbb0a85ae27dde -Self Parent
+	acd96ce31c6e424f543a5344b3ec5d40 -Gossip Parent
+	Round Received: 8	Consensus Time: 258
+
+Node owner: 2	Timestamp: 248
+	Payload: 501.89 to 3
+	Current Networth: 11555.7 11786.6 7934 10333.3 8663.93 9726.44 
+	f641b098caf9cb6a67d3945eb15f12b4 -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 2	Timestamp: 249
+	e3162418647d59d75c6045b8fc5b47e1 -Self Parent
+	164e59dfb3eca2dc161f4ea8e9bbc7c -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 0	Timestamp: 250
+	164e59dfb3eca2dc161f4ea8e9bbc7c -Self Parent
+	acd96ce31c6e424f543a5344b3ec5d40 -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 2	Timestamp: 252
+	8925cfd1f5a1f893f3a352999f628d40 -Self Parent
+	acd96ce31c6e424f543a5344b3ec5d40 -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 2	Timestamp: 253
+	46e201e9271036ad473ce3416f943e41 -Self Parent
+	8cacfb14ea044cd9314c7d79fc20245c -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 5	Timestamp: 260
+	Payload: 854.29 to 4
+	Current Networth: 11555.7 11786.6 7934 10333.3 9518.22 8872.15 
+	7d010a3975f715476f1c888792f197 -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 8	Consensus Time: 269
+
+Node owner: 5	Timestamp: 261
+	63c227a4afb8c580d7956b3e11ad -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 8	Consensus Time: 269
+
+Node owner: 0	Timestamp: 262
+	8cacfb14ea044cd9314c7d79fc20245c -Self Parent
+	e9c78d79eee1761b4903f3365383d2c -Gossip Parent
+	Round Received: 8	Consensus Time: 287
+
+Node owner: 5	Timestamp: 263
+	Payload: 635.51 to 5
+	Current Networth: 11555.7 11786.6 7934 10333.3 9518.22 8872.15 
+	ef3a3ae44fe63f42ab50edcc7fd7ae96 -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 8	Consensus Time: 269
+
+Node owner: 2	Timestamp: 264
+	e9c78d79eee1761b4903f3365383d2c -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 4	Timestamp: 266
+	8cf0c809f61c7612736cbb1cb4784c28 -Self Parent
+	2b0f336d28f0391082e56f85d3f4b8bb -Gossip Parent
+	Round Received: 8	Consensus Time: 271
+
+Node owner: 2	Timestamp: 269
+	Payload: 740.86 to 5
+	Current Networth: 11555.7 11786.6 7193.14 10333.3 9518.22 9613.01 
+	9eb7a5232bd5b713bd8c6e93df8e7bc9 -Self Parent
+	9369a7a090d27fccec5691a223fcdd19 -Gossip Parent
+	Round Received: 8	Consensus Time: 277
+
+Node owner: 0	Timestamp: 270
+	2c9c7963642527bdbcf047ecdb24aea1 -Self Parent
+	1d71ddb83651ca30581d8eee30a18ce9 -Gossip Parent
+	Round Received: 8	Consensus Time: 287
+
+Node owner: 1	Timestamp: 240
+	aa40c76f9c2fd6b8d2b7c7a18a5b0c1a -Self Parent
+	f641b098caf9cb6a67d3945eb15f12b4 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 242
+	4fc87fc8457982e58a18e555937f6b13 -Self Parent
+	a43171ae85a7ca234bfdfa7fa3833853 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 245
+	a1d3b9361affab0433407ef9da02bf8f -Self Parent
+	acd96ce31c6e424f543a5344b3ec5d40 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 251
+	Payload: 805.8 to 0
+	Current Networth: 12361.5 10980.8 7193.14 10333.3 9518.22 9613.01 
+	d23b0b6488005dfe3f93813bfc136e8 -Self Parent
+	7d010a3975f715476f1c888792f197 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 3	Timestamp: 254
+	Payload: 334.44 to 2
+	Current Networth: 12361.5 10980.8 7527.58 9998.89 9518.22 9613.01 
+	acd96ce31c6e424f543a5344b3ec5d40 -Self Parent
+	7d010a3975f715476f1c888792f197 -Gossip Parent
+	Round Received: 9	Consensus Time: 280
+
+Node owner: 1	Timestamp: 255
+	1d29c76c9c462f88ef08eaf754812d44 -Self Parent
+	e9c78d79eee1761b4903f3365383d2c -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 256
+	0068b9e13f9c2ab381704fffb270ab5f -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 257
+	e6fceaf6700ec5f696f6ffa1bee43ad5 -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 3	Timestamp: 258
+	7fbd57706f2f45e24807a430b025390b -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 9	Consensus Time: 280
+
+Node owner: 3	Timestamp: 259
+	df41e5ebf54be0c3b86b8dcff985180c -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 9	Consensus Time: 280
+
+Node owner: 1	Timestamp: 265
+	4568b1283e4369d94da3e5ab188bca1c -Self Parent
+	8cf0c809f61c7612736cbb1cb4784c28 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 267
+	f558ba0ada2ddfd86e653ba8589d9030 -Self Parent
+	2b0f336d28f0391082e56f85d3f4b8bb -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 268
+	Payload: 773.13 to 4
+	Current Networth: 12361.5 10207.7 7527.58 9998.89 10291.3 9613.01 
+	cffe279f113566b878f8c00fbe28d77b -Self Parent
+	2c9c7963642527bdbcf047ecdb24aea1 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 5	Timestamp: 271
+	2b0f336d28f0391082e56f85d3f4b8bb -Self Parent
+	9369a7a090d27fccec5691a223fcdd19 -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 2	Timestamp: 272
+	1d71ddb83651ca30581d8eee30a18ce9 -Self Parent
+	9369a7a090d27fccec5691a223fcdd19 -Gossip Parent
+	Round Received: 9	Consensus Time: 287
+
+Node owner: 4	Timestamp: 273
+	9369a7a090d27fccec5691a223fcdd19 -Self Parent
+	9abe13303d38b50678077233a80a48df -Gossip Parent
+	Round Received: 9	Consensus Time: 280
+
+Node owner: 3	Timestamp: 274
+	9abe13303d38b50678077233a80a48df -Self Parent
+	d78d5c906fa65c415dc8c7a8035ab23 -Gossip Parent
+	Round Received: 9	Consensus Time: 281
+
+Node owner: 1	Timestamp: 275
+	1d4606e06e48db5d8f692256f1e2a97 -Self Parent
+	bd36e8b624e5e05b9a3a7257215c481e -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 3	Timestamp: 276
+	5e9df6914fa0ea857c108056cd14b957 -Self Parent
+	d78d5c906fa65c415dc8c7a8035ab23 -Gossip Parent
+	Round Received: 9	Consensus Time: 281
+
+Node owner: 5	Timestamp: 277
+	55d579e8cf1933955e09abe85ecd13d1 -Self Parent
+	bd36e8b624e5e05b9a3a7257215c481e -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 0	Timestamp: 278
+	bd36e8b624e5e05b9a3a7257215c481e -Self Parent
+	cd941ae72f6a348fbb1f74cbd4b269c -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 1	Timestamp: 279
+	022ded207b0028bb92618592bd54785f -Self Parent
+	8438e1778203bd00ca19bbe94d0ce496 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 5	Timestamp: 280
+	Payload: 10.08 to 3
+	Current Networth: 12361.5 10207.7 7527.58 10009 10291.3 9602.93 
+	3b492be9403840e399e0a3d1288ec6b2 -Self Parent
+	8438e1778203bd00ca19bbe94d0ce496 -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 4	Timestamp: 281
+	d78d5c906fa65c415dc8c7a8035ab23 -Self Parent
+	8438e1778203bd00ca19bbe94d0ce496 -Gossip Parent
+	Round Received: 9	Consensus Time: 300
+
+Node owner: 5	Timestamp: 282
+	bde43e9f3272fedca968c324725a230 -Self Parent
+	cd941ae72f6a348fbb1f74cbd4b269c -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 3	Timestamp: 283
+	8438e1778203bd00ca19bbe94d0ce496 -Self Parent
+	bb7006cd14a4030d38ed0ee6be601068 -Gossip Parent
+	Round Received: 9	Consensus Time: 300
+
+Node owner: 0	Timestamp: 284
+	Payload: 707 to 4
+	Current Networth: 11654.5 10207.7 7527.58 10009 10998.3 9602.93 
+	e15434d277016247e846f22f8acf16d7 -Self Parent
+	cd941ae72f6a348fbb1f74cbd4b269c -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 4	Timestamp: 285
+	bb7006cd14a4030d38ed0ee6be601068 -Self Parent
+	d92125a3340e166dbd4266ba5b0817d9 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 0	Timestamp: 286
+	5b9d201ebf2edb927e3339b489d1560d -Self Parent
+	cd941ae72f6a348fbb1f74cbd4b269c -Gossip Parent
+	Round Received: 9	Consensus Time: 294
+
+Node owner: 4	Timestamp: 287
+	7a16f38bf27a84f811d1a263da3c0d32 -Self Parent
+	1582643ecfb67e18e37f71205b9b0891 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 3	Timestamp: 288
+	d92125a3340e166dbd4266ba5b0817d9 -Self Parent
+	cd941ae72f6a348fbb1f74cbd4b269c -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 5	Timestamp: 289
+	1582643ecfb67e18e37f71205b9b0891 -Self Parent
+	e9a69140e5b1d0a19f1419aff46e952a -Gossip Parent
+	Round Received: 9	Consensus Time: 295
+
+Node owner: 1	Timestamp: 290
+	b1821a3944a9a64a2e9efad12bd48d5c -Self Parent
+	571dd09cc442070ec857952be038011f -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 291
+	046594aec673f118b3f53ed7c68b5fe5 -Self Parent
+	e9a69140e5b1d0a19f1419aff46e952a -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 292
+	db0e1e51b2b206484e94ccf649939bf1 -Self Parent
+	571dd09cc442070ec857952be038011f -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 293
+	0d84088db3007309b86e230c7b3f8199 -Self Parent
+	571dd09cc442070ec857952be038011f -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 2	Timestamp: 294
+	cd941ae72f6a348fbb1f74cbd4b269c -Self Parent
+	571dd09cc442070ec857952be038011f -Gossip Parent
+	Round Received: 9	Consensus Time: 301
+
+Node owner: 4	Timestamp: 295
+	2fb58d86bf5d80234fad6bd973ec1ca7 -Self Parent
+	571dd09cc442070ec857952be038011f -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 5	Timestamp: 296
+	571dd09cc442070ec857952be038011f -Self Parent
+	f49ed2508b9cbfa2c111252c48efe6c6 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 297
+	4bd01ead589bd2c5a133b7dc2dc976d1 -Self Parent
+	8cd9539db4d2803ba062eda9ec47ecba -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 5	Timestamp: 298
+	8cd9539db4d2803ba062eda9ec47ecba -Self Parent
+	c0b79715a0892466ae2fdf2d6c5a187f -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 4	Timestamp: 299
+	57f535a529ada0edf4e8269b66d48740 -Self Parent
+	e9a69140e5b1d0a19f1419aff46e952a -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 1	Timestamp: 300
+	600764ebf05639d98188365c177b30cd -Self Parent
+	84e404621dff96e697a42409ab18cd -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 4	Timestamp: 301
+	Payload: 689.91 to 2
+	Current Networth: 11654.5 10207.7 8217.49 10009 10308.4 9602.93 
+	702e0e2963492fea6d6f4c5c95257d92 -Self Parent
+	f49ed2508b9cbfa2c111252c48efe6c6 -Gossip Parent
+	Round Received: 9	Consensus Time: 309
+
+Node owner: 5	Timestamp: 302
+	84e404621dff96e697a42409ab18cd -Self Parent
+	8a4ef7d327a6fb13e6701d1eca05fc84 -Gossip Parent
+	Round Received: 9	Consensus Time: 312
+
+Node owner: 0	Timestamp: 303
+	e9a69140e5b1d0a19f1419aff46e952a -Self Parent
+	f49ed2508b9cbfa2c111252c48efe6c6 -Gossip Parent
+	Round Received: 9	Consensus Time: 317
+
+Node owner: 1	Timestamp: 304
+	8a4ef7d327a6fb13e6701d1eca05fc84 -Self Parent
+	7206338acbbaa414e0a4508ae8f915ef -Gossip Parent
+	Round Received: 9	Consensus Time: 317
+
+Node owner: 3	Timestamp: 305
+	c0b79715a0892466ae2fdf2d6c5a187f -Self Parent
+	f49ed2508b9cbfa2c111252c48efe6c6 -Gossip Parent
+	Round Received: 9	Consensus Time: 317
+
+Node owner: 3	Timestamp: 306
+	15af013f7f6e15af5d9d2aace472022d -Self Parent
+	f49ed2508b9cbfa2c111252c48efe6c6 -Gossip Parent
+	Round Received: 9	Consensus Time: 317
+
+Node owner: 5	Timestamp: 307
+	939272b65a6dde4577cf92cb14bd61ae -Self Parent
+	4b4361b2576bfab1e4359db29bb2cfde -Gossip Parent
+	Round Received: 9	Consensus Time: 312
+
+Node owner: 3	Timestamp: 308
+	Payload: 534.53 to 5
+	Current Networth: 11654.5 10207.7 8217.49 9474.44 10308.4 10137.5 
+	b3292b9ff6e5f1bb4429f3ff29b631f6 -Self Parent
+	2fb1965c65bc53634058826ccfbb50cc -Gossip Parent
+	Round Received: 9	Consensus Time: 317
+
+Node owner: 0	Timestamp: 309
+	7206338acbbaa414e0a4508ae8f915ef -Self Parent
+	0ceaac2a4ee0e7a811dc24f2ddd17f93 -Gossip Parent
+	Round Received: 9	Consensus Time: 320
+
+Node owner: 0	Timestamp: 310
+	0bc409b8992c3d6a2f398d686229a024 -Self Parent
+	2fb1965c65bc53634058826ccfbb50cc -Gossip Parent
+	Round Received: 9	Consensus Time: 320
+
+Node owner: 0	Timestamp: 311
+	be4a9ffff8c18fdea686b5b648a9c20a -Self Parent
+	91d551c144631a23e963626d95b8c82a -Gossip Parent
+	Round Received: 9	Consensus Time: 320
+
+Node owner: 1	Timestamp: 312
+	91d551c144631a23e963626d95b8c82a -Self Parent
+	2fb1965c65bc53634058826ccfbb50cc -Gossip Parent
+	Round Received: 9	Consensus Time: 318
+
+Node owner: 2	Timestamp: 313
+	f49ed2508b9cbfa2c111252c48efe6c6 -Self Parent
+	c800d172faf5b831d7785851500fac5 -Gossip Parent
+	Round Received: 9	Consensus Time: 326
+
+Node owner: 2	Timestamp: 314
+	66f7598aa024a0d47db224595d2e74a -Self Parent
+	0ceaac2a4ee0e7a811dc24f2ddd17f93 -Gossip Parent
+	Round Received: 9	Consensus Time: 326
+
+Node owner: 2	Timestamp: 315
+	e3178e0d6061eb57ee89efc8d89f4894 -Self Parent
+	c50b86a296934283c1788b51b4b6d329 -Gossip Parent
+	Round Received: 9	Consensus Time: 326
+
+Node owner: 4	Timestamp: 316
+	4b4361b2576bfab1e4359db29bb2cfde -Self Parent
+	2fb1965c65bc53634058826ccfbb50cc -Gossip Parent
+	Round Received: 9	Consensus Time: 337
+
+Node owner: 4	Timestamp: 317
+	de47ccd78f975f74cee5e977d149ada -Self Parent
+	9b68c004b860100683d1bf9e671a66ad -Gossip Parent
+	Round Received: 9	Consensus Time: 337
+
+Node owner: 4	Timestamp: 319
+	570087948cec36e5802351cfb1fb5d7d -Self Parent
+	c50b86a296934283c1788b51b4b6d329 -Gossip Parent
+	Round Received: 9	Consensus Time: 337
+
+Node owner: 3	Timestamp: 318
+	0ceaac2a4ee0e7a811dc24f2ddd17f93 -Self Parent
+	c800d172faf5b831d7785851500fac5 -Gossip Parent
+	Round Received: 10	Consensus Time: 327
+
+Node owner: 5	Timestamp: 320
+	2fb1965c65bc53634058826ccfbb50cc -Self Parent
+	1abb39758ce463c7f7dce613b53c1dbb -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 5	Timestamp: 321
+	e37a66dbb87b833728d439cc9983d311 -Self Parent
+	9b68c004b860100683d1bf9e671a66ad -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 4	Timestamp: 322
+	1abb39758ce463c7f7dce613b53c1dbb -Self Parent
+	c800d172faf5b831d7785851500fac5 -Gossip Parent
+	Round Received: 10	Consensus Time: 337
+
+Node owner: 3	Timestamp: 323
+	36b512a875c8e9adb9c6a0ee9e92ce20 -Self Parent
+	c50b86a296934283c1788b51b4b6d329 -Gossip Parent
+	Round Received: 10	Consensus Time: 327
+
+Node owner: 2	Timestamp: 324
+	9b68c004b860100683d1bf9e671a66ad -Self Parent
+	4208cfeba4013599cd7f8c7e3965164 -Gossip Parent
+	Round Received: 10	Consensus Time: 328
+
+Node owner: 0	Timestamp: 325
+	c50b86a296934283c1788b51b4b6d329 -Self Parent
+	c800d172faf5b831d7785851500fac5 -Gossip Parent
+	Round Received: 10	Consensus Time: 344
+
+Node owner: 1	Timestamp: 326
+	c800d172faf5b831d7785851500fac5 -Self Parent
+	f890bd4cdef7a29feff297e11e9e8b46 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 0	Timestamp: 327
+	Payload: 980 to 4
+	Current Networth: 10674.5 10207.7 8217.49 9474.44 11288.4 10137.5 
+	3be0f54eeda3ca298a7ff195164255e -Self Parent
+	f890bd4cdef7a29feff297e11e9e8b46 -Gossip Parent
+	Round Received: 10	Consensus Time: 344
+
+Node owner: 5	Timestamp: 328
+	Payload: 609.88 to 2
+	Current Networth: 10674.5 10207.7 8827.37 9474.44 11288.4 9527.58 
+	cc483dd781d5df4381faa3f95034f567 -Self Parent
+	f890bd4cdef7a29feff297e11e9e8b46 -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 5	Timestamp: 329
+	2e3facc7a92c69e653a2cf48d5a1b9ee -Self Parent
+	f890bd4cdef7a29feff297e11e9e8b46 -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 0	Timestamp: 330
+	456fde161a0a5c9c39c58252e251389 -Self Parent
+	f890bd4cdef7a29feff297e11e9e8b46 -Gossip Parent
+	Round Received: 10	Consensus Time: 344
+
+Node owner: 1	Timestamp: 331
+	281a13108255d9f5d5ca3dbcd36e5c49 -Self Parent
+	fa6f92847f1fc4fd3191bf5d8304894 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 4	Timestamp: 332
+	a2e618e125ce63a2c340b2d0da66f999 -Self Parent
+	4208cfeba4013599cd7f8c7e3965164 -Gossip Parent
+	Round Received: 10	Consensus Time: 337
+
+Node owner: 3	Timestamp: 333
+	4208cfeba4013599cd7f8c7e3965164 -Self Parent
+	0419f7ef518d139eaad23fc1dc1f023 -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 5	Timestamp: 334
+	0419f7ef518d139eaad23fc1dc1f023 -Self Parent
+	b474ca40a381a5fccac408f49c704df1 -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 5	Timestamp: 335
+	bf1331074481bfa02a5f4c746c9abc64 -Self Parent
+	c287a3181f243daf86e65a6dff89015a -Gossip Parent
+	Round Received: 10	Consensus Time: 345
+
+Node owner: 3	Timestamp: 336
+	Payload: 895.8 to 2
+	Current Networth: 10674.5 10207.7 9723.17 8578.64 11288.4 9527.58 
+	b474ca40a381a5fccac408f49c704df1 -Self Parent
+	8ecd8911aec1d97a5dab7246984c0295 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 2	Timestamp: 337
+	f890bd4cdef7a29feff297e11e9e8b46 -Self Parent
+	351502d769a363172eea927b9049479c -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 3	Timestamp: 338
+	351502d769a363172eea927b9049479c -Self Parent
+	c287a3181f243daf86e65a6dff89015a -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 0	Timestamp: 339
+	Payload: 70.07 to 1
+	Current Networth: 10604.4 10277.7 9723.17 8578.64 11288.4 9527.58 
+	fa6f92847f1fc4fd3191bf5d8304894 -Self Parent
+	c287a3181f243daf86e65a6dff89015a -Gossip Parent
+	Round Received: 10	Consensus Time: 351
+
+Node owner: 2	Timestamp: 340
+	Payload: 941.62 to 3
+	Current Networth: 10604.4 10277.7 8781.55 9520.26 11288.4 9527.58 
+	fa989f99df723bdeee9eceab1cbb18fc -Self Parent
+	8ecd8911aec1d97a5dab7246984c0295 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 3	Timestamp: 341
+	2e09a2a894a20ddfd02f66f6a0a22640 -Self Parent
+	2ff95ca923d4174ec0926f29c1c9e251 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 3	Timestamp: 342
+	Payload: 84.3 to 3
+	Current Networth: 10604.4 10277.7 8781.55 9520.26 11288.4 9527.58 
+	c89edf83342878b1598f1c83aeabac0e -Self Parent
+	8ecd8911aec1d97a5dab7246984c0295 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 3	Timestamp: 343
+	3cf960859c0e2239854854eed592e716 -Self Parent
+	8614d1066531eede5cf1e187957eefc1 -Gossip Parent
+	Round Received: 10	Consensus Time: 350
+
+Node owner: 2	Timestamp: 344
+	2ff95ca923d4174ec0926f29c1c9e251 -Self Parent
+	1f6b7318f62e68e74d3740da5fd3decf -Gossip Parent
+	Round Received: 10	Consensus Time: 365
+
+Node owner: 1	Timestamp: 345
+	8614d1066531eede5cf1e187957eefc1 -Self Parent
+	1f6b7318f62e68e74d3740da5fd3decf -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 3	Timestamp: 346
+	1f6b7318f62e68e74d3740da5fd3decf -Self Parent
+	8ecd8911aec1d97a5dab7246984c0295 -Gossip Parent
+	Round Received: 10	Consensus Time: 360
+
+Node owner: 1	Timestamp: 347
+	7997a7874c35b4b246af3b11b1d21b77 -Self Parent
+	759850aebe8454e1685af77c4a1b228b -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 2	Timestamp: 348
+	ea895fe8dbc299aee6393e92e16d1957 -Self Parent
+	8ecd8911aec1d97a5dab7246984c0295 -Gossip Parent
+	Round Received: 10	Consensus Time: 365
+
+Node owner: 0	Timestamp: 349
+	759850aebe8454e1685af77c4a1b228b -Self Parent
+	8ecd8911aec1d97a5dab7246984c0295 -Gossip Parent
+	Round Received: 10	Consensus Time: 359
+
+Node owner: 5	Timestamp: 350
+	8ecd8911aec1d97a5dab7246984c0295 -Self Parent
+	c33702c344acbd4a33a5f911e2e99980 -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 2	Timestamp: 351
+	95383400846bb57ae9ddf95089773c25 -Self Parent
+	72923c177c6e78188b8d101a4135bcda -Gossip Parent
+	Round Received: 10	Consensus Time: 365
+
+Node owner: 2	Timestamp: 352
+	3c3ef52ce294e0895f8ddec29ee79683 -Self Parent
+	c287a3181f243daf86e65a6dff89015a -Gossip Parent
+	Round Received: 10	Consensus Time: 365
+
+Node owner: 5	Timestamp: 353
+	4c02906e214c048b474f7aedd2f605c3 -Self Parent
+	c33702c344acbd4a33a5f911e2e99980 -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 0	Timestamp: 354
+	72923c177c6e78188b8d101a4135bcda -Self Parent
+	c33702c344acbd4a33a5f911e2e99980 -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 1	Timestamp: 355
+	c33702c344acbd4a33a5f911e2e99980 -Self Parent
+	7282a117deb299d143ae87dcaa63558 -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 0	Timestamp: 356
+	18aba18d92cbc8b04ad71d392bdf7fe -Self Parent
+	e85a98a08467a7a625649ef0a113a0a5 -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 0	Timestamp: 357
+	8f3c32799c4db620f79a8d5159dc1c53 -Self Parent
+	27c5955f681fa358bb5df75b212d608b -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 4	Timestamp: 360
+	c287a3181f243daf86e65a6dff89015a -Self Parent
+	27c5955f681fa358bb5df75b212d608b -Gossip Parent
+	Round Received: 10	Consensus Time: 365
+
+Node owner: 2	Timestamp: 361
+	ebedb59df8c736dbccf8b01d46513d -Self Parent
+	27c5955f681fa358bb5df75b212d608b -Gossip Parent
+	Round Received: 10	Consensus Time: 368
+
+Node owner: 4	Timestamp: 364
+	Payload: 172.14 to 2
+	Current Networth: 10604.4 10277.7 8953.69 9520.26 11116.3 9527.58 
+	60a5497613b465b2ec9bfcfc73171d72 -Self Parent
+	34920359d2f3543d59aa22c34198dc00 -Gossip Parent
+	Round Received: 10	Consensus Time: 369
+
+Node owner: 1	Timestamp: 358
+	e85a98a08467a7a625649ef0a113a0a5 -Self Parent
+	47d49270a87a253b871f81edd31a2970 -Gossip Parent
+	Round Received: 11	Consensus Time: 396
+
+Node owner: 5	Timestamp: 359
+	7282a117deb299d143ae87dcaa63558 -Self Parent
+	ebedb59df8c736dbccf8b01d46513d -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 5	Timestamp: 362
+	189047b47315294cbee804f3c4a65591 -Self Parent
+	60a5497613b465b2ec9bfcfc73171d72 -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 3	Timestamp: 363
+	27c5955f681fa358bb5df75b212d608b -Self Parent
+	60a5497613b465b2ec9bfcfc73171d72 -Gossip Parent
+	Round Received: 11	Consensus Time: 377
+
+Node owner: 1	Timestamp: 365
+	89f557e73e616ca3b0b305529d1e84bd -Self Parent
+	a1eee4f2e927a98d6f5ec33961f7b369 -Gossip Parent
+	Round Received: 11	Consensus Time: 396
+
+Node owner: 1	Timestamp: 366
+	d26a9356f6006c4c52efe8125fb04f48 -Self Parent
+	a1eee4f2e927a98d6f5ec33961f7b369 -Gossip Parent
+	Round Received: 11	Consensus Time: 396
+
+Node owner: 5	Timestamp: 367
+	0b55880bf68f8f6b8b37d5d53056c0d2 -Self Parent
+	47d49270a87a253b871f81edd31a2970 -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 0	Timestamp: 368
+	Payload: 314.17 to 3
+	Current Networth: 10290.3 10277.7 8953.69 9834.43 11116.3 9527.58 
+	47d49270a87a253b871f81edd31a2970 -Self Parent
+	a1eee4f2e927a98d6f5ec33961f7b369 -Gossip Parent
+	Round Received: 11	Consensus Time: 375
+
+Node owner: 3	Timestamp: 369
+	681c66ea211541a9b798558c9fcd43dd -Self Parent
+	be606198a94b4ac148509441fb7463c -Gossip Parent
+	Round Received: 11	Consensus Time: 377
+
+Node owner: 0	Timestamp: 370
+	be606198a94b4ac148509441fb7463c -Self Parent
+	a1eee4f2e927a98d6f5ec33961f7b369 -Gossip Parent
+	Round Received: 11	Consensus Time: 376
+
+Node owner: 0	Timestamp: 371
+	7a24d8cc774cdfc64c3e33bb515404b7 -Self Parent
+	a1eee4f2e927a98d6f5ec33961f7b369 -Gossip Parent
+	Round Received: 11	Consensus Time: 376
+
+Node owner: 4	Timestamp: 372
+	Payload: 948.75 to 1
+	Current Networth: 10290.3 11226.5 8953.69 9834.43 10167.5 9527.58 
+	a1eee4f2e927a98d6f5ec33961f7b369 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 11	Consensus Time: 380
+
+Node owner: 4	Timestamp: 373
+	4477429093f073f6b2234bb122dc04f2 -Self Parent
+	9945c7d475fd78044ee1be61e2cc9d43 -Gossip Parent
+	Round Received: 11	Consensus Time: 380
+
+Node owner: 4	Timestamp: 374
+	8eb64f3d291d1dfd3868bfa670e0fd9 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 11	Consensus Time: 380
+
+Node owner: 5	Timestamp: 375
+	a5a4f0e496ecabd92ddf018a398b83d2 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 2	Timestamp: 376
+	Payload: 928.02 to 2
+	Current Networth: 10290.3 11226.5 8953.69 9834.43 10167.5 9527.58 
+	34920359d2f3543d59aa22c34198dc00 -Self Parent
+	6bbc1dfdc82eddfbcf3870ee5fbf1854 -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 5	Timestamp: 377
+	cef3c31ee19965b9fd4b9e79b61b265 -Self Parent
+	9945c7d475fd78044ee1be61e2cc9d43 -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 4	Timestamp: 378
+	6bbc1dfdc82eddfbcf3870ee5fbf1854 -Self Parent
+	d21800afd7793c0f2fabd545d9f3447 -Gossip Parent
+	Round Received: 11	Consensus Time: 396
+
+Node owner: 5	Timestamp: 379
+	Payload: 128.28 to 4
+	Current Networth: 10290.3 11226.5 8953.69 9834.43 10295.8 9399.3 
+	590b3348f514fa72d8315c45d268dc68 -Self Parent
+	b030949ee94c49c3c7bf61417a748b21 -Gossip Parent
+	Round Received: 11	Consensus Time: 390
+
+Node owner: 3	Timestamp: 381
+	9945c7d475fd78044ee1be61e2cc9d43 -Self Parent
+	e90e004c7e559a88d2d35ae7809f51c2 -Gossip Parent
+	Round Received: 11	Consensus Time: 398
+
+Node owner: 3	Timestamp: 382
+	055efa4153f887ced0a57c3c472c5cc5 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 11	Consensus Time: 398
+
+Node owner: 2	Timestamp: 386
+	b030949ee94c49c3c7bf61417a748b21 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 11	Consensus Time: 397
+
+Node owner: 4	Timestamp: 387
+	e90e004c7e559a88d2d35ae7809f51c2 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 11	Consensus Time: 398
+
+Node owner: 2	Timestamp: 389
+	574552908074fcf8ff1403c696acea9f -Self Parent
+	3b70477244f357fb7d0ce696b9d5566b -Gossip Parent
+	Round Received: 11	Consensus Time: 398
+
+Node owner: 0	Timestamp: 390
+	27e968d8f10f57f55dfa2e80610c343b -Self Parent
+	3b70477244f357fb7d0ce696b9d5566b -Gossip Parent
+	Round Received: 11	Consensus Time: 398
+
+Node owner: 4	Timestamp: 391
+	579efedf840de06ce9c83164b1499507 -Self Parent
+	8a12f448c96bbbe056781fa61a11ec7f -Gossip Parent
+	Round Received: 11	Consensus Time: 398
+
+Node owner: 3	Timestamp: 394
+	98ace0ce43a0e4816abdb7b081ba7bda -Self Parent
+	f20bc099c299dff9c3c697ff2fd37ab8 -Gossip Parent
+	Round Received: 11	Consensus Time: 400
+
+Node owner: 3	Timestamp: 395
+	70c975f6ac222bc8c2e6a8976b83d009 -Self Parent
+	244b5fe2b3d1869348396f5ec8d7f71c -Gossip Parent
+	Round Received: 11	Consensus Time: 400
+
+Node owner: 1	Timestamp: 380
+	d21800afd7793c0f2fabd545d9f3447 -Self Parent
+	b030949ee94c49c3c7bf61417a748b21 -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 1	Timestamp: 383
+	1ca8b7a55290137b90faa5786ab2e90 -Self Parent
+	98ace0ce43a0e4816abdb7b081ba7bda -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 1	Timestamp: 384
+	1e4826558971ccef44f246158e4382ca -Self Parent
+	3b70477244f357fb7d0ce696b9d5566b -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 1	Timestamp: 385
+	d38b0883dc8bb4c5feff85a439831063 -Self Parent
+	27e968d8f10f57f55dfa2e80610c343b -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 1	Timestamp: 388
+	deeb8e94fa1a7a750cfb6e0c1f05396 -Self Parent
+	574552908074fcf8ff1403c696acea9f -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 1	Timestamp: 392
+	65c5ad07e6baca5798d46695fe1f1a9c -Self Parent
+	98ace0ce43a0e4816abdb7b081ba7bda -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 1	Timestamp: 393
+	2a0749f7cb7990c1b88ed68ba47f8813 -Self Parent
+	98ace0ce43a0e4816abdb7b081ba7bda -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 0	Timestamp: 396
+	8a12f448c96bbbe056781fa61a11ec7f -Self Parent
+	f20bc099c299dff9c3c697ff2fd37ab8 -Gossip Parent
+	Round Received: 12	Consensus Time: 410
+
+Node owner: 0	Timestamp: 397
+	Payload: 717.79 to 0
+	Current Networth: 10290.3 11226.5 8953.69 9834.43 10295.8 9399.3 
+	8697997bd8565e77eca005754296b9c2 -Self Parent
+	770735a67a533bad49369ecddb153e2e -Gossip Parent
+	Round Received: 12	Consensus Time: 410
+
+Node owner: 5	Timestamp: 398
+	3b70477244f357fb7d0ce696b9d5566b -Self Parent
+	770735a67a533bad49369ecddb153e2e -Gossip Parent
+	Round Received: 12	Consensus Time: 408
+
+Node owner: 3	Timestamp: 399
+	770735a67a533bad49369ecddb153e2e -Self Parent
+	244b5fe2b3d1869348396f5ec8d7f71c -Gossip Parent
+	Round Received: 12	Consensus Time: 405
+
+Node owner: 4	Timestamp: 400
+	f20bc099c299dff9c3c697ff2fd37ab8 -Self Parent
+	db046d5cfd7e58406fd7644ed8a4ade -Gossip Parent
+	Round Received: 12	Consensus Time: 407
+
+Node owner: 0	Timestamp: 401
+	9267cd529a01840cc85a6d82a50d98da -Self Parent
+	244b5fe2b3d1869348396f5ec8d7f71c -Gossip Parent
+	Round Received: 12	Consensus Time: 410
+
+Node owner: 3	Timestamp: 402
+	db046d5cfd7e58406fd7644ed8a4ade -Self Parent
+	21d8431c27ee8501b32b52c61d99ad5 -Gossip Parent
+	Round Received: 12	Consensus Time: 409
+
+Node owner: 1	Timestamp: 403
+	34b754dcc619375aa2998105e24b12b9 -Self Parent
+	05322c836b2e4232d62f9727e52ba2b2 -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 2	Timestamp: 404
+	244b5fe2b3d1869348396f5ec8d7f71c -Self Parent
+	2f7d1d34aebc54d189f04928a560a4f6 -Gossip Parent
+	Round Received: 12	Consensus Time: 410
+
+Node owner: 0	Timestamp: 405
+	2f7d1d34aebc54d189f04928a560a4f6 -Self Parent
+	de81be00bd1a99964b46639bc8d62ef6 -Gossip Parent
+	Round Received: 12	Consensus Time: 412
+
+Node owner: 2	Timestamp: 406
+	0882976c8c5ed3ae6e60e71c5fe1053a -Self Parent
+	05322c836b2e4232d62f9727e52ba2b2 -Gossip Parent
+	Round Received: 12	Consensus Time: 410
+
+Node owner: 0	Timestamp: 407
+	0a937ba51995d95fa5b38a546dbfe2c7 -Self Parent
+	08507229cb271f394ccfb36ada26c7f1 -Gossip Parent
+	Round Received: 12	Consensus Time: 412
+
+Node owner: 1	Timestamp: 408
+	1613929213943d8012aa591b2e97c88 -Self Parent
+	44ed2dd4962fceffb4d1f36e4502e65c -Gossip Parent
+	Round Received: 12	Consensus Time: 414
+
+Node owner: 5	Timestamp: 409
+	21d8431c27ee8501b32b52c61d99ad5 -Self Parent
+	de81be00bd1a99964b46639bc8d62ef6 -Gossip Parent
+	Round Received: 12	Consensus Time: 422
+
+Node owner: 3	Timestamp: 410
+	de81be00bd1a99964b46639bc8d62ef6 -Self Parent
+	44ed2dd4962fceffb4d1f36e4502e65c -Gossip Parent
+	Round Received: 12	Consensus Time: 423
+
+Node owner: 5	Timestamp: 412
+	d7ec611d770f837ce2b578e397d78f8c -Self Parent
+	a498409e9bbf8d2a385e7a2c46212578 -Gossip Parent
+	Round Received: 12	Consensus Time: 422
+
+Node owner: 3	Timestamp: 413
+	5439ac3e3ec63f84f3ac164842c63c -Self Parent
+	67e69c1795e05230badefd16b4c8128b -Gossip Parent
+	Round Received: 12	Consensus Time: 423
+
+Node owner: 4	Timestamp: 414
+	05322c836b2e4232d62f9727e52ba2b2 -Self Parent
+	6092fa4329bbdd2f2aafbaa71d5ef0c8 -Gossip Parent
+	Round Received: 12	Consensus Time: 425
+
+Node owner: 0	Timestamp: 411
+	44ed2dd4962fceffb4d1f36e4502e65c -Self Parent
+	05322c836b2e4232d62f9727e52ba2b2 -Gossip Parent
+	Round Received: 13	Consensus Time: 419
+
+Node owner: 4	Timestamp: 415
+	c507b4664570f54b51e0b1ea31462548 -Self Parent
+	67e69c1795e05230badefd16b4c8128b -Gossip Parent
+	Round Received: 13	Consensus Time: 425
+
+Node owner: 3	Timestamp: 416
+	6092fa4329bbdd2f2aafbaa71d5ef0c8 -Self Parent
+	0ed2f4fb15cf09a1059506b5c84630 -Gossip Parent
+	Round Received: 13	Consensus Time: 438
+
+Node owner: 1	Timestamp: 417
+	a498409e9bbf8d2a385e7a2c46212578 -Self Parent
+	0ed2f4fb15cf09a1059506b5c84630 -Gossip Parent
+	Round Received: 13	Consensus Time: 422
+
+Node owner: 3	Timestamp: 418
+	42475cafd3c2b84a2d99b57ed62de916 -Self Parent
+	67e69c1795e05230badefd16b4c8128b -Gossip Parent
+	Round Received: 13	Consensus Time: 438
+
+Node owner: 5	Timestamp: 419
+	67e69c1795e05230badefd16b4c8128b -Self Parent
+	0ed2f4fb15cf09a1059506b5c84630 -Gossip Parent
+	Round Received: 13	Consensus Time: 423
+
+Node owner: 5	Timestamp: 420
+	5821c0cbc0d1b63199d1c8f7e15d2866 -Self Parent
+	ee9a18c7c18e391fbc78725597262210 -Gossip Parent
+	Round Received: 13	Consensus Time: 423
+
+Node owner: 4	Timestamp: 421
+	5082e6b9b2f1b3feeb60f9df1490be2f -Self Parent
+	18f47e46f3b71e5c256239487a99ebb0 -Gossip Parent
+	Round Received: 13	Consensus Time: 425
+
+Node owner: 2	Timestamp: 422
+	08507229cb271f394ccfb36ada26c7f1 -Self Parent
+	8f3db7bd33a85764226f5eed80f3266e -Gossip Parent
+	Round Received: 13	Consensus Time: 433
+
+Node owner: 1	Timestamp: 423
+	ee9a18c7c18e391fbc78725597262210 -Self Parent
+	b58216b6a438c9306e7402aaec284830 -Gossip Parent
+	Round Received: 13	Consensus Time: 437
+
+Node owner: 4	Timestamp: 424
+	8f3db7bd33a85764226f5eed80f3266e -Self Parent
+	18f47e46f3b71e5c256239487a99ebb0 -Gossip Parent
+	Round Received: 13	Consensus Time: 431
+
+Node owner: 0	Timestamp: 425
+	0ed2f4fb15cf09a1059506b5c84630 -Self Parent
+	b58216b6a438c9306e7402aaec284830 -Gossip Parent
+	Round Received: 13	Consensus Time: 438
+
+Node owner: 2	Timestamp: 426
+	b58216b6a438c9306e7402aaec284830 -Self Parent
+	76b74d6eb6cbc87f2c9161f1a28101a7 -Gossip Parent
+	Round Received: 13	Consensus Time: 437
+
+Node owner: 1	Timestamp: 427
+	76b74d6eb6cbc87f2c9161f1a28101a7 -Self Parent
+	6fe82bfa1a6cb4007a718f44aa503623 -Gossip Parent
+	Round Received: 13	Consensus Time: 439
+
+Node owner: 0	Timestamp: 428
+	6daea2e5fbf023e09cebaf04ed1cf875 -Self Parent
+	0dc7f9e290f91362b165b0a8335a3e99 -Gossip Parent
+	Round Received: 13	Consensus Time: 438
+
+Node owner: 1	Timestamp: 429
+	8f6b06ab80e41c9aa91c4d4693cc6b34 -Self Parent
+	9bfa5a3544d3de7639d0f08e2b59d18a -Gossip Parent
+	Round Received: 13	Consensus Time: 439
+
+Node owner: 1	Timestamp: 430
+	a5a077c0150604a32f406af2df7e3d57 -Self Parent
+	8ad693d912fd389e855aad11faefefb8 -Gossip Parent
+	Round Received: 13	Consensus Time: 439
+
+Node owner: 5	Timestamp: 431
+	18f47e46f3b71e5c256239487a99ebb0 -Self Parent
+	0dc7f9e290f91362b165b0a8335a3e99 -Gossip Parent
+	Round Received: 13	Consensus Time: 448
+
+Node owner: 1	Timestamp: 432
+	3a8333a9eb3b573957ddb50f88e09cd3 -Self Parent
+	6fe82bfa1a6cb4007a718f44aa503623 -Gossip Parent
+	Round Received: 13	Consensus Time: 439
+
+Node owner: 5	Timestamp: 433
+	b8e15d53bf840b73741d4e936bdc985e -Self Parent
+	6fe82bfa1a6cb4007a718f44aa503623 -Gossip Parent
+	Round Received: 13	Consensus Time: 448
+
+Node owner: 0	Timestamp: 434
+	9bfa5a3544d3de7639d0f08e2b59d18a -Self Parent
+	0dc7f9e290f91362b165b0a8335a3e99 -Gossip Parent
+	Round Received: 13	Consensus Time: 449
+
+Node owner: 1	Timestamp: 435
+	3d643b1aea89889f80dfbb394ef0c8c -Self Parent
+	8ad693d912fd389e855aad11faefefb8 -Gossip Parent
+	Round Received: 13	Consensus Time: 439
+
+Node owner: 2	Timestamp: 436
+	6fe82bfa1a6cb4007a718f44aa503623 -Self Parent
+	0dc7f9e290f91362b165b0a8335a3e99 -Gossip Parent
+	Round Received: 13	Consensus Time: 442
+
+Node owner: 4	Timestamp: 437
+	Payload: 573.3 to 0
+	Current Networth: 10863.6 11226.5 8953.69 9834.43 9722.53 9399.3 
+	0dc7f9e290f91362b165b0a8335a3e99 -Self Parent
+	989bdd5bc7672cea7d4d1f22cd973ae9 -Gossip Parent
+	Round Received: 13	Consensus Time: 440
+
+Node owner: 2	Timestamp: 438
+	cc6a42823bcd8881dec093f03c318601 -Self Parent
+	9c2c29f1804f78357e84b5918c3736cb -Gossip Parent
+	Round Received: 13	Consensus Time: 442
+
+Node owner: 5	Timestamp: 439
+	3ce9d037f6fd90a819220f0e4d1aceb5 -Self Parent
+	aa5c4825c9aac0a6b8f51ac7bf2c5fa7 -Gossip Parent
+	Round Received: 13	Consensus Time: 448
+
+Node owner: 0	Timestamp: 440
+	a7d0896761ae11e2d3de9bb5929802cb -Self Parent
+	0878960bba77d963dce247ae80a44edd -Gossip Parent
+	Round Received: 13	Consensus Time: 449
+
+Node owner: 3	Timestamp: 441
+	8ad693d912fd389e855aad11faefefb8 -Self Parent
+	9c2c29f1804f78357e84b5918c3736cb -Gossip Parent
+	Round Received: 13	Consensus Time: 461
+
+Node owner: 3	Timestamp: 442
+	b7739d59ca0c9e6cd203da80bed01a0f -Self Parent
+	aa5c4825c9aac0a6b8f51ac7bf2c5fa7 -Gossip Parent
+	Round Received: 13	Consensus Time: 461
+
+Node owner: 4	Timestamp: 443
+	9c2c29f1804f78357e84b5918c3736cb -Self Parent
+	65c4a50a69e3fe68527eb3a6e77d9ea -Gossip Parent
+	Round Received: 13	Consensus Time: 453
+
+Node owner: 2	Timestamp: 448
+	aa5c4825c9aac0a6b8f51ac7bf2c5fa7 -Self Parent
+	e2eec40c1e1f9f6128a92a65934f8ea6 -Gossip Parent
+	Round Received: 13	Consensus Time: 457
+
+Node owner: 3	Timestamp: 449
+	98d309b353398bdacc730b9a40eb462 -Self Parent
+	7f8cd3d71d64478e5efb60a48f1587a2 -Gossip Parent
+	Round Received: 13	Consensus Time: 461
+
+Node owner: 1	Timestamp: 444
+	989bdd5bc7672cea7d4d1f22cd973ae9 -Self Parent
+	aa5c4825c9aac0a6b8f51ac7bf2c5fa7 -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 0	Timestamp: 445
+	65c4a50a69e3fe68527eb3a6e77d9ea -Self Parent
+	0878960bba77d963dce247ae80a44edd -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 0	Timestamp: 446
+	7e46d670300457a94f124af6789786f0 -Self Parent
+	0878960bba77d963dce247ae80a44edd -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 1	Timestamp: 447
+	Payload: 808.67 to 1
+	Current Networth: 10863.6 11226.5 8953.69 9834.43 9722.53 9399.3 
+	583ed968b385b747b5d0c2d278594fc3 -Self Parent
+	98d309b353398bdacc730b9a40eb462 -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 3	Timestamp: 450
+	ac3dc363162031ea8c56058e2363a834 -Self Parent
+	0878960bba77d963dce247ae80a44edd -Gossip Parent
+	Round Received: 14	Consensus Time: 461
+
+Node owner: 4	Timestamp: 451
+	e2eec40c1e1f9f6128a92a65934f8ea6 -Self Parent
+	0878960bba77d963dce247ae80a44edd -Gossip Parent
+	Round Received: 14	Consensus Time: 461
+
+Node owner: 3	Timestamp: 452
+	9b770a9a16d455862caa3688ecce0d55 -Self Parent
+	7f8cd3d71d64478e5efb60a48f1587a2 -Gossip Parent
+	Round Received: 14	Consensus Time: 461
+
+Node owner: 0	Timestamp: 453
+	5d020809aae8818bdea821c656020d4b -Self Parent
+	7f8cd3d71d64478e5efb60a48f1587a2 -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 3	Timestamp: 454
+	0346ee22f1b67064dc17d0bd90ceb047 -Self Parent
+	0878960bba77d963dce247ae80a44edd -Gossip Parent
+	Round Received: 14	Consensus Time: 461
+
+Node owner: 2	Timestamp: 455
+	7f8cd3d71d64478e5efb60a48f1587a2 -Self Parent
+	78e1d882e7e9fe78f96df107f42500b -Gossip Parent
+	Round Received: 14	Consensus Time: 462
+
+Node owner: 0	Timestamp: 456
+	0f8ef267baebdceceda06817641c530c -Self Parent
+	679c97f9c3b10d111276448a9c44610b -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 1	Timestamp: 457
+	Payload: 598.6 to 4
+	Current Networth: 10863.6 10627.9 8953.69 9834.43 10321.1 9399.3 
+	a0bafe05546067e35facd5c410f0c087 -Self Parent
+	be359f65378c7c24b0747565a7285c56 -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 1	Timestamp: 458
+	2caf4c92a631476f6e8648f26e6913 -Self Parent
+	8a7e21325252a77f52d19121e552f24a -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 1	Timestamp: 459
+	c18c0f813982b73158b87ddd8c06498 -Self Parent
+	78e1d882e7e9fe78f96df107f42500b -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 1	Timestamp: 460
+	202c75c4df5598ecfaed1d2b434eb115 -Self Parent
+	be359f65378c7c24b0747565a7285c56 -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 5	Timestamp: 461
+	0878960bba77d963dce247ae80a44edd -Self Parent
+	21c8df5a5b19642443365e611d72e03 -Gossip Parent
+	Round Received: 14	Consensus Time: 474
+
+Node owner: 0	Timestamp: 462
+	be359f65378c7c24b0747565a7285c56 -Self Parent
+	a483bf093cc0cc18d534fb4f8399191 -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 0	Timestamp: 463
+	561760601a949fba259e27301e43cceb -Self Parent
+	679c97f9c3b10d111276448a9c44610b -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 1	Timestamp: 464
+	21c8df5a5b19642443365e611d72e03 -Self Parent
+	679c97f9c3b10d111276448a9c44610b -Gossip Parent
+	Round Received: 14	Consensus Time: 479
+
+Node owner: 1	Timestamp: 465
+	09f2f3472bccc13c4777288d44ffebaa -Self Parent
+	a483bf093cc0cc18d534fb4f8399191 -Gossip Parent
+	Round Received: 14	Consensus Time: 479
+
+Node owner: 5	Timestamp: 466
+	a483bf093cc0cc18d534fb4f8399191 -Self Parent
+	8a7e21325252a77f52d19121e552f24a -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 3	Timestamp: 467
+	679c97f9c3b10d111276448a9c44610b -Self Parent
+	78e1d882e7e9fe78f96df107f42500b -Gossip Parent
+	Round Received: 14	Consensus Time: 478
+
+Node owner: 2	Timestamp: 468
+	8a7e21325252a77f52d19121e552f24a -Self Parent
+	78e1d882e7e9fe78f96df107f42500b -Gossip Parent
+	Round Received: 14	Consensus Time: 479
+
+Node owner: 0	Timestamp: 469
+	cd91fd9cd0dbf8ca4d4a664f9d428606 -Self Parent
+	5f23d61d5769e47d4ad49b0e59ffa8fd -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 5	Timestamp: 470
+	Payload: 660.12 to 4
+	Current Networth: 10863.6 10627.9 8953.69 9834.43 10981.2 8739.18 
+	5f23d61d5769e47d4ad49b0e59ffa8fd -Self Parent
+	ef4bcfd87ed1c513f02ab9768e502053 -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 1	Timestamp: 471
+	31d89821cb0823bbe144b34474432613 -Self Parent
+	1362801d5e75de7998a3b57cdf2b1219 -Gossip Parent
+	Round Received: 14	Consensus Time: 479
+
+Node owner: 4	Timestamp: 472
+	78e1d882e7e9fe78f96df107f42500b -Self Parent
+	ef4bcfd87ed1c513f02ab9768e502053 -Gossip Parent
+	Round Received: 14	Consensus Time: 490
+
+Node owner: 5	Timestamp: 473
+	f4362e7284f19e4ac00a0651d2c4cad7 -Self Parent
+	a5083bb723e5ca5e69d61420d5de6785 -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 2	Timestamp: 474
+	1362801d5e75de7998a3b57cdf2b1219 -Self Parent
+	4dbd80694541f5f05cde678ae33f58ca -Gossip Parent
+	Round Received: 14	Consensus Time: 479
+
+Node owner: 1	Timestamp: 475
+	4dbd80694541f5f05cde678ae33f58ca -Self Parent
+	01d6b8b0904c7b7dbe8f08e7f626282d -Gossip Parent
+	Round Received: 14	Consensus Time: 487
+
+Node owner: 4	Timestamp: 476
+	2fbf15da3ac215f8648923a92fd611bb -Self Parent
+	01d6b8b0904c7b7dbe8f08e7f626282d -Gossip Parent
+	Round Received: 14	Consensus Time: 490
+
+Node owner: 4	Timestamp: 477
+	3d40bb22c6c7567fd4eac09951e25182 -Self Parent
+	3ffabf739e24da00f62760d64d3f7d3f -Gossip Parent
+	Round Received: 14	Consensus Time: 490
+
+Node owner: 2	Timestamp: 478
+	01d6b8b0904c7b7dbe8f08e7f626282d -Self Parent
+	ef4bcfd87ed1c513f02ab9768e502053 -Gossip Parent
+	Round Received: 14	Consensus Time: 496
+
+Node owner: 0	Timestamp: 479
+	a5083bb723e5ca5e69d61420d5de6785 -Self Parent
+	4316fa479fa7b2b6c4eeb716cd871a2b -Gossip Parent
+	Round Received: 14	Consensus Time: 494
+
+Node owner: 4	Timestamp: 480
+	4316fa479fa7b2b6c4eeb716cd871a2b -Self Parent
+	5341702353fdd005cef4db245c3f50 -Gossip Parent
+	Round Received: 14	Consensus Time: 497
+
+Node owner: 2	Timestamp: 481
+	Payload: 733.99 to 2
+	Current Networth: 10863.6 10627.9 8953.69 9834.43 10981.2 8739.18 
+	8d6fdc97e95c0d7224e0f3e1b09928e8 -Self Parent
+	ef4bcfd87ed1c513f02ab9768e502053 -Gossip Parent
+	Round Received: 14	Consensus Time: 496
+
+Node owner: 2	Timestamp: 482
+	58655965f085c0d69c82e4ed733c5704 -Self Parent
+	ef4bcfd87ed1c513f02ab9768e502053 -Gossip Parent
+	Round Received: 14	Consensus Time: 496
+
+Node owner: 5	Timestamp: 483
+	3ffabf739e24da00f62760d64d3f7d3f -Self Parent
+	5341702353fdd005cef4db245c3f50 -Gossip Parent
+	Round Received: 14	Consensus Time: 496
+
+Node owner: 4	Timestamp: 484
+	c93c61c898d5c7504cfdbafab9d40fc -Self Parent
+	00b6719e804a7eaf343e80bab0b1131a -Gossip Parent
+	Round Received: 14	Consensus Time: 497
+
+Node owner: 0	Timestamp: 485
+	86dae505939adb90f4cd0a8dbc7daef6 -Self Parent
+	ef4bcfd87ed1c513f02ab9768e502053 -Gossip Parent
+	Round Received: 14	Consensus Time: 494
+
+Node owner: 4	Timestamp: 486
+	6dc2c6e24777d761e23587c7fc65b514 -Self Parent
+	829ce745caed821873e42f69ef6c055 -Gossip Parent
+	Round Received: 14	Consensus Time: 497
+
+Node owner: 2	Timestamp: 487
+	00b6719e804a7eaf343e80bab0b1131a -Self Parent
+	829ce745caed821873e42f69ef6c055 -Gossip Parent
+	Round Received: 15	Consensus Time: 496
+
+Node owner: 5	Timestamp: 488
+	829ce745caed821873e42f69ef6c055 -Self Parent
+	9947d78025e0f6458ac32390f1f9ffd4 -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 5	Timestamp: 489
+	ed29fd58f022dcc26ef393ca510c9b03 -Self Parent
+	3152c1b9a5757a22bc3b39754f3b28b -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 3	Timestamp: 490
+	ef4bcfd87ed1c513f02ab9768e502053 -Self Parent
+	25bfdaf2e44e9a134b899760223ba8cc -Gossip Parent
+	Round Received: 15	Consensus Time: 505
+
+Node owner: 4	Timestamp: 491
+	3152c1b9a5757a22bc3b39754f3b28b -Self Parent
+	25bfdaf2e44e9a134b899760223ba8cc -Gossip Parent
+	Round Received: 14	Consensus Time: 497
+
+Node owner: 4	Timestamp: 492
+	683ffeff4c6f433c2499cde61c033e98 -Self Parent
+	9947d78025e0f6458ac32390f1f9ffd4 -Gossip Parent
+	Round Received: 15	Consensus Time: 497
+
+Node owner: 5	Timestamp: 493
+	b100bd1a9393554f342c5aeaffa0283b -Self Parent
+	9947d78025e0f6458ac32390f1f9ffd4 -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 5	Timestamp: 494
+	50bda6b02fdbc7af6e25a37af5e577f -Self Parent
+	2bc1b8d437885abf99e561d6ba7c7752 -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 5	Timestamp: 495
+	cda60c856a1539e1a6f1bfb776199c38 -Self Parent
+	f160b84b465b52cdbaecc69a3d626260 -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 1	Timestamp: 496
+	5341702353fdd005cef4db245c3f50 -Self Parent
+	cdf1628f3430a60795d6e9c7c78eb1f2 -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 2	Timestamp: 497
+	9947d78025e0f6458ac32390f1f9ffd4 -Self Parent
+	2bc1b8d437885abf99e561d6ba7c7752 -Gossip Parent
+	Round Received: 15	Consensus Time: 502
+
+Node owner: 3	Timestamp: 498
+	f160b84b465b52cdbaecc69a3d626260 -Self Parent
+	25bfdaf2e44e9a134b899760223ba8cc -Gossip Parent
+	Round Received: 15	Consensus Time: 510
+
+Node owner: 4	Timestamp: 499
+	2bc1b8d437885abf99e561d6ba7c7752 -Self Parent
+	610b6df4e5f45dc078cedb181cabaa33 -Gossip Parent
+	Round Received: 15	Consensus Time: 532
+
+Node owner: 1	Timestamp: 500
+	0a0653d034fc1a5bc96bc2168ec7b65f -Self Parent
+	25bfdaf2e44e9a134b899760223ba8cc -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 5	Timestamp: 501
+	cdf1628f3430a60795d6e9c7c78eb1f2 -Self Parent
+	610b6df4e5f45dc078cedb181cabaa33 -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 1	Timestamp: 502
+	3e46c827a0f99d964cae0ff6f5d65a5c -Self Parent
+	65315c1310f85e4f8b44620820baeb0 -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 2	Timestamp: 503
+	610b6df4e5f45dc078cedb181cabaa33 -Self Parent
+	25bfdaf2e44e9a134b899760223ba8cc -Gossip Parent
+	Round Received: 15	Consensus Time: 510
+
+Node owner: 3	Timestamp: 504
+	3d5372e39591e3f61cbe39dff5bb7c08 -Self Parent
+	351533e730cb29b4bccadb77a31fe0fb -Gossip Parent
+	Round Received: 15	Consensus Time: 510
+
+Node owner: 2	Timestamp: 505
+	351533e730cb29b4bccadb77a31fe0fb -Self Parent
+	c397f645d34c60da1216963850a0eadc -Gossip Parent
+	Round Received: 15	Consensus Time: 511
+
+Node owner: 0	Timestamp: 506
+	25bfdaf2e44e9a134b899760223ba8cc -Self Parent
+	65315c1310f85e4f8b44620820baeb0 -Gossip Parent
+	Round Received: 15	Consensus Time: 526
+
+Node owner: 5	Timestamp: 507
+	65315c1310f85e4f8b44620820baeb0 -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 523
+
+Node owner: 5	Timestamp: 508
+	44760d90ba7df772648aaf16301bf75a -Self Parent
+	c397f645d34c60da1216963850a0eadc -Gossip Parent
+	Round Received: 15	Consensus Time: 523
+
+Node owner: 1	Timestamp: 509
+	Payload: 145.82 to 4
+	Current Networth: 10863.6 10482.1 8953.69 9834.43 11127.1 8739.18 
+	8a79f4036ddb57cf52d5ab55ee2ebcd -Self Parent
+	4475c950ff12b0324565a769c41dcd35 -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 0	Timestamp: 510
+	67365e6f2700707418b5743340aae57 -Self Parent
+	a768cf05a5bbf7a37bef34315de67b5b -Gossip Parent
+	Round Received: 15	Consensus Time: 526
+
+Node owner: 4	Timestamp: 511
+	4475c950ff12b0324565a769c41dcd35 -Self Parent
+	a768cf05a5bbf7a37bef34315de67b5b -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 4	Timestamp: 512
+	20002203a4c50878dfe1afd57c7a5ff -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 4	Timestamp: 513
+	ced82da1d8ce080fe407fef51131f57f -Self Parent
+	a768cf05a5bbf7a37bef34315de67b5b -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 4	Timestamp: 514
+	46ccd3fb59487985375d4dea483c8d08 -Self Parent
+	f13618cf6418d2c194656fca67e187da -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 0	Timestamp: 515
+	Payload: 176.25 to 0
+	Current Networth: 10863.6 10482.1 8953.69 9834.43 11127.1 8739.18 
+	f13618cf6418d2c194656fca67e187da -Self Parent
+	a768cf05a5bbf7a37bef34315de67b5b -Gossip Parent
+	Round Received: 15	Consensus Time: 528
+
+Node owner: 0	Timestamp: 516
+	546c9d0fe10c3f966a6eafecd60a63de -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 528
+
+Node owner: 0	Timestamp: 517
+	786f62318a1cb61b833db4579b9cd1d9 -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 528
+
+Node owner: 4	Timestamp: 518
+	e05ac76c7fef396368b1d712b0203107 -Self Parent
+	c397f645d34c60da1216963850a0eadc -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 1	Timestamp: 519
+	c8e5eaa6171c38fad26e6b265aa62f7c -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 0	Timestamp: 520
+	f1eeeed2fe0f75b53d271ca664b7158 -Self Parent
+	c397f645d34c60da1216963850a0eadc -Gossip Parent
+	Round Received: 15	Consensus Time: 528
+
+Node owner: 4	Timestamp: 521
+	158cca2fdd8cb7982cbc8dde8af9312 -Self Parent
+	a768cf05a5bbf7a37bef34315de67b5b -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 1	Timestamp: 523
+	9b674fe2e8d82d9de2bc82fbd204f48f -Self Parent
+	86fc9f32b4a29dae737bd397492e4714 -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 1	Timestamp: 524
+	662a960d6361e8fb9b90051412272e5b -Self Parent
+	c397f645d34c60da1216963850a0eadc -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 0	Timestamp: 525
+	86fc9f32b4a29dae737bd397492e4714 -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 529
+
+Node owner: 3	Timestamp: 527
+	c397f645d34c60da1216963850a0eadc -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 4	Timestamp: 528
+	a70241124f1e8c76612d51cc895f6cec -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 1	Timestamp: 529
+	Payload: 166.23 to 2
+	Current Networth: 10863.6 10315.8 9119.92 9834.43 11127.1 8739.18 
+	23cd9e0fdedd9703d3aed1d32fbac150 -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 15	Consensus Time: 540
+
+Node owner: 4	Timestamp: 530
+	Payload: 792.77 to 3
+	Current Networth: 10863.6 10315.8 9119.92 10627.2 10334.3 8739.18 
+	5732d67dd62bc6c18272d58c732a8ccd -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 15	Consensus Time: 547
+
+Node owner: 2	Timestamp: 531
+	4c627821ff7ed2266ac46f1c70c05310 -Self Parent
+	9bf34f3da78803c787a23121a2904f9 -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 3	Timestamp: 532
+	ac6b70afb95522d3c2a3b5da1ce72eeb -Self Parent
+	aeb21261b6154111205ccc83c2baec3e -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 2	Timestamp: 533
+	d7bb9c3e346517e27b7ffe9fcf4d404e -Self Parent
+	9bf34f3da78803c787a23121a2904f9 -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 3	Timestamp: 535
+	162f2ff1f9d7d04152eed0fc74b345ed -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 2	Timestamp: 537
+	ba58b4eeeac68f1345cad5e84ba7e458 -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 2	Timestamp: 540
+	1befee87ead25d376c04b7454f7499c -Self Parent
+	51cfd89cc7a4e12fd44048a6d9d2f62 -Gossip Parent
+	Round Received: 15	Consensus Time: 553
+
+Node owner: 5	Timestamp: 522
+	a768cf05a5bbf7a37bef34315de67b5b -Self Parent
+	4c627821ff7ed2266ac46f1c70c05310 -Gossip Parent
+	Round Received: 16	Consensus Time: 543
+
+Node owner: 5	Timestamp: 526
+	Payload: 400.32 to 5
+	Current Networth: 10863.6 10315.8 9119.92 10627.2 10334.3 8739.18 
+	4e173d0af1a9f6cc1871aa3beb3d7ec2 -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 16	Consensus Time: 543
+
+Node owner: 1	Timestamp: 534
+	aeb21261b6154111205ccc83c2baec3e -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 16	Consensus Time: 543
+
+Node owner: 4	Timestamp: 536
+	9bf34f3da78803c787a23121a2904f9 -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 16	Consensus Time: 552
+
+Node owner: 1	Timestamp: 538
+	aa20f9cff435b14bee7614ff231da9dd -Self Parent
+	56c3c8a7cbec71ec7e788c5ef6e94b32 -Gossip Parent
+	Round Received: 16	Consensus Time: 543
+
+Node owner: 5	Timestamp: 539
+	56c3c8a7cbec71ec7e788c5ef6e94b32 -Self Parent
+	2a312aee20616fa7b5a129d31f1f467 -Gossip Parent
+	Round Received: 16	Consensus Time: 543
+
+Node owner: 1	Timestamp: 541
+	2a312aee20616fa7b5a129d31f1f467 -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 2	Timestamp: 542
+	ecfc95486ce762b03ca66a21e14a9ca -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 553
+
+Node owner: 3	Timestamp: 543
+	51cfd89cc7a4e12fd44048a6d9d2f62 -Self Parent
+	67b7ba5f1dc59e417b309c9e91e35ab5 -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 1	Timestamp: 544
+	c30274e5875d49bff12f00bdd104b6ad -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 3	Timestamp: 545
+	Payload: 303.5 to 5
+	Current Networth: 10863.6 10315.8 9119.92 10323.7 10334.3 9042.68 
+	438e9bb371048e89af990f72f83afc57 -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 4	Timestamp: 546
+	78e7bc7679a8860ead82044db20a6964 -Self Parent
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Gossip Parent
+	Round Received: 16	Consensus Time: 552
+
+Node owner: 1	Timestamp: 547
+	d703a9e45197b2d6f3eb7efc391ab249 -Self Parent
+	27672e5db3e6f88453af843114ca037 -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 3	Timestamp: 548
+	27672e5db3e6f88453af843114ca037 -Self Parent
+	3ed6a40f36e2853995c926f5a068776c -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 1	Timestamp: 549
+	Payload: 479.39 to 1
+	Current Networth: 10863.6 10315.8 9119.92 10323.7 10334.3 9042.68 
+	6a7c2fff81dfb9705bc52f3b1a3d463a -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 2	Timestamp: 550
+	67b7ba5f1dc59e417b309c9e91e35ab5 -Self Parent
+	3ed6a40f36e2853995c926f5a068776c -Gossip Parent
+	Round Received: 16	Consensus Time: 563
+
+Node owner: 4	Timestamp: 551
+	Payload: 537.79 to 5
+	Current Networth: 10863.6 10315.8 9119.92 10323.7 9796.51 9580.47 
+	3ed6a40f36e2853995c926f5a068776c -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 563
+
+Node owner: 1	Timestamp: 552
+	abc350532f361167a76929b94db05275 -Self Parent
+	5eba9e7736e6dd92ee806304d6716a09 -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 4	Timestamp: 553
+	103600855849c2f89fc0ab0d34a27146 -Self Parent
+	6ec17aebcb857554c2ee756327a304a -Gossip Parent
+	Round Received: 16	Consensus Time: 563
+
+Node owner: 3	Timestamp: 554
+	5eba9e7736e6dd92ee806304d6716a09 -Self Parent
+	0ec9f3b0f5453dadab3c5e4e3e49ebae -Gossip Parent
+	Round Received: 16	Consensus Time: 558
+
+Node owner: 1	Timestamp: 555
+	0ec9f3b0f5453dadab3c5e4e3e49ebae -Self Parent
+	acb212128d1c75abb4004a35cf7586 -Gossip Parent
+	Round Received: 16	Consensus Time: 572
+
+Node owner: 4	Timestamp: 556
+	647f936aa9bb4ab354fbf26b5d4dc3e3 -Self Parent
+	acb212128d1c75abb4004a35cf7586 -Gossip Parent
+	Round Received: 16	Consensus Time: 563
+
+Node owner: 4	Timestamp: 557
+	2b9dcda8bace369d4172df00e4a3c8c8 -Self Parent
+	6ec17aebcb857554c2ee756327a304a -Gossip Parent
+	Round Received: 16	Consensus Time: 563
+
+Node owner: 0	Timestamp: 558
+	9f1aaf04fb8a8a1e961c5e9840a1227b -Self Parent
+	acb212128d1c75abb4004a35cf7586 -Gossip Parent
+	Round Received: 16	Consensus Time: 573
+
+Node owner: 3	Timestamp: 559
+	acb212128d1c75abb4004a35cf7586 -Self Parent
+	f2ec45762fa82f42f50485fb823cd02 -Gossip Parent
+	Round Received: 16	Consensus Time: 563
+
+Node owner: 2	Timestamp: 560
+	6ec17aebcb857554c2ee756327a304a -Self Parent
+	eef545e49f46f3fada5a7554602ce6a6 -Gossip Parent
+	Round Received: 16	Consensus Time: 569
+
+Node owner: 4	Timestamp: 561
+	f2ec45762fa82f42f50485fb823cd02 -Self Parent
+	5a089c0e9259da3771aeaff91f8ef852 -Gossip Parent
+	Round Received: 16	Consensus Time: 586
+
+Node owner: 3	Timestamp: 562
+	eef545e49f46f3fada5a7554602ce6a6 -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 572
+
+Node owner: 1	Timestamp: 563
+	Payload: 811.57 to 4
+	Current Networth: 10863.6 9504.27 9119.92 10323.7 10608.1 9580.47 
+	0a417303c75abaa4eb1eecd0b52e1ca7 -Self Parent
+	6f908dd6d876f60c614eb6d7d56e8ac3 -Gossip Parent
+	Round Received: 16	Consensus Time: 572
+
+Node owner: 4	Timestamp: 564
+	fcd3163a8ffb016961268f51e96c759 -Self Parent
+	5b5ae2514d365a722f406f1c40183c54 -Gossip Parent
+	Round Received: 16	Consensus Time: 586
+
+Node owner: 3	Timestamp: 565
+	6f908dd6d876f60c614eb6d7d56e8ac3 -Self Parent
+	2bb5d65b950aa922277a02c943556342 -Gossip Parent
+	Round Received: 16	Consensus Time: 580
+
+Node owner: 4	Timestamp: 566
+	62161732521ade0a725a74f02eb72044 -Self Parent
+	5b5ae2514d365a722f406f1c40183c54 -Gossip Parent
+	Round Received: 16	Consensus Time: 586
+
+Node owner: 3	Timestamp: 567
+	d98e1dcfcc9d372b6001706843eac089 -Self Parent
+	5a089c0e9259da3771aeaff91f8ef852 -Gossip Parent
+	Round Received: 16	Consensus Time: 580
+
+Node owner: 2	Timestamp: 568
+	5a089c0e9259da3771aeaff91f8ef852 -Self Parent
+	5b5ae2514d365a722f406f1c40183c54 -Gossip Parent
+	Round Received: 16	Consensus Time: 576
+
+Node owner: 0	Timestamp: 569
+	5b5ae2514d365a722f406f1c40183c54 -Self Parent
+	7b3918ad74400c69753d3898f0c19edc -Gossip Parent
+	Round Received: 16	Consensus Time: 585
+
+Node owner: 0	Timestamp: 570
+	1e02f6fda94890f66c4b7dfc93bd5cfe -Self Parent
+	829bd7d33be3d1a4e07ce5828587fa68 -Gossip Parent
+	Round Received: 16	Consensus Time: 585
+
+Node owner: 2	Timestamp: 571
+	Payload: 18.93 to 3
+	Current Networth: 10863.6 9504.27 9100.99 10342.6 10608.1 9580.47 
+	7b3918ad74400c69753d3898f0c19edc -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 576
+
+Node owner: 4	Timestamp: 572
+	e7f22a394c105039ef93f0633671b016 -Self Parent
+	829bd7d33be3d1a4e07ce5828587fa68 -Gossip Parent
+	Round Received: 16	Consensus Time: 586
+
+Node owner: 1	Timestamp: 573
+	2bb5d65b950aa922277a02c943556342 -Self Parent
+	ef383e1171b13dda3697b9b69bcfd242 -Gossip Parent
+	Round Received: 16	Consensus Time: 587
+
+Node owner: 0	Timestamp: 574
+	a8ddf233ff4e047680e87947876e837 -Self Parent
+	ef383e1171b13dda3697b9b69bcfd242 -Gossip Parent
+	Round Received: 16	Consensus Time: 585
+
+Node owner: 1	Timestamp: 575
+	895bf15276a2e21f58330e363d2c0b57 -Self Parent
+	ef383e1171b13dda3697b9b69bcfd242 -Gossip Parent
+	Round Received: 16	Consensus Time: 587
+
+Node owner: 1	Timestamp: 578
+	a54bbe7c1f27bcbef0e8b78e6d2a7bbb -Self Parent
+	ef383e1171b13dda3697b9b69bcfd242 -Gossip Parent
+	Round Received: 16	Consensus Time: 587
+
+Node owner: 1	Timestamp: 579
+	b5e24aefe1c66e3fce8ff3dd4290cc88 -Self Parent
+	85fb415a7acc24140a2d204766efa0 -Gossip Parent
+	Round Received: 16	Consensus Time: 587
+
+Node owner: 5	Timestamp: 580
+	85fb415a7acc24140a2d204766efa0 -Self Parent
+	a99037f615657840ad96a8dc5f0cd7ee -Gossip Parent
+	Round Received: 16	Consensus Time: 585
+
+Node owner: 1	Timestamp: 581
+	ba8f3eece8467e014411da84c5d13c30 -Self Parent
+	124ccf2b4b1e0d1d205a29722b5352f7 -Gossip Parent
+	Round Received: 16	Consensus Time: 587
+
+Node owner: 3	Timestamp: 576
+	829bd7d33be3d1a4e07ce5828587fa68 -Self Parent
+	ef383e1171b13dda3697b9b69bcfd242 -Gossip Parent
+	Round Received: 17	Consensus Time: 594
+
+Node owner: 3	Timestamp: 577
+	d94dca87b328c7a7d3df6c292b8e0786 -Self Parent
+	25418688a1ac5d8bf1b1dac8bcf318b3 -Gossip Parent
+	Round Received: 17	Consensus Time: 594
+
+Node owner: 0	Timestamp: 582
+	Payload: 880.28 to 1
+	Current Networth: 9983.28 10384.6 9100.99 10342.6 10608.1 9580.47 
+	a99037f615657840ad96a8dc5f0cd7ee -Self Parent
+	9b596b509d36e2118a7e6f258fb22a10 -Gossip Parent
+	Round Received: 17	Consensus Time: 596
+
+Node owner: 4	Timestamp: 583
+	25418688a1ac5d8bf1b1dac8bcf318b3 -Self Parent
+	ef383e1171b13dda3697b9b69bcfd242 -Gossip Parent
+	Round Received: 17	Consensus Time: 589
+
+Node owner: 0	Timestamp: 584
+	7c9865c9c657ef37ab3312e8c8fa2acc -Self Parent
+	df5f993f53c9f7b92a385893e6295150 -Gossip Parent
+	Round Received: 17	Consensus Time: 596
+
+Node owner: 2	Timestamp: 585
+	ef383e1171b13dda3697b9b69bcfd242 -Self Parent
+	9b596b509d36e2118a7e6f258fb22a10 -Gossip Parent
+	Round Received: 17	Consensus Time: 590
+
+Node owner: 1	Timestamp: 586
+	9b596b509d36e2118a7e6f258fb22a10 -Self Parent
+	c4547a79d5aebc997f702b8ad3a0fe8f -Gossip Parent
+	Round Received: 17	Consensus Time: 601
+
+Node owner: 3	Timestamp: 587
+	c4547a79d5aebc997f702b8ad3a0fe8f -Self Parent
+	b97bf29d521201f3a4e797deb66b17f3 -Gossip Parent
+	Round Received: 17	Consensus Time: 596
+
+Node owner: 4	Timestamp: 588
+	Payload: 662.1 to 5
+	Current Networth: 9983.28 10384.6 9100.99 10342.6 9945.98 10242.6 
+	df5f993f53c9f7b92a385893e6295150 -Self Parent
+	ae5c3c198718f64fc1843b3ec7346a58 -Gossip Parent
+	Round Received: 17	Consensus Time: 591
+
+Node owner: 5	Timestamp: 589
+	124ccf2b4b1e0d1d205a29722b5352f7 -Self Parent
+	6c44cce5d1c81511541ddc5b6c8fc8b7 -Gossip Parent
+	Round Received: 17	Consensus Time: 592
+
+Node owner: 1	Timestamp: 590
+	0cddb1a44f21be1d53ab051af67e325f -Self Parent
+	56a8c847a112d180269b2ca475550f73 -Gossip Parent
+	Round Received: 17	Consensus Time: 601
+
+Node owner: 3	Timestamp: 591
+	b60e9a4919f43b983c38ff5ea7a8f16f -Self Parent
+	56a8c847a112d180269b2ca475550f73 -Gossip Parent
+	Round Received: 17	Consensus Time: 596
+
+Node owner: 2	Timestamp: 592
+	ae5c3c198718f64fc1843b3ec7346a58 -Self Parent
+	56a8c847a112d180269b2ca475550f73 -Gossip Parent
+	Round Received: 17	Consensus Time: 602
+
+Node owner: 5	Timestamp: 593
+	56a8c847a112d180269b2ca475550f73 -Self Parent
+	3178e1d3d638a057b25cce8d81ed55ce -Gossip Parent
+	Round Received: 17	Consensus Time: 610
+
+Node owner: 0	Timestamp: 594
+	b97bf29d521201f3a4e797deb66b17f3 -Self Parent
+	3178e1d3d638a057b25cce8d81ed55ce -Gossip Parent
+	Round Received: 17	Consensus Time: 598
+
+Node owner: 5	Timestamp: 595
+	38fedc191f7071fdb3b0362d569b449a -Self Parent
+	37c1ee3b3dbc0e322de84fd1a542900a -Gossip Parent
+	Round Received: 17	Consensus Time: 610
+
+Node owner: 2	Timestamp: 596
+	f729088bad549cede663fce67c99d692 -Self Parent
+	37c1ee3b3dbc0e322de84fd1a542900a -Gossip Parent
+	Round Received: 17	Consensus Time: 602
+
+Node owner: 3	Timestamp: 597
+	3178e1d3d638a057b25cce8d81ed55ce -Self Parent
+	2f2595d083ef242b808f6df7a2d39610 -Gossip Parent
+	Round Received: 17	Consensus Time: 610
+
+Node owner: 1	Timestamp: 598
+	2f2595d083ef242b808f6df7a2d39610 -Self Parent
+	672e9ca382757196da554a9ad084b88 -Gossip Parent
+	Round Received: 17	Consensus Time: 619
+
+Node owner: 0	Timestamp: 599
+	37c1ee3b3dbc0e322de84fd1a542900a -Self Parent
+	6c44cce5d1c81511541ddc5b6c8fc8b7 -Gossip Parent
+	Round Received: 17	Consensus Time: 607
+
+Node owner: 2	Timestamp: 600
+	672e9ca382757196da554a9ad084b88 -Self Parent
+	592153d1e25109953367cdd9617e9937 -Gossip Parent
+	Round Received: 17	Consensus Time: 610
+
+Node owner: 5	Timestamp: 602
+	3d44f1b3f95726c597e3b5bc5cb8824 -Self Parent
+	516b9bfd6ea519935fa67a70c736dada -Gossip Parent
+	Round Received: 17	Consensus Time: 610
+
+Node owner: 4	Timestamp: 601
+	6c44cce5d1c81511541ddc5b6c8fc8b7 -Self Parent
+	f9e3085085945e15a629665fc7dbc9bd -Gossip Parent
+	Round Received: 19	Consensus Time: 623
+
+Node owner: 4	Timestamp: 603
+	1578dc66ac81dfb6ab3beb7cb06d9980 -Self Parent
+	f9e3085085945e15a629665fc7dbc9bd -Gossip Parent
+	Round Received: 19	Consensus Time: 623
+
+Node owner: 3	Timestamp: 604
+	592153d1e25109953367cdd9617e9937 -Self Parent
+	dcf818d2965d435f3b808c1dc4e68f9 -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 3	Timestamp: 605
+	394dbd585d884722249a8fca156a41f6 -Self Parent
+	516b9bfd6ea519935fa67a70c736dada -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 2	Timestamp: 606
+	Payload: 99.41 to 3
+	Current Networth: 9983.28 10384.6 9001.58 10442 9945.98 10242.6 
+	516b9bfd6ea519935fa67a70c736dada -Self Parent
+	dcf818d2965d435f3b808c1dc4e68f9 -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 1	Timestamp: 607
+	f9e3085085945e15a629665fc7dbc9bd -Self Parent
+	dcf818d2965d435f3b808c1dc4e68f9 -Gossip Parent
+	Round Received: 19	Consensus Time: 619
+
+Node owner: 3	Timestamp: 608
+	c1be72ebd69f0a7b90d39e28f78299f4 -Self Parent
+	ff6b0c9489cc66cf15d5debe9cdf8e6b -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 2	Timestamp: 609
+	b66f19bb5f2963611ebb89279be00ec5 -Self Parent
+	a1216e409fcaefbe22214cae4e05502b -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 4	Timestamp: 610
+	851fefc542d9aec91834debfecac4f38 -Self Parent
+	a1216e409fcaefbe22214cae4e05502b -Gossip Parent
+	Round Received: 19	Consensus Time: 623
+
+Node owner: 3	Timestamp: 611
+	a1216e409fcaefbe22214cae4e05502b -Self Parent
+	ff6b0c9489cc66cf15d5debe9cdf8e6b -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 2	Timestamp: 612
+	d8a2dd52b9ca037c654fea9bd46db789 -Self Parent
+	0b4d2958776235959debdfd5cd1b628 -Gossip Parent
+	Round Received: 19	Consensus Time: 620
+
+Node owner: 4	Timestamp: 613
+	203030362b451a8e0d298854e35a2fc -Self Parent
+	041c3774158fcd8a102f8e06b5538027 -Gossip Parent
+	Round Received: 19	Consensus Time: 623
+
+Node owner: 2	Timestamp: 614
+	041c3774158fcd8a102f8e06b5538027 -Self Parent
+	ff6b0c9489cc66cf15d5debe9cdf8e6b -Gossip Parent
+	Round Received: 19	Consensus Time: 623
+
+Node owner: 1	Timestamp: 615
+	a22beb0a5440660d1492148fa22834ff -Self Parent
+	dcf818d2965d435f3b808c1dc4e68f9 -Gossip Parent
+	Round Received: 19	Consensus Time: 619
+
+Node owner: 0	Timestamp: 616
+	dcf818d2965d435f3b808c1dc4e68f9 -Self Parent
+	ff6b0c9489cc66cf15d5debe9cdf8e6b -Gossip Parent
+	Round Received: 19	Consensus Time: 624
+
+Node owner: 0	Timestamp: 617
+	769ebb17847a2b962b9c7049a61f61be -Self Parent
+	8cd603147905bc3072ee21595bfd417d -Gossip Parent
+	Round Received: 19	Consensus Time: 624
+
+Node owner: 2	Timestamp: 618
+	Payload: 569.67 to 5
+	Current Networth: 9983.28 10384.6 8431.91 10442 9945.98 10812.2 
+	2cff7f096de41518574a6941d72fe0e5 -Self Parent
+	ff6b0c9489cc66cf15d5debe9cdf8e6b -Gossip Parent
+	Round Received: 19	Consensus Time: 623
+
+Node owner: 5	Timestamp: 619
+	ff6b0c9489cc66cf15d5debe9cdf8e6b -Self Parent
+	8cd603147905bc3072ee21595bfd417d -Gossip Parent
+	Round Received: 19	Consensus Time: 626
+
+Node owner: 0	Timestamp: 620
+	Payload: 924.26 to 1
+	Current Networth: 9059.02 11308.8 8431.91 10442 9945.98 10812.2 
+	316640a04786aea0d92614e7b94dbd26 -Self Parent
+	4926fe7b40e86b51c88bf8608ce1f8df -Gossip Parent
+	Round Received: 19	Consensus Time: 624
+
+Node owner: 0	Timestamp: 621
+	b44a22437dd412daaae68cadbfb20f95 -Self Parent
+	c2b8e46890822c7edb1de23eecd22950 -Gossip Parent
+	Round Received: 19	Consensus Time: 624
+
+Node owner: 0	Timestamp: 622
+	2ae850cff3091b4e76fe1c94e820e3e1 -Self Parent
+	8cd603147905bc3072ee21595bfd417d -Gossip Parent
+	Round Received: 19	Consensus Time: 624
+
+Node owner: 5	Timestamp: 623
+	8f71753423ef1a387994ef438c7b2c60 -Self Parent
+	3553320d95962333c6bb9e79773e33ec -Gossip Parent
+	Round Received: 19	Consensus Time: 626
+
+Node owner: 4	Timestamp: 624
+	4926fe7b40e86b51c88bf8608ce1f8df -Self Parent
+	924e033ed181aedae4f7239e8ca1f793 -Gossip Parent
+	Round Received: 19	Consensus Time: 632
+
+Node owner: 3	Timestamp: 625
+	Payload: 40.96 to 5
+	Current Networth: 9059.02 11308.8 8431.91 10401.1 9945.98 10853.2 
+	0b4d2958776235959debdfd5cd1b628 -Self Parent
+	8cd603147905bc3072ee21595bfd417d -Gossip Parent
+	Round Received: 19	Consensus Time: 632
+
+Node owner: 0	Timestamp: 626
+	3553320d95962333c6bb9e79773e33ec -Self Parent
+	0983b91c45a9b43eb3b7ca46a81fca70 -Gossip Parent
+	Round Received: 19	Consensus Time: 635
+
+Node owner: 2	Timestamp: 627
+	c2b8e46890822c7edb1de23eecd22950 -Self Parent
+	1274bea37d0326ad2ab8c9cef30d7734 -Gossip Parent
+	Round Received: 19	Consensus Time: 646
+
+Node owner: 0	Timestamp: 628
+	5271e1258bcff6f49a8951b5db113c67 -Self Parent
+	1274bea37d0326ad2ab8c9cef30d7734 -Gossip Parent
+	Round Received: 19	Consensus Time: 635
+
+Node owner: 1	Timestamp: 629
+	8cd603147905bc3072ee21595bfd417d -Self Parent
+	924e033ed181aedae4f7239e8ca1f793 -Gossip Parent
+	Round Received: 19	Consensus Time: 638
+
+Node owner: 3	Timestamp: 630
+	1274bea37d0326ad2ab8c9cef30d7734 -Self Parent
+	50f1d3b829651616f5b6c3522e6afef -Gossip Parent
+	Round Received: 19	Consensus Time: 641
+
+Node owner: 3	Timestamp: 631
+	be9131c452e87958687c26e274cb6d18 -Self Parent
+	0983b91c45a9b43eb3b7ca46a81fca70 -Gossip Parent
+	Round Received: 19	Consensus Time: 641
+
+Node owner: 5	Timestamp: 632
+	924e033ed181aedae4f7239e8ca1f793 -Self Parent
+	50f1d3b829651616f5b6c3522e6afef -Gossip Parent
+	Round Received: 19	Consensus Time: 661
+
+Node owner: 0	Timestamp: 633
+	50f1d3b829651616f5b6c3522e6afef -Self Parent
+	0983b91c45a9b43eb3b7ca46a81fca70 -Gossip Parent
+	Round Received: 19	Consensus Time: 638
+
+Node owner: 0	Timestamp: 634
+	Payload: 184.27 to 0
+	Current Networth: 9059.02 11308.8 8431.91 10401.1 9945.98 10853.2 
+	eb2a87f846b1e31291ae2f4d7c0c8078 -Self Parent
+	ba19b12ce084abc2f781275ce7fb6ba4 -Gossip Parent
+	Round Received: 19	Consensus Time: 638
+
+Node owner: 1	Timestamp: 635
+	ba19b12ce084abc2f781275ce7fb6ba4 -Self Parent
+	17e60ee7a0949353719db2faee8fb3f0 -Gossip Parent
+	Round Received: 19	Consensus Time: 644
+
+Node owner: 1	Timestamp: 636
+	ead7f6fc40dfb036f8bb60507136a46c -Self Parent
+	8f0a331e782493df951a5ffc3ac833e -Gossip Parent
+	Round Received: 19	Consensus Time: 644
+
+Node owner: 2	Timestamp: 637
+	272dd6a8a0a3a2c75e5abef22f1c3bb6 -Self Parent
+	17e60ee7a0949353719db2faee8fb3f0 -Gossip Parent
+	Round Received: 19	Consensus Time: 646
+
+Node owner: 2	Timestamp: 638
+	557f788db3953f48fe12630e119240e7 -Self Parent
+	8f0a331e782493df951a5ffc3ac833e -Gossip Parent
+	Round Received: 19	Consensus Time: 646
+
+Node owner: 5	Timestamp: 639
+	e537bdd42a07d3f6809f803783fd5353 -Self Parent
+	0983b91c45a9b43eb3b7ca46a81fca70 -Gossip Parent
+	Round Received: 19	Consensus Time: 661
+
+Node owner: 3	Timestamp: 640
+	17e60ee7a0949353719db2faee8fb3f0 -Self Parent
+	ced718145f544f45e419a49d85747513 -Gossip Parent
+	Round Received: 19	Consensus Time: 644
+
+Node owner: 5	Timestamp: 641
+	4fab2055c06dacd55404227e6f1b9596 -Self Parent
+	b610ba42250ccc4f9c59f6984f71ce11 -Gossip Parent
+	Round Received: 19	Consensus Time: 661
+
+Node owner: 0	Timestamp: 642
+	8f0a331e782493df951a5ffc3ac833e -Self Parent
+	898088a451aa6a2f4e137ea82a791e5e -Gossip Parent
+	Round Received: 19	Consensus Time: 644
+
+Node owner: 1	Timestamp: 643
+	ced718145f544f45e419a49d85747513 -Self Parent
+	6c3e483428267c50ac64b1c269bdb50c -Gossip Parent
+	Round Received: 19	Consensus Time: 647
+
+Node owner: 5	Timestamp: 644
+	c9d6931ba11c37e182737930750ac90f -Self Parent
+	1b12e7438f27498dbd191189af8c1ec -Gossip Parent
+	Round Received: 19	Consensus Time: 661
+
+Node owner: 3	Timestamp: 645
+	898088a451aa6a2f4e137ea82a791e5e -Self Parent
+	1b12e7438f27498dbd191189af8c1ec -Gossip Parent
+	Round Received: 19	Consensus Time: 651
+
+Node owner: 1	Timestamp: 646
+	Payload: 570.4 to 1
+	Current Networth: 9059.02 11308.8 8431.91 10401.1 9945.98 10853.2 
+	1b12e7438f27498dbd191189af8c1ec -Self Parent
+	b711897692178fc3fe6d9ed3d083c0d9 -Gossip Parent
+	Round Received: 19	Consensus Time: 669
+
+Node owner: 2	Timestamp: 647
+	b610ba42250ccc4f9c59f6984f71ce11 -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 651
+
+Node owner: 1	Timestamp: 648
+	d23498a5b14460f7c177c3315d09d446 -Self Parent
+	b711897692178fc3fe6d9ed3d083c0d9 -Gossip Parent
+	Round Received: 19	Consensus Time: 669
+
+Node owner: 4	Timestamp: 649
+	0983b91c45a9b43eb3b7ca46a81fca70 -Self Parent
+	82f4139ae324972dcc1e0bd7b0c8e489 -Gossip Parent
+	Round Received: 19	Consensus Time: 651
+
+Node owner: 2	Timestamp: 650
+	82f4139ae324972dcc1e0bd7b0c8e489 -Self Parent
+	a449df20ec7498c0ac7ecc01493208f8 -Gossip Parent
+	Round Received: 19	Consensus Time: 663
+
+Node owner: 5	Timestamp: 651
+	b711897692178fc3fe6d9ed3d083c0d9 -Self Parent
+	a449df20ec7498c0ac7ecc01493208f8 -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 5	Timestamp: 652
+	b917c3e572722d136205b32baee23766 -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 2	Timestamp: 653
+	51d86605227b4ae87ec8ff167fefbd15 -Self Parent
+	6c3e483428267c50ac64b1c269bdb50c -Gossip Parent
+	Round Received: 19	Consensus Time: 663
+
+Node owner: 5	Timestamp: 654
+	9032806c86083219a2b87d896eaefd22 -Self Parent
+	a449df20ec7498c0ac7ecc01493208f8 -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 2	Timestamp: 655
+	b226ace0f4eac49edc23a2f514b243d9 -Self Parent
+	6c3e483428267c50ac64b1c269bdb50c -Gossip Parent
+	Round Received: 19	Consensus Time: 663
+
+Node owner: 4	Timestamp: 656
+	a449df20ec7498c0ac7ecc01493208f8 -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 671
+
+Node owner: 4	Timestamp: 657
+	f3c46757bbfa5d83e8cb15ececf8250d -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 671
+
+Node owner: 0	Timestamp: 658
+	6c3e483428267c50ac64b1c269bdb50c -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 671
+
+Node owner: 1	Timestamp: 659
+	923ec7fbd85eb826608ae56ba091aa00 -Self Parent
+	10b43fe24f44c14254b5b53cb6049c -Gossip Parent
+	Round Received: 19	Consensus Time: 669
+
+Node owner: 4	Timestamp: 660
+	4115c4b0e174749a7e81280fe47d6786 -Self Parent
+	f0c88278e61dd110458817fbe1c93747 -Gossip Parent
+	Round Received: 19	Consensus Time: 671
+
+Node owner: 2	Timestamp: 661
+	10b43fe24f44c14254b5b53cb6049c -Self Parent
+	c32b821496969b9a821263b7b0a9a01c -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 1	Timestamp: 662
+	fd53de69adfc1579dda853d03a188e77 -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 669
+
+Node owner: 4	Timestamp: 663
+	8b68f8a5bfe3b53225be4cf6851a41d -Self Parent
+	2a8242db14b5479898dbe95485a89086 -Gossip Parent
+	Round Received: 19	Consensus Time: 671
+
+Node owner: 2	Timestamp: 664
+	7f6bb2c73b7814cc63cd697c3fe96f2 -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 2	Timestamp: 665
+	6e9f386ac62312df9bc59621a0387e24 -Self Parent
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 2	Timestamp: 666
+	422ed99fc9c84505595f66b368534708 -Self Parent
+	c32b821496969b9a821263b7b0a9a01c -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 4	Timestamp: 667
+	bf22aa792f31ea6aad8beee8b6b9850c -Self Parent
+	2a8242db14b5479898dbe95485a89086 -Gossip Parent
+	Round Received: 19	Consensus Time: 671
+
+Node owner: 0	Timestamp: 669
+	f0c88278e61dd110458817fbe1c93747 -Self Parent
+	1694befdba31287fbb56b0a56f5df85c -Gossip Parent
+	Round Received: 19	Consensus Time: 673
+
+Node owner: 5	Timestamp: 670
+	c32b821496969b9a821263b7b0a9a01c -Self Parent
+	f911fecc7e5e8c1e627b2a68b11ecf -Gossip Parent
+	Round Received: 19	Consensus Time: 679
+
+Node owner: 5	Timestamp: 671
+	493386aed685b474f27a32a1b6614eca -Self Parent
+	25b7c4339cb8700b1cc06c0fd9882940 -Gossip Parent
+	Round Received: 19	Consensus Time: 679
+
+Node owner: 4	Timestamp: 673
+	Payload: 156.54 to 4
+	Current Networth: 9059.02 11308.8 8431.91 10401.1 9945.98 10853.2 
+	1694befdba31287fbb56b0a56f5df85c -Self Parent
+	25b7c4339cb8700b1cc06c0fd9882940 -Gossip Parent
+	Round Received: 19	Consensus Time: 676
+
+Node owner: 5	Timestamp: 675
+	3c82fa97bc17bbb5ca2764de040fece -Self Parent
+	291cd69cb171ed756b16f360ddb7c23f -Gossip Parent
+	Round Received: 19	Consensus Time: 679
+
+Node owner: 1	Timestamp: 676
+	2a8242db14b5479898dbe95485a89086 -Self Parent
+	5a16cc921bd452bed23cd9c39991e3c4 -Gossip Parent
+	Round Received: 19	Consensus Time: 679
+
+Node owner: 2	Timestamp: 679
+	f911fecc7e5e8c1e627b2a68b11ecf -Self Parent
+	da3776c89ce4e513e3875326d2e0b947 -Gossip Parent
+	Round Received: 19	Consensus Time: 687
+
+Node owner: 3	Timestamp: 668
+	85bc64cfe350a4d2cb9b67a03d85a1e9 -Self Parent
+	f0c88278e61dd110458817fbe1c93747 -Gossip Parent
+	Round Received: 20	Consensus Time: 681
+
+Node owner: 3	Timestamp: 672
+	7979ce3923cbf0d87011a49e63074359 -Self Parent
+	1694befdba31287fbb56b0a56f5df85c -Gossip Parent
+	Round Received: 20	Consensus Time: 681
+
+Node owner: 0	Timestamp: 674
+	25b7c4339cb8700b1cc06c0fd9882940 -Self Parent
+	5b64cae6740e3e638072cd6d12abd070 -Gossip Parent
+	Round Received: 20	Consensus Time: 692
+
+Node owner: 5	Timestamp: 677
+	5a16cc921bd452bed23cd9c39991e3c4 -Self Parent
+	da3776c89ce4e513e3875326d2e0b947 -Gossip Parent
+	Round Received: 20	Consensus Time: 684
+
+Node owner: 4	Timestamp: 678
+	291cd69cb171ed756b16f360ddb7c23f -Self Parent
+	5b64cae6740e3e638072cd6d12abd070 -Gossip Parent
+	Round Received: 20	Consensus Time: 687
+
+Node owner: 4	Timestamp: 680
+	c5c48a65bf016ecc2f1d786efccebc35 -Self Parent
+	6df6559d1995caa8252a5941ecaf0746 -Gossip Parent
+	Round Received: 20	Consensus Time: 687
+
+Node owner: 2	Timestamp: 681
+	d910e746536e81b9b3ae9ed03dabc6a1 -Self Parent
+	8ddfa99dd4b0d27be7025bcd646a6008 -Gossip Parent
+	Round Received: 20	Consensus Time: 694
+
+Node owner: 4	Timestamp: 682
+	8ddfa99dd4b0d27be7025bcd646a6008 -Self Parent
+	da3776c89ce4e513e3875326d2e0b947 -Gossip Parent
+	Round Received: 20	Consensus Time: 698
+
+Node owner: 2	Timestamp: 683
+	b35c3f9c87b77cf0e2798f9fba6a94fa -Self Parent
+	da3776c89ce4e513e3875326d2e0b947 -Gossip Parent
+	Round Received: 20	Consensus Time: 694
+
+Node owner: 1	Timestamp: 684
+	da3776c89ce4e513e3875326d2e0b947 -Self Parent
+	7b7a28957432953c7f9d613a846b773a -Gossip Parent
+	Round Received: 20	Consensus Time: 702
+
+Node owner: 2	Timestamp: 685
+	30a03eec6013f2c9e27bd61b770d5c7 -Self Parent
+	6df6559d1995caa8252a5941ecaf0746 -Gossip Parent
+	Round Received: 20	Consensus Time: 694
+
+Node owner: 4	Timestamp: 686
+	7b7a28957432953c7f9d613a846b773a -Self Parent
+	9b9a31aad226ffc490f20fc65275fe8a -Gossip Parent
+	Round Received: 20	Consensus Time: 702
+
+Node owner: 5	Timestamp: 687
+	Payload: 685.41 to 0
+	Current Networth: 9744.43 11308.8 8431.91 10401.1 9945.98 10167.8 
+	6df6559d1995caa8252a5941ecaf0746 -Self Parent
+	9b9a31aad226ffc490f20fc65275fe8a -Gossip Parent
+	Round Received: 20	Consensus Time: 702
+
+Node owner: 4	Timestamp: 688
+	99eea84b893ce317afe00b4ec60edc0 -Self Parent
+	4af87d492b8830476ac03de1225f9633 -Gossip Parent
+	Round Received: 20	Consensus Time: 702
+
+Node owner: 2	Timestamp: 689
+	Payload: 748.71 to 4
+	Current Networth: 9744.43 11308.8 7683.2 10401.1 10694.7 10167.8 
+	9b9a31aad226ffc490f20fc65275fe8a -Self Parent
+	24d1572a94dd7839ee8e558b954cccf9 -Gossip Parent
+	Round Received: 20	Consensus Time: 695
+
+Node owner: 3	Timestamp: 690
+	5b64cae6740e3e638072cd6d12abd070 -Self Parent
+	24d1572a94dd7839ee8e558b954cccf9 -Gossip Parent
+	Round Received: 20	Consensus Time: 703
+
+Node owner: 5	Timestamp: 691
+	4af87d492b8830476ac03de1225f9633 -Self Parent
+	447902d0d65d2fd536848c1dfe698c5d -Gossip Parent
+	Round Received: 20	Consensus Time: 705
+
+Node owner: 1	Timestamp: 692
+	727f8124e6286cfd59cc44423b29fdcf -Self Parent
+	24d1572a94dd7839ee8e558b954cccf9 -Gossip Parent
+	Round Received: 20	Consensus Time: 702
+
+Node owner: 5	Timestamp: 693
+	46c8332969c2588381bd3f5f832648f1 -Self Parent
+	c47af1b8eec3380385e151e9e5f65855 -Gossip Parent
+	Round Received: 20	Consensus Time: 705
+
+Node owner: 1	Timestamp: 694
+	Payload: 693.96 to 4
+	Current Networth: 9744.43 10614.9 7683.2 10401.1 11388.7 10167.8 
+	ab5ac1ae2df958b36c9714c4d9ee5713 -Self Parent
+	c47af1b8eec3380385e151e9e5f65855 -Gossip Parent
+	Round Received: 20	Consensus Time: 702
+
+Node owner: 0	Timestamp: 695
+	24d1572a94dd7839ee8e558b954cccf9 -Self Parent
+	c47af1b8eec3380385e151e9e5f65855 -Gossip Parent
+	Round Received: 20	Consensus Time: 703
+
+Node owner: 5	Timestamp: 696
+	ac6a61bf535e391640a5b48f2e1d808d -Self Parent
+	83a8db4ade8211d26658045093487645 -Gossip Parent
+	Round Received: 20	Consensus Time: 705
+
+Node owner: 0	Timestamp: 697
+	4ebc0fbe46e1b63c4da9478a2512b535 -Self Parent
+	c47af1b8eec3380385e151e9e5f65855 -Gossip Parent
+	Round Received: 20	Consensus Time: 703
+
+Node owner: 2	Timestamp: 698
+	c47af1b8eec3380385e151e9e5f65855 -Self Parent
+	b124688d35c842bf8e18ce61c9a3054 -Gossip Parent
+	Round Received: 20	Consensus Time: 715
+
+Node owner: 1	Timestamp: 699
+	Payload: 280.66 to 1
+	Current Networth: 9744.43 10614.9 7683.2 10401.1 11388.7 10167.8 
+	b124688d35c842bf8e18ce61c9a3054 -Self Parent
+	b703d6aec0b340df395c0fc5c6efcf8c -Gossip Parent
+	Round Received: 20	Consensus Time: 703
+
+Node owner: 1	Timestamp: 700
+	710aacd037812333d0ad178cfd61c80 -Self Parent
+	447902d0d65d2fd536848c1dfe698c5d -Gossip Parent
+	Round Received: 20	Consensus Time: 703
+
+Node owner: 5	Timestamp: 701
+	094b443be0c2a3a839ba047fc55f1dc -Self Parent
+	2b72c48124f73f53e78b7d2341564280 -Gossip Parent
+	Round Received: 20	Consensus Time: 705
+
+Node owner: 0	Timestamp: 702
+	b703d6aec0b340df395c0fc5c6efcf8c -Self Parent
+	32d9eb50eb781c6d4fa38951837adcbc -Gossip Parent
+	Round Received: 20	Consensus Time: 706
+
+Node owner: 2	Timestamp: 703
+	4d7599dd73905796ce0853b52cf2e88f -Self Parent
+	943e099add5cda825c7267f68b1fa0bd -Gossip Parent
+	Round Received: 20	Consensus Time: 715
+
+Node owner: 2	Timestamp: 704
+	bf647ac2aef07724fdc6cb503a55fcbd -Self Parent
+	32d9eb50eb781c6d4fa38951837adcbc -Gossip Parent
+	Round Received: 20	Consensus Time: 715
+
+Node owner: 3	Timestamp: 705
+	83a8db4ade8211d26658045093487645 -Self Parent
+	b980f07f2b5cbcc13902d6804b619306 -Gossip Parent
+	Round Received: 22	Consensus Time: 726
+
+Node owner: 4	Timestamp: 706
+	Payload: 250.44 to 0
+	Current Networth: 9994.87 10614.9 7683.2 10401.1 11138.2 10167.8 
+	447902d0d65d2fd536848c1dfe698c5d -Self Parent
+	b980f07f2b5cbcc13902d6804b619306 -Gossip Parent
+	Round Received: 22	Consensus Time: 717
+
+Node owner: 3	Timestamp: 707
+	7973cc381ff15b9221ad8564d075b922 -Self Parent
+	943e099add5cda825c7267f68b1fa0bd -Gossip Parent
+	Round Received: 22	Consensus Time: 726
+
+Node owner: 3	Timestamp: 708
+	9a23f64c24502751e3a56786a5281393 -Self Parent
+	32d9eb50eb781c6d4fa38951837adcbc -Gossip Parent
+	Round Received: 22	Consensus Time: 726
+
+Node owner: 2	Timestamp: 709
+	b980f07f2b5cbcc13902d6804b619306 -Self Parent
+	32d9eb50eb781c6d4fa38951837adcbc -Gossip Parent
+	Round Received: 22	Consensus Time: 717
+
+Node owner: 2	Timestamp: 710
+	332cce8f39cfcb1424e8d487df81e160 -Self Parent
+	943e099add5cda825c7267f68b1fa0bd -Gossip Parent
+	Round Received: 22	Consensus Time: 717
+
+Node owner: 4	Timestamp: 711
+	31f4b994753f4c58a7c7fb4d7dd08355 -Self Parent
+	04f6ef9b430b9af04afddad6e023c051 -Gossip Parent
+	Round Received: 22	Consensus Time: 717
+
+Node owner: 5	Timestamp: 712
+	32d9eb50eb781c6d4fa38951837adcbc -Self Parent
+	2b72c48124f73f53e78b7d2341564280 -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 3	Timestamp: 713
+	81f6bb0632ddb598af7f05864ce70c88 -Self Parent
+	943e099add5cda825c7267f68b1fa0bd -Gossip Parent
+	Round Received: 22	Consensus Time: 726
+
+Node owner: 2	Timestamp: 714
+	04f6ef9b430b9af04afddad6e023c051 -Self Parent
+	943e099add5cda825c7267f68b1fa0bd -Gossip Parent
+	Round Received: 22	Consensus Time: 735
+
+Node owner: 0	Timestamp: 715
+	943e099add5cda825c7267f68b1fa0bd -Self Parent
+	ea87052269101a52d57945faa501c41c -Gossip Parent
+	Round Received: 22	Consensus Time: 726
+
+Node owner: 2	Timestamp: 716
+	f4153d0056ce613f6de82e4bf9a1393 -Self Parent
+	ea87052269101a52d57945faa501c41c -Gossip Parent
+	Round Received: 22	Consensus Time: 735
+
+Node owner: 5	Timestamp: 717
+	fe7ca6e07b484cd27a79a58b9e5d84e -Self Parent
+	26ab654b7bcb316ffe8213330f4e86a -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 4	Timestamp: 718
+	ea87052269101a52d57945faa501c41c -Self Parent
+	cfc749d4fd503b9c5b4158eaa0014fd6 -Gossip Parent
+	Round Received: 22	Consensus Time: 745
+
+Node owner: 4	Timestamp: 719
+	Payload: 31.23 to 3
+	Current Networth: 9994.87 10614.9 7683.2 10432.3 11107 10167.8 
+	64cfad03fbbd96d571c076038c2eac0 -Self Parent
+	cfc749d4fd503b9c5b4158eaa0014fd6 -Gossip Parent
+	Round Received: 22	Consensus Time: 745
+
+Node owner: 3	Timestamp: 720
+	Payload: 954.2 to 4
+	Current Networth: 9994.87 10614.9 7683.2 9478.11 12061.2 10167.8 
+	5c3b595518dc69b3c3df52f346e4fa9 -Self Parent
+	2b72c48124f73f53e78b7d2341564280 -Gossip Parent
+	Round Received: 22	Consensus Time: 726
+
+Node owner: 5	Timestamp: 721
+	ecb21795972184bb9548fe029247db55 -Self Parent
+	26ab654b7bcb316ffe8213330f4e86a -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 1	Timestamp: 722
+	2b72c48124f73f53e78b7d2341564280 -Self Parent
+	cac0a986162925c1381604119aed8c22 -Gossip Parent
+	Round Received: 22	Consensus Time: 728
+
+Node owner: 4	Timestamp: 723
+	ede61cf9612790d825620884c1148984 -Self Parent
+	cac0a986162925c1381604119aed8c22 -Gossip Parent
+	Round Received: 22	Consensus Time: 745
+
+Node owner: 1	Timestamp: 724
+	0d36d28164f55b13ea79578881181771 -Self Parent
+	26ab654b7bcb316ffe8213330f4e86a -Gossip Parent
+	Round Received: 22	Consensus Time: 728
+
+Node owner: 3	Timestamp: 725
+	cac0a986162925c1381604119aed8c22 -Self Parent
+	cfc749d4fd503b9c5b4158eaa0014fd6 -Gossip Parent
+	Round Received: 22	Consensus Time: 749
+
+Node owner: 2	Timestamp: 726
+	cfc749d4fd503b9c5b4158eaa0014fd6 -Self Parent
+	df2fff8efa050a48c9443ea47a30f168 -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 5	Timestamp: 727
+	d7fc9b019fa80052838e92554caff52d -Self Parent
+	df2fff8efa050a48c9443ea47a30f168 -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 0	Timestamp: 728
+	26ab654b7bcb316ffe8213330f4e86a -Self Parent
+	df2fff8efa050a48c9443ea47a30f168 -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 3	Timestamp: 729
+	394fc412ff82847cec0996e1b1f3a36b -Self Parent
+	6fb1bf7384cc7cc316ef06a6d886a9ea -Gossip Parent
+	Round Received: 22	Consensus Time: 749
+
+Node owner: 3	Timestamp: 730
+	8085206c9f9807a336c4440a390a7b8 -Self Parent
+	b9bf8597ef30cf9e64c16ebe4f0bc11a -Gossip Parent
+	Round Received: 22	Consensus Time: 749
+
+Node owner: 3	Timestamp: 731
+	3f89c594a7cde9ac73f1037c3be309ad -Self Parent
+	df2fff8efa050a48c9443ea47a30f168 -Gossip Parent
+	Round Received: 22	Consensus Time: 749
+
+Node owner: 3	Timestamp: 732
+	661b2f2b556eff3e80c19e890185035 -Self Parent
+	023878b33ba9306e2815306299a8de43 -Gossip Parent
+	Round Received: 22	Consensus Time: 749
+
+Node owner: 5	Timestamp: 733
+	6fb1bf7384cc7cc316ef06a6d886a9ea -Self Parent
+	023878b33ba9306e2815306299a8de43 -Gossip Parent
+	Round Received: 22	Consensus Time: 737
+
+Node owner: 3	Timestamp: 734
+	Payload: 388.57 to 5
+	Current Networth: 9994.87 10614.9 7683.2 9089.54 12061.2 10556.4 
+	83a433f21e8dda445e2fc333231f8f04 -Self Parent
+	deac74bb3393464754ac510cda3999a -Gossip Parent
+	Round Received: 22	Consensus Time: 749
+
+Node owner: 0	Timestamp: 735
+	023878b33ba9306e2815306299a8de43 -Self Parent
+	b9bf8597ef30cf9e64c16ebe4f0bc11a -Gossip Parent
+	Round Received: 22	Consensus Time: 748
+
+Node owner: 0	Timestamp: 736
+	052400fae5dce5ebdcb52a4dfdb6df62 -Self Parent
+	deac74bb3393464754ac510cda3999a -Gossip Parent
+	Round Received: 22	Consensus Time: 748
+
+Node owner: 1	Timestamp: 737
+	df2fff8efa050a48c9443ea47a30f168 -Self Parent
+	83dc89c224081d3a4ba02990a46277b0 -Gossip Parent
+	Round Received: 23	Consensus Time: 789
+
+Node owner: 5	Timestamp: 738
+	deac74bb3393464754ac510cda3999a -Self Parent
+	b9bf8597ef30cf9e64c16ebe4f0bc11a -Gossip Parent
+	Round Received: 22	Consensus Time: 752
+
+Node owner: 5	Timestamp: 739
+	b3ed6be1f9c7649f1919c758f96af0a0 -Self Parent
+	b9bf8597ef30cf9e64c16ebe4f0bc11a -Gossip Parent
+	Round Received: 22	Consensus Time: 752
+
+Node owner: 2	Timestamp: 740
+	Payload: 369.61 to 3
+	Current Networth: 9994.87 10614.9 7313.59 9459.15 12061.2 10556.4 
+	b9bf8597ef30cf9e64c16ebe4f0bc11a -Self Parent
+	83dc89c224081d3a4ba02990a46277b0 -Gossip Parent
+	Round Received: 22	Consensus Time: 753
+
+Node owner: 2	Timestamp: 741
+	cf1d47498956373d310122c5be4623a3 -Self Parent
+	b7238ce231d59c338bc165c37fe574b9 -Gossip Parent
+	Round Received: 22	Consensus Time: 753
+
+Node owner: 2	Timestamp: 742
+	6aa9b794a53ebecf7b28de9d354fb7e2 -Self Parent
+	bee4a3a0c0ea0c3de30502d9792fcba8 -Gossip Parent
+	Round Received: 22	Consensus Time: 753
+
+Node owner: 2	Timestamp: 743
+	6df1c16a1e63cab32c45b2ea331a82f4 -Self Parent
+	83dc89c224081d3a4ba02990a46277b0 -Gossip Parent
+	Round Received: 22	Consensus Time: 753
+
+Node owner: 0	Timestamp: 744
+	58bf78a78ee8fcfbe807acb0ba0e0a5f -Self Parent
+	b7238ce231d59c338bc165c37fe574b9 -Gossip Parent
+	Round Received: 22	Consensus Time: 748
+
+Node owner: 5	Timestamp: 745
+	bee4a3a0c0ea0c3de30502d9792fcba8 -Self Parent
+	ccaca46333d0a1d1eb6667335f9ca45 -Gossip Parent
+	Round Received: 22	Consensus Time: 762
+
+Node owner: 2	Timestamp: 746
+	8899b252cbb19fb996151b50469b40c9 -Self Parent
+	b7238ce231d59c338bc165c37fe574b9 -Gossip Parent
+	Round Received: 22	Consensus Time: 753
+
+Node owner: 4	Timestamp: 747
+	b7238ce231d59c338bc165c37fe574b9 -Self Parent
+	ccaca46333d0a1d1eb6667335f9ca45 -Gossip Parent
+	Round Received: 22	Consensus Time: 752
+
+Node owner: 2	Timestamp: 748
+	4aef3e03719884d7932571145fea0bb0 -Self Parent
+	5e73ed7c2fa1e59f4b97fc737159f7fa -Gossip Parent
+	Round Received: 22	Consensus Time: 753
+
+Node owner: 4	Timestamp: 749
+	5e73ed7c2fa1e59f4b97fc737159f7fa -Self Parent
+	83dc89c224081d3a4ba02990a46277b0 -Gossip Parent
+	Round Received: 22	Consensus Time: 762
+
+Node owner: 1	Timestamp: 750
+	07f00bf0e5511dd85b23021ef6badba5 -Self Parent
+	a8cc94cf214201f563bf8e962aefc5f7 -Gossip Parent
+	Round Received: 23	Consensus Time: 789
+
+Node owner: 4	Timestamp: 751
+	a8cc94cf214201f563bf8e962aefc5f7 -Self Parent
+	1a31dea5ce2793653c5c2114688b2dc9 -Gossip Parent
+	Round Received: 22	Consensus Time: 762
+
+Node owner: 0	Timestamp: 752
+	ccaca46333d0a1d1eb6667335f9ca45 -Self Parent
+	1a31dea5ce2793653c5c2114688b2dc9 -Gossip Parent
+	Round Received: 22	Consensus Time: 765
+
+Node owner: 1	Timestamp: 753
+	2dd1de7fb3ec2d60ceeed25a799e0805 -Self Parent
+	34d6538ed658cef21cb40b06ad7729e8 -Gossip Parent
+	Round Received: 23	Consensus Time: 789
+
+Node owner: 1	Timestamp: 754
+	4af5087fd76fc6e4908f53e9598bf5bc -Self Parent
+	83dc89c224081d3a4ba02990a46277b0 -Gossip Parent
+	Round Received: 23	Consensus Time: 789
+
+Node owner: 0	Timestamp: 755
+	4d11e5c871bb0ecd5f6b5e68339b0fac -Self Parent
+	1a31dea5ce2793653c5c2114688b2dc9 -Gossip Parent
+	Round Received: 22	Consensus Time: 765
+
+Node owner: 3	Timestamp: 756
+	83dc89c224081d3a4ba02990a46277b0 -Self Parent
+	34d6538ed658cef21cb40b06ad7729e8 -Gossip Parent
+	Round Received: 22	Consensus Time: 770
+
+Node owner: 1	Timestamp: 757
+	6076984b6011e3c1e9bc303333412a0 -Self Parent
+	8477c1d67cb5260650d1a0416c28c349 -Gossip Parent
+	Round Received: 23	Consensus Time: 789
+
+Node owner: 4	Timestamp: 758
+	34d6538ed658cef21cb40b06ad7729e8 -Self Parent
+	4afdab9a8448f859c027e2b6e93496fa -Gossip Parent
+	Round Received: 22	Consensus Time: 765
+
+Node owner: 4	Timestamp: 759
+	9c8960491073f59eae95ff0f96bea17b -Self Parent
+	8bf67ea82072485790fe391ae34fd156 -Gossip Parent
+	Round Received: 22	Consensus Time: 765
+
+Node owner: 5	Timestamp: 760
+	8bf67ea82072485790fe391ae34fd156 -Self Parent
+	1a31dea5ce2793653c5c2114688b2dc9 -Gossip Parent
+	Round Received: 22	Consensus Time: 769
+
+Node owner: 3	Timestamp: 761
+	8477c1d67cb5260650d1a0416c28c349 -Self Parent
+	1bd6fead2c00585273e75033dd5af0f5 -Gossip Parent
+	Round Received: 22	Consensus Time: 771
+
+Node owner: 2	Timestamp: 762
+	1a31dea5ce2793653c5c2114688b2dc9 -Self Parent
+	e26a22399bc9d2e8f68181a0eaf01f34 -Gossip Parent
+	Round Received: 22	Consensus Time: 776
+
+Node owner: 0	Timestamp: 763
+	4afdab9a8448f859c027e2b6e93496fa -Self Parent
+	a56a8de01cd817e5b9cec4829b28bdef -Gossip Parent
+	Round Received: 22	Consensus Time: 769
+
+Node owner: 3	Timestamp: 764
+	e26a22399bc9d2e8f68181a0eaf01f34 -Self Parent
+	a56a8de01cd817e5b9cec4829b28bdef -Gossip Parent
+	Round Received: 22	Consensus Time: 779
+
+Node owner: 2	Timestamp: 765
+	23748a9fc7ae580c957e203fcb2aca22 -Self Parent
+	a56a8de01cd817e5b9cec4829b28bdef -Gossip Parent
+	Round Received: 22	Consensus Time: 776
+
+Node owner: 2	Timestamp: 766
+	e45563f27d49cf43709408406862e1f1 -Self Parent
+	a56a8de01cd817e5b9cec4829b28bdef -Gossip Parent
+	Round Received: 22	Consensus Time: 776
+
+Node owner: 2	Timestamp: 767
+	Payload: 357.2 to 2
+	Current Networth: 9994.87 10614.9 7313.59 9459.15 12061.2 10556.4 
+	1f790a1c234c96fbce9275c42e3bcf -Self Parent
+	aa88cc3a9fcc3496e1215adee98caba1 -Gossip Parent
+	Round Received: 22	Consensus Time: 776
+
+Node owner: 5	Timestamp: 768
+	1bd6fead2c00585273e75033dd5af0f5 -Self Parent
+	aa88cc3a9fcc3496e1215adee98caba1 -Gossip Parent
+	Round Received: 22	Consensus Time: 773
+
+Node owner: 4	Timestamp: 769
+	a56a8de01cd817e5b9cec4829b28bdef -Self Parent
+	883908fd9608f02556328d6c3e37559c -Gossip Parent
+	Round Received: 22	Consensus Time: 774
+
+Node owner: 5	Timestamp: 770
+	883908fd9608f02556328d6c3e37559c -Self Parent
+	9ed03691c2bff8d07c766b1e3aaebb30 -Gossip Parent
+	Round Received: 22	Consensus Time: 780
+
+Node owner: 0	Timestamp: 771
+	aa88cc3a9fcc3496e1215adee98caba1 -Self Parent
+	c6924988a0d43e246559abccdd077bf -Gossip Parent
+	Round Received: 22	Consensus Time: 785
+
+Node owner: 0	Timestamp: 772
+	70f26cf85606a6c7b9fce2b334dd2842 -Self Parent
+	92bca13474512309cc4e776c9cf7aa63 -Gossip Parent
+	Round Received: 22	Consensus Time: 785
+
+Node owner: 1	Timestamp: 773
+	3b49605cb12724a33f6ec819f65abd -Self Parent
+	7d11e9dec659f776711fd765f6601572 -Gossip Parent
+	Round Received: 23	Consensus Time: 789
+
+Node owner: 5	Timestamp: 774
+	a5e18c28ca3c2a2822d3a41476cebec2 -Self Parent
+	92bca13474512309cc4e776c9cf7aa63 -Gossip Parent
+	Round Received: 22	Consensus Time: 780
+
+Node owner: 3	Timestamp: 775
+	c6924988a0d43e246559abccdd077bf -Self Parent
+	5ac04d7ced68c3445668a59a4ade7852 -Gossip Parent
+	Round Received: 23	Consensus Time: 806
+
+Node owner: 4	Timestamp: 776
+	92bca13474512309cc4e776c9cf7aa63 -Self Parent
+	5ac04d7ced68c3445668a59a4ade7852 -Gossip Parent
+	Round Received: 23	Consensus Time: 785
+
+Node owner: 5	Timestamp: 777
+	5ac04d7ced68c3445668a59a4ade7852 -Self Parent
+	9ed03691c2bff8d07c766b1e3aaebb30 -Gossip Parent
+	Round Received: 23	Consensus Time: 793
+
+Node owner: 0	Timestamp: 778
+	7d11e9dec659f776711fd765f6601572 -Self Parent
+	9ed03691c2bff8d07c766b1e3aaebb30 -Gossip Parent
+	Round Received: 23	Consensus Time: 794
+
+Node owner: 5	Timestamp: 779
+	22c6105526c0afb1a10151e383aeb48d -Self Parent
+	13694d5937c989678a98ec36fe9a3c3 -Gossip Parent
+	Round Received: 23	Consensus Time: 793
+
+Node owner: 2	Timestamp: 780
+	9ed03691c2bff8d07c766b1e3aaebb30 -Self Parent
+	92bb7121207a6038c7b754fb9c630cac -Gossip Parent
+	Round Received: 23	Consensus Time: 785
+
+Node owner: 4	Timestamp: 781
+	92bb7121207a6038c7b754fb9c630cac -Self Parent
+	3a8f0b703da016c176a8fc471a3f3d28 -Gossip Parent
+	Round Received: 23	Consensus Time: 785
+
+Node owner: 1	Timestamp: 782
+	13694d5937c989678a98ec36fe9a3c3 -Self Parent
+	01378bf8f94649181406b81caefe283c -Gossip Parent
+	Round Received: 23	Consensus Time: 795
+
+Node owner: 0	Timestamp: 783
+	01378bf8f94649181406b81caefe283c -Self Parent
+	969517cead5ac1e72673f6c1cc824724 -Gossip Parent
+	Round Received: 23	Consensus Time: 805
+
+Node owner: 2	Timestamp: 784
+	3a8f0b703da016c176a8fc471a3f3d28 -Self Parent
+	969517cead5ac1e72673f6c1cc824724 -Gossip Parent
+	Round Received: 23	Consensus Time: 791
+
+Node owner: 3	Timestamp: 785
+	071a76b5eeffb9e39426effc6cbb4c73 -Self Parent
+	6457423c9d38a6fe2e2d8d6f35eb1911 -Gossip Parent
+	Round Received: 23	Consensus Time: 806
+
+Node owner: 5	Timestamp: 786
+	5de834b4903f1a7fc7acc161b53ea631 -Self Parent
+	969517cead5ac1e72673f6c1cc824724 -Gossip Parent
+	Round Received: 23	Consensus Time: 793
+
+Node owner: 4	Timestamp: 787
+	969517cead5ac1e72673f6c1cc824724 -Self Parent
+	cd40b95b9f87063d3fe77e1e968c99b7 -Gossip Parent
+	Round Received: 23	Consensus Time: 793
+
+Node owner: 4	Timestamp: 788
+	8ed74a65840b0027e9d02f3399b0db04 -Self Parent
+	98e5c49a273f6eaead274e987b5f839c -Gossip Parent
+	Round Received: 23	Consensus Time: 793
+
+Node owner: 3	Timestamp: 789
+	e857d08f4fb5e55cf282fd167eea586c -Self Parent
+	6f75b7e6ec36473c1f0716b37d1fdd6d -Gossip Parent
+	Round Received: 23	Consensus Time: 806
+
+Node owner: 5	Timestamp: 790
+	cd40b95b9f87063d3fe77e1e968c99b7 -Self Parent
+	d35bb91bbdb7a473bff861d4a0c7b135 -Gossip Parent
+	Round Received: 23	Consensus Time: 801
+
+Node owner: 0	Timestamp: 791
+	6457423c9d38a6fe2e2d8d6f35eb1911 -Self Parent
+	98e5c49a273f6eaead274e987b5f839c -Gossip Parent
+	Round Received: 23	Consensus Time: 810
+
+Node owner: 1	Timestamp: 792
+	6f75b7e6ec36473c1f0716b37d1fdd6d -Self Parent
+	d35bb91bbdb7a473bff861d4a0c7b135 -Gossip Parent
+	Round Received: 23	Consensus Time: 797
+
+Node owner: 3	Timestamp: 793
+	35cc9b028f7c84fd27c327da61df3451 -Self Parent
+	0be3747167c51f062786b61080724aab -Gossip Parent
+	Round Received: 23	Consensus Time: 806
+
+Node owner: 5	Timestamp: 794
+	0be3747167c51f062786b61080724aab -Self Parent
+	1cdaff4219cb9074f4c2a9a1d78c58ad -Gossip Parent
+	Round Received: 23	Consensus Time: 803
+
+Node owner: 0	Timestamp: 795
+	8cf25d7dd278da5815bb3ab1c27df1cd -Self Parent
+	1cdaff4219cb9074f4c2a9a1d78c58ad -Gossip Parent
+	Round Received: 23	Consensus Time: 810
+
+Node owner: 1	Timestamp: 796
+	1cdaff4219cb9074f4c2a9a1d78c58ad -Self Parent
+	98e5c49a273f6eaead274e987b5f839c -Gossip Parent
+	Round Received: 23	Consensus Time: 809
+
+Node owner: 2	Timestamp: 797
+	98e5c49a273f6eaead274e987b5f839c -Self Parent
+	3c0d418f8035b82cc89774eddd67abe2 -Gossip Parent
+	Round Received: 23	Consensus Time: 803
+
+Node owner: 4	Timestamp: 798
+	d35bb91bbdb7a473bff861d4a0c7b135 -Self Parent
+	9d70d1165b9d046af5c2a73270f53d0 -Gossip Parent
+	Round Received: 23	Consensus Time: 813
+
+Node owner: 5	Timestamp: 799
+	3c0d418f8035b82cc89774eddd67abe2 -Self Parent
+	9ebd56523b441bd9d0d39a693153938 -Gossip Parent
+	Round Received: 23	Consensus Time: 809
+
+Node owner: 4	Timestamp: 800
+	b0676d34ed390c677ab6d275d23e573b -Self Parent
+	96ecd606b990cd417e7171c09ab70bc5 -Gossip Parent
+	Round Received: 23	Consensus Time: 813
+
+Node owner: 4	Timestamp: 801
+	c5ef52f5d694482bd68d32fb54950836 -Self Parent
+	9ebd56523b441bd9d0d39a693153938 -Gossip Parent
+	Round Received: 23	Consensus Time: 813
+
+Node owner: 0	Timestamp: 802
+	96ecd606b990cd417e7171c09ab70bc5 -Self Parent
+	9406d475422180fd8f645623379768d -Gossip Parent
+	Round Received: 23	Consensus Time: 815
+
+Node owner: 0	Timestamp: 803
+	b2405d0be5d2226f67fd908e74bb1bbf -Self Parent
+	9ebd56523b441bd9d0d39a693153938 -Gossip Parent
+	Round Received: 23	Consensus Time: 815
+
+Node owner: 0	Timestamp: 804
+	29531ebeef0cc23c1d63b51b235cfa0 -Self Parent
+	9d70d1165b9d046af5c2a73270f53d0 -Gossip Parent
+	Round Received: 23	Consensus Time: 815
+
+Node owner: 1	Timestamp: 805
+	9d70d1165b9d046af5c2a73270f53d0 -Self Parent
+	9406d475422180fd8f645623379768d -Gossip Parent
+	Round Received: 23	Consensus Time: 815
+
+Node owner: 4	Timestamp: 806
+	46dff1ffd7eac66f6b57ed4f21674764 -Self Parent
+	9406d475422180fd8f645623379768d -Gossip Parent
+	Round Received: 23	Consensus Time: 813
+
+Node owner: 1	Timestamp: 807
+	a5712783cff4f1d4928200b9c2ffbcd3 -Self Parent
+	8b3dec84653f4289a16098a14730add3 -Gossip Parent
+	Round Received: 23	Consensus Time: 815
+
+Node owner: 4	Timestamp: 808
+	399c9ef65f69c1d3b1fba3d07bcfff5e -Self Parent
+	8b3dec84653f4289a16098a14730add3 -Gossip Parent
+	Round Received: 23	Consensus Time: 813
+
+Node owner: 1	Timestamp: 810
+	8b8ab3909566645225b43fad812940e -Self Parent
+	e0199007383c9239deee32538ff60adb -Gossip Parent
+	Round Received: 23	Consensus Time: 815
+
+Node owner: 3	Timestamp: 809
+	9406d475422180fd8f645623379768d -Self Parent
+	e0199007383c9239deee32538ff60adb -Gossip Parent
+	Round Received: 24	Consensus Time: 824
+
+Node owner: 3	Timestamp: 811
+	ce7fadeb21eb561ddfdd7e7cc1459315 -Self Parent
+	525dfb0488807f0a34957f915219d4af -Gossip Parent
+	Round Received: 24	Consensus Time: 824
+
+Node owner: 2	Timestamp: 812
+	9ebd56523b441bd9d0d39a693153938 -Self Parent
+	5b7735371e246e46570a3c0395d6e275 -Gossip Parent
+	Round Received: 24	Consensus Time: 836
+
+Node owner: 5	Timestamp: 813
+	8b3dec84653f4289a16098a14730add3 -Self Parent
+	525dfb0488807f0a34957f915219d4af -Gossip Parent
+	Round Received: 24	Consensus Time: 826
+
+Node owner: 3	Timestamp: 814
+	a1fc203bc2e2e16f66e40ed234757415 -Self Parent
+	5b7735371e246e46570a3c0395d6e275 -Gossip Parent
+	Round Received: 24	Consensus Time: 824
+
+Node owner: 4	Timestamp: 815
+	e0199007383c9239deee32538ff60adb -Self Parent
+	a9dad024f63cbf706287f9f31a95b01e -Gossip Parent
+	Round Received: 24	Consensus Time: 825
+
+Node owner: 1	Timestamp: 816
+	525dfb0488807f0a34957f915219d4af -Self Parent
+	5b7735371e246e46570a3c0395d6e275 -Gossip Parent
+	Round Received: 24	Consensus Time: 836
+
+Node owner: 5	Timestamp: 817
+	c9e177a7b087128e62f66fabd76d43bb -Self Parent
+	5b7735371e246e46570a3c0395d6e275 -Gossip Parent
+	Round Received: 24	Consensus Time: 826
+
+Node owner: 5	Timestamp: 818
+	41514a011c2f0cb861e2f8cf788c6bfc -Self Parent
+	5b7735371e246e46570a3c0395d6e275 -Gossip Parent
+	Round Received: 24	Consensus Time: 826
+
+Node owner: 1	Timestamp: 819
+	848872eeccad00612e653bebf230ab19 -Self Parent
+	8c82b0fa931cf65425fd06fdc7bb3d02 -Gossip Parent
+	Round Received: 24	Consensus Time: 836
+
+Node owner: 5	Timestamp: 820
+	8b1579d3cea01690571f12307cafcdd8 -Self Parent
+	de353d58203f032c948470d2cd8c13c -Gossip Parent
+	Round Received: 24	Consensus Time: 826
+
+Node owner: 3	Timestamp: 821
+	a9dad024f63cbf706287f9f31a95b01e -Self Parent
+	8c82b0fa931cf65425fd06fdc7bb3d02 -Gossip Parent
+	Round Received: 24	Consensus Time: 838
+
+Node owner: 2	Timestamp: 822
+	8c82b0fa931cf65425fd06fdc7bb3d02 -Self Parent
+	fff8a33131e44f1a83b2f090d718113f -Gossip Parent
+	Round Received: 24	Consensus Time: 836
+
+Node owner: 1	Timestamp: 823
+	fff8a33131e44f1a83b2f090d718113f -Self Parent
+	5b7735371e246e46570a3c0395d6e275 -Gossip Parent
+	Round Received: 24	Consensus Time: 847
+
+Node owner: 0	Timestamp: 824
+	5b7735371e246e46570a3c0395d6e275 -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 839
+
+Node owner: 2	Timestamp: 825
+	5da0a0c0142a03c4c2a5352ac1b23673 -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 836
+
+Node owner: 1	Timestamp: 826
+	cd49f273a93e3516e0231f84e09a2eb3 -Self Parent
+	7fde530c767b4de6de83267c28c46d99 -Gossip Parent
+	Round Received: 24	Consensus Time: 847
+
+Node owner: 1	Timestamp: 827
+	debe761550de68d7292f97e2a83e8d -Self Parent
+	c059235eb0c24172c1d766e6567c9cd5 -Gossip Parent
+	Round Received: 24	Consensus Time: 847
+
+Node owner: 0	Timestamp: 828
+	7fde530c767b4de6de83267c28c46d99 -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 841
+
+Node owner: 2	Timestamp: 829
+	066aa68983b902581b1af7b6534e4dad -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 836
+
+Node owner: 3	Timestamp: 830
+	c059235eb0c24172c1d766e6567c9cd5 -Self Parent
+	46e5ab6ca4e543c672ae19f446ba4672 -Gossip Parent
+	Round Received: 24	Consensus Time: 846
+
+Node owner: 0	Timestamp: 831
+	071cbd2fa2a75e85f84523a3c26e7a55 -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 841
+
+Node owner: 0	Timestamp: 832
+	152838a4fd8bb3b3cfeb745bfdb73640 -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 841
+
+Node owner: 1	Timestamp: 833
+	64cd5edae38cd214f4f774c59be446c -Self Parent
+	46e5ab6ca4e543c672ae19f446ba4672 -Gossip Parent
+	Round Received: 24	Consensus Time: 847
+
+Node owner: 2	Timestamp: 834
+	46e5ab6ca4e543c672ae19f446ba4672 -Self Parent
+	de353d58203f032c948470d2cd8c13c -Gossip Parent
+	Round Received: 24	Consensus Time: 852
+
+Node owner: 4	Timestamp: 835
+	de353d58203f032c948470d2cd8c13c -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 863
+
+Node owner: 4	Timestamp: 836
+	280c4259ff498c8769af12b7559e228d -Self Parent
+	3e492971ed8680255a45b5d19fd9fc5 -Gossip Parent
+	Round Received: 24	Consensus Time: 863
+
+Node owner: 4	Timestamp: 837
+	32b5c700dd77fe12682f11aa8054371f -Self Parent
+	60ee5c9964af3716744482d9eccad2a -Gossip Parent
+	Round Received: 24	Consensus Time: 863
+
+Node owner: 2	Timestamp: 838
+	5524e90e8352d0a9243a083eba8553f7 -Self Parent
+	60ee5c9964af3716744482d9eccad2a -Gossip Parent
+	Round Received: 24	Consensus Time: 852
+
+Node owner: 3	Timestamp: 839
+	60ee5c9964af3716744482d9eccad2a -Self Parent
+	a8abb5095115bd1f3747674238124a0c -Gossip Parent
+	Round Received: 24	Consensus Time: 848
+
+Node owner: 2	Timestamp: 841
+	d0de2a73296d7e343448258fb17d7ee5 -Self Parent
+	8d3e2547f9fccb3e49be6d816136ca78 -Gossip Parent
+	Round Received: 24	Consensus Time: 852
+
+Node owner: 0	Timestamp: 843
+	a8abb5095115bd1f3747674238124a0c -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 24	Consensus Time: 852
+
+Node owner: 2	Timestamp: 845
+	5dbd5a5dbf6e13b0440f1372a625ee23 -Self Parent
+	93c1825c66d1734a2e8305c316cec8dd -Gossip Parent
+	Round Received: 24	Consensus Time: 852
+
+Node owner: 0	Timestamp: 846
+	93c1825c66d1734a2e8305c316cec8dd -Self Parent
+	b825436aa220eb942807d5236af2ea3e -Gossip Parent
+	Round Received: 24	Consensus Time: 853
+
+Node owner: 4	Timestamp: 848
+	69c4205fa26f6d16fcec51c31be18e3 -Self Parent
+	4ba06cfefbbc414e3570d8c59ea36573 -Gossip Parent
+	Round Received: 24	Consensus Time: 863
+
+Node owner: 1	Timestamp: 840
+	3e492971ed8680255a45b5d19fd9fc5 -Self Parent
+	a8abb5095115bd1f3747674238124a0c -Gossip Parent
+	Round Received: 25	Consensus Time: 851
+
+Node owner: 3	Timestamp: 842
+	8d3e2547f9fccb3e49be6d816136ca78 -Self Parent
+	a442043a1261330091056a8d8d2fef3b -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 3	Timestamp: 844
+	0c7973a3cad5a53628de07e89fdaf24a -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 2	Timestamp: 847
+	b825436aa220eb942807d5236af2ea3e -Self Parent
+	734c4ddee8d2349e9e285b8c430a3215 -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 4	Timestamp: 849
+	41565da13c9dbfa0f81b00645020225a -Self Parent
+	4ba06cfefbbc414e3570d8c59ea36573 -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 0	Timestamp: 850
+	4ba06cfefbbc414e3570d8c59ea36573 -Self Parent
+	3f57a098aa9f9feaa703153aa50bd97c -Gossip Parent
+	Round Received: 25	Consensus Time: 857
+
+Node owner: 4	Timestamp: 851
+	47bc2d9611700623c420f9ecb69a1786 -Self Parent
+	a442043a1261330091056a8d8d2fef3b -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 5	Timestamp: 852
+	3f57a098aa9f9feaa703153aa50bd97c -Self Parent
+	f5373df93a1090c49ebcc9c9fb6a0d30 -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 2	Timestamp: 853
+	3179640482458a1f6cfe04f463e4f023 -Self Parent
+	9871a555d947ef4f4007749bd2537ce -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 2	Timestamp: 854
+	444522e22ec1df361050519ab9fe8b2c -Self Parent
+	734c4ddee8d2349e9e285b8c430a3215 -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 5	Timestamp: 855
+	ec65d5dffda1f22e3ba0b75d38bb2f67 -Self Parent
+	a442043a1261330091056a8d8d2fef3b -Gossip Parent
+	Round Received: 25	Consensus Time: 863
+
+Node owner: 3	Timestamp: 856
+	734c4ddee8d2349e9e285b8c430a3215 -Self Parent
+	9baeac6e74d68213ed350610b5d35498 -Gossip Parent
+	Round Received: 25	Consensus Time: 864
+
+Node owner: 4	Timestamp: 857
+	f5373df93a1090c49ebcc9c9fb6a0d30 -Self Parent
+	010b0e7ef8b36699de70e054bc7bf96c -Gossip Parent
+	Round Received: 25	Consensus Time: 864
+
+Node owner: 4	Timestamp: 858
+	3c2bbf387d94baaa633bc105705029d7 -Self Parent
+	21a69beff829ca6bd940ea36915f4e7d -Gossip Parent
+	Round Received: 25	Consensus Time: 864
+
+Node owner: 3	Timestamp: 859
+	010b0e7ef8b36699de70e054bc7bf96c -Self Parent
+	49e22467f8f6527dd789e36a709ecdb4 -Gossip Parent
+	Round Received: 25	Consensus Time: 866
+
+Node owner: 5	Timestamp: 860
+	21a69beff829ca6bd940ea36915f4e7d -Self Parent
+	9871a555d947ef4f4007749bd2537ce -Gossip Parent
+	Round Received: 25	Consensus Time: 877
+
+Node owner: 3	Timestamp: 861
+	e09cc716fbc1ccce7064c9cd42c97962 -Self Parent
+	9baeac6e74d68213ed350610b5d35498 -Gossip Parent
+	Round Received: 25	Consensus Time: 866
+
+Node owner: 3	Timestamp: 862
+	b4621121456e872e3b0d1e21ec56c5c -Self Parent
+	a442043a1261330091056a8d8d2fef3b -Gossip Parent
+	Round Received: 25	Consensus Time: 866
+
+Node owner: 1	Timestamp: 863
+	a442043a1261330091056a8d8d2fef3b -Self Parent
+	f5acdfcbfcf88827d3d7109723336ffd -Gossip Parent
+	Round Received: 25	Consensus Time: 870
+
+Node owner: 2	Timestamp: 864
+	9baeac6e74d68213ed350610b5d35498 -Self Parent
+	b894d637f3c90b88e80543de59adc3c4 -Gossip Parent
+	Round Received: 25	Consensus Time: 877
+
+Node owner: 1	Timestamp: 865
+	b894d637f3c90b88e80543de59adc3c4 -Self Parent
+	f5acdfcbfcf88827d3d7109723336ffd -Gossip Parent
+	Round Received: 25	Consensus Time: 875
+
+Node owner: 0	Timestamp: 866
+	9871a555d947ef4f4007749bd2537ce -Self Parent
+	f5acdfcbfcf88827d3d7109723336ffd -Gossip Parent
+	Round Received: 25	Consensus Time: 873
+
+Node owner: 2	Timestamp: 867
+	5a854fe0b82bbd4f8c9dadf2b3bd3c47 -Self Parent
+	f5acdfcbfcf88827d3d7109723336ffd -Gossip Parent
+	Round Received: 25	Consensus Time: 877
+
+Node owner: 3	Timestamp: 868
+	f5acdfcbfcf88827d3d7109723336ffd -Self Parent
+	cd2041cb557c9f22b668173391c19609 -Gossip Parent
+	Round Received: 25	Consensus Time: 877
+
+Node owner: 3	Timestamp: 869
+	fc659cd76699f703f4c8d2e58247e722 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 25	Consensus Time: 877
+
+Node owner: 5	Timestamp: 870
+	72a413372a935ec694dd692e319aebb1 -Self Parent
+	d849a3ad59e760959912eee58c4826 -Gossip Parent
+	Round Received: 25	Consensus Time: 877
+
+Node owner: 4	Timestamp: 871
+	49e22467f8f6527dd789e36a709ecdb4 -Self Parent
+	cd2041cb557c9f22b668173391c19609 -Gossip Parent
+	Round Received: 25	Consensus Time: 882
+
+Node owner: 0	Timestamp: 872
+	cd2041cb557c9f22b668173391c19609 -Self Parent
+	739f65f69cb2c95c3372b2b437d987 -Gossip Parent
+	Round Received: 25	Consensus Time: 882
+
+Node owner: 2	Timestamp: 873
+	d849a3ad59e760959912eee58c4826 -Self Parent
+	2403c03c1cd634f38802f6bc99a6e76d -Gossip Parent
+	Round Received: 25	Consensus Time: 878
+
+Node owner: 2	Timestamp: 874
+	2b61933e6bc85e8c4173c29a4705db07 -Self Parent
+	947ee26ef992805b75720c34e340fc05 -Gossip Parent
+	Round Received: 25	Consensus Time: 878
+
+Node owner: 0	Timestamp: 875
+	Payload: 528.94 to 2
+	Current Networth: 9465.93 10614.9 7842.53 9459.15 12061.2 10556.4 
+	8a34713d14b062daa941c91784ad1723 -Self Parent
+	28e284ea7414eb672fb8e267c967ff48 -Gossip Parent
+	Round Received: 25	Consensus Time: 882
+
+Node owner: 0	Timestamp: 876
+	38ead98b2fcf780a71931f8436e59f4d -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 25	Consensus Time: 882
+
+Node owner: 4	Timestamp: 877
+	739f65f69cb2c95c3372b2b437d987 -Self Parent
+	36d593fdd1a80ad27b684e765aa88f44 -Gossip Parent
+	Round Received: 25	Consensus Time: 882
+
+Node owner: 3	Timestamp: 878
+	2403c03c1cd634f38802f6bc99a6e76d -Self Parent
+	b034003529842952cb22417212839a6e -Gossip Parent
+	Round Received: 26	Consensus Time: 900
+
+Node owner: 3	Timestamp: 879
+	19efd6c11efd112acb0e3f9dce48a3d4 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 900
+
+Node owner: 2	Timestamp: 880
+	28e284ea7414eb672fb8e267c967ff48 -Self Parent
+	947ee26ef992805b75720c34e340fc05 -Gossip Parent
+	Round Received: 26	Consensus Time: 886
+
+Node owner: 0	Timestamp: 881
+	Payload: 91.79 to 5
+	Current Networth: 9374.14 10614.9 7842.53 9459.15 12061.2 10648.1 
+	36d593fdd1a80ad27b684e765aa88f44 -Self Parent
+	b034003529842952cb22417212839a6e -Gossip Parent
+	Round Received: 26	Consensus Time: 887
+
+Node owner: 2	Timestamp: 882
+	Payload: 197.1 to 4
+	Current Networth: 9374.14 10614.9 7645.43 9459.15 12258.3 10648.1 
+	9dbc361836149c0c313b5e6d3b043fd9 -Self Parent
+	b034003529842952cb22417212839a6e -Gossip Parent
+	Round Received: 26	Consensus Time: 886
+
+Node owner: 0	Timestamp: 883
+	5c03110ab9bf6c818ed48a518e0677af -Self Parent
+	20ab4cbe2fe217104a1e2ec436744ec3 -Gossip Parent
+	Round Received: 26	Consensus Time: 887
+
+Node owner: 4	Timestamp: 884
+	b034003529842952cb22417212839a6e -Self Parent
+	ba61cc833e59e66bfb73418c84d36e6d -Gossip Parent
+	Round Received: 26	Consensus Time: 897
+
+Node owner: 3	Timestamp: 885
+	2232faf8fe0fd793dde5d20d237c4ab3 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 900
+
+Node owner: 5	Timestamp: 886
+	947ee26ef992805b75720c34e340fc05 -Self Parent
+	7ff76c9157ca61ca4a1709545ea05ec1 -Gossip Parent
+	Round Received: 26	Consensus Time: 902
+
+Node owner: 3	Timestamp: 887
+	Payload: 353.58 to 4
+	Current Networth: 9374.14 10614.9 7645.43 9105.57 12611.9 10648.1 
+	2dd1d11de9be084a37add17b156afeb5 -Self Parent
+	ba61cc833e59e66bfb73418c84d36e6d -Gossip Parent
+	Round Received: 26	Consensus Time: 900
+
+Node owner: 4	Timestamp: 888
+	7ff76c9157ca61ca4a1709545ea05ec1 -Self Parent
+	2880347f19fca74bbc26936edec5dc4e -Gossip Parent
+	Round Received: 26	Consensus Time: 901
+
+Node owner: 3	Timestamp: 889
+	2880347f19fca74bbc26936edec5dc4e -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 903
+
+Node owner: 3	Timestamp: 890
+	Payload: 909.27 to 3
+	Current Networth: 9374.14 10614.9 7645.43 9105.57 12611.9 10648.1 
+	4b1d135f3d711ca39ad994bf73aac645 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 903
+
+Node owner: 3	Timestamp: 891
+	30835b6320d91a7a6004bdd31710ba69 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 903
+
+Node owner: 2	Timestamp: 892
+	20ab4cbe2fe217104a1e2ec436744ec3 -Self Parent
+	b6ab554bb661e615f34c534ae7e33550 -Gossip Parent
+	Round Received: 26	Consensus Time: 901
+
+Node owner: 2	Timestamp: 893
+	88d736d4e772a9a27a2689a638bcf1bf -Self Parent
+	b6ab554bb661e615f34c534ae7e33550 -Gossip Parent
+	Round Received: 26	Consensus Time: 901
+
+Node owner: 5	Timestamp: 894
+	9af3369944c455ae4c258ecf6f349aa5 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 902
+
+Node owner: 2	Timestamp: 895
+	0f57736877686b38da867d8f5d1913b1 -Self Parent
+	e330be7cb43547d7af65d4e4c9615580 -Gossip Parent
+	Round Received: 26	Consensus Time: 901
+
+Node owner: 4	Timestamp: 896
+	b6ab554bb661e615f34c534ae7e33550 -Self Parent
+	ba61cc833e59e66bfb73418c84d36e6d -Gossip Parent
+	Round Received: 26	Consensus Time: 904
+
+Node owner: 3	Timestamp: 897
+	9beb24241cd88a6950db36b8e76873d7 -Self Parent
+	8992bc1427d99c244b1ea426c6819192 -Gossip Parent
+	Round Received: 26	Consensus Time: 903
+
+Node owner: 4	Timestamp: 898
+	88bae53cd3347577f2f8269c22647262 -Self Parent
+	0f69c9aa1f2d9523cb3bba4e404e02c5 -Gossip Parent
+	Round Received: 26	Consensus Time: 904
+
+Node owner: 4	Timestamp: 899
+	e86fb8fc4239e1741ce6fb553cd9d677 -Self Parent
+	6b4a2173929a4c2c385b930dad333260 -Gossip Parent
+	Round Received: 26	Consensus Time: 904
+
+Node owner: 1	Timestamp: 900
+	e330be7cb43547d7af65d4e4c9615580 -Self Parent
+	6b4a2173929a4c2c385b930dad333260 -Gossip Parent
+	Round Received: 26	Consensus Time: 908
+
+Node owner: 3	Timestamp: 901
+	0f69c9aa1f2d9523cb3bba4e404e02c5 -Self Parent
+	3a368615d76a0652790e06334fb9e2aa -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 2	Timestamp: 902
+	6b4a2173929a4c2c385b930dad333260 -Self Parent
+	75cb7d835ebd91017f95a199579e6adc -Gossip Parent
+	Round Received: 26	Consensus Time: 906
+
+Node owner: 0	Timestamp: 903
+	ba61cc833e59e66bfb73418c84d36e6d -Self Parent
+	4bb45e013cc83856f044634bd576db19 -Gossip Parent
+	Round Received: 26	Consensus Time: 911
+
+Node owner: 3	Timestamp: 904
+	fa57c4377fd66622ed029b70af4bdd2e -Self Parent
+	4bb45e013cc83856f044634bd576db19 -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 3	Timestamp: 905
+	d97eefbe190f60e538824e59963f328c -Self Parent
+	5263b8c48a5072b511bc8d1ef2c8f101 -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 5	Timestamp: 907
+	8992bc1427d99c244b1ea426c6819192 -Self Parent
+	25860d19b9c819974f1994d485ceb976 -Gossip Parent
+	Round Received: 26	Consensus Time: 922
+
+Node owner: 2	Timestamp: 908
+	4bb45e013cc83856f044634bd576db19 -Self Parent
+	3a368615d76a0652790e06334fb9e2aa -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 3	Timestamp: 909
+	25860d19b9c819974f1994d485ceb976 -Self Parent
+	36ef336360fb49aba565ea4fa34da04a -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 0	Timestamp: 910
+	5263b8c48a5072b511bc8d1ef2c8f101 -Self Parent
+	3a368615d76a0652790e06334fb9e2aa -Gossip Parent
+	Round Received: 26	Consensus Time: 915
+
+Node owner: 2	Timestamp: 911
+	36ef336360fb49aba565ea4fa34da04a -Self Parent
+	b1b882c71406bdaac95a541c6c874c3c -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 1	Timestamp: 912
+	3a368615d76a0652790e06334fb9e2aa -Self Parent
+	a666cebed22c733b75b3966fd61736a -Gossip Parent
+	Round Received: 26	Consensus Time: 916
+
+Node owner: 2	Timestamp: 913
+	5dc57897e82f8675c1397a5398d06404 -Self Parent
+	b66e71b52d4a71a326e622709fead9bb -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 2	Timestamp: 914
+	1d3f37ca44c87b4259f11e9d7c7e100d -Self Parent
+	b66e71b52d4a71a326e622709fead9bb -Gossip Parent
+	Round Received: 26	Consensus Time: 917
+
+Node owner: 5	Timestamp: 916
+	19d34a488a4942281097bafaa5318d75 -Self Parent
+	81f35416837c9f84fe9a9e054e67b7e0 -Gossip Parent
+	Round Received: 26	Consensus Time: 922
+
+Node owner: 4	Timestamp: 906
+	75cb7d835ebd91017f95a199579e6adc -Self Parent
+	4bb45e013cc83856f044634bd576db19 -Gossip Parent
+	Round Received: 27	Consensus Time: 935
+
+Node owner: 3	Timestamp: 915
+	b1b882c71406bdaac95a541c6c874c3c -Self Parent
+	81f35416837c9f84fe9a9e054e67b7e0 -Gossip Parent
+	Round Received: 27	Consensus Time: 932
+
+Node owner: 1	Timestamp: 917
+	b66e71b52d4a71a326e622709fead9bb -Self Parent
+	81f35416837c9f84fe9a9e054e67b7e0 -Gossip Parent
+	Round Received: 27	Consensus Time: 930
+
+Node owner: 0	Timestamp: 918
+	a666cebed22c733b75b3966fd61736a -Self Parent
+	d6df43555b433e4247588cd2681c0ee2 -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 1	Timestamp: 919
+	9d248baf7683425449ae27558530ee9 -Self Parent
+	81f35416837c9f84fe9a9e054e67b7e0 -Gossip Parent
+	Round Received: 27	Consensus Time: 930
+
+Node owner: 2	Timestamp: 920
+	81f35416837c9f84fe9a9e054e67b7e0 -Self Parent
+	afd38d4277007212dd1e36a3e8c1bc23 -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 0	Timestamp: 921
+	a484b1e1c2295f35424cb7d166d2ae3d -Self Parent
+	ac8f274138e5fc77653fce9040c70f05 -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 4	Timestamp: 922
+	c53bdbdfbebd29028a02b88d4ad4eaa5 -Self Parent
+	afd38d4277007212dd1e36a3e8c1bc23 -Gossip Parent
+	Round Received: 27	Consensus Time: 935
+
+Node owner: 0	Timestamp: 923
+	9518af0459e9f4be777d3c595204b781 -Self Parent
+	7346c90872af47d2fc65889439d2db70 -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 4	Timestamp: 924
+	Payload: 1.29 to 1
+	Current Networth: 9374.14 10616.1 7645.43 9105.57 12610.6 10648.1 
+	f9b8856a5622c525464718b7241c99ec -Self Parent
+	d6df43555b433e4247588cd2681c0ee2 -Gossip Parent
+	Round Received: 27	Consensus Time: 935
+
+Node owner: 2	Timestamp: 925
+	ac8f274138e5fc77653fce9040c70f05 -Self Parent
+	afd38d4277007212dd1e36a3e8c1bc23 -Gossip Parent
+	Round Received: 27	Consensus Time: 952
+
+Node owner: 3	Timestamp: 926
+	d6df43555b433e4247588cd2681c0ee2 -Self Parent
+	afd38d4277007212dd1e36a3e8c1bc23 -Gossip Parent
+	Round Received: 27	Consensus Time: 938
+
+Node owner: 3	Timestamp: 927
+	b039dd2ac79d58719af750495b2a9d8e -Self Parent
+	7346c90872af47d2fc65889439d2db70 -Gossip Parent
+	Round Received: 27	Consensus Time: 938
+
+Node owner: 0	Timestamp: 928
+	bc56f8b8f1d6965bd0aee5c1753da321 -Self Parent
+	37cc69a24d82ee9442a82862842c653b -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 0	Timestamp: 929
+	5e5c397382646397c9805f9511423639 -Self Parent
+	37cc69a24d82ee9442a82862842c653b -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 2	Timestamp: 930
+	c4287c8e3710f710f2207b347b21ecd7 -Self Parent
+	7346c90872af47d2fc65889439d2db70 -Gossip Parent
+	Round Received: 27	Consensus Time: 952
+
+Node owner: 0	Timestamp: 931
+	Payload: 24.4 to 2
+	Current Networth: 9349.74 10616.1 7669.83 9105.57 12610.6 10648.1 
+	09b737be4c95ecacf40bf5607d911234 -Self Parent
+	37cc69a24d82ee9442a82862842c653b -Gossip Parent
+	Round Received: 27	Consensus Time: 937
+
+Node owner: 1	Timestamp: 932
+	7346c90872af47d2fc65889439d2db70 -Self Parent
+	c5c935568f730283a43b75defcb7536 -Gossip Parent
+	Round Received: 27	Consensus Time: 940
+
+Node owner: 3	Timestamp: 933
+	b104cfd9661b115ee3f66a7e702b8be2 -Self Parent
+	afd38d4277007212dd1e36a3e8c1bc23 -Gossip Parent
+	Round Received: 27	Consensus Time: 938
+
+Node owner: 4	Timestamp: 934
+	37cc69a24d82ee9442a82862842c653b -Self Parent
+	d5e50098fbcf2038d32bcd99dfc5fb2 -Gossip Parent
+	Round Received: 27	Consensus Time: 943
+
+Node owner: 2	Timestamp: 935
+	c35ef046f1c30ca170b2ca5770539bc1 -Self Parent
+	c5c935568f730283a43b75defcb7536 -Gossip Parent
+	Round Received: 27	Consensus Time: 952
+
+Node owner: 1	Timestamp: 936
+	a45d878afc5cbc4ad44543fd44b9dc5b -Self Parent
+	d5e50098fbcf2038d32bcd99dfc5fb2 -Gossip Parent
+	Round Received: 27	Consensus Time: 940
+
+Node owner: 4	Timestamp: 937
+	5ba341d62f23c7e98e5cf420567a9779 -Self Parent
+	392076e583913b9c8868c3f2e935b6fc -Gossip Parent
+	Round Received: 27	Consensus Time: 943
+
+Node owner: 5	Timestamp: 941
+	afd38d4277007212dd1e36a3e8c1bc23 -Self Parent
+	cb019af27eb1be7d706b4cedae35512 -Gossip Parent
+	Round Received: 27	Consensus Time: 957
+
+Node owner: 0	Timestamp: 938
+	c5c935568f730283a43b75defcb7536 -Self Parent
+	392076e583913b9c8868c3f2e935b6fc -Gossip Parent
+	Round Received: 28	Consensus Time: 952
+
+Node owner: 0	Timestamp: 939
+	d772b1c2ce5e26425a36475135df5b4f -Self Parent
+	8d4064f4cd71b11e43b8523ae4858b67 -Gossip Parent
+	Round Received: 28	Consensus Time: 952
+
+Node owner: 3	Timestamp: 940
+	d5e50098fbcf2038d32bcd99dfc5fb2 -Self Parent
+	392076e583913b9c8868c3f2e935b6fc -Gossip Parent
+	Round Received: 28	Consensus Time: 958
+
+Node owner: 3	Timestamp: 942
+	f9c854dad9894a8519680fabfd2dc4d -Self Parent
+	64222a29546affb5153ada7d5d96c0 -Gossip Parent
+	Round Received: 28	Consensus Time: 958
+
+Node owner: 2	Timestamp: 943
+	8d4064f4cd71b11e43b8523ae4858b67 -Self Parent
+	64222a29546affb5153ada7d5d96c0 -Gossip Parent
+	Round Received: 28	Consensus Time: 966
+
+Node owner: 3	Timestamp: 944
+	Payload: 39.84 to 2
+	Current Networth: 9349.74 10616.1 7709.67 9065.73 12610.6 10648.1 
+	188cea8173227460212dee5c53eb3575 -Self Parent
+	64222a29546affb5153ada7d5d96c0 -Gossip Parent
+	Round Received: 28	Consensus Time: 958
+
+Node owner: 1	Timestamp: 945
+	392076e583913b9c8868c3f2e935b6fc -Self Parent
+	7867856aba4fc77db446e6a3489beaa0 -Gossip Parent
+	Round Received: 28	Consensus Time: 952
+
+Node owner: 2	Timestamp: 946
+	fad435d2847e7478a64a6291c34880cd -Self Parent
+	6c4e471ec39979c93a4c5c559124ddfe -Gossip Parent
+	Round Received: 28	Consensus Time: 966
+
+Node owner: 2	Timestamp: 947
+	a1953db8d6484f62652081a7fb7ce53 -Self Parent
+	64222a29546affb5153ada7d5d96c0 -Gossip Parent
+	Round Received: 28	Consensus Time: 966
+
+Node owner: 0	Timestamp: 948
+	7867856aba4fc77db446e6a3489beaa0 -Self Parent
+	6c4e471ec39979c93a4c5c559124ddfe -Gossip Parent
+	Round Received: 28	Consensus Time: 958
+
+Node owner: 1	Timestamp: 949
+	6c4e471ec39979c93a4c5c559124ddfe -Self Parent
+	b65e21f5c42f6bbc7e9e553aa60bd585 -Gossip Parent
+	Round Received: 28	Consensus Time: 958
+
+Node owner: 0	Timestamp: 950
+	b65e21f5c42f6bbc7e9e553aa60bd585 -Self Parent
+	1ac6afec7d3aeeec70e31be8ea00bb1d -Gossip Parent
+	Round Received: 28	Consensus Time: 958
+
+Node owner: 1	Timestamp: 951
+	1ac6afec7d3aeeec70e31be8ea00bb1d -Self Parent
+	a9e4b44074884ba687a8909e567f6f80 -Gossip Parent
+	Round Received: 28	Consensus Time: 963
+
+Node owner: 5	Timestamp: 952
+	64222a29546affb5153ada7d5d96c0 -Self Parent
+	a9e4b44074884ba687a8909e567f6f80 -Gossip Parent
+	Round Received: 28	Consensus Time: 959
+
+Node owner: 1	Timestamp: 953
+	b617ca2cadc4b3c96b4420dd628069ef -Self Parent
+	a9e4b44074884ba687a8909e567f6f80 -Gossip Parent
+	Round Received: 28	Consensus Time: 963
+
+Node owner: 0	Timestamp: 954
+	a9e4b44074884ba687a8909e567f6f80 -Self Parent
+	cb019af27eb1be7d706b4cedae35512 -Gossip Parent
+	Round Received: 28	Consensus Time: 969
+
+Node owner: 5	Timestamp: 955
+	33137b89c210e76b4884f20892c5d60 -Self Parent
+	b83d3c368f4163adce9a3c07eed2e62 -Gossip Parent
+	Round Received: 28	Consensus Time: 959
+
+Node owner: 3	Timestamp: 956
+	b83d3c368f4163adce9a3c07eed2e62 -Self Parent
+	8b4172ddba3c2b6faa44c522246a0d07 -Gossip Parent
+	Round Received: 28	Consensus Time: 973
+
+Node owner: 1	Timestamp: 957
+	f48e717f310953b920c764d8d3498e11 -Self Parent
+	228e6ac9472ce8e34a2782b1566fc37d -Gossip Parent
+	Round Received: 28	Consensus Time: 963
+
+Node owner: 4	Timestamp: 958
+	cb019af27eb1be7d706b4cedae35512 -Self Parent
+	228e6ac9472ce8e34a2782b1566fc37d -Gossip Parent
+	Round Received: 28	Consensus Time: 973
+
+Node owner: 2	Timestamp: 959
+	8b4172ddba3c2b6faa44c522246a0d07 -Self Parent
+	a89779719b807847b895d71641fb77ea -Gossip Parent
+	Round Received: 28	Consensus Time: 969
+
+Node owner: 4	Timestamp: 960
+	50f40093b92092b3f5b7d38aefc9825 -Self Parent
+	3c6cbbeeee027269c5e53eecf6187ff5 -Gossip Parent
+	Round Received: 28	Consensus Time: 973
+
+Node owner: 2	Timestamp: 961
+	7bc4158a60f69637a954c69efd1cea4 -Self Parent
+	3c6cbbeeee027269c5e53eecf6187ff5 -Gossip Parent
+	Round Received: 28	Consensus Time: 969
+
+Node owner: 0	Timestamp: 962
+	3c6cbbeeee027269c5e53eecf6187ff5 -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 3	Timestamp: 963
+	841b9f1236cd9b16c56355d2ada414cc -Self Parent
+	a89779719b807847b895d71641fb77ea -Gossip Parent
+	Round Received: 28	Consensus Time: 973
+
+Node owner: 3	Timestamp: 964
+	f0e27ec4fedf7125dbba766757844688 -Self Parent
+	a89779719b807847b895d71641fb77ea -Gossip Parent
+	Round Received: 28	Consensus Time: 973
+
+Node owner: 0	Timestamp: 965
+	45f09161587fe4048e5eb89115d57790 -Self Parent
+	228e6ac9472ce8e34a2782b1566fc37d -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 5	Timestamp: 966
+	228e6ac9472ce8e34a2782b1566fc37d -Self Parent
+	414dc2accfb69bc66b33088648161109 -Gossip Parent
+	Round Received: 28	Consensus Time: 990
+
+Node owner: 4	Timestamp: 967
+	4f14406d41f98885d25eceb67eb2e8a5 -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 28	Consensus Time: 973
+
+Node owner: 1	Timestamp: 968
+	a89779719b807847b895d71641fb77ea -Self Parent
+	414dc2accfb69bc66b33088648161109 -Gossip Parent
+	Round Received: 28	Consensus Time: 975
+
+Node owner: 1	Timestamp: 969
+	78445cc1d3083a052c78fc35a1c8fe49 -Self Parent
+	74917d0ee86a2db3dd2cf505a636ba8d -Gossip Parent
+	Round Received: 28	Consensus Time: 975
+
+Node owner: 5	Timestamp: 970
+	f145a9bdf5a43ae835b5f4e8edb849de -Self Parent
+	4faacb17d803a4c686f970db8d504f28 -Gossip Parent
+	Round Received: 28	Consensus Time: 990
+
+Node owner: 5	Timestamp: 971
+	e9c939abdf260a92eb5441459d597868 -Self Parent
+	74917d0ee86a2db3dd2cf505a636ba8d -Gossip Parent
+	Round Received: 28	Consensus Time: 990
+
+Node owner: 0	Timestamp: 973
+	28d4ece7fbe03974ec600be7ff253a98 -Self Parent
+	4faacb17d803a4c686f970db8d504f28 -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 3	Timestamp: 975
+	414dc2accfb69bc66b33088648161109 -Self Parent
+	4faacb17d803a4c686f970db8d504f28 -Gossip Parent
+	Round Received: 28	Consensus Time: 985
+
+Node owner: 1	Timestamp: 976
+	4faacb17d803a4c686f970db8d504f28 -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 28	Consensus Time: 985
+
+Node owner: 0	Timestamp: 977
+	a2044c784841e35af8239d17d57d3ada -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 0	Timestamp: 978
+	e0ffbea365e817dcfade474bdf5e2ba7 -Self Parent
+	f2b31a20ae21bf0ecdfc08c158c88be4 -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 3	Timestamp: 979
+	c94c43fffb2df602759bf75dec7cbaeb -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 28	Consensus Time: 985
+
+Node owner: 0	Timestamp: 980
+	096c7e9bb8f13655f18e3526cf9a7746 -Self Parent
+	6a02a4b1c099f2a7722157666921a3 -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 2	Timestamp: 983
+	5b79389e7a872a30e5eb60494fafbe64 -Self Parent
+	563f22ccdff0b464cbf043c2346ec3ee -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 2	Timestamp: 984
+	b2cd5abad8d4aedad282229931c846f -Self Parent
+	563f22ccdff0b464cbf043c2346ec3ee -Gossip Parent
+	Round Received: 28	Consensus Time: 994
+
+Node owner: 4	Timestamp: 972
+	Payload: 944.32 to 0
+	Current Networth: 10294.1 10616.1 7709.67 9065.73 11666.2 10648.1 
+	74917d0ee86a2db3dd2cf505a636ba8d -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 4	Timestamp: 974
+	194f4d154cbe275a76967af7226b1de2 -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 3	Timestamp: 981
+	6a02a4b1c099f2a7722157666921a3 -Self Parent
+	5b79389e7a872a30e5eb60494fafbe64 -Gossip Parent
+	Round Received: 29	Consensus Time: 995
+
+Node owner: 4	Timestamp: 982
+	0394d1222da0184516c2d5fdc4625c5e -Self Parent
+	41a4b319216b3baa12e36b2bdef0257c -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 5	Timestamp: 985
+	41a4b319216b3baa12e36b2bdef0257c -Self Parent
+	3023c8bdcebe2bb494b204476440f6ed -Gossip Parent
+	Round Received: 29	Consensus Time: 998
+
+Node owner: 5	Timestamp: 986
+	35881d1cc8bc66772f353e456ea9ff29 -Self Parent
+	f2b31a20ae21bf0ecdfc08c158c88be4 -Gossip Parent
+	Round Received: 29	Consensus Time: 998
+
+Node owner: 0	Timestamp: 987
+	563f22ccdff0b464cbf043c2346ec3ee -Self Parent
+	9d1fc3ed587cc30ee35ae10b8b04933d -Gossip Parent
+	Round Received: 29	Consensus Time: 1014
+
+Node owner: 2	Timestamp: 988
+	3023c8bdcebe2bb494b204476440f6ed -Self Parent
+	49e3b7d7cfc6da71ed5e6b22623cb43 -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 2	Timestamp: 989
+	beb8f2e0294df5c8effe0a59625190ef -Self Parent
+	49e3b7d7cfc6da71ed5e6b22623cb43 -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 2	Timestamp: 990
+	Payload: 820.33 to 0
+	Current Networth: 11114.4 10616.1 6889.34 9065.73 11666.2 10648.1 
+	3abd8ebf32c5e68fbd44a2efc5dbc560 -Self Parent
+	58e4615ae53715afb5ed68b9a2e268dc -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 3	Timestamp: 991
+	49e3b7d7cfc6da71ed5e6b22623cb43 -Self Parent
+	f2b31a20ae21bf0ecdfc08c158c88be4 -Gossip Parent
+	Round Received: 29	Consensus Time: 995
+
+Node owner: 1	Timestamp: 992
+	Payload: 209.15 to 5
+	Current Networth: 11114.4 10407 6889.34 9065.73 11666.2 10857.3 
+	f2b31a20ae21bf0ecdfc08c158c88be4 -Self Parent
+	c008cc6359858c0812dcbebeaca0f850 -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 2	Timestamp: 993
+	0466d1a28017dc4b57615f7f1d39ef98 -Self Parent
+	c008cc6359858c0812dcbebeaca0f850 -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 1	Timestamp: 994
+	be6a4b089eeb06f92ad1a09bfec18e3e -Self Parent
+	9d1fc3ed587cc30ee35ae10b8b04933d -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 0	Timestamp: 995
+	38e24bee1e638f90eed9baa4528ea7b1 -Self Parent
+	c008cc6359858c0812dcbebeaca0f850 -Gossip Parent
+	Round Received: 29	Consensus Time: 1014
+
+Node owner: 4	Timestamp: 996
+	58e4615ae53715afb5ed68b9a2e268dc -Self Parent
+	28d20f77a41bf5edeb6c060c854f9b83 -Gossip Parent
+	Round Received: 29	Consensus Time: 1004
+
+Node owner: 5	Timestamp: 997
+	9d1fc3ed587cc30ee35ae10b8b04933d -Self Parent
+	28d20f77a41bf5edeb6c060c854f9b83 -Gossip Parent
+	Round Received: 29	Consensus Time: 1000
+
+Node owner: 4	Timestamp: 998
+	9f60a9fd9339b771c0aeefb6fd92ac97 -Self Parent
+	505ec06bcc9f6e3438167d4cf58285bf -Gossip Parent
+	Round Received: 29	Consensus Time: 1004
+
+Node owner: 2	Timestamp: 999
+	28d20f77a41bf5edeb6c060c854f9b83 -Self Parent
+	505ec06bcc9f6e3438167d4cf58285bf -Gossip Parent
+	Round Received: 29	Consensus Time: 1013
+
+Node owner: 3	Timestamp: 1000
+	Payload: 161.45 to 3
+	Current Networth: 11114.4 10407 6889.34 9065.73 11666.2 10857.3 
+	c008cc6359858c0812dcbebeaca0f850 -Self Parent
+	d542b5d93df763fc1705f8f3f3f5740 -Gossip Parent
+	Round Received: 29	Consensus Time: 1011
+
+Node owner: 0	Timestamp: 1001
+	26ca5f8593d6114737b4a2328b97c36d -Self Parent
+	d542b5d93df763fc1705f8f3f3f5740 -Gossip Parent
+	Round Received: 29	Consensus Time: 1014
+
+Node owner: 1	Timestamp: 1002
+	11455f033893304ddbeed0212fde14 -Self Parent
+	0cc8fe923478efd8981ce782d63add7f -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 1	Timestamp: 1003
+	b4bb22eed03d8a4f8e3255aefe66b45 -Self Parent
+	505ec06bcc9f6e3438167d4cf58285bf -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 2	Timestamp: 1004
+	0cc8fe923478efd8981ce782d63add7f -Self Parent
+	bb02cd41e96f24e34c6ae20d1071786b -Gossip Parent
+	Round Received: 29	Consensus Time: 1016
+
+Node owner: 3	Timestamp: 1005
+	bb02cd41e96f24e34c6ae20d1071786b -Self Parent
+	d542b5d93df763fc1705f8f3f3f5740 -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 1	Timestamp: 1006
+	0c27b7f172419c3f436dfddb512cc7c3 -Self Parent
+	d542b5d93df763fc1705f8f3f3f5740 -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 2	Timestamp: 1007
+	0d134e7999942ed34b3fdd143ab1bf20 -Self Parent
+	d542b5d93df763fc1705f8f3f3f5740 -Gossip Parent
+	Round Received: 29	Consensus Time: 1016
+
+Node owner: 2	Timestamp: 1008
+	8099b9dbc55d660174a520446825d542 -Self Parent
+	505ec06bcc9f6e3438167d4cf58285bf -Gossip Parent
+	Round Received: 29	Consensus Time: 1016
+
+Node owner: 4	Timestamp: 1009
+	d542b5d93df763fc1705f8f3f3f5740 -Self Parent
+	5bc04bc73e03dc44534671168ffbdf0f -Gossip Parent
+	Round Received: 29	Consensus Time: 1020
+
+Node owner: 5	Timestamp: 1010
+	505ec06bcc9f6e3438167d4cf58285bf -Self Parent
+	556d72875fdb65a63c8f872e653e853f -Gossip Parent
+	Round Received: 29	Consensus Time: 1030
+
+Node owner: 1	Timestamp: 1011
+	0919fcc2229c525a22465599c28e0eb9 -Self Parent
+	affec4dab13faa0fcc00a8fb70d6a94 -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 4	Timestamp: 1012
+	e555f9a646e0330b4062cf5ccef58192 -Self Parent
+	556d72875fdb65a63c8f872e653e853f -Gossip Parent
+	Round Received: 29	Consensus Time: 1020
+
+Node owner: 2	Timestamp: 1015
+	5bc04bc73e03dc44534671168ffbdf0f -Self Parent
+	556d72875fdb65a63c8f872e653e853f -Gossip Parent
+	Round Received: 29	Consensus Time: 1023
+
+Node owner: 1	Timestamp: 1016
+	92f8a119dad2003fa2e35ca2d3a9bbc0 -Self Parent
+	f8b0584bfdb7da9adbc68e6e12ea014e -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 2	Timestamp: 1017
+	a07eceb521fc4cc3aa83215ca964d1bf -Self Parent
+	f8b0584bfdb7da9adbc68e6e12ea014e -Gossip Parent
+	Round Received: 29	Consensus Time: 1023
+
+Node owner: 2	Timestamp: 1018
+	ee9e4bc75f9a8f9a57439003301d690b -Self Parent
+	f8b0584bfdb7da9adbc68e6e12ea014e -Gossip Parent
+	Round Received: 29	Consensus Time: 1023
+
+Node owner: 1	Timestamp: 1021
+	5a81f8ddf0722851d3ac7ac602d41b9 -Self Parent
+	b939eb96d38d84dd7f28fce7989cd2b4 -Gossip Parent
+	Round Received: 29	Consensus Time: 1024
+
+Node owner: 3	Timestamp: 1013
+	affec4dab13faa0fcc00a8fb70d6a94 -Self Parent
+	5bc04bc73e03dc44534671168ffbdf0f -Gossip Parent
+	Round Received: 30	Consensus Time: 1030
+
+Node owner: 3	Timestamp: 1014
+	94698d18fc3a3b4a14372aba99a970ab -Self Parent
+	3dc3249cd2c5f05025e6e1382e137936 -Gossip Parent
+	Round Received: 30	Consensus Time: 1030
+
+Node owner: 3	Timestamp: 1019
+	a3f96b248c9b381d66ae26558dd72969 -Self Parent
+	556d72875fdb65a63c8f872e653e853f -Gossip Parent
+	Round Received: 30	Consensus Time: 1030
+
+Node owner: 3	Timestamp: 1020
+	dc9e98ee6f4fd65a1d806e20e19842d9 -Self Parent
+	f8b0584bfdb7da9adbc68e6e12ea014e -Gossip Parent
+	Round Received: 30	Consensus Time: 1030
+
+Node owner: 5	Timestamp: 1022
+	3dc3249cd2c5f05025e6e1382e137936 -Self Parent
+	65a827218f92a8ecb04d11c5edf5e99b -Gossip Parent
+	Round Received: 30	Consensus Time: 1035
+
+Node owner: 3	Timestamp: 1023
+	9312ec5d1031bad43f1bfabb8be8c3b1 -Self Parent
+	65a827218f92a8ecb04d11c5edf5e99b -Gossip Parent
+	Round Received: 30	Consensus Time: 1030
+
+Node owner: 0	Timestamp: 1024
+	556d72875fdb65a63c8f872e653e853f -Self Parent
+	65a827218f92a8ecb04d11c5edf5e99b -Gossip Parent
+	Round Received: 30	Consensus Time: 1035
+
+Node owner: 3	Timestamp: 1025
+	7472d7b2416108114c20b886d721a8c4 -Self Parent
+	65a827218f92a8ecb04d11c5edf5e99b -Gossip Parent
+	Round Received: 30	Consensus Time: 1030
+
+Node owner: 2	Timestamp: 1026
+	b939eb96d38d84dd7f28fce7989cd2b4 -Self Parent
+	f8b0584bfdb7da9adbc68e6e12ea014e -Gossip Parent
+	Round Received: 30	Consensus Time: 1035
+
+Node owner: 2	Timestamp: 1027
+	87d38a1f82f0a818fb3ac25cbbc80987 -Self Parent
+	e46c9ea1315b5a06b1a4e4d2c217ba7c -Gossip Parent
+	Round Received: 30	Consensus Time: 1035
+
+Node owner: 4	Timestamp: 1028
+	f8b0584bfdb7da9adbc68e6e12ea014e -Self Parent
+	e46c9ea1315b5a06b1a4e4d2c217ba7c -Gossip Parent
+	Round Received: 30	Consensus Time: 1054
+
+Node owner: 0	Timestamp: 1029
+	e46c9ea1315b5a06b1a4e4d2c217ba7c -Self Parent
+	098d74d52c4d0d62915c1f3c8254159d -Gossip Parent
+	Round Received: 30	Consensus Time: 1036
+
+Node owner: 1	Timestamp: 1030
+	65a827218f92a8ecb04d11c5edf5e99b -Self Parent
+	098d74d52c4d0d62915c1f3c8254159d -Gossip Parent
+	Round Received: 30	Consensus Time: 1053
+
+Node owner: 0	Timestamp: 1031
+	Payload: 238.66 to 0
+	Current Networth: 11114.4 10407 6889.34 9065.73 11666.2 10857.3 
+	1b7dcc4995369b65cd70913cb08c0e9d -Self Parent
+	f004ed5f869de02384856e06283ee0d1 -Gossip Parent
+	Round Received: 30	Consensus Time: 1036
+
+Node owner: 0	Timestamp: 1032
+	Payload: 354.56 to 4
+	Current Networth: 10759.8 10407 6889.34 9065.73 12020.8 10857.3 
+	84176ba422748617d62f5e4d9859081 -Self Parent
+	580874dac87c8e9721f256f99e61de48 -Gossip Parent
+	Round Received: 30	Consensus Time: 1036
+
+Node owner: 4	Timestamp: 1033
+	Payload: 231.77 to 0
+	Current Networth: 10991.6 10407 6889.34 9065.73 11789 10857.3 
+	e73c47437d9c6afdc076f1051a91d61 -Self Parent
+	580874dac87c8e9721f256f99e61de48 -Gossip Parent
+	Round Received: 30	Consensus Time: 1054
+
+Node owner: 0	Timestamp: 1034
+	46a067e93bf21b1c969604939d427321 -Self Parent
+	f004ed5f869de02384856e06283ee0d1 -Gossip Parent
+	Round Received: 30	Consensus Time: 1036
+
+Node owner: 3	Timestamp: 1035
+	098d74d52c4d0d62915c1f3c8254159d -Self Parent
+	c89067a6a23388a3954168e7645f5056 -Gossip Parent
+	Round Received: 30	Consensus Time: 1041
+
+Node owner: 2	Timestamp: 1036
+	580874dac87c8e9721f256f99e61de48 -Self Parent
+	b9b95aa2b1cfbb66837b49f6e3843e2b -Gossip Parent
+	Round Received: 30	Consensus Time: 1043
+
+Node owner: 3	Timestamp: 1037
+	b9b95aa2b1cfbb66837b49f6e3843e2b -Self Parent
+	c89067a6a23388a3954168e7645f5056 -Gossip Parent
+	Round Received: 30	Consensus Time: 1041
+
+Node owner: 3	Timestamp: 1038
+	3f4424f95cd0c96e62517b2dff6f3abd -Self Parent
+	f004ed5f869de02384856e06283ee0d1 -Gossip Parent
+	Round Received: 30	Consensus Time: 1041
+
+Node owner: 2	Timestamp: 1039
+	d85ff309fa3de72bbf5596543f6b4c11 -Self Parent
+	bc7ca159304da46813895d5087882a01 -Gossip Parent
+	Round Received: 30	Consensus Time: 1043
+
+Node owner: 4	Timestamp: 1040
+	7384394c1092bccfe3d5eb03e2086a8 -Self Parent
+	49edca5dd37ec7f9e3493fc7d7a9cfbc -Gossip Parent
+	Round Received: 30	Consensus Time: 1054
+
+Node owner: 0	Timestamp: 1041
+	c89067a6a23388a3954168e7645f5056 -Self Parent
+	770eda929dff3db2e2e000eded96d9c7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1060
+
+Node owner: 4	Timestamp: 1042
+	682675f8b6b9b081525bf3c1dd6eb83f -Self Parent
+	bc7ca159304da46813895d5087882a01 -Gossip Parent
+	Round Received: 30	Consensus Time: 1054
+
+Node owner: 1	Timestamp: 1043
+	49edca5dd37ec7f9e3493fc7d7a9cfbc -Self Parent
+	7dcbf10e140edcad8b7ff0a467c17007 -Gossip Parent
+	Round Received: 30	Consensus Time: 1060
+
+Node owner: 3	Timestamp: 1044
+	Payload: 94.29 to 5
+	Current Networth: 10991.6 10407 6889.34 8971.44 11789 10951.6 
+	bc7ca159304da46813895d5087882a01 -Self Parent
+	770eda929dff3db2e2e000eded96d9c7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1053
+
+Node owner: 1	Timestamp: 1045
+	16dd64ebe5ab14668ad7aa6676444d2b -Self Parent
+	770eda929dff3db2e2e000eded96d9c7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1060
+
+Node owner: 4	Timestamp: 1046
+	cb3cafb6795feb315fdf32b2e5f85224 -Self Parent
+	770eda929dff3db2e2e000eded96d9c7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1054
+
+Node owner: 4	Timestamp: 1047
+	486952904fb900367a55b4b3f6c41e62 -Self Parent
+	cb5e5c0ce4eb4dfddf2d3b3f134508b8 -Gossip Parent
+	Round Received: 30	Consensus Time: 1054
+
+Node owner: 1	Timestamp: 1048
+	40cd7077581e0c584c6117fbd7d6d68 -Self Parent
+	f004ed5f869de02384856e06283ee0d1 -Gossip Parent
+	Round Received: 30	Consensus Time: 1060
+
+Node owner: 0	Timestamp: 1049
+	7dcbf10e140edcad8b7ff0a467c17007 -Self Parent
+	5488e0ce109924b0fa123d8d4be3f132 -Gossip Parent
+	Round Received: 30	Consensus Time: 1062
+
+Node owner: 0	Timestamp: 1050
+	5f7b57041609133742a9e5dbf3f27c20 -Self Parent
+	5488e0ce109924b0fa123d8d4be3f132 -Gossip Parent
+	Round Received: 30	Consensus Time: 1062
+
+Node owner: 4	Timestamp: 1051
+	5488e0ce109924b0fa123d8d4be3f132 -Self Parent
+	770eda929dff3db2e2e000eded96d9c7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1055
+
+Node owner: 4	Timestamp: 1052
+	a75f7d7d2f88a3781f98ad34432a2125 -Self Parent
+	770eda929dff3db2e2e000eded96d9c7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1055
+
+Node owner: 5	Timestamp: 1053
+	f004ed5f869de02384856e06283ee0d1 -Self Parent
+	b57718983f0ae639cba265b1925850c5 -Gossip Parent
+	Round Received: 30	Consensus Time: 1055
+
+Node owner: 2	Timestamp: 1055
+	770eda929dff3db2e2e000eded96d9c7 -Self Parent
+	f00cdf6dfbd7ece482854e3d131862e7 -Gossip Parent
+	Round Received: 30	Consensus Time: 1061
+
+Node owner: 0	Timestamp: 1058
+	b9e816c67998a6aec7866ba71988a6f9 -Self Parent
+	be86df297732a90d1eee2a47d4bbf850 -Gossip Parent
+	Round Received: 30	Consensus Time: 1062
+
+Node owner: 3	Timestamp: 1054
+	cb5e5c0ce4eb4dfddf2d3b3f134508b8 -Self Parent
+	f00cdf6dfbd7ece482854e3d131862e7 -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 5	Timestamp: 1056
+	f00cdf6dfbd7ece482854e3d131862e7 -Self Parent
+	b57718983f0ae639cba265b1925850c5 -Gossip Parent
+	Round Received: 31	Consensus Time: 1066
+
+Node owner: 3	Timestamp: 1057
+	da8ee893456f17b08480372069f447ae -Self Parent
+	74d845c3fbbed3335440e863ae7f00e5 -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 4	Timestamp: 1059
+	b57718983f0ae639cba265b1925850c5 -Self Parent
+	74d845c3fbbed3335440e863ae7f00e5 -Gossip Parent
+	Round Received: 31	Consensus Time: 1066
+
+Node owner: 5	Timestamp: 1060
+	9c1792628b7cf5fe7be076cc87038d1a -Self Parent
+	dd39aafa304eff2b22f4fd94ccc79375 -Gossip Parent
+	Round Received: 31	Consensus Time: 1066
+
+Node owner: 5	Timestamp: 1061
+	7900b75373f51c59fbc5872a8ded0c8d -Self Parent
+	52e00a3bfceb9433c8b3769fae2d4426 -Gossip Parent
+	Round Received: 31	Consensus Time: 1066
+
+Node owner: 2	Timestamp: 1062
+	Payload: 661.96 to 2
+	Current Networth: 10991.6 10407 6889.34 8971.44 11789 10951.6 
+	74d845c3fbbed3335440e863ae7f00e5 -Self Parent
+	4e2209b4bfd75beaad2494af9b3c2f64 -Gossip Parent
+	Round Received: 31	Consensus Time: 1077
+
+Node owner: 3	Timestamp: 1063
+	29e3159ac7e2964fd59c561783094610 -Self Parent
+	dd39aafa304eff2b22f4fd94ccc79375 -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 2	Timestamp: 1064
+	50088b154d9b8a894946b90a5e7c9f6a -Self Parent
+	be86df297732a90d1eee2a47d4bbf850 -Gossip Parent
+	Round Received: 31	Consensus Time: 1077
+
+Node owner: 4	Timestamp: 1065
+	Payload: 136.61 to 1
+	Current Networth: 10991.6 10543.6 6889.34 8971.44 11652.4 10951.6 
+	52e00a3bfceb9433c8b3769fae2d4426 -Self Parent
+	4e2209b4bfd75beaad2494af9b3c2f64 -Gossip Parent
+	Round Received: 31	Consensus Time: 1078
+
+Node owner: 3	Timestamp: 1066
+	3d47ae17a7e8fe4e83985a4a8ec6dcf2 -Self Parent
+	607d2f455e20dcb4e8bc5a14b7f6864c -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 1	Timestamp: 1067
+	be86df297732a90d1eee2a47d4bbf850 -Self Parent
+	4e2209b4bfd75beaad2494af9b3c2f64 -Gossip Parent
+	Round Received: 31	Consensus Time: 1087
+
+Node owner: 5	Timestamp: 1068
+	4e2209b4bfd75beaad2494af9b3c2f64 -Self Parent
+	dd39aafa304eff2b22f4fd94ccc79375 -Gossip Parent
+	Round Received: 31	Consensus Time: 1077
+
+Node owner: 2	Timestamp: 1069
+	607d2f455e20dcb4e8bc5a14b7f6864c -Self Parent
+	512b00b9f5436d1075eb5ece2dc24c5b -Gossip Parent
+	Round Received: 31	Consensus Time: 1080
+
+Node owner: 2	Timestamp: 1070
+	54f9a43e95bf2e6d495b92d745ae84ba -Self Parent
+	2c6c6961628c9c9727d04872700956bd -Gossip Parent
+	Round Received: 31	Consensus Time: 1080
+
+Node owner: 3	Timestamp: 1071
+	9b24e9db28f0a656650ee369cc7cd2ce -Self Parent
+	dd39aafa304eff2b22f4fd94ccc79375 -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 4	Timestamp: 1072
+	2c6c6961628c9c9727d04872700956bd -Self Parent
+	512b00b9f5436d1075eb5ece2dc24c5b -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 5	Timestamp: 1073
+	512b00b9f5436d1075eb5ece2dc24c5b -Self Parent
+	f6112a0ad1e5842ab4a79076eab9c2f3 -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 4	Timestamp: 1074
+	d5497a0eeefbedf30220b7c115e280d -Self Parent
+	dd39aafa304eff2b22f4fd94ccc79375 -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 1	Timestamp: 1075
+	3f5d6b2756771f8a6a7dee0b20fe812b -Self Parent
+	dd39aafa304eff2b22f4fd94ccc79375 -Gossip Parent
+	Round Received: 31	Consensus Time: 1087
+
+Node owner: 0	Timestamp: 1076
+	dd39aafa304eff2b22f4fd94ccc79375 -Self Parent
+	5f94e8ce53568bb76ac777cc182611d9 -Gossip Parent
+	Round Received: 31	Consensus Time: 1087
+
+Node owner: 0	Timestamp: 1077
+	b79bed4d529fa624e52930f58ec99a19 -Self Parent
+	96506189197bc0b11e9de403f7775b -Gossip Parent
+	Round Received: 31	Consensus Time: 1087
+
+Node owner: 1	Timestamp: 1078
+	Payload: 477.49 to 0
+	Current Networth: 11469.1 10066.1 6889.34 8971.44 11652.4 10951.6 
+	5f94e8ce53568bb76ac777cc182611d9 -Self Parent
+	5e7385522e692a202c3e840ae9ac686b -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 2	Timestamp: 1079
+	96506189197bc0b11e9de403f7775b -Self Parent
+	50b7a77a165e229129d3c5ed129aff52 -Gossip Parent
+	Round Received: 31	Consensus Time: 1082
+
+Node owner: 5	Timestamp: 1080
+	50b7a77a165e229129d3c5ed129aff52 -Self Parent
+	92cb96afe39db6079ccecc755571df62 -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 3	Timestamp: 1081
+	Payload: 976.96 to 4
+	Current Networth: 11469.1 10066.1 6889.34 7994.48 12629.4 10951.6 
+	f6112a0ad1e5842ab4a79076eab9c2f3 -Self Parent
+	b61c6a4cc0b3d3268c332a80a799456e -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 0	Timestamp: 1082
+	Payload: 546.69 to 0
+	Current Networth: 11469.1 10066.1 6889.34 7994.48 12629.4 10951.6 
+	5e7385522e692a202c3e840ae9ac686b -Self Parent
+	92cb96afe39db6079ccecc755571df62 -Gossip Parent
+	Round Received: 31	Consensus Time: 1087
+
+Node owner: 3	Timestamp: 1083
+	157f0317ee07cec3c3b603f35d3cf35 -Self Parent
+	92cb96afe39db6079ccecc755571df62 -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 5	Timestamp: 1084
+	b61c6a4cc0b3d3268c332a80a799456e -Self Parent
+	c5a4768872af04143ca1b71aed13a525 -Gossip Parent
+	Round Received: 31	Consensus Time: 1097
+
+Node owner: 1	Timestamp: 1085
+	c5a4768872af04143ca1b71aed13a525 -Self Parent
+	c0b0a08cd3fd51f9ddbcedd23c03b004 -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 5	Timestamp: 1086
+	dc9a1535db13dafa8eab6ad8153b67ad -Self Parent
+	c0b0a08cd3fd51f9ddbcedd23c03b004 -Gossip Parent
+	Round Received: 31	Consensus Time: 1097
+
+Node owner: 3	Timestamp: 1087
+	b1e002f4e725973156346174b9e011c4 -Self Parent
+	c0b0a08cd3fd51f9ddbcedd23c03b004 -Gossip Parent
+	Round Received: 31	Consensus Time: 1095
+
+Node owner: 5	Timestamp: 1088
+	6febb5499c56dba75674a7a7a476598 -Self Parent
+	a73bf927d775d3aab97cd60c21f6c297 -Gossip Parent
+	Round Received: 31	Consensus Time: 1097
+
+Node owner: 5	Timestamp: 1089
+	Payload: 332.48 to 5
+	Current Networth: 11469.1 10066.1 6889.34 7994.48 12629.4 10951.6 
+	0f980d3f9b25821d8e5d2f8b51f2bd6c -Self Parent
+	4f1f946ba8b8d75012d80dac6ceaef88 -Gossip Parent
+	Round Received: 31	Consensus Time: 1097
+
+Node owner: 5	Timestamp: 1090
+	c58c7a9dd70ba316893327ab37f55468 -Self Parent
+	c43153c85858b266b028ee6fb0d70a6a -Gossip Parent
+	Round Received: 31	Consensus Time: 1097
+

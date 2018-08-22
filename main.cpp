@@ -177,11 +177,28 @@ void refresh(Person const & p)
 				(*((*(p.getHashgraph_const()))[i])->getGossiperParent()));
 		}
 	}
+	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin(); i != p.getFinishedNodes()->end(); ++i)
+	{
+		if ((runTime - (*i)->getData().timestamp) * GAP > H)
+			continue ;
+		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
+		if ((*i)->getSelfParent())
+		{
+			connect(**i,*(*i)->getSelfParent());
+			connect(**i,*(*i)->getGossiperParent());
+		}
+	}
 	for (unsigned int i = 0; i < (p.getHashgraph_const())->size(); i++)
 	{
 		if ((runTime - ((*(p.getHashgraph_const()))[i])->getData().timestamp) * GAP > H)
 			continue ;
 		square(*((*(p.getHashgraph_const()))[i]));
+	}
+	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin(); i != p.getFinishedNodes()->end(); ++i)
+	{
+		if ((runTime - (*i)->getData().timestamp) * GAP > H)
+			continue ;
+		square(**(i));
 	}
 	if (N <= 6)
 		ponies();
