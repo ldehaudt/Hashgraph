@@ -118,7 +118,7 @@ int	Person::finalizeOrder(int const & n, int const & r, std::vector<Event*> cons
 
 	ufw = findUFW(w);
 	int j;
-	for (j = 0; j < N && (!ufw[j] || ufw[j]->ancestor(hashgraph[n])); j++)
+	for (j = 0; j < N && (!ufw[j] || ufw[j]->ancestor(*(hashgraph[n]))); j++)
 		;
 	if (j == N)
 	{
@@ -128,7 +128,7 @@ int	Person::finalizeOrder(int const & n, int const & r, std::vector<Event*> cons
 			{
 				tmp = ufw[j];
 				while (tmp->getSelfParent()
-					&& tmp->getSelfParent()->ancestor(hashgraph[n]))
+					&& tmp->getSelfParent()->ancestor(*(hashgraph[n])))
 					tmp = tmp->getSelfParent();
 				s.push_back(tmp->getData().timestamp);
 			}
@@ -193,7 +193,7 @@ void	Person::gossip(Person & p) {
 	for (unsigned int i = 0; i < hashgraph.size(); i++)
 	{
 		if (!b[hashgraph[i]->getData().owner]){
-			if (check && check->see(hashgraph[i]))
+			if (check && check->see(*(hashgraph[i])))
 				b[hashgraph[i]->getData().owner] = true;
 			arr.push_back(hashgraph[i]->getData());
 		}

@@ -16,27 +16,41 @@ SDL_Event event;
 std::array<Person*, N> people;
 bool stop = 0;
 int personShown;
-
+std::deque<double> times;
 
 void putdigit(int const & x, int const & y, int const & val)
 {
 	SDL_Rect rect = {x, y, 10, 15};
 	if (val == 10)
-		rect.w = 5;
-	SDL_Rect num = {val * 10, 0, 10, 15};
+		rect.w = 6;
+	if (val == 11)
+		rect.w = 6;
+	SDL_Rect num = {val * 10, 0, (val == 11 ? 10 : rect.w), 15};
 	SDL_RenderCopy(rend, number_tex, &num, &rect);
 }
 
 void putfloat(int const & x, int const & y, std::string const & val)
 {
-	int i;
-	for (i = 0; val[i] != '.'; i++){
+	int i = 0;
+	if (val[0] == '-'){
+		putdigit(x, y, 11);
+		i = 1;
+	}
+	for (i = i; val[i] != '.'; i++){
 		putdigit(x + i * 10, y, val[i] - '0');
 	}
 	putdigit(x + i * 10, y, 10);
 	i++;
 	for (int j = 0; j < 2; j++){
 		putdigit(x + (i + j) * 10, y, val[i + j] - '0');
+	}
+}
+
+void putInt(int const &x, int const &y, std::string const &val)
+{
+	int i;
+	for (i = 0; i < val.size(); i++){
+		putdigit(x + i * 10, y, val[i] - '0');
 	}
 }
 
@@ -71,6 +85,15 @@ void connect(Event const & e, Event const & p)
 	SDL_RenderDrawLine(rend, x, y, x2, y2);
 	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
+}
+
+double calculateAvg(const std::deque<double> &queue)
+{
+    double avg = 0;
+    for(int i = 0; i != queue.size(); i++)
+		avg += queue[i];
+    avg /= queue.size();
+	return avg;
 }
 
 void ponies()
@@ -127,7 +150,7 @@ void ponies()
 	for (int i = 0; i < N; i++)
 	{
 		std::ostringstream s;
-		s << std::fixed << std::setprecision(2) << fabs(people[personShown]->networth[i]);
+		s << std::fixed << std::setprecision(2) << people[personShown]->networth[i];
 		putfloat(rect.x, H - 50, s.str());
 		rect.x += (W - 2 * M) / (N - 1);
 	}
@@ -162,6 +185,7 @@ void refresh(Person const & p)
 	}
 	if (N <= 6)
 		ponies();
+	putInt(70, 170 ,std::to_string((int)calculateAvg(times)));
 	SDL_RenderPresent(rend);
 }
 
@@ -197,6 +221,8 @@ void SDL_Init()
 }
 
 int main(){
+	clock_t begin;
+	clock_t end;
 	SDL_Init();
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
@@ -235,7 +261,14 @@ int main(){
 		int j;
 		while ((j = std::rand() % N) == i)
 			;
+		begin = clock();
 		people[i]->gossip(*(people[j]));
+  		end = clock();
+	  	double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+		times.push_back(1 / elapsed_secs);
+		if (times.size() > 100){
+			times.pop_front();
+		}
 		refresh(*people[personShown]);
 		runTime++;
 	}

@@ -34,7 +34,7 @@ void			reverse_bits(unsigned int *c)
 {
 	unsigned int t;
 
-	t = 0;
+	t = 0; 
 	t += *c & 0xff;
 	t = t << 8;
 	t += (*c >> 8) & 0xff;
