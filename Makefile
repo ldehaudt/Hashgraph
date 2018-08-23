@@ -1,6 +1,6 @@
 NAME = hashgraph
 
-SRC = Event.cpp Person.cpp main.cpp md5.cpp
+SRC = Event.cpp Person.cpp main.cpp md5.cpp Showcaser.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -49,7 +49,7 @@ endif
 
 compile :
 	@echo "${YELLO}Checking for graphics library ..."	
-	#@brew install sdl2
+	@brew install sdl2
 	@echo "${YELLO}Compiling ...${WHITE}"
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
 
