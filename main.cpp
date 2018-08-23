@@ -16,7 +16,11 @@ SDL_Event event;
 std::array<Person*, N> people;
 bool stop = 0;
 int personShown;
-std::deque<double> times;
+int gossipsCounted;
+clock_t begin;
+double gossipPerSec;
+clock_t pauseSt;
+double pausedTime = 0;
 
 void putdigit(int const & x, int const & y, int const & val)
 {
@@ -177,7 +181,8 @@ void refresh(Person const & p)
 				(*((*(p.getHashgraph_const()))[i])->getGossiperParent()));
 		}
 	}
-	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin(); i != p.getFinishedNodes()->end(); ++i)
+	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin();
+	i != p.getFinishedNodes()->end(); ++i)
 	{
 		if ((runTime - (*i)->getData().timestamp) * GAP > H)
 			continue ;
@@ -194,7 +199,8 @@ void refresh(Person const & p)
 			continue ;
 		square(*((*(p.getHashgraph_const()))[i]));
 	}
-	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin(); i != p.getFinishedNodes()->end(); ++i)
+	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin();
+	i != p.getFinishedNodes()->end(); ++i)
 	{
 		if ((runTime - (*i)->getData().timestamp) * GAP > H)
 			continue ;
@@ -202,7 +208,7 @@ void refresh(Person const & p)
 	}
 	if (N <= 6)
 		ponies();
-	putInt(70, 170 ,std::to_string((int)calculateAvg(times)));
+	putInt(10, 10 ,std::to_string((int)gossipPerSec));
 	SDL_RenderPresent(rend);
 }
 
@@ -237,9 +243,8 @@ void SDL_Init()
 	SDL_FreeSurface(tmpSurf);
 }
 
-int main(){
-	clock_t begin;
-	clock_t end;
+int main()
+{
 	SDL_Init();
 	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
@@ -253,7 +258,13 @@ int main(){
 		        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
 		            exit (1);
 		        if (event.key.keysym.sym == SDLK_SPACE)
+				{
 		            stop = !stop;
+					if (stop)
+						pauseSt = clock();
+					else
+						pausedTime = double(clock() - pauseSt);
+				}
 		        if (event.key.keysym.sym == SDLK_f)
 		            makeForks = !makeForks;
 				if (event.key.keysym.sym == SDLK_l)
@@ -278,13 +289,14 @@ int main(){
 		int j;
 		while ((j = std::rand() % N) == i)
 			;
-		begin = clock();
+		if (gossipsCounted == 0)
+			begin = clock();
 		people[i]->gossip(*(people[j]));
-  		end = clock();
-	  	double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-		times.push_back(1 / elapsed_secs);
-		if (times.size() > 100){
-			times.pop_front();
+		gossipsCounted++;
+		if (gossipsCounted >= 100){
+			gossipsCounted = 0;
+			gossipPerSec = 100 * CLOCKS_PER_SEC / (double(clock() - begin - pausedTime));
+			pausedTime = 0;
 		}
 		refresh(*people[personShown]);
 		runTime++;
