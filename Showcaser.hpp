@@ -17,8 +17,9 @@ private:
     SDL_Texture* p5;
     SDL_Texture* p6;
     SDL_Texture* number_tex;
+    SDL_Texture* throughput;
     SDL_Event event;
-    bool stop; // =0
+    bool stop; // = 0
     int personShown;
     int gossipsCounted;
     clock_t begin;

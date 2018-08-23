@@ -27,5 +27,6 @@ extern int						runTime;
 extern std::array<Person*, N>	people;
 
 const std::string		md5_hash(std::string const str);
+void					md5Init();
 
 #endif

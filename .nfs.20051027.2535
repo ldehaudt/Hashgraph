@@ -2,7 +2,7 @@
 #include "Hashgraphs.hpp"
 
 Event::Event(Person &p, data const & data) : d(data),
-graph(const_cast<std::vector<Event *>&>(p.getHashgraph())),
+graph(const_cast<std::vector<Event&>&>(p.getHashgraph())),
 selfParent(NULL), gossiperParent(NULL), consensusTimestamp(-1), roundRecieved(-1),
 round(0), witness(d.selfHash == "\0" ? true : false), famous(-1)
 {
@@ -66,7 +66,7 @@ bool	Event::operator==(Event const & rhs) const
 	return (hash == rhs.getHash());
 }
 
-bool	Event::seeRecursion(Event const & y, std::vector<Event*> & forkCheck,
+bool	Event::seeRecursion(Event const & y, std::vector<Event&> & forkCheck,
 	bool & done, std::vector<Event*> & visited){
 	if (std::find(visited.begin(), visited.end() , this) != visited.end())
 		return (*this == y);
@@ -115,7 +115,7 @@ bool	Event::see(Event const & y)
 }
 
 bool	Event::ancestorRecursion(Event const & y, bool & done,
-std::vector<Event*> & visited)
+std::vector<Event&> & visited)
 {
 	if (std::find(visited.begin(), visited.end() , this) != visited.end())
 		return (*this == y);
@@ -213,7 +213,7 @@ bool	Event::stronglySee(Event const & y)
 	return false;
 }
 
-bool	Event::fork(Event *x, Event *y){
+bool	Event::fork(Event &x, Event &y){
 	Event *t;
 
 	if (!(x->getData().owner == y->getData().owner))
@@ -235,35 +235,35 @@ bool	Event::fork(Event *x, Event *y){
 	return 1;
 }
 
-std::vector<Event*>	&Event::getGraph() const {
+std::vector<Event&>	&Event::getGraph() const {
 	return (graph);
 }
 
-Event	*Event::getSelfParent() const {
+Event	*Event::getSelfParent() const {    
 	return (selfParent);
 }
-Event	*Event::getGossiperParent() const {
+Event	*Event::getGossiperParent() const {    
 	return (gossiperParent);
 }
 data	Event::getData() const{
 	return d;
 }
-int		Event::getRound() const {
+int		Event::getRound() const {    
 	return (round);
 }
-bool	Event::getWitness() const {
+bool	Event::getWitness() const {    
 	return (witness);
 }
 std::string	Event::getHash() const{
 	return hash;
 }
-int		Event::getConsensusTimestamp() const {
+int		Event::getConsensusTimestamp() const {    
 	return (consensusTimestamp);
-}
-int		Event::getRoundRecieved() const {
+}   
+int		Event::getRoundRecieved() const {    
 	return (roundRecieved);
 }
-char	Event::getFamous() const {
+char	Event::getFamous() const {    
 	return (famous);
 }
 void	Event::setFamous(char const & fame){
@@ -283,8 +283,8 @@ void	Event::setGossiperParent(Event* const e) {
 }
 
 std::ostream&	operator<<(std::ostream& os, const Event& e)
-{
+{  
 	os << e.getData().selfHash << e.getData().gossipHash
 	<< e.getData().timestamp << e.getData().owner;
-	return os;
+	return os;  
 }

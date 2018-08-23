@@ -17,7 +17,7 @@ Person::~Person(){
 }
 
 Person::Person(Person const & rhs){
-	*this = rhs;    
+	*this = rhs;
 }
 
 Person&	Person::operator=(Person const &){
@@ -197,7 +197,7 @@ void	Person::gossip(Person & p) {
 			arr.push_back(hashgraph[i]->getData());
 		}
 	}
-    p.recieveGossip(*this, arr);
+	p.recieveGossip(*this, arr);
 }
 
 Event	*Person::getTopNode(Person const & target) const {
@@ -365,5 +365,4 @@ void	Person::removeOldBalls()
 			i--;
 		}
 	}
-
 }

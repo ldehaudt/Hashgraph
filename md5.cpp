@@ -6,9 +6,10 @@ unsigned int g_c;
 unsigned int g_d;
 
 unsigned int g_k[64];
+
 t_bt g_m[16][4];
 
-unsigned int g_coe[64] = {7, 12, 17, 22, 7, 12, 17, 22,
+static unsigned int g_coe[64] = {7, 12, 17, 22, 7, 12, 17, 22,
 	7, 12, 17, 22, 7, 12, 17, 22,
 	5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20,
 	4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23,
@@ -120,6 +121,13 @@ static void	set_up(std::string const str)
 		g_new[64 * g_cks - i - 1] = ((char*)(&g_len))[i];
 }
 
+void md5Init()
+{
+	int i = -1;
+	while (++i < 64)
+		g_k[i] = floor(pow(2, 32) * fabs(sin(i + 1)));
+}
+
 const std::string	md5_hash(std::string const str)
 {
 	t_v				v;
@@ -131,9 +139,6 @@ const std::string	md5_hash(std::string const str)
 	g_b = 0xefcdab89;
 	g_c = 0x98badcfe;
 	g_d = 0x10325476;
-	i = -1;
-	while (++i < 64)
-		g_k[i] = floor(pow(2, 32) * fabs(sin(i + 1)));
 	set_up(str);
 	count = -1;
 	while (++count < g_cks)
@@ -142,6 +147,11 @@ const std::string	md5_hash(std::string const str)
 	reverse_bits(&g_b);
 	reverse_bits(&g_c);
 	reverse_bits(&g_d);
-	s << std::setw(8) << std::setfill('0') << std::hex << g_a << g_b << g_c << g_d;
+	s << std::hex << std::setfill('0') << std::setw(8) << g_a;
+	s << std::hex << std::setfill('0') << std::setw(8) << g_b;
+	s << std::hex << std::setfill('0') << std::setw(8) << g_c;
+	s << std::hex << std::setfill('0') << std::setw(8) << g_d;
+	if (g_new)
+		free(g_new);
 	return (s.str());
 }

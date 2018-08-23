@@ -31,8 +31,10 @@ void Showcaser::putfloat(int const & x, int const & y, std::string const & val)
 void Showcaser::putInt(int const &x, int const &y, std::string const &val)
 {
 	int i;
+	SDL_Rect rect = {10, 10, 87, 17};
+	SDL_RenderCopy(rend, throughput, NULL, &rect);
 	for (i = 0; i < val.size(); i++){
-		putdigit(x + i * 10, y, val[i] - '0');
+		putdigit(x + 92 + i * 10, y, val[i] - '0');
 	}
 }
 
@@ -58,7 +60,7 @@ void Showcaser::square(Event const & e)
 	SDL_RenderFillRect(rend, &rect);
 }
 
-void Showcaser::connect(Event const & e, Event const & p)
+void	Showcaser::connect(Event const & e, Event const & p)
 {
 	int y = (runTime - e.getData().timestamp) * GAP;
 	int x = M + e.getData().owner * (W - 2 * M) / (N - 1);
@@ -69,7 +71,7 @@ void Showcaser::connect(Event const & e, Event const & p)
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
 }
 
-void Showcaser::ponies()
+void	Showcaser::ponies()
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
 	SDL_Rect rect;
@@ -129,7 +131,7 @@ void Showcaser::ponies()
 	}
 }
 
-void Showcaser::refresh(Person const & p)
+void	Showcaser::refresh(Person const & p)
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
 	SDL_RenderFillRect(rend, NULL);
@@ -181,7 +183,7 @@ void Showcaser::refresh(Person const & p)
 	SDL_RenderPresent(rend);
 }
 
-void Showcaser::SDL_Start()
+void	Showcaser::SDL_Start()
 {
 	auto t_start = std::chrono::high_resolution_clock::now();
 	srand(time(NULL));
@@ -207,69 +209,74 @@ void Showcaser::SDL_Start()
 	tmpSurf = SDL_LoadBMP("ponies/6.bmp");
 	p6 = SDL_CreateTextureFromSurface(rend, tmpSurf);
 	SDL_FreeSurface(tmpSurf);
+	tmpSurf = SDL_LoadBMP("throughput.bmp");
+	throughput = SDL_CreateTextureFromSurface(rend, tmpSurf);
+	SDL_FreeSurface(tmpSurf);
 	tmpSurf = SDL_LoadBMP("numbers.bmp");
 	number_tex = SDL_CreateTextureFromSurface(rend, tmpSurf);
 	SDL_FreeSurface(tmpSurf);
 }
 
-void Showcaser::get_input()
+void	Showcaser::get_input()
 {
 	while (SDL_PollEvent(&event))
 	{
-	    if (event.type == SDL_KEYDOWN || event.type == SDL_QUIT)
-	    {
-	        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
-	            exit (1);
-	        if (event.key.keysym.sym == SDLK_SPACE)
+		if (event.type == SDL_KEYDOWN || event.type == SDL_QUIT)
+		{
+			if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
+				exit (1);
+			if (event.key.keysym.sym == SDLK_SPACE)
 			{
-	            stop = !stop;
+				stop = !stop;
 				if (stop)
 					pauseSt = clock();
 				else
 					pausedTime = double(clock() - pauseSt);
 			}
-	        if (event.key.keysym.sym == SDLK_f)
-	            makeForks = !makeForks;
+			if (event.key.keysym.sym == SDLK_f)
+				makeForks = !makeForks;
 			if (event.key.keysym.sym == SDLK_l)
-	            writeLog = !writeLog;
-	        if (N >= 1 && event.key.keysym.sym == SDLK_1)
-	        	personShown = 0;
-	        if (N >= 2 && event.key.keysym.sym == SDLK_2)
-	        	personShown = 1;
-	        if (N >= 3 && event.key.keysym.sym == SDLK_3)
-	        	personShown = 2;
-	        if (N >= 4 && event.key.keysym.sym == SDLK_4)
-	        	personShown = 3;
-	        if (N >= 5 && event.key.keysym.sym == SDLK_5)
-	        	personShown = 4;
-	        if (N >= 6 && event.key.keysym.sym == SDLK_6)
-	        	personShown = 5;
+				writeLog = !writeLog;
+			if (N >= 1 && event.key.keysym.sym == SDLK_1)
+				personShown = 0;
+			if (N >= 2 && event.key.keysym.sym == SDLK_2)
+				personShown = 1;
+			if (N >= 3 && event.key.keysym.sym == SDLK_3)
+				personShown = 2;
+			if (N >= 4 && event.key.keysym.sym == SDLK_4)
+				personShown = 3;
+			if (N >= 5 && event.key.keysym.sym == SDLK_5)
+				personShown = 4;
+			if (N >= 6 && event.key.keysym.sym == SDLK_6)
+				personShown = 5;
 			refresh(*(people[personShown]));
-	    }
+		}
 	}
 }
 
 Showcaser::Showcaser() : stop(0), personShown(0) {
+	md5Init();
 	SDL_Start();
-    for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; i++)
 		people[i] = new Person(i);
 }
 
 Showcaser::~Showcaser(){
-    SDL_DestroyTexture(p1);
-    SDL_DestroyTexture(p2);
-    SDL_DestroyTexture(p3);
-    SDL_DestroyTexture(p4);
-    SDL_DestroyTexture(p5);
-    SDL_DestroyTexture(p6);
-    SDL_DestroyTexture(number_tex);
+	SDL_DestroyTexture(p1);
+	SDL_DestroyTexture(p2);
+	SDL_DestroyTexture(p3);
+	SDL_DestroyTexture(p4);
+	SDL_DestroyTexture(p5);
+	SDL_DestroyTexture(p6);
+	SDL_DestroyTexture(number_tex);
+	SDL_DestroyTexture(throughput);
 }
 
-int Showcaser::run()
+int		Showcaser::run()
 {
 	runTime = 2;
-    makeForks = 0;
-    writeLog = 1;
+	makeForks = 0;
+	writeLog = 1;
 	while (1)
 	{
 		get_input();
