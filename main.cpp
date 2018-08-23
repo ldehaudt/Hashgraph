@@ -1,4 +1,7 @@
 #include "Hashgraphs.hpp"
+#include "Event.hpp"
+#include <iomanip>
+# include <SDL2/SDL.h>
 
 int runTime = 1;
 bool makeForks = 0;

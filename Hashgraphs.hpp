@@ -1,18 +1,11 @@
 #ifndef HASHGRAPHS_HPP
 # define HASHGRAPHS_HPP
-# include <SDL2/SDL.h>
-# include <time.h>
 # include <iostream>
 # include <vector>
-# include <list>
-# include <array>
 # include <unistd.h>
 # include <sstream>
-# include <thread>
 # include <fstream>
-# include <iomanip>
 # include <ctime>
-# include "Event.hpp"
 
 # define W 1000
 # define H 1320
@@ -33,6 +26,6 @@ extern bool						writeLog;
 extern int						runTime;
 extern std::array<Person*, N>	people;
 
-const std::string	md5_hash(std::string const str);
+const std::string		md5_hash(std::string const str);
 
 #endif

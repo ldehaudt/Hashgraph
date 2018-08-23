@@ -3,6 +3,7 @@
 #include "Person.hpp"
 #include "Hashgraphs.hpp" 
 #include <unordered_set>
+#include <array>
 
 class Person;
 
