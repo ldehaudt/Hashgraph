@@ -9,7 +9,7 @@ class Event;
 
 struct data;
 
-class Person{
+class Person {
 private:
 	std::vector<Event*> hashgraph;
 	std::list<Event*> finishedNodes;
@@ -29,8 +29,8 @@ public:
 	Person(int const &);
 	bool	operator==(Person const &);
 	void	recieveGossip(Person &, std::vector<data> const & gossip);
-	const std::vector<Event*>	*getHashgraph() const;
-	const std::list<Event*>	*getFinishedNodes() const;
+	const std::vector<Event*>	&getHashgraph() const;
+	const std::list<Event*>	&getFinishedNodes() const;
 	void	findOrder();
 	int		finalizeOrder(int const & n, int const & r,
 		std::vector<Event*> const & w);
@@ -39,7 +39,7 @@ public:
 	void	insertEvent(Event const &);
 	std::vector<Event*>	findWitnesses(int const & round) const;
 	void	gossip(Person &);
-	int		getCurRound();
+	int		getCurRound() const ;
 	void	incCurRound();
 	void	removeOldBalls();
 };

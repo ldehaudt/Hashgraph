@@ -12,7 +12,6 @@
 # include <fstream>
 # include <iomanip>
 # include <ctime>
-# include <deque>
 # include "Event.hpp"
 
 # define W 1000
@@ -34,6 +33,6 @@ extern bool						writeLog;
 extern int						runTime;
 extern std::array<Person*, N>	people;
 
-std::string		md5_hash(std::string str);
+const std::string	md5_hash(std::string const str);
 
 #endif

@@ -6,7 +6,7 @@
 
 class Person;
 
- struct data{
+ struct data {
 	float		payload;
 	int			target;
 	std::string	selfHash;
@@ -15,9 +15,9 @@ class Person;
 	int			owner;
 };
 
-class Event{
+class Event {
 private:
-	std::vector<Event*> *graph;
+	std::vector<Event*> &graph;
 	std::unordered_set<std::string> ancestorsNotSeen;
 	std::unordered_set<std::string> hashesSeen;
 	std::unordered_set<std::string> hashesNotSeen;
@@ -31,11 +31,10 @@ private:
 	bool	witness;
 	char	famous;
 	std::string makeHash();
-
-public:
 	Event();
-	~Event();
 	Event(const Event &);
+public:
+	~Event();
 	Event & operator=(const Event &);
 	Event(Person &, data const &) ;
 	bool	operator==(Event const &) const;
@@ -61,7 +60,7 @@ public:
 	Event	*getGossiperParent() const;
 	data	getData() const;
 	std::string			getHash() const;
-	std::vector<Event*>	*getGraph() const;
+	std::vector<Event*>	&getGraph() const;
 
 	static bool fork(Event*, Event*);
 };

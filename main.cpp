@@ -91,15 +91,6 @@ void connect(Event const & e, Event const & p)
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
 }
 
-double calculateAvg(const std::deque<double> &queue)
-{
-    double avg = 0;
-    for(int i = 0; i != queue.size(); i++)
-		avg += queue[i];
-    avg /= queue.size();
-	return avg;
-}
-
 void ponies()
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
@@ -168,39 +159,39 @@ void refresh(Person const & p)
 	for (int i = 0; i < N; i++)
 		SDL_RenderDrawLine(rend, M + i * (W - 2 * M) / (N - 1), 0,
 			M + i * (W - 2 * M) / (N - 1), H);
-	for (unsigned int i = 0; i < (p.getHashgraph())->size(); i++)
+	for (unsigned int i = 0; i < p.getHashgraph().size(); i++)
 	{
-		if ((runTime - ((*(p.getHashgraph()))[i])->getData().timestamp) * GAP > H)
+		if ((runTime - (p.getHashgraph())[i]->getData().timestamp) * GAP > H)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
-		if ((*(p.getHashgraph()))[i]->getSelfParent())
+		if ((p.getHashgraph())[i]->getSelfParent())
 		{
-			connect(*(*(p.getHashgraph()))[i],
-				(*((*(p.getHashgraph()))[i])->getSelfParent()));
-			connect(*(*(p.getHashgraph()))[i],
-				(*((*(p.getHashgraph()))[i])->getGossiperParent()));
+			connect(*(p.getHashgraph())[i],
+				(*((p.getHashgraph())[i])->getSelfParent()));
+			connect(*(p.getHashgraph())[i],
+				(*((p.getHashgraph())[i])->getGossiperParent()));
 		}
 	}
-	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin();
-	i != p.getFinishedNodes()->end(); ++i)
+	for (std::list<Event*>::const_iterator i = p.getFinishedNodes().begin();
+	i != p.getFinishedNodes().end(); ++i)
 	{
 		if ((runTime - (*i)->getData().timestamp) * GAP > H)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
 		if ((*i)->getSelfParent())
 		{
-			connect(**i,*(*i)->getSelfParent());
-			connect(**i,*(*i)->getGossiperParent());
+			connect(**i, *(*i)->getSelfParent());
+			connect(**i, *(*i)->getGossiperParent());
 		}
 	}
-	for (unsigned int i = 0; i < (p.getHashgraph())->size(); i++)
+	for (unsigned int i = 0; i < (p.getHashgraph()).size(); i++)
 	{
-		if ((runTime - ((*(p.getHashgraph()))[i])->getData().timestamp) * GAP > H)
+		if ((runTime - p.getHashgraph()[i]->getData().timestamp) * GAP > H)
 			continue ;
-		square(*((*(p.getHashgraph()))[i]));
+		square(*(p.getHashgraph()[i]));
 	}
-	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin();
-	i != p.getFinishedNodes()->end(); ++i)
+	for (std::list<Event*>::const_iterator i = p.getFinishedNodes().begin();
+	i != p.getFinishedNodes().end(); ++i)
 	{
 		if ((runTime - (*i)->getData().timestamp) * GAP > H)
 			continue ;
@@ -243,6 +234,43 @@ void SDL_Init()
 	SDL_FreeSurface(tmpSurf);
 }
 
+void get_input()
+{
+	while (SDL_PollEvent(&event))
+	{
+	    if (event.type == SDL_KEYDOWN || event.type == SDL_QUIT)
+	    {
+	        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
+	            exit (1);
+	        if (event.key.keysym.sym == SDLK_SPACE)
+			{
+	            stop = !stop;
+				if (stop)
+					pauseSt = clock();
+				else
+					pausedTime = double(clock() - pauseSt);
+			}
+	        if (event.key.keysym.sym == SDLK_f)
+	            makeForks = !makeForks;
+			if (event.key.keysym.sym == SDLK_l)
+	            writeLog = !writeLog;
+	        if (N >= 1 && event.key.keysym.sym == SDLK_1)
+	        	personShown = 0;
+	        if (N >= 2 && event.key.keysym.sym == SDLK_2)
+	        	personShown = 1;
+	        if (N >= 3 && event.key.keysym.sym == SDLK_3)
+	        	personShown = 2;
+	        if (N >= 4 && event.key.keysym.sym == SDLK_4)
+	        	personShown = 3;
+	        if (N >= 5 && event.key.keysym.sym == SDLK_5)
+	        	personShown = 4;
+	        if (N >= 6 && event.key.keysym.sym == SDLK_6)
+	        	personShown = 5;
+			refresh(*(people[personShown]));
+	    }
+	}
+}
+
 int main()
 {
 	SDL_Init();
@@ -252,37 +280,7 @@ int main()
 	runTime++;
 	while (1)
 	{
-		while (SDL_PollEvent(&event))
-		    if (event.type == SDL_KEYDOWN || event.type == SDL_QUIT)
-		    {
-		        if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
-		            exit (1);
-		        if (event.key.keysym.sym == SDLK_SPACE)
-				{
-		            stop = !stop;
-					if (stop)
-						pauseSt = clock();
-					else
-						pausedTime = double(clock() - pauseSt);
-				}
-		        if (event.key.keysym.sym == SDLK_f)
-		            makeForks = !makeForks;
-				if (event.key.keysym.sym == SDLK_l)
-		            writeLog = !writeLog;
-		        if (N >= 1 && event.key.keysym.sym == SDLK_1)
-		        	personShown = 0;
-		        if (N >= 2 && event.key.keysym.sym == SDLK_2)
-		        	personShown = 1;
-		        if (N >= 3 && event.key.keysym.sym == SDLK_3)
-		        	personShown = 2;
-		        if (N >= 4 && event.key.keysym.sym == SDLK_4)
-		        	personShown = 3;
-		        if (N >= 5 && event.key.keysym.sym == SDLK_5)
-		        	personShown = 4;
-		        if (N >= 6 && event.key.keysym.sym == SDLK_6)
-		        	personShown = 5;
-				refresh(*(people[personShown]));
-		    }
+		get_input();
 		if (stop)
 			continue ;
 		int i = std::rand() % N;

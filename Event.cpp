@@ -1,18 +1,15 @@
 #include "Event.hpp"
 #include "Hashgraphs.hpp"
 
-Event::Event(Person &p, data const & data) : graph(const_cast<std::vector<Event *>*>(p.getHashgraph())), d(data),
+Event::Event(Person &p, data const & data) : d(data),
+graph(const_cast<std::vector<Event *>&>(p.getHashgraph())),
 selfParent(NULL), gossiperParent(NULL), consensusTimestamp(-1), roundRecieved(-1),
 round(0), witness(d.selfHash == "\0" ? true : false), famous(-1)
 {
 	hash = makeHash();
 }
 
-Event::Event(){}
 Event::~Event(){}
-Event::Event(const Event &rhs){
-	*this = rhs;
-}
 
 std::string Event::makeHash()
 {
@@ -164,12 +161,12 @@ void	Event::decideFame()
 
 	if (!witness || round < 2)
 		return ;
-	for (unsigned int x = graph->size() - 1; x < graph->size(); x--)
+	for (unsigned int x = graph.size() - 1; x < graph.size(); x--)
 	{
-		if ((*graph)[x]->getWitness() && (*graph)[x]->getFamous() == -1
-			&& (*graph)[x]->getRound() <= round - 2)
+		if (graph[x]->getWitness() && graph[x]->getFamous() == -1
+			&& graph[x]->getRound() <= round - 2)
 		{
-			s = people[getData().owner]->findWitnesses((*graph)[x]->getRound() + 1);
+			s = people[getData().owner]->findWitnesses(graph[x]->getRound() + 1);
 			count = 0;
 			countNo = 0;
 			for (unsigned int y = 0; y < s.size(); y++)
@@ -178,19 +175,19 @@ void	Event::decideFame()
 					s.erase(s.begin() + y);
 				}
 				else {
-					if (s[y]->see(*((*graph)[x])))
+					if (s[y]->see(*(graph[x])))
 						count++;
 					else
 						countNo++;
 				}
 			}
-			d = round - (*graph)[x]->getRound();
+			d = round - graph[x]->getRound();
 			if (count > 2 * N / 3)
-				(*graph)[x]->setFamous(1);
+				graph[x]->setFamous(1);
 			else if (countNo > 2 * N / 3)
-				(*graph)[x]->setFamous(0);
+				graph[x]->setFamous(0);
 			else if (!(d % C))
-				(*graph)[x]->setFamous((*graph)[x]->getHash()[16] % 2);
+				graph[x]->setFamous(graph[x]->getHash()[16] % 2);
 		}
 	}
 }
@@ -199,15 +196,15 @@ bool	Event::stronglySee(Event const & y)
 {
 	int numSee = 0;
 	std::array<bool, N> found = {false};
-	for (unsigned int n = 0; n < graph->size(); n++)
+	for (unsigned int n = 0; n < graph.size(); n++)
 	{
-		if (found[(*graph)[n]->getData().owner] == true
-			|| (*graph)[n]->getRound() < y.getRound())
+		if (found[graph[n]->getData().owner] == true
+			|| graph[n]->getRound() < y.getRound())
 			continue ;
-		if (this->see(*((*graph)[n])) && (*graph)[n]->see(y))
+		if (this->see(*(graph[n])) && graph[n]->see(y))
 		{
 			numSee++;
-			found[(*graph)[n]->getData().owner] = true;
+			found[graph[n]->getData().owner] = true;
 			if (numSee > 2 * N / 3){
 				return true;
 			}
@@ -238,7 +235,7 @@ bool	Event::fork(Event *x, Event *y){
 	return 1;
 }
 
-std::vector<Event*>	*Event::getGraph() const {
+std::vector<Event*>	&Event::getGraph() const {
 	return (graph);
 }
 

@@ -14,7 +14,7 @@ unsigned int g_coe[64] = {7, 12, 17, 22, 7, 12, 17, 22,
 	4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23,
 	6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21 };
 
-unsigned int	rotate(unsigned int nbr, int n)
+static unsigned int	rotate(unsigned int nbr, int n)
 {
 	int				i;
 	unsigned int	bit;
@@ -30,7 +30,7 @@ unsigned int	rotate(unsigned int nbr, int n)
 	return (nbr);
 }
 
-void			reverse_bits(unsigned int *c)
+static void			reverse_bits(unsigned int *c)
 {
 	unsigned int t;
 
@@ -45,7 +45,7 @@ void			reverse_bits(unsigned int *c)
 	*c = t;
 }
 
-void	do_step(int i, t_v *vp)
+static void	do_step(int const i, t_v *vp)
 {
 	if (0 <= i && i < 16)
 	{
@@ -74,7 +74,7 @@ void	do_step(int i, t_v *vp)
 	vp->b += (vp->f << g_coe[i]) | (vp->f >> (32 - g_coe[i]));
 }
 
-void	do_stage(int count, t_v *vp)
+static void	do_stage(int const count, t_v *vp)
 {
 	int i;
 	int j;
@@ -99,7 +99,7 @@ void	do_stage(int count, t_v *vp)
 	g_d += vp->d;
 }
 
-void	set_up(std::string str)
+static void	set_up(std::string const str)
 {
 	int		i;
 	t_bt	bt;
@@ -120,7 +120,7 @@ void	set_up(std::string str)
 		g_new[64 * g_cks - i - 1] = ((char*)(&g_len))[i];
 }
 
-std::string		md5_hash(std::string str)
+const std::string	md5_hash(std::string const str)
 {
 	t_v				v;
 	unsigned int	count;
