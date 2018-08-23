@@ -351,17 +351,20 @@ void	Person::removeOldBalls()
 		if (hashgraph[i]->getConsensusTimestamp() != -1 && hashgraph[i]->getWitness()  == false){
 			finishedNodes.push_back(hashgraph[i]);
 			hashgraph.erase(hashgraph.begin() + i);
-			i--;			
+			i--;
 		}
-		if (hashgraph[i]->getWitness() && hashgraph[i]->getConsensusTimestamp() != -1 
-		&& hashgraph[i]->getRound() < currentRound - 5){
+		if (hashgraph[i]->getRound() < currentRound - 5){
+			if (hashgraph[i])
+				delete hashgraph[i];
 			hashgraph.erase(hashgraph.begin() + i);
 			i--;
 		}
 	}
 	for (std::list<Event*>::iterator i = finishedNodes.begin(); i != finishedNodes.end(); ++i){
 		if ((*i)->getRound() < currentRound - 6){
-			finishedNodes.erase(i);
+			if (*i)
+				delete *i;
+			i = finishedNodes.erase(i);
 			i--;
 		}
 	}

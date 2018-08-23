@@ -144,7 +144,8 @@ void	Showcaser::refresh(Person const & p)
 		if ((runTime - (p.getHashgraph())[i]->getData().timestamp) * GAP > H)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
-		if ((p.getHashgraph())[i]->getSelfParent())
+		if ((p.getHashgraph())[i]->getRound() > people[personShown]->getCurRound() - 5
+			&& (p.getHashgraph())[i]->getSelfParent())
 		{
 			connect(*(p.getHashgraph())[i],
 				(*((p.getHashgraph())[i])->getSelfParent()));
@@ -158,7 +159,7 @@ void	Showcaser::refresh(Person const & p)
 		if ((runTime - (*i)->getData().timestamp) * GAP > H)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
-		if ((*i)->getSelfParent())
+		if ((*i)->getRound() > people[personShown]->getCurRound() - 5 && (*i)->getSelfParent())
 		{
 			connect(**i, *(*i)->getSelfParent());
 			connect(**i, *(*i)->getGossiperParent());
