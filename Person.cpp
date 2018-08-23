@@ -358,22 +358,22 @@ void	Person::removeOldBalls()
 			i--;
 		}
 		if (hashgraph[i]->getRound() < currentRound - 5){
-			if (hashgraph[i])
-			{
-				delete hashgraph[i];
-				hashgraph[i] = NULL;
-			}
+			// if (hashgraph[i])
+			// {
+			// 	delete hashgraph[i];
+			// 	hashgraph[i] = NULL;
+			// }
 			hashgraph.erase(hashgraph.begin() + i);
 			i--;
 		}
 	}
 	for (std::list<Event*>::iterator i = finishedNodes.begin(); i != finishedNodes.end(); ++i){
 		if ((*i)->getRound() < currentRound - 6){
-			if (*i)
-			{
-				delete *i;
-				*i = NULL;
-			}
+			// if (*i)
+			// {
+			// 	delete *i;
+			// 	*i = NULL;
+			// }
 			i = finishedNodes.erase(i);
 			i--;
 		}
