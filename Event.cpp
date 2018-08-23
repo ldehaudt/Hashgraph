@@ -3,7 +3,7 @@
 
 Event::Event(Person &p, data const & data)
 {
-	graph = p.getHashgraph();
+	graph = const_cast<std::vector<Event *>*>(p.getHashgraph());
 	round = 0;
 	d = data;
 	gossiperParent = NULL;
@@ -248,7 +248,6 @@ bool	Event::fork(Event *x, Event *y){
 std::vector<Event*>	*Event::getGraph() const {
 	return (graph);
 }
-
 Event	*Event::getSelfParent() const {    
 	return (selfParent);
 }

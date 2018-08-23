@@ -12,7 +12,6 @@
 # include <fstream>
 # include <iomanip>
 # include <ctime>
-# include <deque>
 # include "Event.hpp"
 
 # define W 1000

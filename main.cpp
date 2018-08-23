@@ -91,15 +91,6 @@ void connect(Event const & e, Event const & p)
 	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
 }
 
-double calculateAvg(const std::deque<double> &queue)
-{
-    double avg = 0;
-    for(int i = 0; i != queue.size(); i++)
-		avg += queue[i];
-    avg /= queue.size();
-	return avg;
-}
-
 void ponies()
 {
 	SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);
@@ -168,17 +159,17 @@ void refresh(Person const & p)
 	for (int i = 0; i < N; i++)
 		SDL_RenderDrawLine(rend, M + i * (W - 2 * M) / (N - 1), 0,
 			M + i * (W - 2 * M) / (N - 1), H);
-	for (unsigned int i = 0; i < (p.getHashgraph_const())->size(); i++)
+	for (unsigned int i = 0; i < (p.getHashgraph())->size(); i++)
 	{
-		if ((runTime - ((*(p.getHashgraph_const()))[i])->getData().timestamp) * GAP > H)
+		if ((runTime - ((*(p.getHashgraph()))[i])->getData().timestamp) * GAP > H)
 			continue ;
 		SDL_SetRenderDrawColor(rend, 200, 200, 200, 255);
-		if ((*(p.getHashgraph_const()))[i]->getSelfParent())
+		if ((*(p.getHashgraph()))[i]->getSelfParent())
 		{
-			connect(*(*(p.getHashgraph_const()))[i],
-				(*((*(p.getHashgraph_const()))[i])->getSelfParent()));
-			connect(*(*(p.getHashgraph_const()))[i],
-				(*((*(p.getHashgraph_const()))[i])->getGossiperParent()));
+			connect(*(*(p.getHashgraph()))[i],
+				(*((*(p.getHashgraph()))[i])->getSelfParent()));
+			connect(*(*(p.getHashgraph()))[i],
+				(*((*(p.getHashgraph()))[i])->getGossiperParent()));
 		}
 	}
 	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin();
@@ -193,11 +184,11 @@ void refresh(Person const & p)
 			connect(**i,*(*i)->getGossiperParent());
 		}
 	}
-	for (unsigned int i = 0; i < (p.getHashgraph_const())->size(); i++)
+	for (unsigned int i = 0; i < (p.getHashgraph())->size(); i++)
 	{
-		if ((runTime - ((*(p.getHashgraph_const()))[i])->getData().timestamp) * GAP > H)
+		if ((runTime - ((*(p.getHashgraph()))[i])->getData().timestamp) * GAP > H)
 			continue ;
-		square(*((*(p.getHashgraph_const()))[i]));
+		square(*((*(p.getHashgraph()))[i]));
 	}
 	for (std::list<Event*>::const_iterator i = p.getFinishedNodes()->begin();
 	i != p.getFinishedNodes()->end(); ++i)

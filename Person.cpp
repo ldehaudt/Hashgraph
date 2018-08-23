@@ -3,11 +3,11 @@
 std::vector<Event*>	Person::findWitnesses(int const & round) const
 {
 	std::vector<Event*> witnesses;
-	for (unsigned int i = 0; i < getHashgraph_const()->size()
-		&& (*getHashgraph_const())[i]->getRound() >= round - 1; i++)
-		if ((*getHashgraph_const())[i]->getRound() == round
-			&& (*getHashgraph_const())[i]->getWitness() == true)
-			witnesses.push_back((*getHashgraph_const())[i]);
+	for (unsigned int i = 0; i < getHashgraph()->size()
+		&& (*getHashgraph())[i]->getRound() >= round - 1; i++)
+		if ((*getHashgraph())[i]->getRound() == round
+			&& (*getHashgraph())[i]->getWitness() == true)
+			witnesses.push_back((*getHashgraph())[i]);
 	return witnesses;
 }
 
@@ -330,16 +330,12 @@ bool	Person::operator==(Person const & rhs){
 	return index == rhs.index;
 }
 
-const std::vector<Event*>    *Person::getHashgraph_const() const {
+const std::vector<Event*>    *Person::getHashgraph() const {
 	return &hashgraph;
 }
 
 const std::list<Event*>    *Person::getFinishedNodes() const {
 	return &finishedNodes;
-}
-
-std::vector<Event*>    *Person::getHashgraph() {
-	return &hashgraph;
 }
 
 int		Person::getCurRound(){
