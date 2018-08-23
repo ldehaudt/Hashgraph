@@ -117,21 +117,22 @@ bool	Event::see(Event const & y)
 bool	Event::ancestorRecursion(Event const & y, bool & done,
 std::vector<Event*> & visited)
 {
-	if (std::find(visited.begin(), visited.end() , this) != visited.end())
-		return (*this == y);
-	visited.push_back(this);
 	if (done)
 		return true;
 	if (*this == y)
 	{
-		return true;
 		done = true;
+		return true;
 	}
+	if (std::find(visited.begin(), visited.end() , this) != visited.end())
+		return (*this == y);
+	visited.push_back(this);
 	if (d.timestamp < y.getData().timestamp)
 		return false;
-	if (!this->getSelfParent())
+	if (!this->getSelfParent() || !this->getGossiperParent())
 		return false;
-	return (this->getSelfParent()->see(y)) || (this->getGossiperParent()->see(y));
+	return (this->getSelfParent()->ancestorRecursion(y, done, visited))
+	|| (this->getGossiperParent()->ancestorRecursion(y, done, visited));
 }
 
 bool	Event::ancestor(Event const & y)
