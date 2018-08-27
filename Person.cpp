@@ -69,7 +69,7 @@ void	Person::insertEvent(Event const & event){
 	unsigned int i;
 	Event* p;
 
-	*p = event;
+	p = const_cast<Event*>(&event);
 	for (i = 0; i < hashgraph.size(); i++) {
 		if (hashgraph[i]->getRoundRecieved() != -1
 			&& hashgraph[i]->getRoundRecieved() <= event.getRoundRecieved())
@@ -125,12 +125,10 @@ int	Person::finalizeOrder(int const & n, int const & r, std::vector<Event*> cons
 		{
 			if (ufw[j])
 			{
-std::cout << "1\n";
 				tmp = ufw[j];
 				while (tmp->getSelfParent() && tmp->getSelfParent()->ancestor(*(hashgraph[n])))
 					tmp = tmp->getSelfParent();
 				s.push_back(tmp->getData().timestamp);
-std::cout << "2\n";
 			}
 		}
 		if (s.size() == 0)
@@ -153,7 +151,7 @@ std::cout << "2\n";
 void	Person::findOrder()
 {
 	std::vector<Event*> w;
-	std::vector<Event*> db;
+
 	unsigned int i;
 	for (unsigned int n = hashgraph.size() - 1; n < hashgraph.size(); n--)
 	{
@@ -197,9 +195,7 @@ void	Person::gossip(Person & p) {
 			arr.push_back(hashgraph[i]->getData());
 		}
 	}
-std::cout << "a - here?\n";
 	p.recieveGossip(*this, arr);
-std::cout << "b - here?\n";
 }
 
 Event	*Person::getTopNode(Person const & target) const {
@@ -298,9 +294,7 @@ void	Person::recieveGossip(Person & gossiper, std::vector<data> const & gossip){
 	removeOldBalls();
 	for (unsigned int i = 0; i < nEvents.size(); i++)
 		nEvents[i]->decideFame();
-std::cout << "AA - here?\n";
 	findOrder();
-std::cout << "BB - here?\n";
 }
 
 void	Person::linkEvents(std::vector<Event*> const & nEvents)

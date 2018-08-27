@@ -34,9 +34,9 @@ private:
 	std::string makeHash();
 	Event();
 	Event(const Event &);
+	Event & operator=(const Event &);
 public:
 	~Event();
-	Event & operator=(const Event &);
 	Event(Person &, data const &) ;
 	bool	operator==(Event const &) const;
 	bool	operator<(const Event &) const;

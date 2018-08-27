@@ -19,21 +19,6 @@ std::string Event::makeHash()
 	return md5_hash(s.str());
 }
 
-Event&	Event::operator=(const Event &rhs)
-{
-	graph = rhs.getGraph();
-	d = rhs.getData();
-	gossiperParent = NULL;
-	selfParent = NULL;
-	consensusTimestamp = rhs.getConsensusTimestamp();
-	roundRecieved = rhs.getRoundRecieved();
-	round = rhs.getRound();
-	witness = rhs.getWitness();
-	famous = rhs.getFamous();
-	hash = makeHash();
-	return (*this);
-}
-
 void	Event::divideRounds()
 {
 	if (!this->selfParent || !this->gossiperParent)

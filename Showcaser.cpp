@@ -289,9 +289,7 @@ int		Showcaser::run()
 			;
 		if (gossipsCounted == 0)
 			begin = clock();
-std::cout << "A - here?\n";
 		people[i]->gossip(*(people[j]));
-std::cout << "B - here?\n";
 		gossipsCounted++;
 		if (gossipsCounted >= 100){
 			gossipsCounted = 0;
