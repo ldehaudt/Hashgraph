@@ -16,9 +16,10 @@ class Person;
 	int			owner;
 };
 
-class Event {
+class Event final{
 private:
 	std::vector<Event*> &graph;
+	std::unordered_set<std::string> ancestorsSeen;
 	std::unordered_set<std::string> ancestorsNotSeen;
 	std::unordered_set<std::string> hashesSeen;
 	std::unordered_set<std::string> hashesNotSeen;
@@ -59,7 +60,7 @@ public:
 	int		getRoundRecieved() const;
 	Event	*getSelfParent() const;
 	Event	*getGossiperParent() const;
-	data	getData() const;
+	const data	&getData() const;
 	std::string			getHash() const;
 	std::vector<Event*>	&getGraph() const;
 

@@ -6,11 +6,11 @@
 #include "Hashgraphs.hpp"
 
 class Person;
-class Event;
+class Event; 
 
 struct data;
 
-class Person {
+class Person final {
 private:
 	std::vector<Event*> hashgraph;
 	std::list<Event*> finishedNodes;

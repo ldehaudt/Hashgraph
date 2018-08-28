@@ -54,7 +54,7 @@ bool	Event::operator==(Event const & rhs) const
 bool	Event::seeRecursion(Event const & y, std::vector<Event*> & forkCheck,
 	bool & done, std::vector<Event*> & visited){
 	if (std::find(visited.begin(), visited.end() , this) != visited.end())
-		return (*this == y);
+		return false;
 	visited.push_back(this);
 	if (d.owner == y.getData().owner)
 		forkCheck.push_back(this);
@@ -75,9 +75,10 @@ bool	Event::seeRecursion(Event const & y, std::vector<Event*> & forkCheck,
 
 bool	Event::see(Event const & y)
 {
-	if (hashesSeen.find(y.getHash()) != hashesSeen.end())
+	std::string yHash = y.getHash();
+	if (hashesSeen.find(yHash) != hashesSeen.end())
 		return true;
-	if (hashesNotSeen.find(y.getHash()) != hashesSeen.end())
+	if (hashesNotSeen.find(yHash) != hashesSeen.end())
 		return false;
 	std::vector<Event*> forkCheck;
 	std::vector<Event*> visited;
@@ -85,17 +86,17 @@ bool	Event::see(Event const & y)
 	bool b = seeRecursion(y, forkCheck, done, visited);
 	if (b == false)
 	{
-		hashesNotSeen.insert(y.getHash());
+		hashesNotSeen.insert(yHash);
 		return false;
 	}
 	for (unsigned int i = 0; i < forkCheck.size(); i++)
 		for (unsigned int j = i + 1; j < forkCheck.size(); j++)
 			if (fork(forkCheck[i],forkCheck[j]))
 			{
-				hashesNotSeen.insert(y.getHash());	
+				hashesNotSeen.insert(yHash);	
 				return false;
 			}
-	hashesSeen.insert(y.getHash());	
+	hashesSeen.insert(yHash);	
 	return true;
 }
 
@@ -110,7 +111,7 @@ std::vector<Event*> & visited)
 		return true;
 	}
 	if (std::find(visited.begin(), visited.end() , this) != visited.end())
-		return (*this == y);
+		return false;
 	visited.push_back(this);
 	if (d.timestamp < y.getData().timestamp)
 		return false;
@@ -125,15 +126,17 @@ bool	Event::ancestor(Event const & y)
 	bool b;
 	std::vector<Event*> visited;
 	bool done = false;
-
-	if (hashesSeen.find(y.getHash()) != hashesSeen.end())
+	std::string yHash = y.getHash();
+	if (hashesSeen.find(yHash) != hashesSeen.end() || ancestorsSeen.find(yHash) != ancestorsSeen.end())
 		return true;
-	if (ancestorsNotSeen.find(y.getHash()) != ancestorsNotSeen.end())
+	if (ancestorsNotSeen.find(yHash) != ancestorsNotSeen.end())
 		return false;
 	b = ancestorRecursion(y, done, visited);
 	if (!b){
-		ancestorsNotSeen.insert(y.getHash());		
+		ancestorsNotSeen.insert(yHash);		
 	}
+	else 
+		ancestorsSeen.insert(yHash);
 	return b;
 }
 
@@ -231,7 +234,7 @@ Event	*Event::getSelfParent() const {
 Event	*Event::getGossiperParent() const {
 	return (gossiperParent);
 }
-data	Event::getData() const{
+const data	&Event::getData() const{
 	return d;
 }
 int		Event::getRound() const {

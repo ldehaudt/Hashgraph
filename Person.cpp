@@ -2,12 +2,14 @@
 
 std::vector<Event*>	Person::findWitnesses(int const & round) const
 {
+	int size = getHashgraph().size();
+
 	std::vector<Event*> witnesses;
-	for (unsigned int i = 0; i < getHashgraph().size()
-		&& getHashgraph()[i]->getRound() >= round - 1; i++)
-		if (getHashgraph()[i]->getRound() == round
-			&& getHashgraph()[i]->getWitness() == true)
-			witnesses.push_back(getHashgraph()[i]);
+	const std::vector<Event*> &hashRef = getHashgraph();
+	for (unsigned int i = 0; i < size && hashRef[i]->getRound() >= round - 1; i++)
+		if (hashRef[i]->getRound() == round
+			&& hashRef[i]->getWitness() == true)
+			witnesses.push_back(hashRef[i]);
 	return witnesses;
 }
 

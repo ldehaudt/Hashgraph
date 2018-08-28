@@ -15,9 +15,9 @@ BREW_INC = -I ~/.brew/include
 
 SDL_LINK = -g  -L ~/.brew/lib -l SDL2
 
-CPPFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror -O2
 
-CPP = @g++ -std=c++11
+CPP = @clang++ -std=c++11
 
 all: $(NAME)
 
@@ -53,7 +53,7 @@ compile :
 	@echo "${YELLO}Compiling ...${WHITE}"
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
 
-%.o: %.cpp
+%.o: %.cpp %.hpp
 	@echo "${WHITE}Creating $@"
 	$(CPP) -c $< $(BREW_INC)
 

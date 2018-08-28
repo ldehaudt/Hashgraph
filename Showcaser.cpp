@@ -66,9 +66,11 @@ void	Showcaser::connect(Event const & e, Event const & p)
 	int x = M + e.getData().owner * (W - 2 * M) / (N - 1);
 	int y2 = (runTime - p.getData().timestamp) * GAP;
 	int x2 = M + p.getData().owner * (W - 2 * M) / (N - 1);
-	SDL_RenderDrawLine(rend, x, y, x2, y2);
-	SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
-	SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
+	if (y < H || y2 < H){
+		SDL_RenderDrawLine(rend, x, y, x2, y2);
+		SDL_RenderDrawLine(rend, x, y - 1, x2, y2 - 1);
+		SDL_RenderDrawLine(rend, x - 1, y, x2 - 1, y2);
+	}
 }
 
 void	Showcaser::ponies()

@@ -6,7 +6,7 @@
 #include <iomanip>
 # include <SDL2/SDL.h>
 
-class Showcaser {
+class Showcaser final{
 private:
     SDL_Window *win;
     SDL_Renderer *rend;
