@@ -21,7 +21,7 @@ CPP = @clang++ -std=c++11
 
 all: $(NAME)
 
-$(NAME): obj brew compile gaetan
+$(NAME): brew obj compile gaetan
 
 clean:
 	@echo "${RED}Removing object files"	
