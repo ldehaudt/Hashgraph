@@ -13,7 +13,7 @@ YELLO = \033[1;38;2;255;200;0m
 
 BREW_INC = -I ~/.brew/include
 
-SDL_LINK = -g  -L ~/.brew/lib -l SDL2
+SDL_LINK = -L ~/.brew/lib -l SDL2
 
 CPPFLAGS = -Wall -Wextra -Werror -O2
 
@@ -21,7 +21,7 @@ CPP = @clang++ -std=c++11
 
 all: $(NAME)
 
-$(NAME): $(OBJ) brew compile gaetan
+$(NAME): obj brew compile gaetan
 
 clean:
 	@echo "${RED}Removing object files"	
@@ -53,9 +53,9 @@ compile :
 	@echo "${YELLO}Compiling ...${WHITE}"
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME) $(FRAMEWORKS) $(BREW_INC) $(SDL_LINK)
 
-%.o: %.cpp %.hpp
+obj: $(SRC) *.hpp
 	@echo "${WHITE}Creating $@"
-	$(CPP) -c $< $(BREW_INC)
+	$(CPP) -c $(SRC) $(BREW_INC)
 
 gaetan: 
 	@echo "${RED}It's a Gaetan ???${WHITE}"

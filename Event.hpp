@@ -16,7 +16,7 @@ class Person;
 	int			owner;
 };
 
-class Event final{
+class Event{
 private:
 	std::vector<Event*> &graph;
 	std::unordered_set<std::string> ancestorsSeen;

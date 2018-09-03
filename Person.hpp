@@ -10,7 +10,7 @@ class Event;
 
 struct data;
 
-class Person final {
+class Person{
 private:
 	std::vector<Event*> hashgraph;
 	std::list<Event*> finishedNodes;
