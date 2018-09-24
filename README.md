@@ -12,7 +12,7 @@ Simple implementation of the consensus algorithm Hashgraph with clear visualizer
 ![alt text](https://github.com/conanwu777/hashgraph/blob/master/1.png)
 
 ## Abstract
-This project is done in collaboration with Conan Wu at 42. It is implemented according to the paper by L. Baird, 2016.
+This project is done in collaboration with Conan Wu (conanwu777) at 42. It is implemented according to the paper by L. Baird, 2016.
 https://www.swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf
 
 Hashgraph is considered a strong and more efficient alternative to current block-chain technology. It achieved consensus through frequent communication between all parties(a.k.a. gossips). The algorithm comes with a voting system which 'well known' nodes (i.e. gets 'famous' status by being seen and strongly seen by others) in each round votes to approve newer nodes. With probablity 1, all nodes which are authenatic will be aproved. One of the most interesting thing about this structure is that votes are collected indevidually by each player and yet all will arrive at the exact same result.
