@@ -1,6 +1,12 @@
 # Hashgraph
 Simple implementation of the consensus algorithm Hashgraph with clear visualizer
 
+This project was done with Conan Wu (conanwu777) <---- CHECK HER OUT
+
+Also thank you to Gaetan Juvin for offering and guiding us (very loosely).
+
+Make sure to enjoy ^-^
+
 ## Compiling and running
 - Run `make`. An executable will compile. Currently only tested on OS X.
 - Run with `./hashgraph`.
