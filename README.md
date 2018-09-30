@@ -3,7 +3,7 @@ Simple implementation of the consensus algorithm Hashgraph with clear visualizer
 
 This project was done with Conan Wu (conanwu777) <---- CHECK HER OUT
 
-Also thank you to Gaetan Juvin for giving us this project and guiding us (very loosely).
+Thank you to Gaetan Juvin for giving us this project and guiding us (very loosely).
 
 Make sure to enjoy ^-^
 
